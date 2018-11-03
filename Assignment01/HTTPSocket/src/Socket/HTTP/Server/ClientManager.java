@@ -6,8 +6,9 @@ import IO.OutputWriter;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by Subangkar on 03-Nov-18.
@@ -15,43 +16,31 @@ import java.nio.charset.StandardCharsets;
 public class ClientManager implements Runnable {
 	
 	private String name;
-	private InputReader in;
-	private OutputWriter out;
 	private Socket client;
 	
 	
-	public ClientManager( String name , Socket client ) throws IOException {
+	public ClientManager( String name , Socket client ) {
 		this.name = name;
 		this.client = client;
-		in = new InputReader( this.client.getInputStream() );
-		out = new OutputWriter( this.client.getOutputStream() );
-		
 	}
 	
-	ClientManager( Socket client ) throws IOException {
+	ClientManager( Socket client ) {
 		this.client = client;
 		name = "Client";
-		
-		in = new InputReader( this.client.getInputStream() );
-		out = new OutputWriter( this.client.getOutputStream() );
-		
-		if (this.client.isClosed()) {
-			System.out.println( ">>Closed" );
-		}
 	}
 	
-	public void start() {
+	void start() {
+		writeLog( "Accepting Connection" );
 		new Thread( this , name ).start();
 	}
 	
 	@Override
 	public void run() {
 		try {
-			if (this.client.isClosed()) {
-				System.out.println( ">>>>Closed" );
-			}
+			InputReader in = new InputReader( this.client.getInputStream() );
+			OutputWriter out = new OutputWriter( this.client.getOutputStream() );
 			String input = in.readNextLine();
-			System.out.println( "Here Input : " + input );
+			writeLog( "Here Input : " + input );
 			
 			out.writeLine( "HTTP/1.1 200 OK" );
 			out.writeLine( "Content-Type: text/html" );
@@ -59,9 +48,15 @@ public class ClientManager implements Runnable {
 			out.writeLine();
 			
 			out.write( FileIOManager.readFileToCharString( "index.html" , StandardCharsets.UTF_8 ) );
-			System.out.println( "Sent" );
+			writeLog( "Terminating Connection" );
+			client.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	private void writeLog( String log ) {
+		System.out.println(  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()) + " >> " + client.getInetAddress().getHostAddress() + ":" + client.getPort() + " >> " + log );
 	}
 }
