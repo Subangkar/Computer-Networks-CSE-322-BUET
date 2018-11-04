@@ -1,8 +1,12 @@
 
-Assignment01/HTTPSocket/\.idea/
+**/\.idea/
 
 *.class
 
-Assignment01/SocketProgramming/\.vscode/
+**/\.vscode/
 
 Assignment01/SocketProgramming/~\$HTTP\.ppt
+
+Assignment01/SocketProgramming/~\$SMTP\.ppt
+
+Assignment01/SocketProgramming/~\$Socket Programming Java\.ppt

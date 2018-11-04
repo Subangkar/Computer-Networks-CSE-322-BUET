@@ -14,16 +14,17 @@ public class OutputWriter {
 	}
 	
 	public void write(String msg) throws IOException {
-		outputStream.write( msg.getBytes( "UTF-8" ) );
+		write( msg.getBytes( "UTF-8" ) );
 	}
 	public void writeLine(String msg) throws IOException {
-		outputStream.write( (msg+"\r\n").getBytes( "UTF-8" ) );
+		write( (msg+"\r\n").getBytes( "UTF-8" ) );
 	}
 	public void writeLine() throws IOException {
-		outputStream.write( ("\r\n").getBytes( "UTF-8" ) );
+		write( ("\r\n").getBytes( "UTF-8" ) );
 	}
 	public void write(byte[] data) throws IOException {
 		outputStream.write( data );
+		outputStream.flush();
 	}
 	
 	public void close() throws IOException {

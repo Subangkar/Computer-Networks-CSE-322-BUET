@@ -104,8 +104,6 @@ public class ClientManager implements Runnable {
 			writeLog( "Requested file: " + file.getPath() );
 			HTTP_Write( "200 OK" , Files.probeContentType( file.toPath() ) , FileIOManager.readFileBytes( file.getPath() ) );
 		}
-		writeLog( "Terminating Connection" );
-		client.close();
 	}
 	
 	private void POST_Handler( String path ) throws IOException {
@@ -127,8 +125,11 @@ public class ClientManager implements Runnable {
 		if (MMI != null) writeLog( "Sending Contents With MIME Type: " + MMI );
 		
 		out.writeLine( "HTTP/1.1 " + status );
-		if (MMI != null) out.writeLine( "Content-Type: " + MMI );
-//		out.writeLine( "Connection: close" );
+		if (MMI != null) {
+			out.writeLine( "Content-Type: " + MMI );
+			out.writeLine( "Content-Length: "+contents.length );
+			out.writeLine( "Connection: close" );
+		}
 		out.writeLine();
 		if (contents != null) out.write( contents );
 		
@@ -137,8 +138,8 @@ public class ClientManager implements Runnable {
 	
 	void closeConnection() throws IOException {
 		writeLog( "Terminating Connection" );
-		in.close();
 		out.close();
+		in.close();
 		client.close();
 		writeLog( "Terminated Connection" );
 	}
