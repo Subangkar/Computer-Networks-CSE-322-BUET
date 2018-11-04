@@ -1,199 +1,198 @@
-2018-11-04 19:13:34 >> 0:0:0:0:0:0:0:1:64224 >> Accepting Connection
-2018-11-04 19:13:34 >> 0:0:0:0:0:0:0:1:64224 >> New Request line: GET /jpgpic.jpg HTTP/1.1
-2018-11-04 19:13:34 >> 0:0:0:0:0:0:0:1:64224 >> Requested file: jpgpic.jpg
-2018-11-04 19:13:34 >> 0:0:0:0:0:0:0:1:64224 >> Sending Contents With MIME Type: image/jpeg
-2018-11-04 19:13:34 >> 0:0:0:0:0:0:0:1:64224 >> Terminating Connection
-2018-11-04 19:13:34 >> 0:0:0:0:0:0:0:1:64224 >> Terminated Connection
-2018-11-04 19:13:47 >> 0:0:0:0:0:0:0:1:64241 >> Accepting Connection
-2018-11-04 19:13:47 >> 0:0:0:0:0:0:0:1:64244 >> Accepting Connection
-2018-11-04 19:13:47 >> 0:0:0:0:0:0:0:1:64244 >> New Request line: GET /Assignment.pdf HTTP/1.1
-2018-11-04 19:13:47 >> 0:0:0:0:0:0:0:1:64244 >> Requested file: Assignment.pdf
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64244 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64244 >> Terminating Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64244 >> Terminated Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64246 >> Accepting Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64246 >> New Request line: GET /Assignment.pdf HTTP/1.1
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64246 >> Requested file: Assignment.pdf
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64246 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64247 >> Accepting Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64247 >> New Request line: GET /Assignment.pdf HTTP/1.1
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64247 >> Requested file: Assignment.pdf
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64247 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64248 >> Accepting Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64248 >> Terminating Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64248 >> Terminated Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64241 >> Terminating Connection
-2018-11-04 19:13:48 >> 0:0:0:0:0:0:0:1:64241 >> Terminated Connection
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64714 >> Accepting Connection
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64715 >> Accepting Connection
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64714 >> New Request line: GET /tiger.bmp HTTP/1.1
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64714 >> Requested file: tiger.bmp
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64714 >> Sending Contents With MIME Type: image/bmp
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64714 >> Terminating Connection
-2018-11-04 19:17:32 >> 0:0:0:0:0:0:0:1:64714 >> Terminated Connection
-2018-11-04 19:19:18 >> 0:0:0:0:0:0:0:1:64715 >> Terminating Connection
-2018-11-04 19:19:18 >> 0:0:0:0:0:0:0:1:64715 >> Terminated Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64968 >> Accepting Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64969 >> Accepting Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64971 >> Accepting Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64971 >> New Request line: GET /tiff.tiff HTTP/1.1
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64971 >> /tiff.tiff File Not Found in Directory
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64971 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64971 >> Terminating Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64971 >> Terminated Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64972 >> Accepting Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64972 >> New Request line: GET /tiff.tiff HTTP/1.1
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64972 >> /tiff.tiff File Not Found in Directory
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64972 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64969 >> New Request line: GET /tiff.tiff HTTP/1.1
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64969 >> /tiff.tiff File Not Found in Directory
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64969 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64969 >> Terminating Connection
-2018-11-04 19:23:34 >> 0:0:0:0:0:0:0:1:64969 >> Terminated Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64968 >> Terminating Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64975 >> Accepting Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64968 >> Terminated Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64974 >> Accepting Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64976 >> Accepting Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64976 >> New Request line: GET /tiff.tif HTTP/1.1
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64976 >> Requested file: tiff.tif
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64976 >> Sending Contents With MIME Type: image/tiff
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64976 >> Terminating Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64976 >> Terminated Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64977 >> Accepting Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64977 >> New Request line: GET /tiff.tif HTTP/1.1
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64977 >> Requested file: tiff.tif
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64977 >> Sending Contents With MIME Type: image/tiff
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64975 >> Terminating Connection
-2018-11-04 19:23:46 >> 0:0:0:0:0:0:0:1:64975 >> Terminated Connection
-2018-11-04 19:25:03 >> 0:0:0:0:0:0:0:1:65202 >> Accepting Connection
-2018-11-04 19:25:03 >> 0:0:0:0:0:0:0:1:65203 >> Accepting Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65206 >> Accepting Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65206 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65206 >> Requested file: assignment.pdf
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65206 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65206 >> Terminating Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65206 >> Terminated Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65207 >> Accepting Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65208 >> Accepting Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65207 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65209 >> Accepting Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65207 >> Requested file: assignment.pdf
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65207 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65208 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65209 >> Terminating Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65209 >> Terminated Connection
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65208 >> Requested file: assignment.pdf
-2018-11-04 19:25:05 >> 0:0:0:0:0:0:0:1:65208 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:25:06 >> 0:0:0:0:0:0:0:1:65202 >> Terminating Connection
-2018-11-04 19:25:06 >> 0:0:0:0:0:0:0:1:65202 >> Terminated Connection
-2018-11-04 19:25:19 >> 0:0:0:0:0:0:0:1:64974 >> Terminating Connection
-2018-11-04 19:25:19 >> 0:0:0:0:0:0:0:1:64974 >> Terminated Connection
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65203 >> Terminating Connection
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65284 >> Accepting Connection
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65203 >> Terminated Connection
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65284 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65284 >> Requested file: assignment.pdf
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65285 >> Accepting Connection
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65284 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65284 >> Terminating Connection
-2018-11-04 19:25:48 >> 0:0:0:0:0:0:0:1:65284 >> Terminated Connection
-2018-11-04 19:25:50 >> 0:0:0:0:0:0:0:1:65285 >> New Request line: GET /favicon.ico HTTP/1.1
-2018-11-04 19:25:50 >> 0:0:0:0:0:0:0:1:65285 >> /favicon.ico File Not Found in Directory
-2018-11-04 19:25:50 >> 0:0:0:0:0:0:0:1:65285 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:25:50 >> 0:0:0:0:0:0:0:1:65285 >> Terminating Connection
-2018-11-04 19:25:50 >> 0:0:0:0:0:0:0:1:65285 >> Terminated Connection
-2018-11-04 19:29:12 >> 0:0:0:0:0:0:0:1:65360 >> Accepting Connection
-2018-11-04 19:29:12 >> 0:0:0:0:0:0:0:1:65360 >> New Request line: GET /tiff.tif HTTP/1.1
-2018-11-04 19:29:12 >> 0:0:0:0:0:0:0:1:65360 >> Requested file: tiff.tif
-2018-11-04 19:29:12 >> 0:0:0:0:0:0:0:1:65360 >> Sending Contents With MIME Type: image/tiff
-2018-11-04 19:29:12 >> 0:0:0:0:0:0:0:1:65360 >> Terminating Connection
-2018-11-04 19:29:12 >> 0:0:0:0:0:0:0:1:65360 >> Terminated Connection
-2018-11-04 19:30:08 >> 0:0:0:0:0:0:0:1:65375 >> Accepting Connection
-2018-11-04 19:30:08 >> 0:0:0:0:0:0:0:1:65375 >> New Request line: GET /jpgpic.jpg HTTP/1.1
-2018-11-04 19:30:08 >> 0:0:0:0:0:0:0:1:65375 >> Requested file: jpgpic.jpg
-2018-11-04 19:30:08 >> 0:0:0:0:0:0:0:1:65375 >> Sending Contents With MIME Type: image/jpeg
-2018-11-04 19:30:08 >> 0:0:0:0:0:0:0:1:65375 >> Terminating Connection
-2018-11-04 19:30:08 >> 0:0:0:0:0:0:0:1:65375 >> Terminated Connection
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65383 >> Accepting Connection
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65384 >> Accepting Connection
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65384 >> New Request line: GET /Assignment.pdf HTTP/1.1
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65384 >> Requested file: Assignment.pdf
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65384 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65384 >> Terminating Connection
-2018-11-04 19:30:29 >> 0:0:0:0:0:0:0:1:65384 >> Terminated Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65385 >> Accepting Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65385 >> New Request line: GET /Assignment.pdf HTTP/1.1
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65385 >> Requested file: Assignment.pdf
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65385 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65386 >> Accepting Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65386 >> New Request line: GET /Assignment.pdf HTTP/1.1
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65386 >> Requested file: Assignment.pdf
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65386 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65387 >> Accepting Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65387 >> Terminating Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65387 >> Terminated Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65383 >> Terminating Connection
-2018-11-04 19:30:30 >> 0:0:0:0:0:0:0:1:65383 >> Terminated Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65410 >> Accepting Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65410 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:31:33 >> 127.0.0.1:65410 >> Requested file: assignment.pdf
-2018-11-04 19:31:33 >> 127.0.0.1:65410 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:31:33 >> 127.0.0.1:65410 >> Terminating Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65410 >> Terminated Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65411 >> Accepting Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65411 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:31:33 >> 127.0.0.1:65411 >> Requested file: assignment.pdf
-2018-11-04 19:31:33 >> 127.0.0.1:65411 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:31:33 >> 127.0.0.1:65412 >> Accepting Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65412 >> New Request line: GET /assignment.pdf HTTP/1.1
-2018-11-04 19:31:33 >> 127.0.0.1:65412 >> Requested file: assignment.pdf
-2018-11-04 19:31:33 >> 127.0.0.1:65412 >> Sending Contents With MIME Type: application/pdf
-2018-11-04 19:31:33 >> 127.0.0.1:65413 >> Accepting Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65413 >> Terminating Connection
-2018-11-04 19:31:33 >> 127.0.0.1:65413 >> Terminated Connection
-2018-11-04 19:32:21 >> 0:0:0:0:0:0:0:1:65431 >> Accepting Connection
-2018-11-04 19:32:21 >> 0:0:0:0:0:0:0:1:65431 >> New Request line: GET /log.txt HTTP/1.1
-2018-11-04 19:32:21 >> 0:0:0:0:0:0:0:1:65431 >> Requested file: log.txt
-2018-11-04 19:32:21 >> 0:0:0:0:0:0:0:1:65431 >> Sending Contents With MIME Type: text/plain
-2018-11-04 19:32:21 >> 0:0:0:0:0:0:0:1:65431 >> Terminating Connection
-2018-11-04 19:32:21 >> 0:0:0:0:0:0:0:1:65431 >> Terminated Connection
-2018-11-04 19:32:49 >> 0:0:0:0:0:0:0:1:65438 >> Accepting Connection
-2018-11-04 19:32:49 >> 0:0:0:0:0:0:0:1:65438 >> New Request line: GET /tenor HTTP/1.1
-2018-11-04 19:32:49 >> 0:0:0:0:0:0:0:1:65438 >> /tenor File Not Found in Directory
-2018-11-04 19:32:49 >> 0:0:0:0:0:0:0:1:65438 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:32:49 >> 0:0:0:0:0:0:0:1:65438 >> Terminating Connection
-2018-11-04 19:32:49 >> 0:0:0:0:0:0:0:1:65438 >> Terminated Connection
-2018-11-04 19:32:53 >> 0:0:0:0:0:0:0:1:65439 >> Accepting Connection
-2018-11-04 19:32:53 >> 0:0:0:0:0:0:0:1:65439 >> New Request line: GET /tenor.gif HTTP/1.1
-2018-11-04 19:32:53 >> 0:0:0:0:0:0:0:1:65439 >> Requested file: tenor.gif
-2018-11-04 19:32:53 >> 0:0:0:0:0:0:0:1:65439 >> Sending Contents With MIME Type: image/gif
-2018-11-04 19:32:53 >> 0:0:0:0:0:0:0:1:65439 >> Terminating Connection
-2018-11-04 19:32:53 >> 0:0:0:0:0:0:0:1:65439 >> Terminated Connection
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49222 >> Accepting Connection
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49223 >> Accepting Connection
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49223 >> New Request line: GET /sundarban.jpg HTTP/1.1
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49223 >> Requested file: sundarban.jpg
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49223 >> Sending Contents With MIME Type: image/jpeg
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49223 >> Terminating Connection
-2018-11-04 19:34:03 >> 0:0:0:0:0:0:0:1:49223 >> Terminated Connection
-2018-11-04 19:34:59 >> 127.0.0.1:49253 >> Accepting Connection
-2018-11-04 19:35:25 >> 127.0.0.1:49253 >> New Request line: GET /sundarban.jpg HTTP/1.1
-2018-11-04 19:35:25 >> 127.0.0.1:49253 >> Requested file: sundarban.jpg
-2018-11-04 19:35:25 >> 127.0.0.1:49253 >> Sending Contents With MIME Type: image/jpeg
-2018-11-04 19:35:29 >> 127.0.0.1:49253 >> Terminating Connection
-2018-11-04 19:35:29 >> 127.0.0.1:49253 >> Terminated Connection
-2018-11-04 19:35:50 >> 0:0:0:0:0:0:0:1:49222 >> Terminating Connection
-2018-11-04 19:35:50 >> 0:0:0:0:0:0:0:1:49222 >> Terminated Connection
-2018-11-04 19:35:57 >> 0:0:0:0:0:0:0:1:49339 >> Accepting Connection
-2018-11-04 19:35:57 >> 0:0:0:0:0:0:0:1:49339 >> New Request line: GET /http_post.html HTTP/1.1
-2018-11-04 19:35:57 >> 0:0:0:0:0:0:0:1:49339 >> Requested file: http_post.html
-2018-11-04 19:35:57 >> 0:0:0:0:0:0:0:1:49339 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:35:57 >> 0:0:0:0:0:0:0:1:49339 >> Terminating Connection
-2018-11-04 19:35:57 >> 0:0:0:0:0:0:0:1:49339 >> Terminated Connection
-2018-11-04 19:40:53 >> 0:0:0:0:0:0:0:1:49494 >> Accepting Connection
-2018-11-04 19:40:53 >> 0:0:0:0:0:0:0:1:49494 >> New Request line: POST /form_submited HTTP/1.1
-2018-11-04 19:40:53 >> 0:0:0:0:0:0:0:1:49494 >> Received Form Data: Subangkar                                                                                                                                                                                                                                                                                                                                                                                    
-2018-11-04 19:40:53 >> 0:0:0:0:0:0:0:1:49494 >> Sending Contents With MIME Type: text/html
-2018-11-04 19:40:53 >> 0:0:0:0:0:0:0:1:49494 >> Terminating Connection
-2018-11-04 19:40:53 >> 0:0:0:0:0:0:0:1:49494 >> Terminated Connection
+2018-11-04 22:37:27 >> 127.0.0.1:46934 >> Accepting Connection
+2018-11-04 22:37:27 >> 127.0.0.1:46934 >> New Request line: GET /assignment.pdf HTTP/1.1
+2018-11-04 22:37:27 >> 127.0.0.1:46934 >> /assignment.pdf File Not Found in Directory
+2018-11-04 22:37:27 >> 127.0.0.1:46934 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:37:27 >> 127.0.0.1:46934 >> Terminating Connection
+2018-11-04 22:37:27 >> 127.0.0.1:46934 >> Terminated Connection
+2018-11-04 22:37:27 >> 127.0.0.1:46938 >> Accepting Connection
+2018-11-04 22:37:27 >> 127.0.0.1:46938 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:37:27 >> 127.0.0.1:46938 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:37:27 >> 127.0.0.1:46938 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:37:27 >> 127.0.0.1:46938 >> Terminating Connection
+2018-11-04 22:37:27 >> 127.0.0.1:46938 >> Terminated Connection
+2018-11-04 22:37:59 >> 127.0.0.1:46952 >> Accepting Connection
+2018-11-04 22:37:59 >> 127.0.0.1:46952 >> New Request line: GET /Assignment.pdf HTTP/1.1
+2018-11-04 22:37:59 >> 127.0.0.1:46952 >> Requested file: Assignment.pdf
+2018-11-04 22:37:59 >> 127.0.0.1:46952 >> Sending Contents With MIME Type: application/pdf
+2018-11-04 22:37:59 >> 127.0.0.1:46952 >> Terminating Connection
+2018-11-04 22:37:59 >> 127.0.0.1:46952 >> Terminated Connection
+2018-11-04 22:37:59 >> 127.0.0.1:46954 >> Accepting Connection
+2018-11-04 22:37:59 >> 127.0.0.1:46954 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:37:59 >> 127.0.0.1:46954 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:37:59 >> 127.0.0.1:46954 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:37:59 >> 127.0.0.1:46954 >> Terminating Connection
+2018-11-04 22:37:59 >> 127.0.0.1:46954 >> Terminated Connection
+2018-11-04 22:38:45 >> 127.0.0.1:46992 >> Accepting Connection
+2018-11-04 22:38:45 >> 127.0.0.1:46992 >> New Request line: GET / HTTP/1.1
+2018-11-04 22:38:45 >> 127.0.0.1:46992 >> Requested file: index.html
+2018-11-04 22:38:45 >> 127.0.0.1:46992 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:45 >> 127.0.0.1:46992 >> Terminating Connection
+2018-11-04 22:38:45 >> 127.0.0.1:46992 >> Terminated Connection
+2018-11-04 22:38:46 >> 127.0.0.1:46994 >> Accepting Connection
+2018-11-04 22:38:46 >> 127.0.0.1:46996 >> Accepting Connection
+2018-11-04 22:38:46 >> 127.0.0.1:46996 >> New Request line: GET /scripts/main.js HTTP/1.1
+2018-11-04 22:38:46 >> 127.0.0.1:46996 >> /scripts/main.js File Not Found in Directory
+2018-11-04 22:38:46 >> 127.0.0.1:46996 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:46 >> 127.0.0.1:46996 >> Terminating Connection
+2018-11-04 22:38:46 >> 127.0.0.1:46996 >> Terminated Connection
+2018-11-04 22:38:46 >> 127.0.0.1:46994 >> New Request line: GET /styles/main.css HTTP/1.1
+2018-11-04 22:38:46 >> 127.0.0.1:46994 >> /styles/main.css File Not Found in Directory
+2018-11-04 22:38:46 >> 127.0.0.1:46994 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:46 >> 127.0.0.1:46994 >> Terminating Connection
+2018-11-04 22:38:46 >> 127.0.0.1:46994 >> Terminated Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47016 >> Accepting Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47016 >> New Request line: GET /scripts/main.js HTTP/1.1
+2018-11-04 22:38:46 >> 127.0.0.1:47016 >> /scripts/main.js File Not Found in Directory
+2018-11-04 22:38:46 >> 127.0.0.1:47016 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:46 >> 127.0.0.1:47016 >> Terminating Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47016 >> Terminated Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47018 >> Accepting Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47020 >> Accepting Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47018 >> New Request line: GET /images/touch/chrome-touch-icon-192x192.png HTTP/1.1
+2018-11-04 22:38:46 >> 127.0.0.1:47018 >> /images/touch/chrome-touch-icon-192x192.png File Not Found in Directory
+2018-11-04 22:38:46 >> 127.0.0.1:47018 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:46 >> 127.0.0.1:47018 >> Terminating Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47018 >> Terminated Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47020 >> New Request line: GET /images/touch/chrome-touch-icon-192x192.png HTTP/1.1
+2018-11-04 22:38:46 >> 127.0.0.1:47020 >> /images/touch/chrome-touch-icon-192x192.png File Not Found in Directory
+2018-11-04 22:38:46 >> 127.0.0.1:47020 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:46 >> 127.0.0.1:47020 >> Terminating Connection
+2018-11-04 22:38:46 >> 127.0.0.1:47020 >> Terminated Connection
+2018-11-04 22:38:53 >> 127.0.0.1:47022 >> Accepting Connection
+2018-11-04 22:38:53 >> 127.0.0.1:47022 >> New Request line: GET /jpgpic.jpg HTTP/1.1
+2018-11-04 22:38:53 >> 127.0.0.1:47022 >> Requested file: jpgpic.jpg
+2018-11-04 22:38:53 >> 127.0.0.1:47022 >> Sending Contents With MIME Type: image/jpeg
+2018-11-04 22:38:53 >> 127.0.0.1:47022 >> Terminating Connection
+2018-11-04 22:38:53 >> 127.0.0.1:47022 >> Terminated Connection
+2018-11-04 22:38:53 >> 127.0.0.1:47024 >> Accepting Connection
+2018-11-04 22:38:53 >> 127.0.0.1:47024 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:38:53 >> 127.0.0.1:47024 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:38:53 >> 127.0.0.1:47024 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:38:53 >> 127.0.0.1:47024 >> Terminating Connection
+2018-11-04 22:38:53 >> 127.0.0.1:47024 >> Terminated Connection
+2018-11-04 22:39:16 >> 127.0.0.1:47026 >> Accepting Connection
+2018-11-04 22:39:16 >> 127.0.0.1:47026 >> New Request line: GET /http_post.html HTTP/1.1
+2018-11-04 22:39:16 >> 127.0.0.1:47026 >> Requested file: http_post.html
+2018-11-04 22:39:16 >> 127.0.0.1:47026 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:39:16 >> 127.0.0.1:47026 >> Terminating Connection
+2018-11-04 22:39:16 >> 127.0.0.1:47026 >> Terminated Connection
+2018-11-04 22:39:16 >> 127.0.0.1:47028 >> Accepting Connection
+2018-11-04 22:39:16 >> 127.0.0.1:47028 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:39:16 >> 127.0.0.1:47028 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:39:16 >> 127.0.0.1:47028 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:39:16 >> 127.0.0.1:47028 >> Terminating Connection
+2018-11-04 22:39:16 >> 127.0.0.1:47028 >> Terminated Connection
+2018-11-04 22:39:45 >> 127.0.0.1:47052 >> Accepting Connection
+2018-11-04 22:39:45 >> 127.0.0.1:47052 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:39:45 >> 127.0.0.1:47052 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:39:45 >> 127.0.0.1:47052 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:39:45 >> 127.0.0.1:47052 >> Terminating Connection
+2018-11-04 22:39:45 >> 127.0.0.1:47052 >> Terminated Connection
+2018-11-04 22:39:49 >> 127.0.0.1:47060 >> Accepting Connection
+2018-11-04 22:39:49 >> 127.0.0.1:47060 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:39:49 >> 127.0.0.1:47060 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:39:49 >> 127.0.0.1:47060 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:39:49 >> 127.0.0.1:47060 >> Terminating Connection
+2018-11-04 22:39:49 >> 127.0.0.1:47060 >> Terminated Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47068 >> Accepting Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47068 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:40:25 >> 127.0.0.1:47068 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:40:25 >> 127.0.0.1:47068 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:40:25 >> 127.0.0.1:47068 >> Terminating Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47068 >> Terminated Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47070 >> Accepting Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47070 >> New Request line: GET /http_post.html HTTP/1.1
+2018-11-04 22:40:25 >> 127.0.0.1:47070 >> Requested file: http_post.html
+2018-11-04 22:40:25 >> 127.0.0.1:47070 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:40:25 >> 127.0.0.1:47070 >> Terminating Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47070 >> Terminated Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47072 >> Accepting Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47072 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:40:25 >> 127.0.0.1:47072 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:40:25 >> 127.0.0.1:47072 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:40:25 >> 127.0.0.1:47072 >> Terminating Connection
+2018-11-04 22:40:25 >> 127.0.0.1:47072 >> Terminated Connection
+2018-11-04 22:40:27 >> 127.0.0.1:47074 >> Accepting Connection
+2018-11-04 22:40:27 >> 127.0.0.1:47074 >> New Request line: POST /form_submited HTTP/1.1
+2018-11-04 22:40:27 >> 127.0.0.1:47074 >> Received Form Data: Subangkar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+2018-11-04 22:40:27 >> 127.0.0.1:47074 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:40:27 >> 127.0.0.1:47074 >> Terminating Connection
+2018-11-04 22:40:27 >> 127.0.0.1:47074 >> Terminated Connection
+2018-11-04 22:40:27 >> 127.0.0.1:47076 >> Accepting Connection
+2018-11-04 22:40:27 >> 127.0.0.1:47076 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:40:27 >> 127.0.0.1:47076 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:40:27 >> 127.0.0.1:47076 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:40:27 >> 127.0.0.1:47076 >> Terminating Connection
+2018-11-04 22:40:27 >> 127.0.0.1:47076 >> Terminated Connection
+2018-11-04 22:41:15 >> 127.0.0.1:47090 >> Accepting Connection
+2018-11-04 22:41:15 >> 127.0.0.1:47090 >> New Request line: GET /log.txt HTTP/1.1
+2018-11-04 22:41:15 >> 127.0.0.1:47090 >> Requested file: log.txt
+2018-11-04 22:41:15 >> 127.0.0.1:47090 >> Sending Contents With MIME Type: text/plain
+2018-11-04 22:41:15 >> 127.0.0.1:47090 >> Terminating Connection
+2018-11-04 22:41:15 >> 127.0.0.1:47090 >> Terminated Connection
+2018-11-04 22:41:34 >> 127.0.0.1:47094 >> Accepting Connection
+2018-11-04 22:41:34 >> 127.0.0.1:47094 >> New Request line: GET /tiff.tif HTTP/1.1
+2018-11-04 22:41:34 >> 127.0.0.1:47094 >> /tiff.tif File Not Found in Directory
+2018-11-04 22:41:34 >> 127.0.0.1:47094 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:41:34 >> 127.0.0.1:47094 >> Terminating Connection
+2018-11-04 22:41:34 >> 127.0.0.1:47094 >> Terminated Connection
+2018-11-04 22:41:34 >> 127.0.0.1:47096 >> Accepting Connection
+2018-11-04 22:41:34 >> 127.0.0.1:47096 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:41:34 >> 127.0.0.1:47096 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:41:34 >> 127.0.0.1:47096 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:41:34 >> 127.0.0.1:47096 >> Terminating Connection
+2018-11-04 22:41:34 >> 127.0.0.1:47096 >> Terminated Connection
+2018-11-04 22:41:58 >> 127.0.0.1:47098 >> Accepting Connection
+2018-11-04 22:41:58 >> 127.0.0.1:47098 >> New Request line: GET /tiff.TIF HTTP/1.1
+2018-11-04 22:41:58 >> 127.0.0.1:47098 >> Requested file: tiff.TIF
+2018-11-04 22:41:58 >> 127.0.0.1:47098 >> Sending Contents With MIME Type: image/tiff
+2018-11-04 22:41:58 >> 127.0.0.1:47098 >> Terminating Connection
+2018-11-04 22:41:58 >> 127.0.0.1:47098 >> Terminated Connection
+2018-11-04 22:42:06 >> 127.0.0.1:47106 >> Accepting Connection
+2018-11-04 22:42:06 >> 127.0.0.1:47106 >> New Request line: GET /tenor.gif HTTP/1.1
+2018-11-04 22:42:06 >> 127.0.0.1:47106 >> Requested file: tenor.gif
+2018-11-04 22:42:06 >> 127.0.0.1:47106 >> Sending Contents With MIME Type: image/gif
+2018-11-04 22:42:06 >> 127.0.0.1:47106 >> Terminating Connection
+2018-11-04 22:42:06 >> 127.0.0.1:47106 >> Terminated Connection
+2018-11-04 22:42:07 >> 127.0.0.1:47108 >> Accepting Connection
+2018-11-04 22:42:07 >> 127.0.0.1:47108 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:42:07 >> 127.0.0.1:47108 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:42:07 >> 127.0.0.1:47108 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:42:07 >> 127.0.0.1:47108 >> Terminating Connection
+2018-11-04 22:42:07 >> 127.0.0.1:47108 >> Terminated Connection
+2018-11-04 22:48:05 >> 127.0.0.1:47538 >> Accepting Connection
+2018-11-04 22:48:05 >> 127.0.0.1:47538 >> New Request line: GET /icon.ico HTTP/1.1
+2018-11-04 22:48:05 >> 127.0.0.1:47538 >> Requested file: icon.ico
+2018-11-04 22:48:05 >> 127.0.0.1:47538 >> Sending Contents With MIME Type: image/vnd.microsoft.icon
+2018-11-04 22:48:05 >> 127.0.0.1:47538 >> Terminating Connection
+2018-11-04 22:48:05 >> 127.0.0.1:47538 >> Terminated Connection
+2018-11-04 22:48:05 >> 127.0.0.1:47540 >> Accepting Connection
+2018-11-04 22:48:05 >> 127.0.0.1:47540 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:48:05 >> 127.0.0.1:47540 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:48:05 >> 127.0.0.1:47540 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:48:05 >> 127.0.0.1:47540 >> Terminating Connection
+2018-11-04 22:48:05 >> 127.0.0.1:47540 >> Terminated Connection
+2018-11-04 22:48:15 >> 127.0.0.1:47548 >> Accepting Connection
+2018-11-04 22:48:15 >> 127.0.0.1:47548 >> New Request line: GET /tiger.bmp HTTP/1.1
+2018-11-04 22:48:15 >> 127.0.0.1:47548 >> Requested file: tiger.bmp
+2018-11-04 22:48:15 >> 127.0.0.1:47548 >> Sending Contents With MIME Type: image/x-ms-bmp
+2018-11-04 22:48:15 >> 127.0.0.1:47548 >> Terminating Connection
+2018-11-04 22:48:15 >> 127.0.0.1:47548 >> Terminated Connection
+2018-11-04 22:48:16 >> 127.0.0.1:47550 >> Accepting Connection
+2018-11-04 22:48:16 >> 127.0.0.1:47550 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:48:16 >> 127.0.0.1:47550 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:48:16 >> 127.0.0.1:47550 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:48:16 >> 127.0.0.1:47550 >> Terminating Connection
+2018-11-04 22:48:16 >> 127.0.0.1:47550 >> Terminated Connection
+2018-11-04 22:48:26 >> 127.0.0.1:47552 >> Accepting Connection
+2018-11-04 22:48:26 >> 127.0.0.1:47552 >> New Request line: GET /Assignment.pdf HTTP/1.1
+2018-11-04 22:48:26 >> 127.0.0.1:47552 >> Requested file: Assignment.pdf
+2018-11-04 22:48:26 >> 127.0.0.1:47552 >> Sending Contents With MIME Type: application/pdf
+2018-11-04 22:48:26 >> 127.0.0.1:47552 >> Terminating Connection
+2018-11-04 22:48:26 >> 127.0.0.1:47552 >> Terminated Connection
+2018-11-04 22:48:27 >> 127.0.0.1:47554 >> Accepting Connection
+2018-11-04 22:48:27 >> 127.0.0.1:47554 >> New Request line: GET /favicon.ico HTTP/1.1
+2018-11-04 22:48:27 >> 127.0.0.1:47554 >> /favicon.ico File Not Found in Directory
+2018-11-04 22:48:27 >> 127.0.0.1:47554 >> Sending Contents With MIME Type: text/html
+2018-11-04 22:48:27 >> 127.0.0.1:47554 >> Terminating Connection
+2018-11-04 22:48:27 >> 127.0.0.1:47554 >> Terminated Connection

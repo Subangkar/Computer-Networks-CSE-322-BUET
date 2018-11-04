@@ -5,7 +5,7 @@ import java.io.*;
 import java.net.ServerSocket;
 
 public class Main {
-	private static final int PORT = 420;
+	private static final int PORT = 8080;
 	static PrintWriter logFile;
 	static String logger;
 	
