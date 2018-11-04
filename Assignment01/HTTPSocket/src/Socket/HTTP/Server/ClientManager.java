@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.StringTokenizer;
@@ -20,6 +21,7 @@ public class ClientManager implements Runnable {
 	private String name;
 	private Socket client;
 	
+	private InputReader in;
 	private OutputWriter out;
 	
 	private final String NOT_FOUND = "<html>\n" + "<head><title>404 Not Found</title></head>\n" +
@@ -47,14 +49,21 @@ public class ClientManager implements Runnable {
 	@Override
 	public void run() {
 		try {
-			InputReader in = new InputReader( this.client.getInputStream() );
+			in = new InputReader( this.client.getInputStream() );
 			out = new OutputWriter( this.client.getOutputStream() );
+			String inp;
 			var input = in.readNextLine();
+			inp = input;
 			writeLog( "New Request line: " + input );
 			
-			if (input.isEmpty() || input.isBlank()) {
+			
+			if (input == null || input.isEmpty() || input.isBlank()) {
 				INVALID_Handler();
 			} else {
+//				while ((inp = in.readNextLine()) != null && !inp.isEmpty()) {
+//					writeLog( "> " + inp );
+//				}
+				
 				StringTokenizer stk;
 				stk = new StringTokenizer( input , " " );
 				String req, path, httpType;
@@ -64,8 +73,7 @@ public class ClientManager implements Runnable {
 				
 				if (!httpType.equalsIgnoreCase( "HTTP/1.1" )) {
 					INVALID_Handler();
-				}
-				else if (req.equalsIgnoreCase( "GET" )) {
+				} else if (req.equalsIgnoreCase( "GET" )) {
 					GET_Handler( path );
 				} else if (req.equalsIgnoreCase( "POST" )) {
 					POST_Handler( path );
@@ -81,7 +89,11 @@ public class ClientManager implements Runnable {
 	
 	
 	private void writeLog( String log ) {
-		System.out.println( new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format( Calendar.getInstance().getTime() ) + " >> " + client.getInetAddress().getHostAddress() + ":" + client.getPort() + " >> " + log );
+		String logMsg = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format( Calendar.getInstance().getTime() ) + " >> " + client.getInetAddress().getHostAddress() + ":" + client.getPort() + " >> " + log;
+		Main.logger += logMsg + "\r\n";
+		Main.logFile.println( logMsg );
+		System.out.println( logMsg );
+		Main.logFile.flush();
 	}
 	
 	
@@ -98,20 +110,24 @@ public class ClientManager implements Runnable {
 			out.writeLine( NOT_FOUND );
 		} else {
 			writeLog( "Requested file: " + file.getPath() );
+			writeLog( "Sending File With MIME Type: " + Files.probeContentType( file.toPath() ) );
+			
 			
 			out.writeLine( "HTTP/1.1 200 OK" );
-			out.writeLine( "Content-Type: text/html" );
+			out.writeLine( "Content-Type: " + Files.probeContentType( file.toPath() ) );
 			out.writeLine( "Connection: close" );
 			out.writeLine();
-			
-			out.write( FileIOManager.readFileToCharString( file.getPath() , StandardCharsets.UTF_8 ) );
+
+//			out.write( FileIOManager.readFileToCharString( file.getPath() , StandardCharsets.UTF_8 ) );
+			out.write( FileIOManager.readFileBytes( file.getPath() ) );
 		}
 		writeLog( "Terminating Connection" );
 		client.close();
 	}
 	
-	private void POST_Handler( String path ) {
-	
+	private void POST_Handler( String path ) throws IOException {
+		while(true)
+			writeLog( in.readNextLine() );
 	}
 	
 	private void INVALID_Handler() throws IOException {

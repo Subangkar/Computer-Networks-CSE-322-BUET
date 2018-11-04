@@ -22,4 +22,7 @@ public class OutputWriter {
 	public void writeLine() throws IOException {
 		outputStream.write( ("\r\n").getBytes( "UTF-8" ) );
 	}
+	public void write(byte[] data) throws IOException {
+		outputStream.write( data );
+	}
 }
