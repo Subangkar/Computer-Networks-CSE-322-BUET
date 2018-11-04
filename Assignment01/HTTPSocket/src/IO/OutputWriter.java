@@ -25,4 +25,8 @@ public class OutputWriter {
 	public void write(byte[] data) throws IOException {
 		outputStream.write( data );
 	}
+	
+	public void close() throws IOException {
+		outputStream.close();
+	}
 }

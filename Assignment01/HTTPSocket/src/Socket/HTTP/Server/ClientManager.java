@@ -7,7 +7,6 @@ import IO.OutputWriter;
 import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -51,25 +50,20 @@ public class ClientManager implements Runnable {
 		try {
 			in = new InputReader( this.client.getInputStream() );
 			out = new OutputWriter( this.client.getOutputStream() );
-			String inp;
-			var input = in.readNextLine();
-			inp = input;
-			writeLog( "New Request line: " + input );
+			var startLine = in.readNextLine();
+			if (startLine != null) writeLog( "New Request line: " + startLine );
 			
 			
-			if (input == null || input.isEmpty() || input.isBlank()) {
-				INVALID_Handler();
+			if (startLine == null || startLine.isEmpty() || startLine.isBlank()) {
+//				INVALID_Handler();
+				closeConnection();
+//				HTTP_Write( "400 BAD REQUEST",null,null );
 			} else {
-//				while ((inp = in.readNextLine()) != null && !inp.isEmpty()) {
-//					writeLog( "> " + inp );
-//				}
-				
 				StringTokenizer stk;
-				stk = new StringTokenizer( input , " " );
-				String req, path, httpType;
-				req = stk.nextToken();
-				path = stk.nextToken();
-				httpType = stk.nextToken();
+				stk = new StringTokenizer( startLine , " " );
+				String req = stk.nextToken(), path = "", httpType = "";
+				if (stk.hasMoreTokens()) path = stk.nextToken();
+				if (stk.hasMoreTokens()) httpType = stk.nextToken();
 				
 				if (!httpType.equalsIgnoreCase( "HTTP/1.1" )) {
 					INVALID_Handler();
@@ -105,36 +99,47 @@ public class ClientManager implements Runnable {
 		
 		if (!file.exists()) {
 			writeLog( path + " File Not Found in Directory" );
-			out.writeLine( "HTTP/1.1 404 NOT FOUND" );
-			out.writeLine();
-			out.writeLine( NOT_FOUND );
+			HTTP_Write( "404 NOT FOUND" , "text/html" , NOT_FOUND.getBytes() );
 		} else {
 			writeLog( "Requested file: " + file.getPath() );
-			writeLog( "Sending File With MIME Type: " + Files.probeContentType( file.toPath() ) );
-			
-			
-			out.writeLine( "HTTP/1.1 200 OK" );
-			out.writeLine( "Content-Type: " + Files.probeContentType( file.toPath() ) );
-			out.writeLine( "Connection: close" );
-			out.writeLine();
-
-//			out.write( FileIOManager.readFileToCharString( file.getPath() , StandardCharsets.UTF_8 ) );
-			out.write( FileIOManager.readFileBytes( file.getPath() ) );
+			HTTP_Write( "200 OK" , Files.probeContentType( file.toPath() ) , FileIOManager.readFileBytes( file.getPath() ) );
 		}
 		writeLog( "Terminating Connection" );
 		client.close();
 	}
 	
 	private void POST_Handler( String path ) throws IOException {
-		while(true)
-			writeLog( in.readNextLine() );
+		String inp = new String( in.read() );
+//		writeLog( inp );
+		String data = inp.substring( inp.lastIndexOf( "user=" ) + "user=".length() );
+		writeLog( "Received Form Data: " + data );
+		String postReply = new String( FileIOManager.readFileBytes( "http_post.html" )).replaceFirst( "<h2> Post-> </h2>","<h2> Post->\""+data+"\" </h2>" );
+		HTTP_Write( "200 OK" , "text/html" , postReply.getBytes() );
 	}
 	
 	private void INVALID_Handler() throws IOException {
 		writeLog( "Invalid request line without GET/POST" );
-		out.writeLine( "HTTP/1.1 400 BAD REQUEST" );
-		out.writeLine( "Connection: close" );
+		HTTP_Write( "400 BAD REQUEST" , null , null );
+	}
+	
+	
+	private void HTTP_Write( String status , String MMI , byte[] contents ) throws IOException {
+		if (MMI != null) writeLog( "Sending Contents With MIME Type: " + MMI );
+		
+		out.writeLine( "HTTP/1.1 " + status );
+		if (MMI != null) out.writeLine( "Content-Type: " + MMI );
+//		out.writeLine( "Connection: close" );
 		out.writeLine();
+		if (contents != null) out.write( contents );
+		
+		closeConnection();
+	}
+	
+	void closeConnection() throws IOException {
+		writeLog( "Terminating Connection" );
+		in.close();
+		out.close();
 		client.close();
+		writeLog( "Terminated Connection" );
 	}
 }
