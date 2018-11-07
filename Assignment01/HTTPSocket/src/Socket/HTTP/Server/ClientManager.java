@@ -102,7 +102,7 @@ public class ClientManager implements Runnable {
 		
 		File file = new File( path.substring( 1 ) );
 		
-		if (!file.exists()) {
+		if (!file.canRead()) {
 			writeLog( path + " File Not Found in Directory" );
 			HTTP_Write( "404 NOT FOUND" , "text/html" , NOT_FOUND.getBytes() );
 		} else {
