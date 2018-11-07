@@ -23,6 +23,8 @@ public class ClientManager implements Runnable {
 	private InputReader in;
 	private OutputWriter out;
 	
+	private String receivedContents;
+	
 	private final String NOT_FOUND = "<html>\n" + "<head><title>404 Not Found</title></head>\n" +
 			                                 "<body bgcolor=\"white\">\n" +
 			                                 "<center><h1>404 Not Found</h1></center>\n" +
@@ -50,14 +52,17 @@ public class ClientManager implements Runnable {
 		try {
 			in = new InputReader( this.client.getInputStream() );
 			out = new OutputWriter( this.client.getOutputStream() );
-			var startLine = in.readNextLine();
-			if (startLine != null) writeLog( "New Request line: " + startLine );
+			String startLine = in.readNextLine();
 			
+			if (startLine != null) {
+				receivedContents = startLine + "\r\n" + new String( in.read() ).trim();
+				writeLog( "New Request: " + receivedContents );
+			}
 			
 			if (startLine == null || startLine.isEmpty() || startLine.isBlank()) {
 //				INVALID_Handler();
-				closeConnection();
 //				HTTP_Write( "400 BAD REQUEST",null,null );
+				closeConnection();
 			} else {
 				StringTokenizer stk;
 				stk = new StringTokenizer( startLine , " " );
@@ -107,11 +112,9 @@ public class ClientManager implements Runnable {
 	}
 	
 	private void POST_Handler( String path ) throws IOException {
-		String inp = new String( in.read() );
-//		writeLog( inp );
-		String data = inp.substring( inp.lastIndexOf( "user=" ) + "user=".length() );
+		String data = receivedContents.substring( receivedContents.lastIndexOf( "user=" ) + "user=".length() );
 		writeLog( "Received Form Data: " + data );
-		String postReply = new String( FileIOManager.readFileBytes( "http_post.html" )).replaceFirst( "<h2> Post-> </h2>","<h2> Post->\""+data+"\" </h2>" );
+		String postReply = new String( FileIOManager.readFileBytes( "http_post.html" ) ).replaceFirst( "<h2> Post-> </h2>" , "<h2> Post->\"" + data + "\" </h2>" );
 		HTTP_Write( "200 OK" , "text/html" , postReply.getBytes() );
 	}
 	
@@ -127,7 +130,7 @@ public class ClientManager implements Runnable {
 		out.writeLine( "HTTP/1.1 " + status );
 		if (MMI != null) {
 			out.writeLine( "Content-Type: " + MMI );
-			out.writeLine( "Content-Length: "+contents.length );
+			out.writeLine( "Content-Length: " + contents.length );
 			out.writeLine( "Connection: close" );
 		}
 		out.writeLine();
