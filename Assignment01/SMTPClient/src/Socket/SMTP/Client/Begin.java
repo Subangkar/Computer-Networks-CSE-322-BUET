@@ -5,13 +5,15 @@ package Socket.SMTP.Client;
  */
 public class Begin extends State {
 	
-	public Begin( SMTP smtp ) {
+	// 'HELO' will be sent in this state
+	Begin( SMTP smtp ) {
 		super( smtp );
 		next = new Wait( smtp );
+		print("BEGIN");
 	}
 	
 	@Override
-	public void print() {
-		System.out.println(">> In BEGIN state: ");
+	public void send( String msg ) {
+	
 	}
 }

@@ -7,11 +7,13 @@ public class Wait extends State {
 	
 	Wait( SMTP smtp ) {
 		super( smtp );
+		next = new EnvelopeCreated( smtp );
+		print("Wait");
 	}
 	
 	@Override
-	public void print() {
-		System.out.println(">> In WAIT state: ");
+	public void send( String msg ) {
+	
 	}
 	
 }

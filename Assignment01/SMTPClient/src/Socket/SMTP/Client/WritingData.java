@@ -7,12 +7,13 @@ public class WritingData extends State {
 	
 	WritingData( SMTP smtp ) {
 		super( smtp );
-		next = new Delivering( smtp );
+		next = null;
+		print("Writing Data");
 	}
 	
 	@Override
-	public void print() {
-		System.out.println(">> In Writing Data state: ");
+	public void send( String msg ) {
+	
 	}
 	
 }

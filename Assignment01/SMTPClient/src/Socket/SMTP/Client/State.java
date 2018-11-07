@@ -8,24 +8,34 @@ import Socket.SMTP.Client.SMTP;
 public abstract class State {
 	private SMTP client;
 	State next;
+	private String name;
 	
-	State(SMTP smtp){
+	State( SMTP smtp ) {
 		this.client = smtp;
 	}
 	
-	abstract void print();
+	void print( String stateName ) {
+		System.out.println( ">> In " + stateName + " state: " );
+	}
 	
-	public void send( String msg ){
+	public abstract void send( String msg );
+//	{
 		//sending codes of
 		
 		//read server reply
-		// print server message
 		
-//      if(this.next==null) QUIT
-//		else if(successful)
+		// print server message
+
+
+//		if(successful)
 //		{
-//			client.setState( next );
+//		if (this.next == null) ;
+			// QUIT
+//		else client.setState( next );
 //		}
-//      else print Error infos
-	}
+//        else{
+//        	print Error infos
+//		    client.setState( this ); or QUIT
+//		}
+//	}
 }

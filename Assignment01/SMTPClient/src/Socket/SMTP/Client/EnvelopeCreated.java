@@ -8,10 +8,11 @@ public class EnvelopeCreated extends State {
 	EnvelopeCreated( SMTP smtp ) {
 		super( smtp );
 		next = new RecSet( smtp );
+		print("Envelope Created");
 	}
 	
 	@Override
-	public void print() {
-		System.out.println(">> In Envelope Created state: ");
+	public void send( String msg ) {
+	
 	}
 }

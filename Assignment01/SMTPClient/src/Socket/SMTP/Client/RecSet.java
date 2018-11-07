@@ -8,10 +8,11 @@ public class RecSet extends State {
 	RecSet( SMTP smtp ) {
 		super( smtp );
 		next = new WritingData( smtp );
+		print("Recipients Set");
 	}
 	
 	@Override
-	public void print() {
-		System.out.println(">> In Recipients Set state: ");
+	public void send( String msg ) {
+	
 	}
 }

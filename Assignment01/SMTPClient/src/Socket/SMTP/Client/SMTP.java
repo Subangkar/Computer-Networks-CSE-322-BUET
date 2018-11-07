@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class SMTP {
@@ -47,9 +46,8 @@ public class SMTP {
 		String f = "";
 		try {
 			
-			String message = command;
-			System.out.println( "msg:" + message + "/" );
-			pr.println( message );
+			System.out.println( "msg:" + command + "/" );
+			pr.println( command );
 			pr.flush();
 			
 			f = in.readLine();
@@ -64,7 +62,7 @@ public class SMTP {
 		return f;
 	}
 	
-	public static void main( String[] args ) throws UnknownHostException, IOException {
+	public static void main( String[] args ) {
 		try {
 			SMTP obj = new SMTP();
 			obj.run( args );
@@ -90,6 +88,21 @@ public class SMTP {
 		}
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	public State getState() {
