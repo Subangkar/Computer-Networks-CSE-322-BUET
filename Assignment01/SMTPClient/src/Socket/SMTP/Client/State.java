@@ -18,7 +18,7 @@ public abstract class State {
 		transition_msg = "";
 		transition_command = "";
 		name = "";
-		next = null;
+//		next = null;
 	}
 	
 	void print( String stateName ) {
@@ -68,7 +68,7 @@ public abstract class State {
 //		    client.setState( this ); or QUIT
 //		}
 //	}
-	public void transition( String newfeedback , String command ) throws NullPointerException {
+	void transition( String newfeedback , String command ) throws NullPointerException {
 		//System.out.println(newfeedback);
 		if (newfeedback == null) return;
 		
@@ -87,4 +87,6 @@ public abstract class State {
 		}
 	}
 	//print(name);
+	
+	void parseFeedBack( String feedback ){}
 }

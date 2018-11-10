@@ -10,9 +10,7 @@ public class Closed extends State {
 		super( smtp );
 		transition_msg = "220";//need to be implemented
 		name = "Closed";
-		print( name );
 		next = new Begin(smtp);
 	}
-	
 	
 }

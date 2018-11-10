@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -42,43 +43,22 @@ public class SMTP {
 	String send_command( String command , String feedback ) {
 		String f;
 		try {
-//			if (command.startsWith( "rcpt to:" )) {
-//				String finalcommand = "";
-//				command = command.substring( 8 );
-//				StringTokenizer stk = new StringTokenizer( command , "," );
-//				String header = stk.nextToken();
-//				finalcommand = "rcpt to:<" + header + ">";
-//				System.out.println( header );
-//				pr.println( finalcommand );
-//				pr.flush();//ignore rcpt
-//				while (stk.hasMoreTokens()) {
-//					String mail = stk.nextToken();
-//					finalcommand = "rcpt to:<" + mail + ">";
-//					pr.println( finalcommand );
-//					pr.flush();
-//				}
-//
-//				System.out.println( "final" + finalcommand );
-//				//return super.send(finalcommand, feedback) ;
-//				f = in.readLine();
-//				state.transition( f , finalcommand );
-//				System.out.println( f );
-//			} else {
 			System.out.println( ">> C: >> " + command );
 			pr.println( command );
 			pr.flush();
-//			}
 			f = in.readLine();
 			System.out.println( ">> S: >> " + f );
-			
-		} catch (Exception e) {
-			f = "exception";
-			e.printStackTrace();
+			state.parseFeedBack( f );
+			return f;
+		} catch (SocketTimeoutException s) {
 			System.out.println( "Timed out..." );
 			System.exit( 0 );
+		} catch (Exception e) {
+//			e.printStackTrace();
+			System.out.println( "Server Timed out..." );
+			System.exit( 1 );
 		}
-		
-		return f;
+		return "exception";
 	}
 	
 	public State getState() {
@@ -99,7 +79,7 @@ public class SMTP {
 		}
 	}
 	
-	public void run( String[] args ) throws Exception {
+	private void run( String[] args ) throws Exception {
 		//while (true) {
 		feedback = in.readLine();
 		System.out.println( feedback );
@@ -113,35 +93,26 @@ public class SMTP {
 					break;
 				}
 				state.print( state.name );
-				// System.out.println("{{" + state.name);
 				command = "";
 				if (state.name.equalsIgnoreCase( "WritingData" )) {
-					String body = "";
-					while (true) {
-						//System.out.println("waiting in while");
+					String body;
+					do {
 						body = sc.nextLine();
 						command = command + "\n" + body;
-						if (body.equalsIgnoreCase( "." )) {
-							break;
-						}
-					}
+					} while (!body.equalsIgnoreCase( "." ));
 					pr.println( command );
-					//pr.println(".");
+					System.out.println( ">> Written Mail Body" );
 					state.send( "." , feedback );
-					//System.out.println(in.readLine());
 				} else {
 					command = sc.nextLine();
 					
 					if (state != null) {
 						if (command.startsWith( "rcpt to:" ) || command.startsWith( "RCPT TO:" )) {
 							StringTokenizer stk = new StringTokenizer( command.replaceAll( "(?i)rcpt to:" , "" ) , ", " );
-							
+							System.out.println( ">> " + "Adding " + stk.countTokens() + " recipients." );
 							while (stk.hasMoreTokens()) {
 								String cmd = "RCPT TO: " + stk.nextToken();
-//								System.out.println( cmd );
 								feedback = state.send( cmd , feedback );
-//							feedback = in.readLine();
-//							System.out.println( feedback );
 							}
 						} else
 							feedback = state.send( command , feedback );

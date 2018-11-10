@@ -12,16 +12,24 @@ public class EnvelopeCreated extends State {
         name = "EnvelopeCreated";
         transition_msg = "250";
         transition_command = "rcpt to";
-        print(name);
         next=new RecSet( smtp );
     }
-
-//    @Override
-//    public String send(String command, String feedback) {
-//
-//        
-//        else return super.send(command, feedback);
-//    }
-    //return super.send(command, feedback); //To change body of generated methods, choose Tools | Templates.
-
+	
+	@Override
+	void print() {
+		super.print();
+		System.out.println( "! provide recipient(s) mail \"rcpt to: <mail_id1,mail_id2,mail_id3......>\"" );
+	}
+	
+	@Override
+	void parseFeedBack( String feedback ) {
+		super.parseFeedBack( feedback );
+		if(feedback==null) return;
+		if(feedback.startsWith( "500" ))
+			System.out.println("      >> \"rcpt to:\" command not provided at first");
+		else if(feedback.startsWith( "501" ))
+			System.out.println("      >> recipients mail_ids not provided");
+	}
+	
+	
 }
