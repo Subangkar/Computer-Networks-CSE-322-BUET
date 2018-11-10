@@ -16,8 +16,9 @@ public class WritingData extends State {
 	void print() {
 		super.print();
 		System.out.println( "! write mail ideal format should be" +
-				                    " >\n\"Subject: <subject_name>\"\n" +
-				                    " >\n\" <mail_body> \"\n \"<CR><LF>.<CR><LF>\"" );
+				                    " -attachments: <fileName_1,fileName_2,....>" +
+				                    "\n >\"Subject: <subject_name>\"\n" +
+				                    "\n >\" <mail_body> \"\n \"<CR><LF>.<CR><LF>\"" );
 	}
 	
 	@Override
