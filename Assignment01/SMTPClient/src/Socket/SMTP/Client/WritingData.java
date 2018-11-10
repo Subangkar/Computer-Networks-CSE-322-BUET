@@ -8,12 +8,13 @@ public class WritingData extends State {
 	WritingData( SMTP smtp ) {
 		super( smtp );
 		next = null;
-		print("Writing Data");
+		name = "WritingData";
+		print( name );
 	}
-	
-	@Override
-	public void send( String msg ) {
-	
-	}
-	
+
+//	@Override
+//	public void send( String msg ) {
+//
+//	}
+
 }
