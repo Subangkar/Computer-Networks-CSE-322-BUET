@@ -74,9 +74,8 @@ public class SMTP {
 			
 			SMTP obj = new SMTP();
 //			obj.attach();
-//			obj.run( args );
-//			obj.testAttachment();
-			obj.sendAttachment( "C:\\Users\\Subangkar\\Desktop\\NETWORK\\Assignment01\\HTTPSocket\\jpgpic.jpg","Text Part" );
+			obj.run( args );
+//			obj.sendAttachment( "C:\\Users\\Subangkar\\Desktop\\NETWORK\\Assignment01\\HTTPSocket\\jpgpic.jpg" , "Text Part" );
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -101,7 +100,7 @@ public class SMTP {
 				command = "";
 				if (state.name.equalsIgnoreCase( "WritingData" )) {
 					String body;
-					while (!(body = sc.nextLine()+"\r\n").startsWith( "." )){
+					while (!(body = sc.nextLine() + "\r\n").startsWith( "." )) {
 						command = command + "\r\n" + body;
 						pr.print( body );
 						System.out.print( ">> " + body );
@@ -156,46 +155,6 @@ public class SMTP {
 		System.out.println( ">> Written Mail Body" );
 	}
 	
-	void testAttachment() throws IOException {
-//		File file = new File("C:\\Users\\Subangkar\\Desktop\\NETWORK\\Assignment01\\SMTPClient\\script.sh");
-//		if(!file.canRead()) return;
-//		byte[] encoded = new byte[0];
-//		try {
-//			encoded = Files.readAllBytes(file.toPath());
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		String img_code = Base64.getMimeEncoder().encodeToString(encoded);
-//
-//		pr.println("Subject: Freaking\r\n" +
-//				           "From: <msshamil.xcp@yahoo.com>\r\n" +
-//				           "To: <1505021.mss@ugrad.cse.buet.ac.bd>\r\n" +
-//				           "To: <zahinwahab@gmail.com>\r\n" +
-//				           "MIME-Version: 1.0\r\n" +
-//				           "Content-type: multipart/mixed; boundary=\"simple boundary\"\r\n" +
-//				           "\r\n" +
-//				           "This is the preamble.  It is to be ignored, though it is a handy place for mail composers to include an explanatory note to non-MIME compliant readers.\r\n" +
-//				           "--simple boundary\r\n" +  "msg\r\n" + "--simple boundary\r\n"+
-//				           "Content-Type: "+Files.probeContentType( file.toPath() )+"\r\n" +
-//				           "Content-Transfer-Encoding: Base64\r\n" +
-//				           "Content-Disposition: attachment; filename="+file.getName()+"\r\n"+
-//				           img_code + "\r\r\n" +
-//				           "--simple boundary--\r\n"+
-//				           "");
-//		System.out.println(img_code);
-//		System.out.println(Files.probeContentType( file.toPath() ));
-//		pr.flush();
-		
-		try {
-			Scanner sc1 = new Scanner( new File( "attach.txt" ) );
-			while (sc1.hasNextLine()) {
-				pr.println( sc1.nextLine() );
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	void sendAttachment( String fileName , String message ) throws IOException {
 		File file = new File( fileName );
 		if (!file.canRead()) return;
@@ -206,7 +165,6 @@ public class SMTP {
 			e.printStackTrace();
 		}
 		String img_code = Base64.getMimeEncoder().encodeToString( encoded );
-		
 		
 		
 		InetAddress mailHost = InetAddress.getByName( mailServer );
@@ -222,18 +180,18 @@ public class SMTP {
 		System.out.println( welcome );
 		
 		String msg;
-		pr.println( "mail from: msshamil.xcp@yahoo.com " );
+		pr.println( "mail from: ssaqib@cse.buet.ac.bd " );
 		pr.flush();
 		msg = in.readLine();
 		System.out.println( msg );
 		
-		pr.println( "rcpt to:<1505021.mss@ugrad.cse.buet.ac.bd>" );
+		pr.println( "rcpt to: s.saqibeusuf@gmail.com" );
 		pr.flush();
 		msg = in.readLine();
 		System.out.println( msg );
 		
 		
-		pr.println( "rcpt to:<zahinwahab@gmail.com>" );
+		pr.println( "rcpt to: 1505015.skb@ugrad.cse.buet.ac.bd" );
 		pr.flush();
 		msg = in.readLine();
 		System.out.println( msg );
@@ -245,8 +203,10 @@ public class SMTP {
 		System.out.println( msg );
 		
 		
-		
 		pr.println( "Subject: SMTP_Attachment\r\n" +
+				            "From: \"Test_SSE\" ssaqib@cse.buet.ac.bd\r\n" +
+				            "To: s.saqibeusuf@gmail.com\r\n" +
+				            "To: 1505015.skb@ugrad.cse.buet.ac.bd\r\n" +
 				            "MIME-Version: 1.0\r\n" +
 				            "Content-Type: multipart/mixed;\r\n" +
 				            "\tboundary=\"----=_NextPart_000_038E_01D47443.F07FDF90\"\r\n" +
@@ -271,11 +231,11 @@ public class SMTP {
 				            "------=_NextPart_001_038F_01D47443.F07FDF90--\r\n" +
 				            "\r\n" +
 				            "------=_NextPart_000_038E_01D47443.F07FDF90\r\n" +
-				            "Content-Type: "+Files.probeContentType( file.toPath() )+";\r\n" +
-				            "\tname=\""+file.getName()+"\"\r\n" +
+				            "Content-Type: " + Files.probeContentType( file.toPath() ) + ";\r\n" +
+				            "\tname=\"" + file.getName() + "\"\r\n" +
 				            "Content-Transfer-Encoding: base64\r\n" +
 				            "Content-Disposition: attachment;\r\n" +
-				            "\tfilename=\""+file.getName()+"\"\r\n" +
+				            "\tfilename=\"" + file.getName() + "\"\r\n" +
 				            "\r\n" +
 				            img_code +
 				            "\r\n" +
@@ -308,7 +268,7 @@ public class SMTP {
 		pr.flush();
 		String welcome = in.readLine();
 		System.out.println( welcome );
-
+		
 		String msg;
 		pr.println( "mail from: msshamil.xcp@yahoo.com " );
 		pr.flush();
@@ -333,24 +293,24 @@ public class SMTP {
 		System.out.println( msg );
 		
 		pr.print( "Subject: Image Sender\r\n" +
-				            "From: msshamil.xcp@yahoo.com\r\n" +
-				            "To: subangkar.karmaker@gmail.com\r\n" +
-				            "To: 1505015.skb@ugrad.cse.buet.ac.bd\r\n" +
-				            "MIME-Version: 1.0\r\n" +
-				            "Content-type: multipart/mixed; boundary=\"simple boundary\"\r\n" +
-				            "\r\n" +
-				            "This is the preamble.  It is to be ignored, though it is a handy place for mail composers to include an explanatory note to non-MIME compliant readers.\r\n" +
-				            "--simple boundary\r\n" + "msg\r\n" + "--simple boundary\r\n" +
-				            "Content-Type: "+Files.probeContentType( file.toPath() )+"\r\n" +
-				            "Content-Transfer-Encoding: Base64\r\n" +
-				            "Content-Disposition: attachment; filename="+file.getName()+"\r\n" +
-				            img_code + "\r\n" +
-				            "--simple boundary--\r\n\r\n" +
-				            ".\r\n" );
+				          "From: msshamil.xcp@yahoo.com\r\n" +
+				          "To: subangkar.karmaker@gmail.com\r\n" +
+				          "To: 1505015.skb@ugrad.cse.buet.ac.bd\r\n" +
+				          "MIME-Version: 1.0\r\n" +
+				          "Content-type: multipart/mixed; boundary=\"simple boundary\"\r\n" +
+				          "\r\n" +
+				          "This is the preamble.  It is to be ignored, though it is a handy place for mail composers to include an explanatory note to non-MIME compliant readers.\r\n" +
+				          "--simple boundary\r\n" + "msg\r\n" + "--simple boundary\r\n" +
+				          "Content-Type: " + Files.probeContentType( file.toPath() ) + "\r\n" +
+				          "Content-Transfer-Encoding: Base64\r\n" +
+				          "Content-Disposition: attachment; filename=" + file.getName() + "\r\n" +
+				          img_code + "\r\n" +
+				          "--simple boundary--\r\n\r\n" +
+				          ".\r\n" );
 		pr.flush();
 		msg = in.readLine();
 		System.out.println( msg );
-
+		
 		pr.println( "quit" );
 		msg = in.readLine();
 		System.out.println( msg );
