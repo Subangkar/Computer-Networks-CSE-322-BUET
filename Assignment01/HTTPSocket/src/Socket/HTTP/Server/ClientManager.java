@@ -73,7 +73,8 @@ public class ClientManager implements Runnable {
 				if (!httpType.equalsIgnoreCase( "HTTP/1.1" )) {
 					INVALID_Handler();
 				} else if (req.equalsIgnoreCase( "GET" )) {
-					GET_Handler( path );
+//					if(authValid(receivedContents))
+						GET_Handler( path );
 				} else if (req.equalsIgnoreCase( "POST" )) {
 					POST_Handler( path );
 				} else {
@@ -145,5 +146,20 @@ public class ClientManager implements Runnable {
 		in.close();
 		client.close();
 		writeLog( "Terminated Connection" );
+	}
+	
+	
+	boolean authValid(String startline) throws IOException {
+		
+		if(startline.contains( "Xauth:" )){
+			String auth = startline.substring( startline.indexOf( "Xauth:" )+"Xauth:".length() );
+			System.out.println(auth);
+			if(auth.equals( "students+network" )){
+				return true;
+			}
+		}
+		
+		HTTP_Write( "401 Unauthorized","text/html","Send Auth".getBytes(  ) );
+		return false;
 	}
 }

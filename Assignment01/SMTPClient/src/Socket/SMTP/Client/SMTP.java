@@ -14,7 +14,7 @@ public class SMTP {
 	Scanner sc;
 	String user;
 	String password;
-	public static final String mailServer = "localhost";
+	public static final String mailServer = "webmail.buet.ac.bd";//"localhost";
 	InetAddress mailHost;
 	InetAddress localHost;
 	Socket smtpSocket;
@@ -32,7 +32,7 @@ public class SMTP {
 		sc = new Scanner( System.in );
 		mailHost = InetAddress.getByName( mailServer );
 		localHost = InetAddress.getLocalHost();
-		smtpSocket = new Socket( mailHost , 1050 );
+		smtpSocket = new Socket( mailHost , 25 );
 		in = new BufferedReader( new InputStreamReader( smtpSocket.getInputStream() ) );
 		pr = new PrintWriter( smtpSocket.getOutputStream() , true );
 		state = new Closed( this );
