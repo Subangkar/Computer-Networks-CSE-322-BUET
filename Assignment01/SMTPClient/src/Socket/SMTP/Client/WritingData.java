@@ -17,7 +17,7 @@ public class WritingData extends State {
 		super.print();
 		System.out.println( "! write mail ideal format should be" +
 				                    " -attachments: <fileName_1,fileName_2,....>" +
-				                    "\n >\"Subject: <subject_name>\"\n" +
+				                    "\n >\"Subject: <subject_name>\"\n<NEWLINE>" +
 				                    "\n >\" <mail_body> \"\n \"<CR><LF>.<CR><LF>\"" );
 	}
 	
@@ -27,6 +27,8 @@ public class WritingData extends State {
 		if(feedback==null) return;
 		if(feedback.startsWith( "250" ))
 			System.out.println("      >> MAIL successfully sent");
+		if(feedback.startsWith( "221" ))
+			System.out.println("      >> Closing Connection with server");
 	}
 	
 }

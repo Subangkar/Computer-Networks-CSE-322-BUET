@@ -72,8 +72,8 @@ public class SMTP {
 	public static void main( String[] args ) {
 		try {
 			SMTP obj = new SMTP();
-//			obj.run( args );
-			obj.testAttachment();
+			obj.run( args );
+//			obj.testAttachment();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -98,11 +98,24 @@ public class SMTP {
 				command = "";
 				if (state.name.equalsIgnoreCase( "WritingData" )) {
 					String body;
-					do {
-						body = sc.nextLine();
+//					do {
+//						body = sc.nextLine()+"\r\n";
+//						command = command + "\r\n" + body;
+//						pr.print( body );
+//						System.out.print( ">> " + body );
+//					} while (!body.startsWith( "." ));
+					
+					while (!(body = sc.nextLine()+"\r\n").startsWith( "." )){
 						command = command + "\r\n" + body;
-					} while (!body.equalsIgnoreCase( "." ));
-					writeMailBody( command );
+						pr.print( body );
+						System.out.print( ">> " + body );
+					}
+//					pr.print("");
+					state.send( "." , feedback );
+//					state.send( "quit",feedback );
+//					pr.flush();
+//					writeMailBody( command );
+//					System.out.println("Here");
 				} else {
 					command = sc.nextLine();
 					
@@ -130,11 +143,13 @@ public class SMTP {
 	void writeMailBody( String command ) throws IOException {
 		
 		if (command.startsWith( "-attachments: " )) {
-			String message = command.substring( command.indexOf( "\r\n",command.indexOf( "Subject: " ) )+1 );
+			String message = command.substring( command.indexOf( "\r\n" , command.indexOf( "Subject: " ) ) + 1 );
 			sendAttachment( command.substring( command.indexOf( ':' ) + 1 ) , message );
 		} else {
-			pr.println( command );
-			pr.println();
+			Scanner scanner = new Scanner( command );
+			while (scanner.hasNextLine())
+				pr.write( scanner.nextLine() + "\r\n" );
+//			pr.println();
 			state.send( "." , feedback );
 			pr.flush();
 		}
@@ -234,6 +249,68 @@ public class SMTP {
 				            "------=_NextPart_000_038E_01D47443.F07FDF90--\n" +
 				            "\r\n" +
 				            ".\r\n" );
+		
+	}
+	
+	void attach() throws IOException {
+		File file = new File( "C:\\Users\\Subangkar\\Desktop\\NETWORK\\Assignment01\\HTTPSocket" );
+		byte[] encoded = Files.readAllBytes( file.toPath() );
+		String img_code = Base64.getMimeEncoder().encodeToString( encoded );
+		System.out.println( img_code );
+		String mailServer = "localhost";//"webmail.buet.ac.bd";
+		InetAddress mailHost = InetAddress.getByName( mailServer );
+		InetAddress localHost = InetAddress.getLocalHost();
+		Socket smtpSocket = new Socket( mailHost , 25 );
+		BufferedReader in = new BufferedReader( new InputStreamReader( smtpSocket.getInputStream() ) );
+		PrintWriter pr = new PrintWriter( smtpSocket.getOutputStream() , true );
+		String initialID = in.readLine();
+		System.out.println( initialID );
+		pr.println( "HELO " + localHost.getHostName() );
+		pr.flush();
+		String welcome = in.readLine();
+		System.out.println( welcome );
+		// TODO code application logic here
+		String msg;
+		pr.println( "mail from:<msshamil.xcp@yahoo.com>" );
+		pr.flush();
+		msg = in.readLine();
+		System.out.println( msg );
+		
+		pr.println( "rcpt to:<1505021.mss@ugrad.cse.buet.ac.bd>" );
+		pr.flush();
+		msg = in.readLine();
+		System.out.println( msg );
+		
+		
+		pr.println( "rcpt to:<zahinwahab@gmail.com>" );
+		pr.flush();
+		msg = in.readLine();
+		System.out.println( msg );
+		
+		
+		pr.println( "DATA" );
+		pr.flush();
+		msg = in.readLine();
+		System.out.println( msg );
+		
+		pr.println( "Subject: Freaking\n" +
+				            "From: <msshamil.xcp@yahoo.com>\n" +
+				            "To: <1505021.mss@ugrad.cse.buet.ac.bd>\n" +
+				            "To: <zahinwahab@gmail.com>\n" +
+				            "MIME-Version: 1.0\n" +
+				            "Content-type: multipart/mixed; boundary=\"simple boundary\"\n" +
+				            "\n" +
+				            "This is the preamble.  It is to be ignored, though it is a handy place for mail composers to include an explanatory note to non-MIME compliant readers.\n" +
+				            "--simple boundary\n" + "msg\n" + "--simple boundary\n" +
+				            "Content-Type: image/gif\n" +
+				            "Content-Transfer-Encoding: Base64\n" +
+				            "Content-Disposition: attachment; filename=bismile.png\n" +
+				            img_code + "\n" +
+				            "--simple boundary--\n" +
+				            "." );
+		pr.flush();
+		msg = in.readLine();
+		System.out.println( msg );
 		
 	}
 }

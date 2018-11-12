@@ -27,10 +27,12 @@ public abstract class State {
 	void print(  ) {
 		System.out.println( ">> In " + name + " state: " );
 	}
+	
 	public String send( String command , String feedback ) {
 		// System.out.println("COMAND"+command);
 		String newfeedback = "";
 		newfeedback = client.send_command( command , feedback );
+		if(name.equals( "WritingData" )) client.send_command( "quit" , feedback );
 		// System.out.println("feed"+newfeedback);
 		transition( newfeedback , command );
 		return newfeedback;
@@ -52,22 +54,7 @@ public abstract class State {
 		return s.next;
 	}
 	
-	//	public abstract void send( String msg );
-//	{
-	//sending codes of
-	//read server reply
-	// print server message
-//		if(successful)
-//		{
-//		if (this.next == null) ;
-	// QUIT
-//		else client.setState( next );
-//		}
-//        else{
-//        	print Error infos
-//		    client.setState( this ); or QUIT
-//		}
-//	}
+
 	void transition( String newfeedback , String command ) throws NullPointerException {
 		//System.out.println(newfeedback);
 		if (newfeedback == null) return;
