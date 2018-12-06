@@ -10,15 +10,34 @@
 //#include <arpa/inet.h>
 //#include <sys/socket.h>
 #include <unistd.h>
+#include <ostream>
 #include "Socket.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 #define INF INFINITY
+#define UP 1
+#define DOWN 0
 
 using namespace std;
 
+
+#define IS_IN_LIST(item, list) (find(list.begin(), list.end(), item) != list.end())
+
+//
+//template<typename t>
+//bool isInList(t item, set<t> list) {
+//	return list.find(list.begin(), list.end(), item) != list.end();
+//}
+//
+//template<typename t>
+//bool isInList(t item, vector<t> list) {
+//	return list.find(list.begin(), list.end(), item) != list.end();
+//}
+
+
 int sockfd;
+Socket socketLocal;
 int bytes_received;
 string routerIpAddress;
 
@@ -27,19 +46,44 @@ struct RoutingTableEntry {
 	string destination;
 	string nextHop;
 	int cost;
+
+	RoutingTableEntry() = default;
+
+	RoutingTableEntry(const string &destination, const string &nextHop, int cost) : destination(destination),
+	                                                                                nextHop(nextHop), cost(cost) {}
+
+	friend ostream &operator<<(ostream &os, const RoutingTableEntry &entry) {
+		os << entry.destination << "\t" << setw(12) << entry.nextHop << "\t" << entry.cost;
+		return os;
+	}
 };
 
-struct Edge {
+struct Link {
 	string neighbor;
 	int cost;
 	int recvClock;
 	int status;
+
+	Link() {
+		cost = -1;
+		recvClock = -1;
+		status = DOWN;
+	}
+
+	Link(const string &neighbor, int cost, int recvClock, int status) : neighbor(neighbor), cost(cost),
+	                                                                    recvClock(recvClock), status(status) {}
+
+	friend ostream &operator<<(ostream &os, const Link &link1) {
+		os << "neighbor: " << link1.neighbor << " cost: " << link1.cost << " recvClock: " << link1.recvClock
+		   << " status: " << link1.status;
+		return os;
+	}
 };
 
 vector<string> neighbors;
 set<string> routers;
 vector<RoutingTableEntry> routingTable;
-vector<Edge> links;
+vector<Link> links;
 
 int sendClock = 0;
 bool entryChanged = false;
@@ -90,6 +134,12 @@ string makeTableIntoPacket(vector<RoutingTableEntry> rt) {
 	return packet;
 }
 
+template<typename T>
+void print_container(std::ostream &os, const T &container, const std::string &delimiter) {
+	std::copy(std::begin(container),
+	          std::end(container),
+	          std::ostream_iterator<typename T::value_type>(os, delimiter.c_str()));
+}
 
 void printTable() {
 	cout << endl << endl << endl;
@@ -97,25 +147,26 @@ void printTable() {
 	cout << "\t------\t" << routerIpAddress << "\t------\t" << endl;
 	cout << "Destination  \tNext Hop \tCost" << endl;
 	cout << "-------------\t-------------\t-----" << endl;
-	for (int i = 0; i < routingTable.size(); i++) {
-		if (!routingTable[i].destination.compare(routerIpAddress)) continue;
-		cout << routingTable[i].destination << "\t" << routingTable[i].nextHop << "\t" << routingTable[i].cost << endl;
+	for (auto &routerEntry : routingTable) {
+		if (routerEntry.destination == socketLocal.getLocalIP()) continue;
+//		cout << routerEntry.destination << "\t" << routerEntry.nextHop << "\t" << routerEntry.cost << endl;
+		cout << routerEntry << endl;
 	}
 	cout << "--------------------------------------" << endl;
 }
 
-int getNeighbor(string nip) {
+int getNeighbor(const string &nip) {
 	for (int i = 0; i < links.size(); i++) {
-		if (!nip.compare(links[i].neighbor)) {
+		if (nip == links[i].neighbor) {
 			return i;
 		}
 	}
 	return 0;
 }
 
-bool isNeighbor(string nip) {
-	for (int i = 0; i < links.size(); i++) {
-		if (!nip.compare(links[i].neighbor))
+bool isNeighbor(const string &nip) {
+	for (auto &link : links) {
+		if (nip == link.neighbor)
 			return true;
 	}
 	return false;
@@ -128,7 +179,7 @@ void updateRoutingTableForNeighbor(string nip, vector<RoutingTableEntry> nrt) {
 			if (!nip.compare(links[j].neighbor)) {
 				tempCost = links[j].cost + nrt[i].cost;
 				if (!nip.compare(routingTable[i].nextHop) ||
-				    (tempCost < routingTable[i].cost && routerIpAddress.compare(nrt[i].nextHop) != 0)) {
+				    (tempCost < routingTable[i].cost && routerIpAddress != nrt[i].nextHop)) {
 					if (routingTable[i].cost != tempCost) {
 						routingTable[i].nextHop = nip;
 						routingTable[i].cost = tempCost;
@@ -139,74 +190,54 @@ void updateRoutingTableForNeighbor(string nip, vector<RoutingTableEntry> nrt) {
 			}
 		}
 	}
-	if (entryChanged == true)
+	if (entryChanged)
 		printTable();
 	entryChanged = false;
 }
 
-void initRouter(string routerIp, string topology) {
-	ifstream topo(topology.c_str());
-	string r1, r2;
+void initRouter(const string &routerIp, const string &topologyFile) {
+	ifstream topo(topologyFile.c_str());
+	string srcRouter, destRouter;
 	int cost;
 
 
 	while (!topo.eof()) {
-		topo >> r1 >> r2 >> cost;
-//	    cout << routerIp << endl;
-//	    cout << r1 << endl;
+		topo >> srcRouter >> destRouter >> cost;
+//		cout << srcRouter << "-" << destRouter << "-" << cost << endl;
 
-		routers.insert(r1);
-		routers.insert(r2);
-
-		struct Edge e;
-
-		if (!r1.compare(routerIp)) {
-			if (!isNeighbor(r2)) {
-				neighbors.push_back(r2);
-				e.neighbor = r2;
-				e.cost = cost;
-				e.status = 1;
-				e.recvClock = 0;
-				links.push_back(e);
+		routers.insert(srcRouter);
+		routers.insert(destRouter);
+		if (srcRouter == socketLocal.getLocalIP()) {
+			if (!isNeighbor(destRouter)) {
+				neighbors.push_back(destRouter);
+				links.emplace_back(destRouter, cost, 0, UP);
 			}
-		} else if (!r2.compare(routerIp)) {
-			if (!isNeighbor(r1)) {
-				neighbors.push_back(r1);
-				e.neighbor = r1;
-				e.cost = cost;
-				e.status = 1;
-				e.recvClock = 0;
-				links.push_back(e);
+		} else if (destRouter == socketLocal.getLocalIP()) {
+			if (!isNeighbor(srcRouter)) {
+				neighbors.push_back(srcRouter);
+				links.emplace_back(srcRouter, cost, 0, UP);
 			}
 		}
 	}
 
 	topo.close();
 
-	struct RoutingTableEntry route;
-	string dest = "192.168.10.";
-	for (int i = 0; i < routers.size(); i++) {
-		char x = i + 1 + '0';
-		string temp = dest + x;
-		if (find(neighbors.begin(), neighbors.end(), temp) != neighbors.end()) {
-			for (int j = 0; j < links.size(); j++) {
-				if (!links[j].neighbor.compare(temp)) {
-					route.destination = temp;
-					route.nextHop = temp;
-					route.cost = links[j].cost;
+//	print_container(cout, links, " - ");
+
+	for (const auto &router:routers) {
+		if (IS_IN_LIST(router, neighbors)) {//if this router is a neighbor
+			for (auto &link : links) { // add its link info to table
+				if (link.neighbor == router) {
+					routingTable.emplace_back(router, router, link.cost);
 				}
 			}
-		} else if (!routerIp.compare(temp)) {
-			route.destination = temp;
-			route.nextHop = temp;
-			route.cost = 0;
-		} else {
-			route.destination = temp;
-			route.nextHop = "\t-";
-			route.cost = INF;
+		} else if (socketLocal.getLocalIP() == router) { // if itself
+			routingTable.emplace_back(router, router, 0);
+		} else { // unreachable
+			routingTable.emplace_back(router, "\t-", INF);
 		}
-		routingTable.push_back(route);
 	}
+
 	printTable();
 }
 
@@ -299,15 +330,15 @@ void updateTableForLinkFailure(string nbr) {
 }
 
 void receive() {
-	struct sockaddr_in router_address;
+	sockaddr_in remote_address;
 	socklen_t addrlen;
 	int n = 0;
 	while (true) {
 		char buffer[1024];
-		bytes_received = recvfrom(sockfd, buffer, 1024, 0, (struct sockaddr *) &router_address, &addrlen);
-		++n;
-		string rec(buffer, 0, bytes_received);
-		cout << "Received " << n << " : " << rec << endl;
+		bytes_received = recvfrom(sockfd, buffer, 1024, 0, (struct sockaddr *) &remote_address, &addrlen);
+//		++n;
+		string rec(buffer);
+//		cout << "Received " << n << " : " << rec << endl;
 		if (bytes_received != -1) {
 			string recv(buffer);
 			string head = recv.substr(0, 4);
@@ -442,22 +473,11 @@ int main(int argc, char *argv[]) {
 
 
 	routerIpAddress = argv[1];
+	socketLocal = Socket(argv[1], 4747);
 	initRouter(argv[1], argv[2]);
 
-//	int bind_flag;
 
-//	client_address.sin_family = AF_INET;
-//	client_address.sin_port = htons(4747);
-//	inet_pton(AF_INET, argv[1], &client_address.sin_addr);
-
-
-//	sockfd = socket(AF_INET, SOCK_DGRAM, 0);
-
-//	bind_flag = bind(sockfd, (struct sockaddr *) &client_address, sizeof(sockaddr_in));
-	sockaddr_in client_address = getInetSocketAddress(argv[1], 4747);
-	bool bind_flag = getSocket(sockfd, client_address);
-
-	if (bind_flag) cout << "Connection successful!!" << endl;
+	if (socketLocal.isBound()) cout << "Connection successful!!" << endl;
 	else cout << "Connection failed!!!" << endl;
 
 	cout << "--------------------------------------" << endl;
