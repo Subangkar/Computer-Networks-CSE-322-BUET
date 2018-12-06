@@ -165,6 +165,8 @@ void initRouter(string routerIp, string topology)
     string r1, r2;
     int cost;
 
+	cout << routerIp << endl;
+
     while(!topo.eof())
     {
         topo>>r1>>r2>>cost;
@@ -506,9 +508,9 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
+
 	routerIpAddress = argv[1];
     initRouter(argv[1], argv[2]);
-
 
     int bind_flag;
     struct sockaddr_in client_address;
