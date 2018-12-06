@@ -2,3 +2,9 @@
 **/cmake-build-debug/*
 
 Assignment02/DVR/venv/
+
+*.out
+
+Assignment02/DVR/\.idea/workspace\.xml
+
+Assignment02/DVR/\.idea/vcs\.xml
