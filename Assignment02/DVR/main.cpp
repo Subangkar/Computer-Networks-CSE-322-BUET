@@ -324,7 +324,7 @@ void updateTableForLinkFailure(string nbr) {
 			}
 		}
 	}
-	if (entryChanged == true)
+	if (entryChanged)
 		printTable();
 	entryChanged = false;
 }
@@ -334,13 +334,16 @@ void receive() {
 	socklen_t addrlen;
 	int n = 0;
 	while (true) {
-		char buffer[1024];
-		bytes_received = recvfrom(sockfd, buffer, 1024, 0, (struct sockaddr *) &remote_address, &addrlen);
-//		++n;
-		string rec(buffer);
-//		cout << "Received " << n << " : " << rec << endl;
+//		char buffer[1024];
+//		bytes_received = recvfrom(sockfd, buffer, 1024, 0, (struct sockaddr *) &remote_address, &addrlen);
+		const char *buffer = socketLocal.readBytes(remote_address);
+//		string recv = socketLocal.readString(remote_address);
+		string recv(buffer, static_cast<unsigned long>(socketLocal.dataLength()));
+		++n;
+//		string rec(buffer);
+		cout << "Received " << n << " : " << recv << endl;
 		if (bytes_received != -1) {
-			string recv(buffer);
+//			string recv(buffer);
 			string head = recv.substr(0, 4);
 			if (head == "cls") {
 				system("clear");
@@ -350,11 +353,11 @@ void receive() {
 				sendClock++;
 				sendTable();
 
-				for (int i = 0; i < links.size(); i++) {
-					if (sendClock - links[i].recvClock > 3 && links[i].status == 1) {
-						cout << "----- link down with : " << links[i].neighbor << " -----" << endl;
-						links[i].status = -1;
-						updateTableForLinkFailure(links[i].neighbor);
+				for (auto &link : links) {
+					if (sendClock - link.recvClock > 3 && link.status == 1) {
+						cout << "----- link down with : " << link.neighbor << " -----" << endl;
+						link.status = -1;
+						updateTableForLinkFailure(link.neighbor);
 					}
 				}
 			} else if (!head.compare("ntbl")) {

@@ -81,6 +81,8 @@ public:
 		socklen_t addrlen;
 		lastBufferSize = recvfrom(socketFileDescriptor, buffer, buffer_size, 0, (struct sockaddr *) &lastRemoteAddress,
 		                          &addrlen);
+		std::cout << lastBufferSize << std::endl;
+		if (lastBufferSize < buffer_size - 1) buffer[lastBufferSize - 1] = NULL;
 		return buffer;
 	}
 
@@ -90,7 +92,7 @@ public:
 
 	std::string readString(sockaddr_in &remoteAddress) {
 		readBytes(remoteAddress);
-		return std::string(buffer, buffer_size);
+		return std::string(buffer, lastBufferSize);
 	}
 
 	const sockaddr_in &getLastRemoteAddress() const {
