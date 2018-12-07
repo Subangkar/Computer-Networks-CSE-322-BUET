@@ -216,7 +216,7 @@ void initRouter(const string &routerIp, const string &topologyFile) {
 	printTable();
 }
 
-string makeIP(unsigned char raw[]) {
+string makeIP(const unsigned char raw[]) {
 	int ipSegment[4];
 	for (int i = 0; i < 4; i++)
 		ipSegment[i] = raw[i];
@@ -225,7 +225,7 @@ string makeIP(unsigned char raw[]) {
 	return ip;
 }
 
-void updateTableForCostChange(string nbr, int changedCost, int oldCost) {
+void updateTableForCostChange(const string &nbr, int changedCost, int oldCost) {
 	for (int i = 0; i < routers.size(); i++) {
 		if (!nbr.compare(routingTable[i].nextHop)) {
 			if (!nbr.compare(routingTable[i].destination)) {
@@ -284,6 +284,17 @@ void forwardMessage(string dest, string length, string msg) {
 	     << ")\n";
 }
 
+void forwardMessage(const string &dest, int length, const string &msg) {
+	string forwardPckt = "frwd#" + dest + "#" + to_string(length) + "#" + msg;
+	string nextHop;
+	nextHop = routingMap[dest].nextHop;
+	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
+
+	socketLocal.writeString(router_address, forwardPckt);
+	cout << msg << " packet forwarded to " << nextHop << " (printed by " << socketLocal.getLocalIP()
+	     << ")\n";
+}
+
 
 void updateTableForLinkFailure(string nbr) {
 	for (int i = 0; i < routingTable.size(); i++) {
@@ -336,11 +347,16 @@ void receiveCommands() {
 		}
 		if (startsWith(recv, SEND_MESSAGE)) {
 			//forward given message to destination router
-			string sip1 = getIPFromBytes(recv.substr(4, 4));
-			string sip2 = getIPFromBytes(recv.substr(8, 4));
+			string src = getIPFromBytes(recv.substr(4, 4));
+			string dst = getIPFromBytes(recv.substr(8, 4));
 			int msgLength = getNumberString(recv.substr(12, 2));
 			string msg = recv.substr(14, msgLength);
-			cout << SEND_MESSAGE << "> " << sip1 << " " << sip2 << " " << msgLength << " " << msg << endl;
+			cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
+			if (dst == socketLocal.getLocalIP()) {
+				cout << msg << " packet reached destination (printed by " << dst << ")\n";
+			} else
+				forwardMessage(dst, msgLength, msg);
+
 			continue;
 		}
 	}
