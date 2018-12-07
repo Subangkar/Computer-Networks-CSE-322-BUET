@@ -12,6 +12,7 @@
 #define SHOW_ROUTING_TABLE "show"
 #define SEND_ROUTING_TABLE "ntbl"
 #define SEND_MESSAGE "send"
+#define NONE "\t-"
 
 
 int sockfd;
@@ -208,8 +209,8 @@ void initRouter(const string &routerIp, const string &topologyFile) {
 			routingTable.emplace_back(router, router, 0);
 			routingMap[router] = RoutingTableEntry(router, router, 0);
 		} else { // unreachable
-			routingTable.emplace_back(router, "\t-", INF);
-			routingMap[router] = RoutingTableEntry(router, "\t-", INF);
+			routingTable.emplace_back(router, NONE, INF);
+			routingMap[router] = RoutingTableEntry(router, NONE, INF);
 		}
 	}
 
@@ -284,13 +285,17 @@ void forwardMessage(string dest, string length, string msg) {
 	     << ")\n";
 }
 
-void forwardMessage(const string &dest, int length, const string &msg) {
-	string forwardPckt = "frwd#" + dest + "#" + to_string(length) + "#" + msg;
-	string nextHop;
-	nextHop = routingMap[dest].nextHop;
-	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
+// missing next hop to be handled
+void forwardMessageToNextHop(const string &dest, int length, const string &msg, const string &recv) {
+//	string forwardPckt = "frwd#" + dest + "#" + to_string(length) + "#" + msg;
+	string nextHop = routingMap[dest].nextHop;
+	if (nextHop == NONE) {
+		cout << msg << " packet dropped @ " << socketLocal.getLocalIP() << endl;
+		return;
+	}
 
-	socketLocal.writeString(router_address, forwardPckt);
+	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
+	socketLocal.writeString(router_address, recv);
 	cout << msg << " packet forwarded to " << nextHop << " (printed by " << socketLocal.getLocalIP()
 	     << ")\n";
 }
@@ -350,12 +355,12 @@ void receiveCommands() {
 			string src = getIPFromBytes(recv.substr(4, 4));
 			string dst = getIPFromBytes(recv.substr(8, 4));
 			int msgLength = getNumberString(recv.substr(12, 2));
-			string msg = recv.substr(14, msgLength);
+			string msg = recv.substr(14, static_cast<unsigned long>(msgLength));
 			cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
 			if (dst == socketLocal.getLocalIP()) {
 				cout << msg << " packet reached destination (printed by " << dst << ")\n";
 			} else
-				forwardMessage(dst, msgLength, msg);
+				forwardMessageToNextHop(dst, msgLength, msg, recv);
 
 			continue;
 		}
