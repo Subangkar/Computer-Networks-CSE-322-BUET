@@ -1,14 +1,4 @@
-//#include <cstdio>
-//#include <cstring>
-//#include <cstdlib>
-//#include <vector>
-//#include <set>
-//#include <iostream>
-//#include <fstream>
-//#include <string>
-#include <bits/stdc++.h>
-//#include <arpa/inet.h>
-//#include <sys/socket.h>
+#include "Utils.h"
 #include <unistd.h>
 #include <ostream>
 #include "Socket.h"
@@ -19,21 +9,9 @@
 #define UP 1
 #define DOWN 0
 
-using namespace std;
-
-
-#define IS_IN_LIST(item, list) (find(list.begin(), list.end(), item) != list.end())
-
-//
-//template<typename t>
-//bool isInList(t item, set<t> list) {
-//	return list.find(list.begin(), list.end(), item) != list.end();
-//}
-//
-//template<typename t>
-//bool isInList(t item, vector<t> list) {
-//	return list.find(list.begin(), list.end(), item) != list.end();
-//}
+#define SHOW_ROUTING_TABLE "show"
+#define SEND_ROUTING_TABLE "ntbl"
+#define SEND_MESSAGE "send"
 
 
 int sockfd;
@@ -83,6 +61,7 @@ struct Link {
 vector<string> neighbors;
 set<string> routers;
 vector<RoutingTableEntry> routingTable;
+map<string, RoutingTableEntry> routingMap;
 vector<Link> links;
 
 int sendClock = 0;
@@ -132,13 +111,6 @@ string makeTableIntoPacket(vector<RoutingTableEntry> rt) {
 		packet = packet + ":" + rt[i].destination + "#" + rt[i].nextHop + "#" + to_string(rt[i].cost);
 	}
 	return packet;
-}
-
-template<typename T>
-void print_container(std::ostream &os, const T &container, const std::string &delimiter) {
-	std::copy(std::begin(container),
-	          std::end(container),
-	          std::ostream_iterator<typename T::value_type>(os, delimiter.c_str()));
 }
 
 void printTable() {
@@ -229,19 +201,22 @@ void initRouter(const string &routerIp, const string &topologyFile) {
 			for (auto &link : links) { // add its link info to table
 				if (link.neighbor == router) {
 					routingTable.emplace_back(router, router, link.cost);
+					routingMap[router] = RoutingTableEntry(router, router, link.cost);
 				}
 			}
 		} else if (socketLocal.getLocalIP() == router) { // if itself
 			routingTable.emplace_back(router, router, 0);
+			routingMap[router] = RoutingTableEntry(router, router, 0);
 		} else { // unreachable
 			routingTable.emplace_back(router, "\t-", INF);
+			routingMap[router] = RoutingTableEntry(router, "\t-", INF);
 		}
 	}
 
 	printTable();
 }
 
-string makeIP(unsigned char *raw) {
+string makeIP(unsigned char raw[]) {
 	int ipSegment[4];
 	for (int i = 0; i < 4; i++)
 		ipSegment[i] = raw[i];
@@ -329,27 +304,52 @@ void updateTableForLinkFailure(string nbr) {
 	entryChanged = false;
 }
 
-void receive() {
-	sockaddr_in remote_address;
-	socklen_t addrlen;
+string getIPFromBytes(string bytes){
+	unsigned char ip[5];
+	for (int i = 0; i < 4; i++) {
+		ip[i] = static_cast<unsigned char>(bytes[i]);
+	}
+	return makeIP(ip);
+}
+
+void receiveCommands() {
+	sockaddr_in remote_address{};
 	int n = 0;
 	while (true) {
-//		char buffer[1024];
-//		bytes_received = recvfrom(sockfd, buffer, 1024, 0, (struct sockaddr *) &remote_address, &addrlen);
+		string recv = socketLocal.readString(remote_address);
+		if (recv.empty()) continue;
+		cout << recv << "::" << endl;
+		if (startsWith(recv, SHOW_ROUTING_TABLE)) {
+			printTable();
+			continue;
+		}
+		if (startsWith(recv, SEND_MESSAGE)) {
+			//forward given message to destination router
+			string sip1 = getIPFromBytes(recv.substr(4, 4));
+			string sip2 = getIPFromBytes(recv.substr(8, 4));
+			cout << SEND_MESSAGE << "> " << sip1 << " " << sip2 << endl;
+			continue;
+		}
+	}
+}
+
+
+void receive() {
+	sockaddr_in remote_address;
+	int n = 0;
+	while (true) {
 		const char *buffer = socketLocal.readBytes(remote_address);
 //		string recv = socketLocal.readString(remote_address);
 		string recv(buffer, static_cast<unsigned long>(socketLocal.dataLength()));
 		++n;
-//		string rec(buffer);
-		cout << "Received " << n << " : " << recv << endl;
 		if (bytes_received != -1) {
-//			string recv(buffer);
-			string head = recv.substr(0, 4);
-			if (head == "cls") {
+			cout << "Received " << n << " : " << recv << endl;
+//			string head = recv.substr(0, 4);
+			if (startsWith(recv, "cls")) {
 				system("clear");
-			} else if (!head.compare("show")) {
+			} else if (startsWith(recv, "show")) {
 				printTable();
-			} else if (!head.compare("clk ")) {
+			} else if (startsWith(recv, "clk")) {
 				sendClock++;
 				sendTable();
 
@@ -360,7 +360,7 @@ void receive() {
 						updateTableForLinkFailure(link.neighbor);
 					}
 				}
-			} else if (!head.compare("ntbl")) {
+			} else if (startsWith(recv, SEND_ROUTING_TABLE)) {
 				string nip = recv.substr(4, 12);
 				int index = getNeighbor(nip);
 				links[index].status = 1;
@@ -374,7 +374,7 @@ void receive() {
 				string packet(pckt);
 				vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
 				updateRoutingTableForNeighbor(nip, ntbl);
-			} else if (!head.compare("send")) {
+			} else if (startsWith(recv, SEND_MESSAGE)) {
 				//forward given message to destination router
 				unsigned char *ip1 = new unsigned char[5];
 				unsigned char *ip2 = new unsigned char[5];
@@ -400,14 +400,14 @@ void receive() {
 				for (int i = 0; i < length; i++) {
 					msg[i] = buffer[14 + i];
 				}
-				msg[length] = '\0';
+				msg[length] = NULL;
 				string message(msg);
 				//forwarding function
 				if (!sip2.compare(routerIpAddress)) {
 					cout << message << " packet reached destination (printed by " << sip2 << ")\n";
 				} else
 					forwardMessage(sip2, msgLength, message);
-			} else if (!head.compare("frwd")) {
+			} else if (startsWith(recv, "frwd")) {
 				//forward until reach destination
 				vector<string> fmsgs;
 				char *msg = new char[recv.length() + 1];
@@ -424,7 +424,7 @@ void receive() {
 				} else
 					forwardMessage(fmsgs[1], fmsgs[2], fmsgs[3]);
 				fmsgs.clear();
-			} else if (!head.compare("cost")) {
+			} else if (startsWith(recv, "cost")) {
 				//codes for updating link cost
 				unsigned char *ip1 = new unsigned char[5];
 				unsigned char *ip2 = new unsigned char[5];
@@ -467,6 +467,7 @@ void receive() {
 	}
 }
 
+
 int main(int argc, char *argv[]) {
 
 	if (argc != 3) {
@@ -485,7 +486,8 @@ int main(int argc, char *argv[]) {
 
 	cout << "--------------------------------------" << endl;
 
-	receive();
+//	receive();
+	receiveCommands();
 
 	return 0;
 }

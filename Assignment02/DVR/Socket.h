@@ -92,7 +92,7 @@ public:
 
 	std::string readString(sockaddr_in &remoteAddress) {
 		readBytes(remoteAddress);
-		return std::string(buffer, lastBufferSize);
+		return lastBufferSize > 0 ? std::string(buffer, lastBufferSize) : "";
 	}
 
 	const sockaddr_in &getLastRemoteAddress() const {
@@ -121,12 +121,14 @@ public:
 	}
 
 
-	const std::string &getLocalIP() {
-		return localInetAddress;
+	const std::string getLocalIP() {
+		return std::string(inet_ntoa(socketAddr.sin_addr));
+//		return localInetAddress;
 	}
 
 	in_port_t getLocalPort() {
-		return socketAddr.sin_port;
+		return ntohs(socketAddr.sin_port);
+//		return socketAddr.sin_port;
 	}
 };
 
