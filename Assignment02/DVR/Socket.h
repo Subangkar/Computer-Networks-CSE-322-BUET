@@ -82,7 +82,7 @@ public:
 		lastBufferSize = recvfrom(socketFileDescriptor, buffer, buffer_size, 0, (struct sockaddr *) &lastRemoteAddress,
 		                          &addrlen);
 		std::cout << lastBufferSize << std::endl;
-		if (lastBufferSize < buffer_size - 1) buffer[lastBufferSize - 1] = NULL;
+		if (lastBufferSize < buffer_size) buffer[lastBufferSize] = NULL;
 		return buffer;
 	}
 

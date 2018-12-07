@@ -304,7 +304,18 @@ void updateTableForLinkFailure(string nbr) {
 	entryChanged = false;
 }
 
-string getIPFromBytes(string bytes){
+int getNumberString(const string &bytes, int ndigit = 2) {
+	unsigned char nums[2];
+	nums[0] = bytes[0];
+	nums[1] = bytes[1];
+
+	int x[bytes.length()];
+	x[0] = nums[0];
+	x[1] = nums[1] * 256;
+	return x[1] + x[0];
+}
+
+string getIPFromBytes(const string &bytes) {
 	unsigned char ip[5];
 	for (int i = 0; i < 4; i++) {
 		ip[i] = static_cast<unsigned char>(bytes[i]);
@@ -327,7 +338,9 @@ void receiveCommands() {
 			//forward given message to destination router
 			string sip1 = getIPFromBytes(recv.substr(4, 4));
 			string sip2 = getIPFromBytes(recv.substr(8, 4));
-			cout << SEND_MESSAGE << "> " << sip1 << " " << sip2 << endl;
+			int msgLength = getNumberString(recv.substr(12, 2));
+			string msg = recv.substr(14, msgLength);
+			cout << SEND_MESSAGE << "> " << sip1 << " " << sip2 << " " << msgLength << " " << msg << endl;
 			continue;
 		}
 	}

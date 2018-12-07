@@ -7,5 +7,5 @@ add_executable(Router main.cpp Socket.h Utils.h)
 
 add_executable(Test test.cpp)
 
-add_executable(Server server.cpp)
-add_executable(Client client.cpp)
+#add_executable(Server server.cpp)
+#add_executable(Client client.cpp)
