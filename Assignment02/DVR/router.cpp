@@ -12,6 +12,11 @@
 #define SHOW_ROUTING_TABLE "show"
 #define SEND_ROUTING_TABLE "ntbl"
 #define SEND_MESSAGE "send"
+#define UPDATE_COST "cost"
+#define DRIVER_CLOCK "clk"
+#define CLEAR_SCREEN "clscr"
+
+
 #define NONE "\t-"
 
 
@@ -35,6 +40,16 @@ struct RoutingTableEntry {
 		os << entry.destination << "\t" << setw(12) << entry.nextHop << "\t" << entry.cost;
 		return os;
 	}
+
+	bool operator==(const RoutingTableEntry &rhs) const {
+		return destination == rhs.destination &&
+		       nextHop == rhs.nextHop &&
+		       cost == rhs.cost;
+	}
+
+	bool operator!=(const RoutingTableEntry &rhs) const {
+		return !(rhs == *this);
+	}
 };
 
 struct Link {
@@ -57,13 +72,24 @@ struct Link {
 		   << " status: " << link1.status;
 		return os;
 	}
+
+	bool operator==(const Link &rhs) const {
+		return neighbor == rhs.neighbor &&
+		       cost == rhs.cost &&
+		       recvClock == rhs.recvClock &&
+		       status == rhs.status;
+	}
+
+	bool operator!=(const Link &rhs) const {
+		return !(rhs == *this);
+	}
 };
 
-vector<string> neighbors;
-set<string> routers;
+vector<string> neighbors; // neighbors list
+set<string> routers;// all routers in network
 vector<RoutingTableEntry> routingTable;
-map<string, RoutingTableEntry> routingMap;
-vector<Link> links;
+map<string, RoutingTableEntry> routingMap; // contains next hop,cost and dest
+vector<Link> links;// all links from this
 
 int sendClock = 0;
 bool entryChanged = false;
@@ -226,22 +252,59 @@ string makeIP(const unsigned char raw[]) {
 	return ip;
 }
 
-void updateTableForCostChange(const string &nbr, int changedCost, int oldCost) {
-	for (int i = 0; i < routers.size(); i++) {
-		if (!nbr.compare(routingTable[i].nextHop)) {
-			if (!nbr.compare(routingTable[i].destination)) {
-				routingTable[i].cost = changedCost;
-			} else {
-				routingTable[i].cost = routingTable[i].cost - oldCost + changedCost;
+void updateTable(const string &neighbor, int newCost, int oldCost) {
+//	for (int i = 0; i < routers.size(); i++) {
+//		if (neighbor == (routingTable[i].nextHop)) {
+//			if (neighbor == (routingTable[i].destination)) {
+//				routingTable[i].cost = newCost;
+//			} else {
+//				routingTable[i].cost = routingTable[i].cost - oldCost + newCost;
+//			}
+//			entryChanged = true;
+//		} else if (neighbor == (routingTable[i].destination) && routingTable[i].cost > newCost) {
+//			routingTable[i].cost = newCost;
+//			routingTable[i].nextHop = neighbor;
+//			entryChanged = true;
+//		}
+//	}
+	for (auto &router:routingMap) {
+		if (neighbor == router.second.nextHop) { // neighbor is some of nextHop's is to be updated
+			if (neighbor == router.first) // dest itself nexthop
+			{
+				router.second.cost = newCost; // set the new cost as it will go to neighbor
+			} else //nextHop is not dest
+			{
+				router.second.cost += (newCost - oldCost); // add/sub cost as it will pass thru neighbor
 			}
 			entryChanged = true;
-		} else if (!nbr.compare(routingTable[i].destination) && routingTable[i].cost > changedCost) {
-			routingTable[i].cost = changedCost;
-			routingTable[i].nextHop = nbr;
+		} else if (neighbor == router.first && router.second.cost > newCost) {
+			// this -> neighbor direct cost has been reduced than that of with intermediate nextHops
+			router.second.cost = newCost;
+			router.second.nextHop = neighbor;
 			entryChanged = true;
 		}
 	}
-	if (entryChanged == true)
+	if (entryChanged)
+		printTable();
+	entryChanged = false;
+}
+
+void updateTableForCostChange(const string &neighbor, int newCost, int oldCost) {
+	for (int i = 0; i < routers.size(); i++) {
+		if (neighbor == (routingTable[i].nextHop)) {
+			if (neighbor == (routingTable[i].destination)) {
+				routingTable[i].cost = newCost;
+			} else {
+				routingTable[i].cost = routingTable[i].cost - oldCost + newCost;
+			}
+			entryChanged = true;
+		} else if (neighbor == (routingTable[i].destination) && routingTable[i].cost > newCost) {
+			routingTable[i].cost = newCost;
+			routingTable[i].nextHop = neighbor;
+			entryChanged = true;
+		}
+	}
+	if (entryChanged)
 		printTable();
 	entryChanged = false;
 }
@@ -263,27 +326,6 @@ void sendTable() {
 	}
 }
 
-
-void forwardMessage(string dest, string length, string msg) {
-	string forwardPckt = "frwd#" + dest + "#" + length + "#" + msg;
-	string next;
-	for (int i = 0; i < routers.size(); i++) {
-		if (!dest.compare(routingTable[i].destination)) {
-			next = routingTable[i].nextHop;
-			break;
-		}
-	}
-	struct sockaddr_in router_address;
-
-	router_address.sin_family = AF_INET;
-	router_address.sin_port = htons(4747);
-	inet_pton(AF_INET, next.c_str(), &router_address.sin_addr);
-
-	int sent_bytes = sendto(sockfd, forwardPckt.c_str(), 1024, 0, (struct sockaddr *) &router_address,
-	                        sizeof(sockaddr_in));
-	cout << msg.c_str() << " packet forwarded to " << next.c_str() << " (printed by " << routerIpAddress.c_str()
-	     << ")\n";
-}
 
 // missing next hop to be handled
 void forwardMessageToNextHop(const string &dest, int length, const string &msg, const string &recv) {
@@ -322,8 +364,8 @@ void updateTableForLinkFailure(string nbr) {
 
 int getNumberString(const string &bytes, int ndigit = 2) {
 	unsigned char nums[2];
-	nums[0] = bytes[0];
-	nums[1] = bytes[1];
+	nums[0] = (unsigned char) bytes[0];
+	nums[1] = (unsigned char) bytes[1];
 
 	int x[bytes.length()];
 	x[0] = nums[0];
@@ -364,6 +406,27 @@ void receiveCommands() {
 
 			continue;
 		}
+		if (startsWith(recv, UPDATE_COST)) {
+			//codes for updating link cost
+			string router1 = getIPFromBytes(recv.substr(4, 4));
+			string router2 = getIPFromBytes(recv.substr(8, 4));
+			int newCost = getNumberString(recv.substr(12, 2));
+			cout << UPDATE_COST << "> " << router1 << " " << router2 << " " << newCost << endl;
+			string updatedNeighbor = router1 == socketLocal.getLocalIP() ? router1 : router2;
+			int oldCost = 0;
+//			print_container(cout,links," - ");
+			for (auto &link:links) {
+				if (link.neighbor == updatedNeighbor) {
+					oldCost = link.cost;
+					link.cost = newCost;
+					updatedNeighbor = router1;
+				}
+			}
+
+			//codes for update table according to link cost change
+			updateTable(updatedNeighbor, newCost, oldCost);
+			continue;
+		}
 	}
 }
 
@@ -379,11 +442,9 @@ void receive() {
 		if (bytes_received != -1) {
 			cout << "Received " << n << " : " << recv << endl;
 //			string head = recv.substr(0, 4);
-			if (startsWith(recv, "cls")) {
+			if (startsWith(recv, CLEAR_SCREEN)) {
 				system("clear");
-			} else if (startsWith(recv, "show")) {
-				printTable();
-			} else if (startsWith(recv, "clk")) {
+			} else if (startsWith(recv, DRIVER_CLOCK)) {
 				sendClock++;
 				sendTable();
 
@@ -408,57 +469,7 @@ void receive() {
 				string packet(pckt);
 				vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
 				updateRoutingTableForNeighbor(nip, ntbl);
-			} else if (startsWith(recv, SEND_MESSAGE)) {
-				//forward given message to destination router
-				unsigned char *ip1 = new unsigned char[5];
-				unsigned char *ip2 = new unsigned char[5];
-				string temp1 = recv.substr(4, 4);
-				string temp2 = recv.substr(8, 4);
-				for (int i = 0; i < 4; i++) {
-					ip1[i] = temp1[i];
-					ip2[i] = temp2[i];
-				}
-				string sip1 = makeIP(ip1);
-				string sip2 = makeIP(ip2);
-
-				unsigned char *c1 = new unsigned char[3];
-				string msgLength = recv.substr(12, 2);
-				int length = 0;
-				c1[0] = msgLength[0];
-				c1[1] = msgLength[1];
-				int x0, x1;
-				x0 = c1[0];
-				x1 = c1[1] * 256;
-				length = x1 + x0;
-				char msg[length + 1];
-				for (int i = 0; i < length; i++) {
-					msg[i] = buffer[14 + i];
-				}
-				msg[length] = NULL;
-				string message(msg);
-				//forwarding function
-				if (!sip2.compare(routerIpAddress)) {
-					cout << message << " packet reached destination (printed by " << sip2 << ")\n";
-				} else
-					forwardMessage(sip2, msgLength, message);
-			} else if (startsWith(recv, "frwd")) {
-				//forward until reach destination
-				vector<string> fmsgs;
-				char *msg = new char[recv.length() + 1];
-				strcpy(msg, recv.c_str());
-				char *token = strtok(msg, "#");
-				while (token != NULL) {
-					fmsgs.push_back(token);
-					token = strtok(NULL, "#");
-				}
-
-				//forwarding function
-				if (!fmsgs[1].compare(routerIpAddress)) {
-					cout << fmsgs[3] << " packet reached destination (printed by " << fmsgs[1] << ")\n";
-				} else
-					forwardMessage(fmsgs[1], fmsgs[2], fmsgs[3]);
-				fmsgs.clear();
-			} else if (startsWith(recv, "cost")) {
+			} else if (startsWith(recv, UPDATE_COST)) {
 				//codes for updating link cost
 				unsigned char *ip1 = new unsigned char[5];
 				unsigned char *ip2 = new unsigned char[5];
