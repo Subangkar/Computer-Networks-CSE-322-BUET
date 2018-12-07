@@ -146,10 +146,14 @@ void printTable() {
 	cout << "\t------\t" << routerIpAddress << "\t------\t" << endl;
 	cout << "Destination  \tNext Hop \tCost" << endl;
 	cout << "-------------\t-------------\t-----" << endl;
-	for (auto &routerEntry : routingTable) {
-		if (routerEntry.destination == socketLocal.getLocalIP()) continue;
-//		cout << routerEntry.destination << "\t" << routerEntry.nextHop << "\t" << routerEntry.cost << endl;
-		cout << routerEntry << endl;
+//	for (auto &routerEntry : routingTable) {
+//		if (routerEntry.destination == socketLocal.getLocalIP()) continue;
+////		cout << routerEntry.destination << "\t" << routerEntry.nextHop << "\t" << routerEntry.cost << endl;
+//		cout << routerEntry << endl;
+//	}
+	for (const auto &[dest, entry] : routingMap) {
+		if (dest == socketLocal.getLocalIP()) continue;
+		cout << entry << endl;
 	}
 	cout << "--------------------------------------" << endl;
 }
@@ -253,39 +257,28 @@ string makeIP(const unsigned char raw[]) {
 }
 
 void updateTable(const string &neighbor, int newCost, int oldCost) {
-//	for (int i = 0; i < routers.size(); i++) {
-//		if (neighbor == (routingTable[i].nextHop)) {
-//			if (neighbor == (routingTable[i].destination)) {
-//				routingTable[i].cost = newCost;
-//			} else {
-//				routingTable[i].cost = routingTable[i].cost - oldCost + newCost;
-//			}
-//			entryChanged = true;
-//		} else if (neighbor == (routingTable[i].destination) && routingTable[i].cost > newCost) {
-//			routingTable[i].cost = newCost;
-//			routingTable[i].nextHop = neighbor;
-//			entryChanged = true;
-//		}
-//	}
-	for (auto &router:routingMap) {
-		if (neighbor == router.second.nextHop) { // neighbor is some of nextHop's is to be updated
-			if (neighbor == router.first) // dest itself nexthop
+	for (auto &[destination, destEntry]:routingMap) {
+		if (neighbor == destEntry.nextHop) { // neighbor is some of nextHop's is to be updated
+			if (neighbor == destination) // dest itself nexthop
 			{
-				router.second.cost = newCost; // set the new cost as it will go to neighbor
+				destEntry.cost = newCost; // set the new cost as it will go to neighbor
+//				cout << "Updated " << routingMap[router.first] << endl;
 			} else //nextHop is not dest
 			{
-				router.second.cost += (newCost - oldCost); // add/sub cost as it will pass thru neighbor
+				destEntry.cost += (newCost - oldCost); // add/sub cost as it will pass thru neighbor
 			}
 			entryChanged = true;
-		} else if (neighbor == router.first && router.second.cost > newCost) {
+		} else if (neighbor == destination && destEntry.cost > newCost) {
 			// this -> neighbor direct cost has been reduced than that of with intermediate nextHops
-			router.second.cost = newCost;
-			router.second.nextHop = neighbor;
+			destEntry.cost = newCost;
+			destEntry.nextHop = neighbor;
 			entryChanged = true;
 		}
 	}
-	if (entryChanged)
+	if (entryChanged) {
+		cout << "Updated Routing Table" << endl;
 		printTable();
+	}
 	entryChanged = false;
 }
 
@@ -412,14 +405,13 @@ void receiveCommands() {
 			string router2 = getIPFromBytes(recv.substr(8, 4));
 			int newCost = getNumberString(recv.substr(12, 2));
 			cout << UPDATE_COST << "> " << router1 << " " << router2 << " " << newCost << endl;
-			string updatedNeighbor = router1 == socketLocal.getLocalIP() ? router1 : router2;
+			string updatedNeighbor = router1 != socketLocal.getLocalIP() ? router1 : router2;
 			int oldCost = 0;
 //			print_container(cout,links," - ");
 			for (auto &link:links) {
 				if (link.neighbor == updatedNeighbor) {
 					oldCost = link.cost;
 					link.cost = newCost;
-					updatedNeighbor = router1;
 				}
 			}
 
@@ -440,7 +432,7 @@ void receive() {
 		string recv(buffer, static_cast<unsigned long>(socketLocal.dataLength()));
 		++n;
 		if (bytes_received != -1) {
-			cout << "Received " << n << " : " << recv << endl;
+//			cout << "Received " << n << " : " << recv << endl;
 //			string head = recv.substr(0, 4);
 			if (startsWith(recv, CLEAR_SCREEN)) {
 				system("clear");
