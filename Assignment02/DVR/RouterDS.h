@@ -23,7 +23,7 @@
 #define CLEAR_SCREEN "clscr"
 
 
-#define NONE "\t-"
+#define NONE "-\t"
 
 typedef string routerip_t;
 typedef string packet_t;
@@ -77,10 +77,11 @@ struct Link {
 	}
 
 	bool operator==(const Link &rhs) const {
-		return neighbor == rhs.neighbor &&
-		       cost == rhs.cost &&
-		       recvClock == rhs.recvClock &&
-		       status == rhs.status;
+//		return neighbor == rhs.neighbor &&
+//		       cost == rhs.cost &&
+//		       recvClock == rhs.recvClock &&
+//		       status == rhs.status;
+		return neighbor == rhs.neighbor;
 	}
 
 	bool operator!=(const Link &rhs) const {

@@ -7,7 +7,6 @@
 
 #include <arpa/inet.h>
 #include <sys/socket.h>
-
 #include <string>
 
 #define BUFFER_SIZE_SOCKET 1024
