@@ -224,7 +224,7 @@ void updateTable(const string &neighbor, int newCost, int oldCost) {
 
 void sendTable() {
 	string tablePacket = makeTableIntoPacket();
-	cout << tablePacket << " to be sent from " << socketLocal.getLocalIP() << endl;
+//	cout << tablePacket << " to be sent from " << socketLocal.getLocalIP() << endl;
 	for (const auto &neighbor:neighbors) {
 		sockaddr_in router_address = getInetSocketAddress(neighbor.data(), 4747);
 		ssize_t sent_bytes = socketLocal.writeString(router_address, tablePacket);
@@ -239,9 +239,10 @@ void forwardMessageToNextHop(const string &dest, const string &msg, const string
 		cout << msg << " packet dropped @ " << socketLocal.getLocalIP() << endl;
 		return;
 	}
-
+	string frwdMsg = FORWARD_MESSAGE + " " + dest + " " + to_string(msg.length()) + " " + msg;
+	cout << "Forwarding>" << frwdMsg << endl;
 	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
-	socketLocal.writeString(router_address, recv);
+	socketLocal.writeString(router_address, frwdMsg);
 	cout << "{" << msg << "}" << " packet forwarded to " << nextHop << " (printed by " << socketLocal.getLocalIP()
 	     << ")\n";
 }
@@ -291,7 +292,7 @@ void receiveCommands() {
 	while (true) {
 		string recv = socketLocal.readString(remote_address);
 		if (recv.empty()) continue;
-		cout << recv << "::" << endl;
+//		cout << recv << "::" << endl;
 		if (startsWith(recv, SHOW_ROUTING_TABLE)) {
 			printTable();
 			continue;
@@ -303,6 +304,23 @@ void receiveCommands() {
 			int msgLength = getNumberString(recv.substr(12, 2));
 			string msg = recv.substr(14, static_cast<unsigned long>(msgLength));
 			cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
+			if (dst == socketLocal.getLocalIP()) {
+				cout << msg << " packet reached destination (printed by " << dst << ")\n";
+			} else
+				forwardMessageToNextHop(dst, msg, recv);
+
+			continue;
+		}
+		if (startsWith(recv, FORWARD_MESSAGE)) {
+			//forward given message to destination router
+			int f1, f2, f3, f4;
+			int msgLength = 0;
+			sscanf(recv.data(), "%*s %d.%d.%d.%d %d", &f1, &f2, &f3, &f4, &msgLength);
+			string dst = to_string(f1) + "." + to_string(f2) + "." + to_string(f3) + "." +
+			             to_string(f4);
+			string msg = recv.substr((FORWARD_MESSAGE + " " + dst + " " + to_string(msgLength) + " ").length(),
+			                         static_cast<unsigned long>(msgLength));
+			cout << FORWARD_MESSAGE << "> " << dst << " " << msgLength << " " << msg << endl;
 			if (dst == socketLocal.getLocalIP()) {
 				cout << msg << " packet reached destination (printed by " << dst << ")\n";
 			} else
@@ -346,7 +364,7 @@ void receiveCommands() {
 		}
 		if (startsWith(recv, SEND_ROUTING_TABLE)) {
 			string srcIP = recv.substr(4, 12);
-			cout << SEND_ROUTING_TABLE << "> " << srcIP << endl;
+//			cout << SEND_ROUTING_TABLE << "> " << srcIP << endl;
 			int index = getNeighbor(srcIP);
 			if (links[index].status == DOWN) {
 				cout << "----- link UP with : " << links[index].neighbor << " -----" << endl;

@@ -17,6 +17,7 @@
 #define SHOW_ROUTING_TABLE "show"
 #define SEND_ROUTING_TABLE "ntbl"
 #define SEND_MESSAGE "send"
+#define FORWARD_MESSAGE string("frwd")
 #define UPDATE_COST "cost"
 #define DRIVER_CLOCK "clk"
 #define CLEAR_SCREEN "clscr"
