@@ -248,22 +248,37 @@ void forwardMessageToNextHop(const string &dest, const string &msg, const string
 }
 
 
-void updateTableForLinkFailure(const string &nbr) {
-	for (int i = 0; i < routingTable.size(); i++) {
-		if (!nbr.compare(routingTable[i].nextHop)) {
-			if (!nbr.compare(routingTable[i].destination) || !isNeighbor(routingTable[i].destination)) {
-				routingTable[i].nextHop = "\t-";
-				routingTable[i].cost = INF;
+void updateTableForLinkFailure(const string &neighbor) {
+//	for (int i = 0; i < routingTable.size(); i++) {
+//		if (!neighbor.compare(routingTable[i].nextHop)) {
+//			if (!neighbor.compare(routingTable[i].destination) || !isNeighbor(routingTable[i].destination)) {
+//				routingTable[i].nextHop = NONE;
+//				routingTable[i].cost = INF;
+//				entryChanged = true;
+//			} else if (isNeighbor(routingTable[i].destination)) {
+//				routingTable[i].nextHop = routingTable[i].destination;
+//				routingTable[i].cost = links[getNeighbor(routingTable[i].destination)].cost;
+//				entryChanged = true;
+//			}
+//		}
+//	}
+	for (auto &[destination, destEntry]:routingMap) {
+		// only update if link failed with any hop
+		if (neighbor == destEntry.nextHop) {
+			if (neighbor == destination || !isNeighbor(destination)) {
+				// neighbor itself via that hop or destinations thru this hop but not neighbor of this will be disconnected
+				destEntry.nextHop = NONE;
+				destEntry.cost = INF;
 				entryChanged = true;
-			} else if (isNeighbor(routingTable[i].destination)) {
-				routingTable[i].nextHop = routingTable[i].destination;
-				routingTable[i].cost = links[getNeighbor(routingTable[i].destination)].cost;
+			} else if (isNeighbor(destination)) {
+				// destinations thru this hop and not neighbor of this will be connected directly instead of hop
+				destEntry.nextHop = destination;
+				destEntry.cost = links[getNeighbor(destination)].cost;
 				entryChanged = true;
 			}
 		}
 	}
-	if (entryChanged)
-		printTable();
+	if (entryChanged)printTable();
 	entryChanged = false;
 }
 
@@ -286,9 +301,92 @@ string getIPFromBytes(const string &bytes) {
 	return makeIP(ip);
 }
 
+
+void sendMessageCMD(const string &recv) {
+	//forward given message to destination router
+	string src = getIPFromBytes(recv.substr(4, 4));
+	string dst = getIPFromBytes(recv.substr(8, 4));
+	int msgLength = getNumberString(recv.substr(12, 2));
+	string msg = recv.substr(14, static_cast<unsigned long>(msgLength));
+	cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
+	if (dst == socketLocal.getLocalIP()) {
+		cout << msg << " packet reached destination (printed by " << dst << ")\n";
+	} else
+		forwardMessageToNextHop(dst, msg, recv);
+
+}
+
+void costUpdateCMD(const string &recv) {
+	//codes for updating link cost
+	string router1 = getIPFromBytes(recv.substr(4, 4));
+	string router2 = getIPFromBytes(recv.substr(8, 4));
+	int newCost = getNumberString(recv.substr(12, 2));
+	cout << UPDATE_COST << "> " << router1 << " " << router2 << " " << newCost << endl;
+	string updatedNeighbor = router1 != socketLocal.getLocalIP() ? router1 : router2;
+	int oldCost = 0;
+//			print_container(cout,links," - ");
+	for (auto &link:links) {
+		if (link.neighbor == updatedNeighbor) {
+			oldCost = link.cost;
+			link.cost = newCost;
+		}
+	}
+
+	//codes for update table according to link cost change
+	updateTable(updatedNeighbor, newCost, oldCost);
+}
+
+void forwardMessageCMD(const string &recv) {
+	//forward given message to destination router
+	int f1, f2, f3, f4;
+	int msgLength = 0;
+	sscanf(recv.data(), "%*s %d.%d.%d.%d %d", &f1, &f2, &f3, &f4, &msgLength);
+	string dst = to_string(f1) + "." + to_string(f2) + "." + to_string(f3) + "." +
+	             to_string(f4);
+	string msg = recv.substr((FORWARD_MESSAGE + " " + dst + " " + to_string(msgLength) + " ").length(),
+	                         static_cast<unsigned long>(msgLength));
+	cout << FORWARD_MESSAGE << "> " << dst << " " << msgLength << " " << msg << endl;
+	if (dst == socketLocal.getLocalIP()) {
+		cout << msg << " packet reached destination (printed by " << dst << ")\n";
+	} else
+		forwardMessageToNextHop(dst, msg, recv);
+}
+
+void clockCMD(const string &recv) {
+	sendClock++;
+	sendTable();
+
+	for (auto &link : links) {
+		if (sendClock - link.recvClock > 3 && link.status == UP) {
+			cout << "----- link down with : " << link.neighbor << " -----" << endl;
+			link.status = DOWN;
+			updateTableForLinkFailure(link.neighbor);
+		}
+	}
+}
+
+void sendTableCMD(const string &recv) {
+	string srcIP = recv.substr(4, 12);
+//			cout << SEND_ROUTING_TABLE << "> " << srcIP << endl;
+	int index = getNeighbor(srcIP);
+	if (links[index].status == DOWN) {
+		cout << "----- link UP with : " << links[index].neighbor << " -----" << endl;
+	}
+	links[index].status = UP;
+	links[index].recvClock = sendClock;
+	//cout<<"receiver : "<<routerIpAddress<<" sender : "<<nip<<" recv clk : "<<links[index].recvClock<<endl;
+//			int length = recv.length() - 15;
+//			char pckt[length];
+//			for (int i = 0; i < length; i++) {
+//				pckt[i] = buffer[16 + i];
+//			}
+//			string packet(pckt);
+//			vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
+//			updateRoutingTableForNeighbor(srcIP, ntbl);
+}
+
 void receiveCommands() {
 	sockaddr_in remote_address{};
-	int n = 0;
 	while (true) {
 		string recv = socketLocal.readString(remote_address);
 		if (recv.empty()) continue;
@@ -298,88 +396,23 @@ void receiveCommands() {
 			continue;
 		}
 		if (startsWith(recv, SEND_MESSAGE)) {
-			//forward given message to destination router
-			string src = getIPFromBytes(recv.substr(4, 4));
-			string dst = getIPFromBytes(recv.substr(8, 4));
-			int msgLength = getNumberString(recv.substr(12, 2));
-			string msg = recv.substr(14, static_cast<unsigned long>(msgLength));
-			cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
-			if (dst == socketLocal.getLocalIP()) {
-				cout << msg << " packet reached destination (printed by " << dst << ")\n";
-			} else
-				forwardMessageToNextHop(dst, msg, recv);
-
+			sendMessageCMD(recv);
 			continue;
 		}
 		if (startsWith(recv, FORWARD_MESSAGE)) {
-			//forward given message to destination router
-			int f1, f2, f3, f4;
-			int msgLength = 0;
-			sscanf(recv.data(), "%*s %d.%d.%d.%d %d", &f1, &f2, &f3, &f4, &msgLength);
-			string dst = to_string(f1) + "." + to_string(f2) + "." + to_string(f3) + "." +
-			             to_string(f4);
-			string msg = recv.substr((FORWARD_MESSAGE + " " + dst + " " + to_string(msgLength) + " ").length(),
-			                         static_cast<unsigned long>(msgLength));
-			cout << FORWARD_MESSAGE << "> " << dst << " " << msgLength << " " << msg << endl;
-			if (dst == socketLocal.getLocalIP()) {
-				cout << msg << " packet reached destination (printed by " << dst << ")\n";
-			} else
-				forwardMessageToNextHop(dst, msg, recv);
-
+			forwardMessageCMD(recv);
 			continue;
 		}
 		if (startsWith(recv, UPDATE_COST)) {
-			//codes for updating link cost
-			string router1 = getIPFromBytes(recv.substr(4, 4));
-			string router2 = getIPFromBytes(recv.substr(8, 4));
-			int newCost = getNumberString(recv.substr(12, 2));
-			cout << UPDATE_COST << "> " << router1 << " " << router2 << " " << newCost << endl;
-			string updatedNeighbor = router1 != socketLocal.getLocalIP() ? router1 : router2;
-			int oldCost = 0;
-//			print_container(cout,links," - ");
-			for (auto &link:links) {
-				if (link.neighbor == updatedNeighbor) {
-					oldCost = link.cost;
-					link.cost = newCost;
-				}
-			}
-
-			//codes for update table according to link cost change
-			updateTable(updatedNeighbor, newCost, oldCost);
+			costUpdateCMD(recv);
 			continue;
 		}
 		if (startsWith(recv, DRIVER_CLOCK)) {
-			sendClock++;
-			sendTable();
-//			cout << "Ok" << endl;
-
-			for (auto &link : links) {
-				if (sendClock - link.recvClock > 3 && link.status == UP) {
-					cout << "----- link down with : " << link.neighbor << " -----" << endl;
-					link.status = DOWN;
-					updateTableForLinkFailure(link.neighbor);
-				}
-			}
+			clockCMD(recv);
 			continue;
 		}
 		if (startsWith(recv, SEND_ROUTING_TABLE)) {
-			string srcIP = recv.substr(4, 12);
-//			cout << SEND_ROUTING_TABLE << "> " << srcIP << endl;
-			int index = getNeighbor(srcIP);
-			if (links[index].status == DOWN) {
-				cout << "----- link UP with : " << links[index].neighbor << " -----" << endl;
-			}
-			links[index].status = UP;
-			links[index].recvClock = sendClock;
-			//cout<<"receiver : "<<routerIpAddress<<" sender : "<<nip<<" recv clk : "<<links[index].recvClock<<endl;
-//			int length = recv.length() - 15;
-//			char pckt[length];
-//			for (int i = 0; i < length; i++) {
-//				pckt[i] = buffer[16 + i];
-//			}
-//			string packet(pckt);
-//			vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
-//			updateRoutingTableForNeighbor(srcIP, ntbl);
+			sendTableCMD(recv);
 			continue;
 		}
 	}
