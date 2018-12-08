@@ -6,6 +6,7 @@
 #define DVR_UTILS_H
 
 //#include <bits/stdc++.h>
+#include <cstdlib>
 #include <string>
 #include <map>
 #include <set>
@@ -23,7 +24,6 @@ using namespace std;
 #define IS_IN_LIST(item, list) (find(list.begin(), list.end(), item) != list.end())
 
 
-
 bool startsWith(string str, string start) {
 	transform(str.begin(), str.end(), str.begin(), ::tolower);
 	transform(start.begin(), start.end(), start.begin(), ::tolower);
@@ -36,7 +36,6 @@ void print_container(std::ostream &os, const T &container, const std::string &de
 	          std::end(container),
 	          std::ostream_iterator<typename T::value_type>(os, delimiter.c_str()));
 }
-
 
 
 #endif //DVR_UTILS_H

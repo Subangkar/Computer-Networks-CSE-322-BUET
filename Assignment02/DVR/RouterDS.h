@@ -23,7 +23,7 @@
 #define CLEAR_SCREEN "clscr"
 
 
-#define NONE "-\t"
+#define NONE "-\t\t"
 
 typedef string routerip_t;
 typedef string packet_t;

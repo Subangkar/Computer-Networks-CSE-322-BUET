@@ -1,16 +1,21 @@
+//
+// Created by subangkar on 12/7/18.
+//
+
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 
 #include "RouterDS.h"
 
-#define MAX_INPUT_SIZE 10
+#define MAX_INPUT_SIZE 15
 
 
 Socket socketLocal;
 
 
-//vector<routerip_t> neighbors; // neighbors list
+vector<routerip_t> neighbors; // neighbors list
 set<routerip_t> routers;// all routers in network
 routingtable_t routingMap; // contains next hop,cost and dest
 vector<Link> links;// all links from this
@@ -50,10 +55,9 @@ void printRoutingMap(const routingtable_t &routingMap) {
 }
 
 void printRoutingTable() {
-	cout << endl << endl << endl;
-	cout << "Printing Routing Table" << endl;
+	cout << endl << "Routing Table" << endl;
 	cout << "\t------\t" << socketLocal.getLocalIP() << "\t------\t" << endl;
-	cout << "Destination  \tNext Hop \tCost" << endl;
+	cout << "Destination  \tNext Hop     \tCost" << endl;
 	cout << "-------------\t-------------\t-----" << endl;
 	printRoutingMap(routingMap);
 	cout << "--------------------------------------" << endl;
@@ -81,7 +85,7 @@ bool isNeighbor(const routerip_t &routerip) {
 	return IS_IN_LIST(Link(routerip, 0, 0, DOWN), links);
 }
 
-void sendTable() {
+void sendRoutingTablePacket() {
 	auto tablePacket = makeTableIntoPacket();
 //	for (const auto &neighbor:neighbors) {
 //		sockaddr_in router_address = getInetSocketAddress(neighbor.data(), 4747);
@@ -165,7 +169,7 @@ void updateTableForLinkFailure(const routerip_t &neighbor) {
 void forwardMessageToNextHop(const routerip_t &dest, const string &msg, const string &recv) {
 	string nextHop = routingMap[dest].nextHop;
 	if (nextHop == NONE) {
-		cout << msg << " packet dropped @ " << socketLocal.getLocalIP() << endl;
+		cout << "{" << msg << "}" << " packet dropped @ " << socketLocal.getLocalIP() << endl;
 		return;
 	}
 	string frwdMsg = FORWARD_MESSAGE + " " + dest + " " + to_string(msg.length()) + " " + msg;
@@ -173,11 +177,11 @@ void forwardMessageToNextHop(const routerip_t &dest, const string &msg, const st
 	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
 	socketLocal.writeString(router_address, frwdMsg);
 	cout << "{" << msg << "}" << " packet forwarded to " << nextHop << " (printed by " << socketLocal.getLocalIP()
-	     << ")\n";
+	     << ")" << endl;
 }
 
 
-int getNumberString(const string &bytes, int ndigit = 2) {
+int getInteger(const string &bytes, int ndigit = 2) {
 	unsigned char nums[2];
 	nums[0] = (unsigned char) bytes[0];
 	nums[1] = (unsigned char) bytes[1];
@@ -203,24 +207,22 @@ routerip_t convertToIP(const string &bytes) {
 
 
 void sendMessageCMD(const packet_t &recv) {
-	//forward given message to destination router
 	string src = convertToIP(recv.substr(4, 4));
 	string dst = convertToIP(recv.substr(8, 4));
-	int msgLength = getNumberString(recv.substr(12, 2));
+	int msgLength = getInteger(recv.substr(12, 2));
 	string msg = recv.substr(14, static_cast<unsigned long>(msgLength));
 	cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
 	if (dst == socketLocal.getLocalIP()) {
-		cout << msg << " packet reached destination (printed by " << dst << ")\n";
+		cout << "{" << msg << "}" << " packet reached destination (printed by " << dst << ")" << endl;;
 	} else
 		forwardMessageToNextHop(dst, msg, recv);
 
 }
 
 void costUpdateCMD(const packet_t &recv) {
-	//codes for updating link cost
 	string router1 = convertToIP(recv.substr(4, 4));
 	string router2 = convertToIP(recv.substr(8, 4));
-	int newCost = getNumberString(recv.substr(12, 2));
+	int newCost = getInteger(recv.substr(12, 2));
 	cout << UPDATE_COST << "> " << router1 << " " << router2 << " " << newCost << endl;
 	string updatedNeighbor = router1 != socketLocal.getLocalIP() ? router1 : router2;
 	int oldCost = 0;
@@ -237,7 +239,6 @@ void costUpdateCMD(const packet_t &recv) {
 }
 
 void forwardMessageCMD(const packet_t &recv) {
-	//forward given message to destination router
 	int f1, f2, f3, f4;
 	int msgLength = 0;
 	sscanf(recv.data(), "%*s %d.%d.%d.%d %d", &f1, &f2, &f3, &f4, &msgLength);
@@ -246,14 +247,14 @@ void forwardMessageCMD(const packet_t &recv) {
 	                         static_cast<unsigned long>(msgLength));
 	cout << FORWARD_MESSAGE << "> " << dst << " " << msgLength << " " << msg << endl;
 	if (dst == socketLocal.getLocalIP()) {
-		cout << msg << " packet reached destination (printed by " << dst << ")\n";
+		cout << "{" << msg << "}" << " packet reached destination (printed by " << dst << ")" << endl;;
 	} else
 		forwardMessageToNextHop(dst, msg, recv);
 }
 
 void clockCMD(const packet_t &recv) {
 	sendClock++;
-	sendTable();
+	sendRoutingTablePacket();
 
 	for (auto &link : links) {
 		if (sendClock - link.recvClock > 3 && link.status == UP) {
@@ -284,8 +285,8 @@ void receiveTableCMD(const packet_t &recv) {
 //	print_container(cout,extractTableFromPacket(recv.substr(16)),"\n");
 //	printRoutingMap(extractTable(recv.substr(recv.find('\n') + 1)));
 //	cout << "--------------------------------------" << endl;
-	routingtable_t ntbl = extractTable(recv.substr(recv.find('\n') + 1));
-	updateRoutingTableForNeighbor(neighbor, ntbl);
+	routingtable_t neighborRoutingTable = extractTable(recv.substr(recv.find('\n') + 1));
+	updateRoutingTableForNeighbor(neighbor, neighborRoutingTable);
 }
 
 void receiveCommands() {
@@ -321,13 +322,14 @@ void receiveCommands() {
 	}
 }
 
-void initRouter(const routerip_t &routerIp, const string &topologyFile) {
-	ifstream topo(topologyFile.c_str());
+void initRouter(const routerip_t &routerIp, const string &topologyFileName) {
+	ifstream topologyFile(topologyFileName.c_str());
 	string srcRouter, destRouter;
 	int cost;
 	size_t nLines = 0;
-	while (!topo.eof()) {
-		topo >> srcRouter >> destRouter >> cost;
+	while (!topologyFile.eof() && nLines < MAX_INPUT_SIZE) {
+		topologyFile >> srcRouter >> destRouter >> cost;
+		++nLines;
 
 		routers.insert(srcRouter);
 		routers.insert(destRouter);
@@ -344,7 +346,7 @@ void initRouter(const routerip_t &routerIp, const string &topologyFile) {
 		}
 	}
 
-	topo.close();
+	topologyFile.close();
 
 //	print_container(cout, links, " - ");
 
@@ -369,7 +371,7 @@ void initRouter(const routerip_t &routerIp, const string &topologyFile) {
 int main(int argc, char *argv[]) {
 
 	if (argc != 3) {
-		cout << "router : " << argv[1] << "<ip address>\n";
+		cout << "router : " << argv[1] << "<ip address>" << endl;;
 		exit(1);
 	}
 
@@ -378,8 +380,8 @@ int main(int argc, char *argv[]) {
 	initRouter(argv[1], argv[2]);
 
 
-	if (socketLocal.isBound()) cout << "Connection successful!!" << endl;
-	else cout << "Connection failed!!!" << endl, exit(EXIT_FAILURE);
+	if (socketLocal.isBound()) cout << "Connection Successful !!" << endl;
+	else cout << "Connection failed !!!" << endl, exit(EXIT_FAILURE);
 
 	cout << "--------------------------------------" << endl;
 
