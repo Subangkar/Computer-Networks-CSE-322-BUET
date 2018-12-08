@@ -1,8 +1,8 @@
 //
 // Created by subangkar on 12/7/18.
 //
-
-
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-err34-c"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
@@ -20,7 +20,7 @@ set<routerip_t> routers;// all routers in network
 routingtable_t routingMap; // contains next hop,cost and dest
 vector<Link> links;// all links from this
 
-int sendClock = 0;
+int currentClock = 0;
 bool tableUpdated = false;
 
 routingtable_t extractTable(const packet_t &packet) {
@@ -82,10 +82,15 @@ Link &getLink(const routerip_t &routerip) {
 
 bool isNeighbor(const routerip_t &routerip) {
 //	return IS_IN_LIST(routerip, neighbors);
-	return IS_IN_LIST(Link(routerip, 0, 0, DOWN), links);
+//	return IS_IN_LIST(Link(routerip, 0, 0, DOWN), links);
+	for (auto &link:links) {
+		if (routerip == link.neighbor)
+			return true;
+	}
+	return false;
 }
 
-void sendRoutingTablePacket() {
+void floodRoutingTablePacket() {
 	auto tablePacket = makeTableIntoPacket();
 //	for (const auto &neighbor:neighbors) {
 //		sockaddr_in router_address = getInetSocketAddress(neighbor.data(), 4747);
@@ -128,7 +133,11 @@ void updateRoutingTableForNeighbor(const routerip_t &neighbor, routingtable_t &n
 				if (neighbor == destEntry.nextHop && destEntry.cost != cost_via_neighbor) {
 					// cost changed @ nextHop & neighbor is the way to reach into destination
 					destEntry.cost = cost_via_neighbor;
-					if (cost_via_neighbor == INF) destEntry.nextHop = NONE;
+					if (cost_via_neighbor == INF || socketLocal.getLocalIP() == neighborRouter[destination].nextHop ) {
+						// 2nd condtn prevents circular updates for initial deactivated links
+						destEntry.nextHop = NONE;
+						destEntry.cost = INF;
+					}
 					tableUpdated = true;
 					break;
 				} else if (cost_via_neighbor < destEntry.cost &&
@@ -145,23 +154,24 @@ void updateRoutingTableForNeighbor(const routerip_t &neighbor, routingtable_t &n
 	printUpdate();
 }
 
-void updateTableForLinkFailure(const routerip_t &neighbor) {
+void updateTableForLinkFailure(const routerip_t &neighborDowned) {
 	for (auto &[destination, destEntry]:routingMap) {
 		// only update if link failed with any hop
-		if (neighbor == destEntry.nextHop) {
-			if (neighbor == destination || !isNeighbor(destination)) {
-				// neighbor itself via that hop or destinations thru this hop but not neighbor of this will be disconnected
-				destEntry.nextHop = NONE;
-				destEntry.cost = INF;
-				tableUpdated = true;
-			} else if (isNeighbor(destination)) {
-				// destinations thru this hop and not neighbor of this will be connected directly instead of hop
+		if (neighborDowned == destEntry.nextHop) {
+			// neighborDowned itself via that hop or destinations thru this hop but not neighborDowned of this will be disconnected
+			destEntry.nextHop = NONE;
+			destEntry.cost = INF;
+			// no connection to destination thru neighborDowned hop
+			if (destination != neighborDowned && isNeighbor(destination) && getLink(destination).status == UP) {
+				// destinations thru this hop and not neighborDowned of this will be connected directly instead of hop
+				// but if destination is neighbor and can be connected then connect directly
 				destEntry.nextHop = destination;
 				destEntry.cost = getLink(destination).cost;
-				tableUpdated = true;
 			}
+			tableUpdated = true;
 		}
 	}
+
 	printUpdate();
 }
 
@@ -207,8 +217,8 @@ routerip_t convertToIP(const string &bytes) {
 
 
 void sendMessageCMD(const packet_t &recv) {
-	string src = convertToIP(recv.substr(4, 4));
-	string dst = convertToIP(recv.substr(8, 4));
+	routerip_t src = convertToIP(recv.substr(4, 4));
+	routerip_t dst = convertToIP(recv.substr(8, 4));
 	int msgLength = getInteger(recv.substr(12, 2));
 	string msg = recv.substr(14, static_cast<unsigned long>(msgLength));
 	cout << SEND_MESSAGE << "> " << src << " " << dst << " " << msgLength << " " << msg << endl;
@@ -220,22 +230,17 @@ void sendMessageCMD(const packet_t &recv) {
 }
 
 void costUpdateCMD(const packet_t &recv) {
-	string router1 = convertToIP(recv.substr(4, 4));
-	string router2 = convertToIP(recv.substr(8, 4));
+	routerip_t router1 = convertToIP(recv.substr(4, 4));
+	routerip_t router2 = convertToIP(recv.substr(8, 4));
 	int newCost = getInteger(recv.substr(12, 2));
 	cout << UPDATE_COST << "> " << router1 << " " << router2 << " " << newCost << endl;
-	string updatedNeighbor = router1 != socketLocal.getLocalIP() ? router1 : router2;
-	int oldCost = 0;
-//			print_container(cout,links," - ");
-	for (auto &link:links) {
-		if (link.neighbor == updatedNeighbor) {
-			oldCost = link.cost;
-			link.cost = newCost;
-		}
-	}
+	routerip_t updatedNeighbor = router1 != socketLocal.getLocalIP() ? router1 : router2;
 
-	//codes for update table according to link cost change
-	updateTableWithNewCost(updatedNeighbor, newCost, oldCost);
+	Link &link = getLink(updatedNeighbor);
+	int oldCost = link.cost;
+	link.cost = newCost;
+	if (link.status == UP)
+		updateTableWithNewCost(updatedNeighbor, newCost, oldCost);
 }
 
 void forwardMessageCMD(const packet_t &recv) {
@@ -253,14 +258,18 @@ void forwardMessageCMD(const packet_t &recv) {
 }
 
 void clockCMD(const packet_t &recv) {
-	sendClock++;
-	sendRoutingTablePacket();
+	currentClock++;
+	floodRoutingTablePacket();
 
 	for (auto &link : links) {
-		if (sendClock - link.recvClock > 3 && link.status == UP) {
+		if (currentClock - link.recvClock > 3 && link.status == UP) {
 			cout << "----- link down with : " << link.neighbor << " -----" << endl;
 			link.status = DOWN;
 			updateTableForLinkFailure(link.neighbor);
+			if (routingMap[link.neighbor].nextHop != NONE || routingMap[link.neighbor].cost != INF) {
+				cout << ">> " << link.neighbor << " is still connected via " << routingMap[link.neighbor].nextHop
+				     << " with cost " << routingMap[link.neighbor].cost << endl;
+			}
 		}
 	}
 }
@@ -279,7 +288,7 @@ void receiveTableCMD(const packet_t &recv) {
 		cout << "----- link UP with : " << link.neighbor << " -----" << endl;
 	}
 	link.status = UP;
-	link.recvClock = sendClock;
+	link.recvClock = currentClock;
 //	cout << "--------------------------------------" << endl;
 //	cout << RECV_ROUTING_TABLE << "> from: " << neighbor << endl;
 //	print_container(cout,extractTableFromPacket(recv.substr(16)),"\n");
@@ -390,4 +399,5 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
+#pragma clang diagnostic pop
 #pragma clang diagnostic pop
