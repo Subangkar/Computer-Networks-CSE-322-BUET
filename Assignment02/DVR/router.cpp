@@ -126,14 +126,24 @@ void updateTableWithNewCost(const routerip_t &neighbor, int newCost, int oldCost
 
 void updateRoutingTableForNeighbor(const routerip_t &neighbor, routingtable_t &neighborRouter) {
 	for (auto &[destination, destEntry]:routingMap) {
+		if (destination == socketLocal.getLocalIP()) continue;
 		for (const auto &link:links) {
 			if (neighbor == link.neighbor) {
+
+				if(neighbor == routingMap[destination].nextHop && neighborRouter[destination].nextHop == socketLocal.getLocalIP()){
+					// circular
+					destEntry.nextHop = NONE;
+					destEntry.cost = INF;
+					break;
+				}
+
 				cost_t cost_via_neighbor =
 						neighborRouter[destination].cost == INF ? INF : (link.cost + neighborRouter[destination].cost);
 				if (neighbor == destEntry.nextHop && destEntry.cost != cost_via_neighbor) {
 					// cost changed @ nextHop & neighbor is the way to reach into destination
 					destEntry.cost = cost_via_neighbor;
-					if (cost_via_neighbor == INF || socketLocal.getLocalIP() == neighborRouter[destination].nextHop ) {
+					// || socketLocal.getLocalIP() == neighborRouter[destination].nextHop
+					if (cost_via_neighbor == INF) {
 						// 2nd condtn prevents circular updates for initial deactivated links
 						destEntry.nextHop = NONE;
 						destEntry.cost = INF;
