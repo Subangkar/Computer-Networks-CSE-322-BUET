@@ -5,23 +5,21 @@
 #include "RouterDS.h"
 
 
-int sockfd;
 Socket socketLocal;
-int bytes_received;
 string routerIpAddress;
 
 
-vector<string> neighbors; // neighbors list
-set<string> routers;// all routers in network
+vector<routerip_t> neighbors; // neighbors list
+set<routerip_t> routers;// all routers in network
 vector<RoutingTableEntry> routingTable;
-map<string, RoutingTableEntry> routingMap; // contains next hop,cost and dest
+routingtable_t routingMap; // contains next hop,cost and dest
 vector<Link> links;// all links from this
 
 int sendClock = 0;
-bool entryChanged = false;
+bool tableUpdated = false;
 
-map<string, RoutingTableEntry> extractTable(const string &packet) {
-	map<string, RoutingTableEntry> table;
+routingtable_t extractTable(const packet_t &packet) {
+	routingtable_t table;
 	string dest, nextHop;
 	int cost;
 
@@ -36,15 +34,15 @@ map<string, RoutingTableEntry> extractTable(const string &packet) {
 	return table;
 }
 
-string makeTableIntoPacket() {
-	string packet = RECV_ROUTING_TABLE + " " + socketLocal.getLocalIP();
+packet_t makeTableIntoPacket() {
+	packet_t packet = RECV_ROUTING_TABLE + " " + socketLocal.getLocalIP();
 	for (const auto &[destination, destEntry]:routingMap) {
 		packet += "\n" + destination + " " + destEntry.nextHop + " " + to_string(destEntry.cost);
 	}
 	return packet;
 }
 
-void printRoutingMap(const map<string, RoutingTableEntry> &routingMap) {
+void printRoutingMap(const routingtable_t &routingMap) {
 	for (const auto &[dest, entry] : routingMap) {
 		if (dest == socketLocal.getLocalIP()) continue;
 		cout << entry << endl;
@@ -61,7 +59,15 @@ void printRoutingTable() {
 	cout << "--------------------------------------" << endl;
 }
 
-int getNeighbor(const string &nip) {
+void printUpdate(){
+	if (tableUpdated) {
+		cout << "Updated Routing Table" << endl;
+		printRoutingTable();
+	}
+	tableUpdated = false;
+}
+
+int getNeighbor(const routerip_t &nip) {
 	for (int i = 0; i < links.size(); i++) {
 		if (nip == links[i].neighbor) {
 			return i;
@@ -70,7 +76,7 @@ int getNeighbor(const string &nip) {
 	return -1;
 }
 
-bool isNeighbor(const string &nip) {
+bool isNeighbor(const routerip_t &nip) {
 	for (auto &link : links) {
 		if (nip == link.neighbor)
 			return true;
@@ -78,62 +84,13 @@ bool isNeighbor(const string &nip) {
 	return false;
 }
 
-string makeIP(const unsigned char raw[]) {
+routerip_t makeIP(const unsigned char raw[]) {
 	int ipSegment[4];
 	for (int i = 0; i < 4; i++)
 		ipSegment[i] = raw[i];
-	string ip = to_string(ipSegment[0]) + "." + to_string(ipSegment[1]) + "." + to_string(ipSegment[2]) + "." +
-	            to_string(ipSegment[3]);
+	routerip_t ip = to_string(ipSegment[0]) + "." + to_string(ipSegment[1]) + "." + to_string(ipSegment[2]) + "." +
+	                to_string(ipSegment[3]);
 	return ip;
-}
-
-void updateRoutingTableForNeighbor(const string &nip, vector<RoutingTableEntry> nrt) {
-	int tempCost;
-	for (int i = 0; i < routers.size(); i++) {
-		for (int j = 0; j < links.size(); j++) {
-			if (!nip.compare(links[j].neighbor)) {
-				tempCost = links[j].cost + nrt[i].cost;
-				if (!nip.compare(routingTable[i].nextHop) ||
-				    (tempCost < routingTable[i].cost && routerIpAddress != nrt[i].nextHop)) {
-					if (routingTable[i].cost != tempCost) {
-						routingTable[i].nextHop = nip;
-						routingTable[i].cost = tempCost;
-						entryChanged = true;
-					}
-					break;
-				}
-			}
-		}
-	}
-	if (entryChanged)
-		printRoutingTable();
-	entryChanged = false;
-}
-
-void updateTable(const string &neighbor, int newCost, int oldCost) {
-	for (auto &[destination, destEntry]:routingMap) {
-		if (neighbor == destEntry.nextHop) { // neighbor is some of nextHop's is to be updated
-			if (neighbor == destination) // dest itself nexthop
-			{
-				destEntry.cost = newCost; // set the new cost as it will go to neighbor
-//				cout << "Updated " << routingMap[router.first] << endl;
-			} else //nextHop is not dest
-			{
-				destEntry.cost += (newCost - oldCost); // add/sub cost as it will pass thru neighbor
-			}
-			entryChanged = true;
-		} else if (neighbor == destination && destEntry.cost > newCost) {
-			// this -> neighbor direct cost has been reduced than that of with intermediate nextHops
-			destEntry.cost = newCost;
-			destEntry.nextHop = neighbor;
-			entryChanged = true;
-		}
-	}
-	if (entryChanged) {
-		cout << "Updated Routing Table" << endl;
-		printRoutingTable();
-	}
-	entryChanged = false;
 }
 
 void sendTable() {
@@ -144,8 +101,55 @@ void sendTable() {
 	}
 }
 
+void updateTableWithNewCost(const routerip_t &neighbor, int newCost, int oldCost) {
+	for (auto &[destination, destEntry]:routingMap) {
+		if (neighbor == destEntry.nextHop) { // neighbor is some of nextHop's is to be updated
+			if (neighbor == destination) // dest itself nexthop
+			{
+				destEntry.cost = newCost; // set the new cost as it will go to neighbor
+//				cout << "Updated " << routingMap[router.first] << endl;
+			} else //nextHop is not dest
+			{
+				destEntry.cost += (newCost - oldCost); // add/sub cost as it will pass thru neighbor
+			}
+			tableUpdated = true;
+		} else if (neighbor == destination && destEntry.cost > newCost) {
+			// this -> neighbor direct cost has been reduced than that of with intermediate nextHops
+			destEntry.cost = newCost;
+			destEntry.nextHop = neighbor;
+			tableUpdated = true;
+		}
+	}
+	printUpdate();
+}
 
-void updateTableForLinkFailure(const string &neighbor) {
+void updateRoutingTableForNeighbor(const routerip_t &neighbor, routingtable_t &neighborRouter) {
+	for (auto &[destination, destEntry]:routingMap) {
+		for (const auto &link:links) {
+			if (neighbor == link.neighbor) {
+				cost_t cost_via_neighbor =
+						neighborRouter[destination].cost == INF ? INF : (link.cost + neighborRouter[destination].cost);
+				if (neighbor == destEntry.nextHop && destEntry.cost != cost_via_neighbor) {
+					// cost changed @ nextHop & neighbor is the way to reach into destination
+					destEntry.cost = cost_via_neighbor;
+					if (cost_via_neighbor == INF) destEntry.nextHop = NONE;
+					tableUpdated = true;
+					break;
+				} else if (cost_via_neighbor < destEntry.cost &&
+				           socketLocal.getLocalIP() != neighborRouter[destination].nextHop) {
+					// take less cost not creating loop
+					destEntry.nextHop = neighbor;
+					destEntry.cost = cost_via_neighbor;
+					tableUpdated = true;
+					break;
+				}
+			}
+		}
+	}
+	printUpdate();
+}
+
+void updateTableForLinkFailure(const routerip_t &neighbor) {
 	for (auto &[destination, destEntry]:routingMap) {
 		// only update if link failed with any hop
 		if (neighbor == destEntry.nextHop) {
@@ -153,20 +157,20 @@ void updateTableForLinkFailure(const string &neighbor) {
 				// neighbor itself via that hop or destinations thru this hop but not neighbor of this will be disconnected
 				destEntry.nextHop = NONE;
 				destEntry.cost = INF;
-				entryChanged = true;
+				tableUpdated = true;
 			} else if (isNeighbor(destination)) {
 				// destinations thru this hop and not neighbor of this will be connected directly instead of hop
 				destEntry.nextHop = destination;
 				destEntry.cost = links[getNeighbor(destination)].cost;
-				entryChanged = true;
+				tableUpdated = true;
 			}
 		}
 	}
-	if (entryChanged)printRoutingTable();
-	entryChanged = false;
+	printUpdate();
 }
 
-void forwardMessageToNextHop(const string &dest, const string &msg, const string &recv) {
+
+void forwardMessageToNextHop(const routerip_t &dest, const string &msg, const string &recv) {
 	string nextHop = routingMap[dest].nextHop;
 	if (nextHop == NONE) {
 		cout << msg << " packet dropped @ " << socketLocal.getLocalIP() << endl;
@@ -201,7 +205,7 @@ string getIPFromBytes(const string &bytes) {
 }
 
 
-void sendMessageCMD(const string &recv) {
+void sendMessageCMD(const packet_t &recv) {
 	//forward given message to destination router
 	string src = getIPFromBytes(recv.substr(4, 4));
 	string dst = getIPFromBytes(recv.substr(8, 4));
@@ -215,7 +219,7 @@ void sendMessageCMD(const string &recv) {
 
 }
 
-void costUpdateCMD(const string &recv) {
+void costUpdateCMD(const packet_t &recv) {
 	//codes for updating link cost
 	string router1 = getIPFromBytes(recv.substr(4, 4));
 	string router2 = getIPFromBytes(recv.substr(8, 4));
@@ -232,10 +236,10 @@ void costUpdateCMD(const string &recv) {
 	}
 
 	//codes for update table according to link cost change
-	updateTable(updatedNeighbor, newCost, oldCost);
+	updateTableWithNewCost(updatedNeighbor, newCost, oldCost);
 }
 
-void forwardMessageCMD(const string &recv) {
+void forwardMessageCMD(const packet_t &recv) {
 	//forward given message to destination router
 	int f1, f2, f3, f4;
 	int msgLength = 0;
@@ -250,7 +254,7 @@ void forwardMessageCMD(const string &recv) {
 		forwardMessageToNextHop(dst, msg, recv);
 }
 
-void clockCMD(const string &recv) {
+void clockCMD(const packet_t &recv) {
 	sendClock++;
 	sendTable();
 
@@ -263,31 +267,24 @@ void clockCMD(const string &recv) {
 	}
 }
 
-void receiveTableCMD(const string &recv) {
+void receiveTableCMD(const packet_t &recv) {
 	stringstream sstrm(recv);
 	sstrm.ignore(std::numeric_limits<streamsize>::max(), ' ');
-	string srcIP;
-	sstrm >> srcIP;
-	int index = getNeighbor(srcIP);
+	string neighbor;
+	sstrm >> neighbor;
+	int index = getNeighbor(neighbor);
 	if (links[index].status == DOWN) {
 		cout << "----- link UP with : " << links[index].neighbor << " -----" << endl;
 	}
 	links[index].status = UP;
 	links[index].recvClock = sendClock;
 	cout << "--------------------------------------" << endl;
-	cout << RECV_ROUTING_TABLE << "> from: " << srcIP << endl;
+	cout << RECV_ROUTING_TABLE << "> from: " << neighbor << endl;
 //	print_container(cout,extractTableFromPacket(recv.substr(16)),"\n");
-	printRoutingMap(extractTable(recv.substr(16)));
+//	printRoutingMap(extractTable(recv.substr(recv.find('\n') + 1)));
 //	cout << "--------------------------------------" << endl;
-//  cout<<"receiver : "<<routerIpAddress<<" sender : "<<nip<<" recv clk : "<<links[index].recvClock<<endl;
-//			int length = recv.length() - 15;
-//			char pckt[length];
-//			for (int i = 0; i < length; i++) {
-//				pckt[i] = buffer[16 + i];
-//			}
-//			string packet(pckt);
-//			vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
-//			updateRoutingTableForNeighbor(srcIP, ntbl);
+	routingtable_t ntbl = extractTable(recv.substr(recv.find('\n') + 1));
+	updateRoutingTableForNeighbor(neighbor, ntbl);
 }
 
 void receiveCommands() {
@@ -323,56 +320,10 @@ void receiveCommands() {
 	}
 }
 
-
-void receive() {
-	sockaddr_in remote_address;
-	int n = 0;
-	while (true) {
-		const char *buffer = socketLocal.readBytes(remote_address);
-//		string recv = socketLocal.readString(remote_address);
-		string recv(buffer, static_cast<unsigned long>(socketLocal.dataLength()));
-		++n;
-		if (bytes_received != -1) {
-//			cout << "Received " << n << " : " << recv << endl;
-//			string head = recv.substr(0, 4);
-			if (startsWith(recv, CLEAR_SCREEN)) {
-				system("clear");
-			} else if (startsWith(recv, DRIVER_CLOCK)) {
-				sendClock++;
-				sendTable();
-
-				for (auto &link : links) {
-					if (sendClock - link.recvClock > 3 && link.status == 1) {
-						cout << "----- link down with : " << link.neighbor << " -----" << endl;
-						link.status = -1;
-						updateTableForLinkFailure(link.neighbor);
-					}
-				}
-			} else if (startsWith(recv, RECV_ROUTING_TABLE)) {
-				string nip = recv.substr(4, 12);
-				int index = getNeighbor(nip);
-				links[index].status = 1;
-				links[index].recvClock = sendClock;
-				//cout<<"receiver : "<<routerIpAddress<<" sender : "<<nip<<" recv clk : "<<links[index].recvClock<<endl;
-				int length = recv.length() - 15;
-				char pckt[length];
-				for (int i = 0; i < length; i++) {
-					pckt[i] = buffer[16 + i];
-				}
-				string packet(pckt);
-//				vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
-//				updateRoutingTableForNeighbor(nip, ntbl);
-			}
-		}
-	}
-}
-
-
-void initRouter(const string &routerIp, const string &topologyFile) {
+void initRouter(const routerip_t &routerIp, const string &topologyFile) {
 	ifstream topo(topologyFile.c_str());
 	string srcRouter, destRouter;
 	int cost;
-
 
 	while (!topo.eof()) {
 		topo >> srcRouter >> destRouter >> cost;
@@ -401,15 +352,15 @@ void initRouter(const string &routerIp, const string &topologyFile) {
 		if (IS_IN_LIST(router, neighbors)) {//if this router is a neighbor
 			for (auto &link : links) { // add its link info to table
 				if (link.neighbor == router) {
-					routingTable.emplace_back(router, router, link.cost);
+//					routingTable.emplace_back(router, router, link.cost);
 					routingMap[router] = RoutingTableEntry(router, router, link.cost);
 				}
 			}
 		} else if (socketLocal.getLocalIP() == router) { // if itself
-			routingTable.emplace_back(router, router, 0);
+//			routingTable.emplace_back(router, router, 0);
 			routingMap[router] = RoutingTableEntry(router, router, 0);
 		} else { // unreachable
-			routingTable.emplace_back(router, NONE, INF);
+//			routingTable.emplace_back(router, NONE, INF);
 			routingMap[router] = RoutingTableEntry(router, NONE, INF);
 		}
 	}

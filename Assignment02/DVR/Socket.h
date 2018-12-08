@@ -7,7 +7,6 @@
 
 #include <arpa/inet.h>
 #include <sys/socket.h>
-//#include <unistd.h>
 
 #include <string>
 
@@ -82,7 +81,7 @@ public:
 		lastBufferSize = recvfrom(socketFileDescriptor, buffer, buffer_size, 0, (struct sockaddr *) &lastRemoteAddress,
 		                          &addrlen);
 //		std::cout << lastBufferSize << std::endl;
-		if (lastBufferSize < buffer_size) buffer[lastBufferSize] = NULL;
+		if (lastBufferSize < buffer_size) buffer[lastBufferSize] = '\0';
 		return buffer;
 	}
 
@@ -123,6 +122,7 @@ public:
 			delete[] buffer;
 			buffer = new char[buffer_size];
 		}
+		return *this;
 	}
 
 

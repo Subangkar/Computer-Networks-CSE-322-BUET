@@ -10,7 +10,7 @@
 #include <ostream>
 #include "Socket.h"
 
-#define INF INFINITY
+#define INF (std::numeric_limits<int>::max())
 #define UP 1
 #define DOWN 0
 
@@ -25,15 +25,18 @@
 
 #define NONE "\t-"
 
+typedef string routerip_t;
+typedef string packet_t;
+typedef int cost_t;
 
 struct RoutingTableEntry {
-	string destination;
-	string nextHop;
-	int cost;
+	routerip_t destination;
+	routerip_t nextHop;
+	cost_t cost{};
 
 	RoutingTableEntry() = default;
 
-	RoutingTableEntry(const string &destination, const string &nextHop, int cost) : destination(destination),
+	RoutingTableEntry(const routerip_t &destination, const routerip_t &nextHop, cost_t cost) : destination(destination),
 	                                                                                nextHop(nextHop), cost(cost) {}
 
 	friend ostream &operator<<(ostream &os, const RoutingTableEntry &entry) {
@@ -53,7 +56,7 @@ struct RoutingTableEntry {
 };
 
 struct Link {
-	string neighbor;
+	routerip_t neighbor;
 	int cost;
 	int recvClock;
 	int status;
@@ -64,7 +67,7 @@ struct Link {
 		status = DOWN;
 	}
 
-	Link(const string &neighbor, int cost, int recvClock, int status) : neighbor(neighbor), cost(cost),
+	Link(const routerip_t &neighbor, int cost, int recvClock, int status) : neighbor(neighbor), cost(cost),
 	                                                                    recvClock(recvClock), status(status) {}
 
 	friend ostream &operator<<(ostream &os, const Link &link1) {
@@ -85,5 +88,7 @@ struct Link {
 	}
 };
 
+
+typedef map<routerip_t, RoutingTableEntry> routingtable_t;
 
 #endif //DVR_ROUTERDS_H
