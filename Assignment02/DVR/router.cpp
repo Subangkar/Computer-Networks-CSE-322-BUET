@@ -20,81 +20,44 @@ vector<Link> links;// all links from this
 int sendClock = 0;
 bool entryChanged = false;
 
-RoutingTableEntry getRouteEntry(string row, string delim) {
-	char *t = new char[row.length() + 1];
-	strcpy(t, row.c_str());
-	struct RoutingTableEntry rte;
-	vector<string> entries;
-	char *tok = strtok(t, delim.c_str());
-
-	while (tok != NULL) {
-		entries.push_back(tok);
-		tok = strtok(NULL, delim.c_str());
-	}
-
-	rte.destination = entries[0];
-	rte.nextHop = entries[1];
-	rte.cost = atoi(entries[2].c_str());
-	entries.clear();
-	return rte;
-}
-
-vector<RoutingTableEntry> extractTableFromPacket(const string &packet) {
-	vector<RoutingTableEntry> rt;
-	char *str = new char[packet.length() + 1];
-	strcpy(str, packet.c_str());
-	char *token = strtok(str, ":");
-	vector<string> entries;
-	while (token != NULL) {
-		entries.push_back(token);
-		token = strtok(NULL, ":");
-	}
-	struct RoutingTableEntry rte;
-	for (int i = 0; i < entries.size(); i++) {
-		rte = getRouteEntry(entries[i], "#");
-		rt.push_back(rte);
-		//cout<<"dest : "<<rte.destination<<"  next : "<<rte.nextHop<<"  cost : "<<rte.cost<<endl;
-	}
-	return rt;
-}
-
 map<string, RoutingTableEntry> extractTable(const string &packet) {
-	char *str = new char[packet.length()];
-	char *token = strtok(str, ":");
-	vector<string> entries;
-	while (token != NULL) {
-		entries.push_back(token);
-		token = strtok(NULL, ":");
-	}
-	RoutingTableEntry rte;
 	map<string, RoutingTableEntry> table;
-	for (auto &entry:entries) {
-		rte = getRouteEntry(entry, "#");
-		table[rte.destination] = rte;
-		//cout<<"dest : "<<rte.destination<<"  next : "<<rte.nextHop<<"  cost : "<<rte.cost<<endl;
+	string dest, nextHop;
+	int cost;
+
+	std::istringstream f(packet);
+	std::string line;
+	while (std::getline(f, line)) {
+		if (line.empty()) continue;
+		stringstream sstrm(line);
+		sstrm >> dest >> nextHop >> cost;
+		table[dest] = RoutingTableEntry(dest, nextHop, cost);
 	}
-	delete[] str;
 	return table;
 }
 
 string makeTableIntoPacket() {
-	string packet = RECV_ROUTING_TABLE + socketLocal.getLocalIP();
+	string packet = RECV_ROUTING_TABLE + " " + socketLocal.getLocalIP();
 	for (const auto &[destination, destEntry]:routingMap) {
-		packet += ":" + destination + "#" + destEntry.nextHop + "#" + to_string(destEntry.cost);
+		packet += "\n" + destination + " " + destEntry.nextHop + " " + to_string(destEntry.cost);
 	}
 	return packet;
 }
 
-void printTable() {
+void printRoutingMap(const map<string, RoutingTableEntry> &routingMap) {
+	for (const auto &[dest, entry] : routingMap) {
+		if (dest == socketLocal.getLocalIP()) continue;
+		cout << entry << endl;
+	}
+}
+
+void printRoutingTable() {
 	cout << endl << endl << endl;
 	cout << "Printing Routing Table" << endl;
 	cout << "\t------\t" << routerIpAddress << "\t------\t" << endl;
 	cout << "Destination  \tNext Hop \tCost" << endl;
 	cout << "-------------\t-------------\t-----" << endl;
-	for (const auto &[dest, entry] : routingMap) {
-		if (dest == socketLocal.getLocalIP()) continue;
-		cout << entry << endl;
-	}
+	printRoutingMap(routingMap);
 	cout << "--------------------------------------" << endl;
 }
 
@@ -104,7 +67,7 @@ int getNeighbor(const string &nip) {
 			return i;
 		}
 	}
-	return 0;
+	return -1;
 }
 
 bool isNeighbor(const string &nip) {
@@ -124,7 +87,7 @@ string makeIP(const unsigned char raw[]) {
 	return ip;
 }
 
-void updateRoutingTableForNeighbor(string nip, vector<RoutingTableEntry> nrt) {
+void updateRoutingTableForNeighbor(const string &nip, vector<RoutingTableEntry> nrt) {
 	int tempCost;
 	for (int i = 0; i < routers.size(); i++) {
 		for (int j = 0; j < links.size(); j++) {
@@ -143,7 +106,7 @@ void updateRoutingTableForNeighbor(string nip, vector<RoutingTableEntry> nrt) {
 		}
 	}
 	if (entryChanged)
-		printTable();
+		printRoutingTable();
 	entryChanged = false;
 }
 
@@ -168,18 +131,16 @@ void updateTable(const string &neighbor, int newCost, int oldCost) {
 	}
 	if (entryChanged) {
 		cout << "Updated Routing Table" << endl;
-		printTable();
+		printRoutingTable();
 	}
 	entryChanged = false;
 }
 
 void sendTable() {
 	string tablePacket = makeTableIntoPacket();
-//	cout << tablePacket << " to be sent from " << socketLocal.getLocalIP() << endl;
 	for (const auto &neighbor:neighbors) {
 		sockaddr_in router_address = getInetSocketAddress(neighbor.data(), 4747);
-		ssize_t sent_bytes = socketLocal.writeString(router_address, tablePacket);
-//		cout << tablePacket << " sent to " << neighbor.data() << endl;
+		socketLocal.writeString(router_address, tablePacket);
 	}
 }
 
@@ -201,7 +162,7 @@ void updateTableForLinkFailure(const string &neighbor) {
 			}
 		}
 	}
-	if (entryChanged)printTable();
+	if (entryChanged)printRoutingTable();
 	entryChanged = false;
 }
 
@@ -279,8 +240,7 @@ void forwardMessageCMD(const string &recv) {
 	int f1, f2, f3, f4;
 	int msgLength = 0;
 	sscanf(recv.data(), "%*s %d.%d.%d.%d %d", &f1, &f2, &f3, &f4, &msgLength);
-	string dst = to_string(f1) + "." + to_string(f2) + "." + to_string(f3) + "." +
-	             to_string(f4);
+	string dst = to_string(f1) + "." + to_string(f2) + "." + to_string(f3) + "." + to_string(f4);
 	string msg = recv.substr((FORWARD_MESSAGE + " " + dst + " " + to_string(msgLength) + " ").length(),
 	                         static_cast<unsigned long>(msgLength));
 	cout << FORWARD_MESSAGE << "> " << dst << " " << msgLength << " " << msg << endl;
@@ -304,15 +264,22 @@ void clockCMD(const string &recv) {
 }
 
 void receiveTableCMD(const string &recv) {
-	string srcIP = recv.substr(4, 12);
-//	cout << RECV_ROUTING_TABLE << "> from: " << srcIP << endl;
+	stringstream sstrm(recv);
+	sstrm.ignore(std::numeric_limits<streamsize>::max(), ' ');
+	string srcIP;
+	sstrm >> srcIP;
 	int index = getNeighbor(srcIP);
 	if (links[index].status == DOWN) {
 		cout << "----- link UP with : " << links[index].neighbor << " -----" << endl;
 	}
 	links[index].status = UP;
 	links[index].recvClock = sendClock;
-	//cout<<"receiver : "<<routerIpAddress<<" sender : "<<nip<<" recv clk : "<<links[index].recvClock<<endl;
+	cout << "--------------------------------------" << endl;
+	cout << RECV_ROUTING_TABLE << "> from: " << srcIP << endl;
+//	print_container(cout,extractTableFromPacket(recv.substr(16)),"\n");
+	printRoutingMap(extractTable(recv.substr(16)));
+//	cout << "--------------------------------------" << endl;
+//  cout<<"receiver : "<<routerIpAddress<<" sender : "<<nip<<" recv clk : "<<links[index].recvClock<<endl;
 //			int length = recv.length() - 15;
 //			char pckt[length];
 //			for (int i = 0; i < length; i++) {
@@ -330,7 +297,7 @@ void receiveCommands() {
 		if (recv.empty()) continue;
 //		cout << recv << "::" << endl;
 		if (startsWith(recv, SHOW_ROUTING_TABLE)) {
-			printTable();
+			printRoutingTable();
 			continue;
 		}
 		if (startsWith(recv, SEND_MESSAGE)) {
@@ -393,8 +360,8 @@ void receive() {
 					pckt[i] = buffer[16 + i];
 				}
 				string packet(pckt);
-				vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
-				updateRoutingTableForNeighbor(nip, ntbl);
+//				vector<RoutingTableEntry> ntbl = extractTableFromPacket(pckt);
+//				updateRoutingTableForNeighbor(nip, ntbl);
 			}
 		}
 	}
@@ -447,7 +414,7 @@ void initRouter(const string &routerIp, const string &topologyFile) {
 		}
 	}
 
-	printTable();
+	printRoutingTable();
 }
 
 
