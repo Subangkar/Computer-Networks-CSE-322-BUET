@@ -15,7 +15,7 @@
 #define DOWN 0
 
 #define SHOW_ROUTING_TABLE "show"
-#define SEND_ROUTING_TABLE "ntbl"
+#define RECV_ROUTING_TABLE "ntbl"
 #define SEND_MESSAGE "send"
 #define FORWARD_MESSAGE string("frwd")
 #define UPDATE_COST "cost"

@@ -78,7 +78,7 @@ map<string, RoutingTableEntry> extractTable(const string &packet) {
 }
 
 string makeTableIntoPacket() {
-	string packet = SEND_ROUTING_TABLE + socketLocal.getLocalIP();
+	string packet = RECV_ROUTING_TABLE + socketLocal.getLocalIP();
 	for (const auto &[destination, destEntry]:routingMap) {
 		packet += ":" + destination + "#" + destEntry.nextHop + "#" + to_string(destEntry.cost);
 	}
@@ -115,6 +115,15 @@ bool isNeighbor(const string &nip) {
 	return false;
 }
 
+string makeIP(const unsigned char raw[]) {
+	int ipSegment[4];
+	for (int i = 0; i < 4; i++)
+		ipSegment[i] = raw[i];
+	string ip = to_string(ipSegment[0]) + "." + to_string(ipSegment[1]) + "." + to_string(ipSegment[2]) + "." +
+	            to_string(ipSegment[3]);
+	return ip;
+}
+
 void updateRoutingTableForNeighbor(string nip, vector<RoutingTableEntry> nrt) {
 	int tempCost;
 	for (int i = 0; i < routers.size(); i++) {
@@ -136,64 +145,6 @@ void updateRoutingTableForNeighbor(string nip, vector<RoutingTableEntry> nrt) {
 	if (entryChanged)
 		printTable();
 	entryChanged = false;
-}
-
-void initRouter(const string &routerIp, const string &topologyFile) {
-	ifstream topo(topologyFile.c_str());
-	string srcRouter, destRouter;
-	int cost;
-
-
-	while (!topo.eof()) {
-		topo >> srcRouter >> destRouter >> cost;
-//		cout << srcRouter << "-" << destRouter << "-" << cost << endl;
-
-		routers.insert(srcRouter);
-		routers.insert(destRouter);
-		if (srcRouter == socketLocal.getLocalIP()) {
-			if (!isNeighbor(destRouter)) {
-				neighbors.push_back(destRouter);
-				links.emplace_back(destRouter, cost, 0, UP);
-			}
-		} else if (destRouter == socketLocal.getLocalIP()) {
-			if (!isNeighbor(srcRouter)) {
-				neighbors.push_back(srcRouter);
-				links.emplace_back(srcRouter, cost, 0, UP);
-			}
-		}
-	}
-
-	topo.close();
-
-//	print_container(cout, links, " - ");
-
-	for (const auto &router:routers) {
-		if (IS_IN_LIST(router, neighbors)) {//if this router is a neighbor
-			for (auto &link : links) { // add its link info to table
-				if (link.neighbor == router) {
-					routingTable.emplace_back(router, router, link.cost);
-					routingMap[router] = RoutingTableEntry(router, router, link.cost);
-				}
-			}
-		} else if (socketLocal.getLocalIP() == router) { // if itself
-			routingTable.emplace_back(router, router, 0);
-			routingMap[router] = RoutingTableEntry(router, router, 0);
-		} else { // unreachable
-			routingTable.emplace_back(router, NONE, INF);
-			routingMap[router] = RoutingTableEntry(router, NONE, INF);
-		}
-	}
-
-	printTable();
-}
-
-string makeIP(const unsigned char raw[]) {
-	int ipSegment[4];
-	for (int i = 0; i < 4; i++)
-		ipSegment[i] = raw[i];
-	string ip = to_string(ipSegment[0]) + "." + to_string(ipSegment[1]) + "." + to_string(ipSegment[2]) + "." +
-	            to_string(ipSegment[3]);
-	return ip;
 }
 
 void updateTable(const string &neighbor, int newCost, int oldCost) {
@@ -233,35 +184,7 @@ void sendTable() {
 }
 
 
-void forwardMessageToNextHop(const string &dest, const string &msg, const string &recv) {
-	string nextHop = routingMap[dest].nextHop;
-	if (nextHop == NONE) {
-		cout << msg << " packet dropped @ " << socketLocal.getLocalIP() << endl;
-		return;
-	}
-	string frwdMsg = FORWARD_MESSAGE + " " + dest + " " + to_string(msg.length()) + " " + msg;
-	cout << "Forwarding>" << frwdMsg << endl;
-	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
-	socketLocal.writeString(router_address, frwdMsg);
-	cout << "{" << msg << "}" << " packet forwarded to " << nextHop << " (printed by " << socketLocal.getLocalIP()
-	     << ")\n";
-}
-
-
 void updateTableForLinkFailure(const string &neighbor) {
-//	for (int i = 0; i < routingTable.size(); i++) {
-//		if (!neighbor.compare(routingTable[i].nextHop)) {
-//			if (!neighbor.compare(routingTable[i].destination) || !isNeighbor(routingTable[i].destination)) {
-//				routingTable[i].nextHop = NONE;
-//				routingTable[i].cost = INF;
-//				entryChanged = true;
-//			} else if (isNeighbor(routingTable[i].destination)) {
-//				routingTable[i].nextHop = routingTable[i].destination;
-//				routingTable[i].cost = links[getNeighbor(routingTable[i].destination)].cost;
-//				entryChanged = true;
-//			}
-//		}
-//	}
 	for (auto &[destination, destEntry]:routingMap) {
 		// only update if link failed with any hop
 		if (neighbor == destEntry.nextHop) {
@@ -281,6 +204,21 @@ void updateTableForLinkFailure(const string &neighbor) {
 	if (entryChanged)printTable();
 	entryChanged = false;
 }
+
+void forwardMessageToNextHop(const string &dest, const string &msg, const string &recv) {
+	string nextHop = routingMap[dest].nextHop;
+	if (nextHop == NONE) {
+		cout << msg << " packet dropped @ " << socketLocal.getLocalIP() << endl;
+		return;
+	}
+	string frwdMsg = FORWARD_MESSAGE + " " + dest + " " + to_string(msg.length()) + " " + msg;
+	cout << "Forwarding>" << frwdMsg << endl;
+	sockaddr_in router_address = getInetSocketAddress(nextHop.data(), 4747);
+	socketLocal.writeString(router_address, frwdMsg);
+	cout << "{" << msg << "}" << " packet forwarded to " << nextHop << " (printed by " << socketLocal.getLocalIP()
+	     << ")\n";
+}
+
 
 int getNumberString(const string &bytes, int ndigit = 2) {
 	unsigned char nums[2];
@@ -365,9 +303,9 @@ void clockCMD(const string &recv) {
 	}
 }
 
-void sendTableCMD(const string &recv) {
+void receiveTableCMD(const string &recv) {
 	string srcIP = recv.substr(4, 12);
-//			cout << SEND_ROUTING_TABLE << "> " << srcIP << endl;
+//	cout << RECV_ROUTING_TABLE << "> from: " << srcIP << endl;
 	int index = getNeighbor(srcIP);
 	if (links[index].status == DOWN) {
 		cout << "----- link UP with : " << links[index].neighbor << " -----" << endl;
@@ -411,8 +349,8 @@ void receiveCommands() {
 			clockCMD(recv);
 			continue;
 		}
-		if (startsWith(recv, SEND_ROUTING_TABLE)) {
-			sendTableCMD(recv);
+		if (startsWith(recv, RECV_ROUTING_TABLE)) {
+			receiveTableCMD(recv);
 			continue;
 		}
 	}
@@ -443,7 +381,7 @@ void receive() {
 						updateTableForLinkFailure(link.neighbor);
 					}
 				}
-			} else if (startsWith(recv, SEND_ROUTING_TABLE)) {
+			} else if (startsWith(recv, RECV_ROUTING_TABLE)) {
 				string nip = recv.substr(4, 12);
 				int index = getNeighbor(nip);
 				links[index].status = 1;
@@ -463,6 +401,56 @@ void receive() {
 }
 
 
+void initRouter(const string &routerIp, const string &topologyFile) {
+	ifstream topo(topologyFile.c_str());
+	string srcRouter, destRouter;
+	int cost;
+
+
+	while (!topo.eof()) {
+		topo >> srcRouter >> destRouter >> cost;
+//		cout << srcRouter << "-" << destRouter << "-" << cost << endl;
+
+		routers.insert(srcRouter);
+		routers.insert(destRouter);
+		if (srcRouter == socketLocal.getLocalIP()) {
+			if (!isNeighbor(destRouter)) {
+				neighbors.push_back(destRouter);
+				links.emplace_back(destRouter, cost, 0, UP);
+			}
+		} else if (destRouter == socketLocal.getLocalIP()) {
+			if (!isNeighbor(srcRouter)) {
+				neighbors.push_back(srcRouter);
+				links.emplace_back(srcRouter, cost, 0, UP);
+			}
+		}
+	}
+
+	topo.close();
+
+//	print_container(cout, links, " - ");
+
+	for (const auto &router:routers) {
+		if (IS_IN_LIST(router, neighbors)) {//if this router is a neighbor
+			for (auto &link : links) { // add its link info to table
+				if (link.neighbor == router) {
+					routingTable.emplace_back(router, router, link.cost);
+					routingMap[router] = RoutingTableEntry(router, router, link.cost);
+				}
+			}
+		} else if (socketLocal.getLocalIP() == router) { // if itself
+			routingTable.emplace_back(router, router, 0);
+			routingMap[router] = RoutingTableEntry(router, router, 0);
+		} else { // unreachable
+			routingTable.emplace_back(router, NONE, INF);
+			routingMap[router] = RoutingTableEntry(router, NONE, INF);
+		}
+	}
+
+	printTable();
+}
+
+
 int main(int argc, char *argv[]) {
 
 	if (argc != 3) {
@@ -477,7 +465,7 @@ int main(int argc, char *argv[]) {
 
 
 	if (socketLocal.isBound()) cout << "Connection successful!!" << endl;
-	else cout << "Connection failed!!!" << endl;
+	else cout << "Connection failed!!!" << endl, exit(EXIT_FAILURE);
 
 	cout << "--------------------------------------" << endl;
 
