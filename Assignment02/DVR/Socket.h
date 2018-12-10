@@ -134,6 +134,11 @@ public:
 		return ntohs(socketAddr.sin_port);
 //		return socketAddr.sin_port;
 	}
+
+	void closeSocket()
+	{
+		close(socketFileDescriptor);
+	}
 };
 
 #endif //DVR_SOCKET_H

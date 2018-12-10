@@ -143,7 +143,7 @@ void updateRoutingTableForNeighbor(const routerip_t &neighbor, routingtable_t &n
 					// cost changed @ nextHop & neighbor is the way to reach into destination
 					destEntry.cost = cost_via_neighbor;
 					// || socketLocal.getLocalIP() == neighborRouter[destination].nextHop
-					if (cost_via_neighbor == INF) {
+					if (cost_via_neighbor >= INF) {
 						// 2nd condtn prevents circular updates for initial deactivated links
 						destEntry.nextHop = NONE;
 						destEntry.cost = INF;
@@ -405,6 +405,8 @@ int main(int argc, char *argv[]) {
 	cout << "--------------------------------------" << endl;
 
 	receiveCommands();
+
+	socketLocal.closeSocket();
 
 	return 0;
 }
