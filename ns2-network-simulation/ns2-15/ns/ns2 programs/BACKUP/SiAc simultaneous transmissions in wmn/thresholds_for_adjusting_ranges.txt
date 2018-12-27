@@ -1,0 +1,26 @@
+-m TwoRayGround -Pt 1.6794 -fr 2.437e9 100
+transmit power: 1.6794
+freq: 2.437e9 (6th channel)
+dist: 100
+Receiving threshold RXThresh_ is: 1.61163e-08
+
+
+Phy/WirelessPhy set RXThresh_ 1.61163e-08
+
+
+
+
+
+
+
+if {$range_11 == 40} { 
+	[$node_($i) set netif_(0)] set RXThresh_ 1.61163e-08
+}
+
+
+
+if {$range_11 == 40} { 
+	[$node_($sink_node) set netif_(0)] set RXThresh_ 1.61163e-08
+}
+
+

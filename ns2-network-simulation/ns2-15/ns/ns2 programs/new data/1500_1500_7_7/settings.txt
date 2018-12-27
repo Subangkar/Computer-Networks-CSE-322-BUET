@@ -1,0 +1,76 @@
+set cbr_size 28
+set cbr_rate 11.0Mb
+set cbr_interval 1
+set num_row 7 ;#number of row
+set num_col 7 ;#number of column
+set x_dim 1500
+set y_dim 1500
+set time_duration 200
+set start_time 5
+set parallel_start_gap 0.1
+set cross_start_gap 0.2
+
+set cbr_type CBR
+set cbr_size_15 28
+set cbr_rate_15 0.250Mb
+#set cbr_interval 1
+
+set collaborator_gap 25
+set collaborator_row [expr $y_dim/$collaborator_gap+1];#number of collaborator in a row
+set collaborator_col [expr $x_dim/$collaborator_gap+1];#number of collaborator in a row
+set collaborator_num [expr $collaborator_row*$collaborator_col];#total number of collaborator
+
+set num_parallel_flow 7
+set num_cross_flow 7
+set num_random_flow 7
+
+#############################################################ENERGY PARAMETERS
+set val(energymodel_11)    EnergyModel     ;
+set val(initialenergy_11)  1000            ;# Initial energy in Joules
+set val(idlepower_11) 900e-3			;#Stargate (802.11b) 
+set val(rxpower_11) 925e-3			;#Stargate (802.11b)
+set val(txpower_11) 1425e-3			;#Stargate (802.11b)
+set val(sleeppower_11) 300e-3			;#Stargate (802.11b)
+set val(transitionpower_11) 200e-3		;#Stargate (802.11b)	??????????????????????????????/
+set val(transitiontime_11) 3			;#Stargate (802.11b)
+
+
+set val(energymodel_15_4)    EnergyModel     ;
+set val(initialenergy_15_4)  1000            ;# Initial energy in Joules
+set val(idlepower_15_4) 3e-3			;#telos	(active power in spec)
+set val(rxpower_15_4) 38e-3			;#telos
+set val(txpower_15_4) 35e-3			;#telos
+set val(sleeppower_15_4) 15e-6			;#telos
+set val(transitionpower_15_4) 1.8e-6		;#telos: volt = 1.8V; sleep current of MSP430 = 1 microA; so, 1.8 micro W
+set val(transitiontime_15_4) 6e-6		;#telos
+
+
+
+#set frequency_ 2.461e+9
+#Phy/WirelessPhy set Rb_ 11*1e6            ;# Bandwidth
+#Phy/WirelessPhy set freq_ $frequency_
+
+set val(chan) Channel/WirelessChannel ;# channel type
+set val(prop) Propagation/TwoRayGround ;# radio-propagation model
+set val(netif) Phy/WirelessPhy ;# network interface type
+set val(mac) Mac/802_11 ;# MAC type
+#set val(mac) SMac/802_15_4 ;# MAC type
+set val(ifq) Queue/DropTail/PriQueue ;# interface queue type
+set val(ll) LL ;# link layer type
+set val(ant) Antenna/OmniAntenna ;# antenna model
+set val(ifqlen) 50 ;# max packet in ifq
+set val(rp) DSDV ;# routing protocol
+
+set val(chan_15) Channel/WirelessChannel ;# channel type
+set val(prop_15) Propagation/TwoRayGround ;# radio-propagation model
+set val(netif_15) Phy/WirelessPhy/802_15_4 ;# network interface type
+set val(mac_15) Mac/802_15_4 ;# MAC type
+#set val(mac) SMac/802_15_4 ;# MAC type
+set val(ifq_15) Queue/DropTail/PriQueue ;# interface queue type
+set val(ll_15) LL ;# link layer type
+set val(ant_15) Antenna/OmniAntenna ;# antenna model
+set val(ifqlen_15) 50 ;# max packet in ifq
+set val(rp_15) AODV ;# routing protocol
+set val(energymodel_15) EnergyModel;
+set val(initialenergy_15) 100;
+

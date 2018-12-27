@@ -1,0 +1,8 @@
+0 x: 100 y: 100 
+1 x: 300 y: 100 
+2 x: 100 y: 300 
+3 x: 300 y: 300 
+PARALLEL: Src: 0 Dest: 2
+PARALLEL: Src: 1 Dest: 3
+CROSS: Src: 0 Dest: 1
+CROSS: Src: 2 Dest: 3

@@ -1,0 +1,6866 @@
+#
+# nodes: 100, pause: 0.00, max speed: 0.00, max x: 500.00, max y: 500.00
+#
+$node_(0) set X_ 260.562257305009
+$node_(0) set Y_ 254.649739355581
+$node_(0) set Z_ 0.000000000000
+$node_(1) set X_ 421.166774258644
+$node_(1) set Y_ 495.704888856648
+$node_(1) set Z_ 0.000000000000
+$node_(2) set X_ 425.428436950109
+$node_(2) set Y_ 344.460469705001
+$node_(2) set Z_ 0.000000000000
+$node_(3) set X_ 496.161139733511
+$node_(3) set Y_ 121.234014913597
+$node_(3) set Z_ 0.000000000000
+$node_(4) set X_ 293.537102885479
+$node_(4) set Y_ 197.644501484478
+$node_(4) set Z_ 0.000000000000
+$node_(5) set X_ 108.224558646490
+$node_(5) set Y_ 339.102760314330
+$node_(5) set Z_ 0.000000000000
+$node_(6) set X_ 286.157596395533
+$node_(6) set Y_ 195.020118976055
+$node_(6) set Z_ 0.000000000000
+$node_(7) set X_ 272.995025334639
+$node_(7) set Y_ 325.307139932151
+$node_(7) set Z_ 0.000000000000
+$node_(8) set X_ 70.551555528008
+$node_(8) set Y_ 39.369783524637
+$node_(8) set Z_ 0.000000000000
+$node_(9) set X_ 47.769746029774
+$node_(9) set Y_ 365.524653119298
+$node_(9) set Z_ 0.000000000000
+$node_(10) set X_ 465.447598442692
+$node_(10) set Y_ 288.877732257025
+$node_(10) set Z_ 0.000000000000
+$node_(11) set X_ 17.624982904176
+$node_(11) set Y_ 86.452302751615
+$node_(11) set Z_ 0.000000000000
+$node_(12) set X_ 160.231570673214
+$node_(12) set Y_ 113.309453024614
+$node_(12) set Z_ 0.000000000000
+$node_(13) set X_ 273.055002511349
+$node_(13) set Y_ 308.757091458299
+$node_(13) set Z_ 0.000000000000
+$node_(14) set X_ 310.664732269539
+$node_(14) set Y_ 310.928572125999
+$node_(14) set Z_ 0.000000000000
+$node_(15) set X_ 454.664835955549
+$node_(15) set Y_ 369.482821634139
+$node_(15) set Z_ 0.000000000000
+$node_(16) set X_ 199.353667433738
+$node_(16) set Y_ 357.873649438312
+$node_(16) set Z_ 0.000000000000
+$node_(17) set X_ 331.598928890325
+$node_(17) set Y_ 412.644552958679
+$node_(17) set Z_ 0.000000000000
+$node_(18) set X_ 33.703375377297
+$node_(18) set Y_ 79.984318031170
+$node_(18) set Z_ 0.000000000000
+$node_(19) set X_ 398.008933124565
+$node_(19) set Y_ 496.655800916349
+$node_(19) set Z_ 0.000000000000
+$node_(20) set X_ 398.193091578820
+$node_(20) set Y_ 484.294719117065
+$node_(20) set Z_ 0.000000000000
+$node_(21) set X_ 405.575720327848
+$node_(21) set Y_ 452.337404034608
+$node_(21) set Z_ 0.000000000000
+$node_(22) set X_ 377.240836961682
+$node_(22) set Y_ 222.845809034055
+$node_(22) set Z_ 0.000000000000
+$node_(23) set X_ 84.439520389638
+$node_(23) set Y_ 457.367480064844
+$node_(23) set Z_ 0.000000000000
+$node_(24) set X_ 294.474660128059
+$node_(24) set Y_ 73.673252440998
+$node_(24) set Z_ 0.000000000000
+$node_(25) set X_ 259.790760357044
+$node_(25) set Y_ 326.225524501621
+$node_(25) set Z_ 0.000000000000
+$node_(26) set X_ 161.457180879799
+$node_(26) set Y_ 15.292619629964
+$node_(26) set Z_ 0.000000000000
+$node_(27) set X_ 23.946807133252
+$node_(27) set Y_ 235.656649227390
+$node_(27) set Z_ 0.000000000000
+$node_(28) set X_ 295.497666453830
+$node_(28) set Y_ 181.985379046052
+$node_(28) set Z_ 0.000000000000
+$node_(29) set X_ 400.240902032263
+$node_(29) set Y_ 269.322602082766
+$node_(29) set Z_ 0.000000000000
+$node_(30) set X_ 238.702350331025
+$node_(30) set Y_ 389.775598205934
+$node_(30) set Z_ 0.000000000000
+$node_(31) set X_ 455.055982491850
+$node_(31) set Y_ 144.206957774015
+$node_(31) set Z_ 0.000000000000
+$node_(32) set X_ 428.794974272455
+$node_(32) set Y_ 37.240348813588
+$node_(32) set Z_ 0.000000000000
+$node_(33) set X_ 29.660102834297
+$node_(33) set Y_ 109.060890084287
+$node_(33) set Z_ 0.000000000000
+$node_(34) set X_ 359.633123107182
+$node_(34) set Y_ 268.733219335906
+$node_(34) set Z_ 0.000000000000
+$node_(35) set X_ 387.955248051950
+$node_(35) set Y_ 96.399225888550
+$node_(35) set Z_ 0.000000000000
+$node_(36) set X_ 91.526748737684
+$node_(36) set Y_ 316.784416998541
+$node_(36) set Z_ 0.000000000000
+$node_(37) set X_ 407.375836566597
+$node_(37) set Y_ 457.524449719369
+$node_(37) set Z_ 0.000000000000
+$node_(38) set X_ 467.350797543527
+$node_(38) set Y_ 126.616368730600
+$node_(38) set Z_ 0.000000000000
+$node_(39) set X_ 174.785710139067
+$node_(39) set Y_ 0.352588848523
+$node_(39) set Z_ 0.000000000000
+$node_(40) set X_ 320.753518775276
+$node_(40) set Y_ 15.444025213913
+$node_(40) set Z_ 0.000000000000
+$node_(41) set X_ 312.987155886676
+$node_(41) set Y_ 150.096529563907
+$node_(41) set Z_ 0.000000000000
+$node_(42) set X_ 215.625541948274
+$node_(42) set Y_ 22.095346496401
+$node_(42) set Z_ 0.000000000000
+$node_(43) set X_ 41.039034266984
+$node_(43) set Y_ 96.559690447621
+$node_(43) set Z_ 0.000000000000
+$node_(44) set X_ 313.773664241871
+$node_(44) set Y_ 137.609338882086
+$node_(44) set Z_ 0.000000000000
+$node_(45) set X_ 111.598770532884
+$node_(45) set Y_ 468.642416987015
+$node_(45) set Z_ 0.000000000000
+$node_(46) set X_ 186.429255473727
+$node_(46) set Y_ 242.126060966919
+$node_(46) set Z_ 0.000000000000
+$node_(47) set X_ 268.795549848460
+$node_(47) set Y_ 485.599087668725
+$node_(47) set Z_ 0.000000000000
+$node_(48) set X_ 109.439204275458
+$node_(48) set Y_ 216.762749614812
+$node_(48) set Z_ 0.000000000000
+$node_(49) set X_ 238.347371242999
+$node_(49) set Y_ 217.667400900931
+$node_(49) set Z_ 0.000000000000
+$node_(50) set X_ 179.547135100189
+$node_(50) set Y_ 365.890571639230
+$node_(50) set Z_ 0.000000000000
+$node_(51) set X_ 331.412803366283
+$node_(51) set Y_ 34.302430840886
+$node_(51) set Z_ 0.000000000000
+$node_(52) set X_ 305.592930541218
+$node_(52) set Y_ 368.367521818831
+$node_(52) set Z_ 0.000000000000
+$node_(53) set X_ 163.925578258121
+$node_(53) set Y_ 476.324772829086
+$node_(53) set Z_ 0.000000000000
+$node_(54) set X_ 76.573492476550
+$node_(54) set Y_ 420.145716143378
+$node_(54) set Z_ 0.000000000000
+$node_(55) set X_ 362.334541130249
+$node_(55) set Y_ 473.297905397128
+$node_(55) set Z_ 0.000000000000
+$node_(56) set X_ 235.548256778633
+$node_(56) set Y_ 247.056904804855
+$node_(56) set Z_ 0.000000000000
+$node_(57) set X_ 128.754826444435
+$node_(57) set Y_ 121.792669718358
+$node_(57) set Z_ 0.000000000000
+$node_(58) set X_ 480.194492936240
+$node_(58) set Y_ 74.914023648509
+$node_(58) set Z_ 0.000000000000
+$node_(59) set X_ 46.488221890654
+$node_(59) set Y_ 272.941887558418
+$node_(59) set Z_ 0.000000000000
+$node_(60) set X_ 78.598561195773
+$node_(60) set Y_ 321.614753081433
+$node_(60) set Z_ 0.000000000000
+$node_(61) set X_ 18.646573037488
+$node_(61) set Y_ 207.164616927095
+$node_(61) set Z_ 0.000000000000
+$node_(62) set X_ 263.500956191728
+$node_(62) set Y_ 327.425648366226
+$node_(62) set Z_ 0.000000000000
+$node_(63) set X_ 474.782357168088
+$node_(63) set Y_ 412.231558757872
+$node_(63) set Z_ 0.000000000000
+$node_(64) set X_ 336.471922343168
+$node_(64) set Y_ 199.319735043334
+$node_(64) set Z_ 0.000000000000
+$node_(65) set X_ 165.418361059162
+$node_(65) set Y_ 157.513483954315
+$node_(65) set Z_ 0.000000000000
+$node_(66) set X_ 179.687966796359
+$node_(66) set Y_ 308.459094064192
+$node_(66) set Z_ 0.000000000000
+$node_(67) set X_ 64.585536470123
+$node_(67) set Y_ 332.524415260432
+$node_(67) set Z_ 0.000000000000
+$node_(68) set X_ 178.452646154480
+$node_(68) set Y_ 27.313148062940
+$node_(68) set Z_ 0.000000000000
+$node_(69) set X_ 188.281974094606
+$node_(69) set Y_ 338.957731379943
+$node_(69) set Z_ 0.000000000000
+$node_(70) set X_ 28.468637359672
+$node_(70) set Y_ 169.910277552283
+$node_(70) set Z_ 0.000000000000
+$node_(71) set X_ 134.507572738820
+$node_(71) set Y_ 131.901090833225
+$node_(71) set Z_ 0.000000000000
+$node_(72) set X_ 293.645591609712
+$node_(72) set Y_ 330.688562892196
+$node_(72) set Z_ 0.000000000000
+$node_(73) set X_ 134.157943866414
+$node_(73) set Y_ 69.103594374272
+$node_(73) set Z_ 0.000000000000
+$node_(74) set X_ 295.126880725471
+$node_(74) set Y_ 238.884873266344
+$node_(74) set Z_ 0.000000000000
+$node_(75) set X_ 455.133645368693
+$node_(75) set Y_ 260.515919697311
+$node_(75) set Z_ 0.000000000000
+$node_(76) set X_ 458.209372313588
+$node_(76) set Y_ 401.043422035182
+$node_(76) set Z_ 0.000000000000
+$node_(77) set X_ 372.989687971271
+$node_(77) set Y_ 152.783617907900
+$node_(77) set Z_ 0.000000000000
+$node_(78) set X_ 208.651022380081
+$node_(78) set Y_ 73.919358634210
+$node_(78) set Z_ 0.000000000000
+$node_(79) set X_ 24.466484107317
+$node_(79) set Y_ 333.718520918268
+$node_(79) set Z_ 0.000000000000
+$node_(80) set X_ 379.043438784088
+$node_(80) set Y_ 216.298993907448
+$node_(80) set Z_ 0.000000000000
+$node_(81) set X_ 34.782603437729
+$node_(81) set Y_ 211.167349112874
+$node_(81) set Z_ 0.000000000000
+$node_(82) set X_ 442.947837205872
+$node_(82) set Y_ 474.223572560238
+$node_(82) set Z_ 0.000000000000
+$node_(83) set X_ 24.610540391643
+$node_(83) set Y_ 160.865681702286
+$node_(83) set Z_ 0.000000000000
+$node_(84) set X_ 155.824082533691
+$node_(84) set Y_ 149.299950933640
+$node_(84) set Z_ 0.000000000000
+$node_(85) set X_ 469.967046927928
+$node_(85) set Y_ 29.704346595915
+$node_(85) set Z_ 0.000000000000
+$node_(86) set X_ 100.076443589269
+$node_(86) set Y_ 380.910470203817
+$node_(86) set Z_ 0.000000000000
+$node_(87) set X_ 252.209925781857
+$node_(87) set Y_ 173.793505562714
+$node_(87) set Z_ 0.000000000000
+$node_(88) set X_ 179.719659239447
+$node_(88) set Y_ 292.672203824813
+$node_(88) set Z_ 0.000000000000
+$node_(89) set X_ 41.169737480419
+$node_(89) set Y_ 133.671259345399
+$node_(89) set Z_ 0.000000000000
+$node_(90) set X_ 475.392213063683
+$node_(90) set Y_ 283.249631737341
+$node_(90) set Z_ 0.000000000000
+$node_(91) set X_ 390.507961093834
+$node_(91) set Y_ 152.710037716592
+$node_(91) set Z_ 0.000000000000
+$node_(92) set X_ 497.274936510526
+$node_(92) set Y_ 326.387518292434
+$node_(92) set Z_ 0.000000000000
+$node_(93) set X_ 64.875613314595
+$node_(93) set Y_ 56.678713483078
+$node_(93) set Z_ 0.000000000000
+$node_(94) set X_ 405.932418521015
+$node_(94) set Y_ 27.283498825265
+$node_(94) set Z_ 0.000000000000
+$node_(95) set X_ 242.741937281173
+$node_(95) set Y_ 84.969567058997
+$node_(95) set Z_ 0.000000000000
+$node_(96) set X_ 128.351564565004
+$node_(96) set Y_ 124.978428821897
+$node_(96) set Z_ 0.000000000000
+$node_(97) set X_ 139.632483139531
+$node_(97) set Y_ 261.683630740781
+$node_(97) set Z_ 0.000000000000
+$node_(98) set X_ 284.211374729864
+$node_(98) set Y_ 355.799798040269
+$node_(98) set Z_ 0.000000000000
+$node_(99) set X_ 45.900527631703
+$node_(99) set Y_ 66.431186817979
+$node_(99) set Z_ 0.000000000000
+#
+# nodes: 100, pause: 0.00, max speed: 1.00, max x: 500.00, max y: 500.00
+#
+$node_(0) set X_ 344.735188224567
+$node_(0) set Y_ 377.829981988444
+$node_(0) set Z_ 0.000000000000
+$node_(1) set X_ 332.780416989309
+$node_(1) set Y_ 222.228618507169
+$node_(1) set Z_ 0.000000000000
+$node_(2) set X_ 308.312788868570
+$node_(2) set Y_ 281.849700870164
+$node_(2) set Z_ 0.000000000000
+$node_(3) set X_ 274.242978902194
+$node_(3) set Y_ 103.205676299236
+$node_(3) set Z_ 0.000000000000
+$node_(4) set X_ 414.355166183290
+$node_(4) set Y_ 358.256849115115
+$node_(4) set Z_ 0.000000000000
+$node_(5) set X_ 330.173552077287
+$node_(5) set Y_ 61.993211948915
+$node_(5) set Z_ 0.000000000000
+$node_(6) set X_ 275.107671907729
+$node_(6) set Y_ 334.394824587303
+$node_(6) set Z_ 0.000000000000
+$node_(7) set X_ 141.078828099276
+$node_(7) set Y_ 273.104706501071
+$node_(7) set Z_ 0.000000000000
+$node_(8) set X_ 298.848961168105
+$node_(8) set Y_ 401.162870331173
+$node_(8) set Z_ 0.000000000000
+$node_(9) set X_ 497.292623025567
+$node_(9) set Y_ 410.037609233480
+$node_(9) set Z_ 0.000000000000
+$node_(10) set X_ 294.794791917623
+$node_(10) set Y_ 366.300265465503
+$node_(10) set Z_ 0.000000000000
+$node_(11) set X_ 252.882038615519
+$node_(11) set Y_ 134.765714763493
+$node_(11) set Z_ 0.000000000000
+$node_(12) set X_ 278.496911615915
+$node_(12) set Y_ 433.372112838877
+$node_(12) set Z_ 0.000000000000
+$node_(13) set X_ 36.119337313069
+$node_(13) set Y_ 284.174178053678
+$node_(13) set Z_ 0.000000000000
+$node_(14) set X_ 485.058791095444
+$node_(14) set Y_ 273.641923656110
+$node_(14) set Z_ 0.000000000000
+$node_(15) set X_ 6.343625327450
+$node_(15) set Y_ 219.192483018161
+$node_(15) set Z_ 0.000000000000
+$node_(16) set X_ 131.169614331629
+$node_(16) set Y_ 76.280463688620
+$node_(16) set Z_ 0.000000000000
+$node_(17) set X_ 429.415944222947
+$node_(17) set Y_ 135.295522665016
+$node_(17) set Z_ 0.000000000000
+$node_(18) set X_ 459.960862568547
+$node_(18) set Y_ 463.996198729428
+$node_(18) set Z_ 0.000000000000
+$node_(19) set X_ 437.871277583117
+$node_(19) set Y_ 446.481445773537
+$node_(19) set Z_ 0.000000000000
+$node_(20) set X_ 87.700563888465
+$node_(20) set Y_ 278.154886177791
+$node_(20) set Z_ 0.000000000000
+$node_(21) set X_ 189.984294473364
+$node_(21) set Y_ 424.494043294052
+$node_(21) set Z_ 0.000000000000
+$node_(22) set X_ 254.123761052671
+$node_(22) set Y_ 119.676088540029
+$node_(22) set Z_ 0.000000000000
+$node_(23) set X_ 171.269561309383
+$node_(23) set Y_ 469.422050551462
+$node_(23) set Z_ 0.000000000000
+$node_(24) set X_ 488.771497426664
+$node_(24) set Y_ 106.328842024412
+$node_(24) set Z_ 0.000000000000
+$node_(25) set X_ 68.321939257664
+$node_(25) set Y_ 123.138607040241
+$node_(25) set Z_ 0.000000000000
+$node_(26) set X_ 20.302608777523
+$node_(26) set Y_ 454.180996625136
+$node_(26) set Z_ 0.000000000000
+$node_(27) set X_ 344.890789184087
+$node_(27) set Y_ 491.601571383217
+$node_(27) set Z_ 0.000000000000
+$node_(28) set X_ 486.902570066912
+$node_(28) set Y_ 348.244782056407
+$node_(28) set Z_ 0.000000000000
+$node_(29) set X_ 77.125024875162
+$node_(29) set Y_ 20.792156300686
+$node_(29) set Z_ 0.000000000000
+$node_(30) set X_ 259.300340417417
+$node_(30) set Y_ 366.887972879386
+$node_(30) set Z_ 0.000000000000
+$node_(31) set X_ 194.834044325510
+$node_(31) set Y_ 191.988043122346
+$node_(31) set Z_ 0.000000000000
+$node_(32) set X_ 190.871457965407
+$node_(32) set Y_ 193.782833592694
+$node_(32) set Z_ 0.000000000000
+$node_(33) set X_ 98.348899035848
+$node_(33) set Y_ 357.368708199982
+$node_(33) set Z_ 0.000000000000
+$node_(34) set X_ 368.179407804580
+$node_(34) set Y_ 195.872746231391
+$node_(34) set Z_ 0.000000000000
+$node_(35) set X_ 463.982144023358
+$node_(35) set Y_ 81.910701128055
+$node_(35) set Z_ 0.000000000000
+$node_(36) set X_ 465.820531917426
+$node_(36) set Y_ 469.482007471905
+$node_(36) set Z_ 0.000000000000
+$node_(37) set X_ 253.884425924150
+$node_(37) set Y_ 109.300966429198
+$node_(37) set Z_ 0.000000000000
+$node_(38) set X_ 480.667584221544
+$node_(38) set Y_ 138.188797920772
+$node_(38) set Z_ 0.000000000000
+$node_(39) set X_ 87.890190254236
+$node_(39) set Y_ 23.805614898812
+$node_(39) set Z_ 0.000000000000
+$node_(40) set X_ 123.326060630339
+$node_(40) set Y_ 292.284106322353
+$node_(40) set Z_ 0.000000000000
+$node_(41) set X_ 81.407023927351
+$node_(41) set Y_ 178.919196644610
+$node_(41) set Z_ 0.000000000000
+$node_(42) set X_ 21.774446482091
+$node_(42) set Y_ 23.509812864950
+$node_(42) set Z_ 0.000000000000
+$node_(43) set X_ 210.929620865118
+$node_(43) set Y_ 363.426136922239
+$node_(43) set Z_ 0.000000000000
+$node_(44) set X_ 381.748194085347
+$node_(44) set Y_ 243.486529832054
+$node_(44) set Z_ 0.000000000000
+$node_(45) set X_ 104.110114778137
+$node_(45) set Y_ 352.551889915670
+$node_(45) set Z_ 0.000000000000
+$node_(46) set X_ 171.215396051482
+$node_(46) set Y_ 432.591815474233
+$node_(46) set Z_ 0.000000000000
+$node_(47) set X_ 314.259478209068
+$node_(47) set Y_ 185.239618767481
+$node_(47) set Z_ 0.000000000000
+$node_(48) set X_ 292.911381094150
+$node_(48) set Y_ 356.987880485477
+$node_(48) set Z_ 0.000000000000
+$node_(49) set X_ 197.716535214577
+$node_(49) set Y_ 377.996863127534
+$node_(49) set Z_ 0.000000000000
+$node_(50) set X_ 281.583037359936
+$node_(50) set Y_ 335.571554908269
+$node_(50) set Z_ 0.000000000000
+$node_(51) set X_ 119.083990987733
+$node_(51) set Y_ 9.722291846349
+$node_(51) set Z_ 0.000000000000
+$node_(52) set X_ 31.394904952063
+$node_(52) set Y_ 4.290608780563
+$node_(52) set Z_ 0.000000000000
+$node_(53) set X_ 25.024621678777
+$node_(53) set Y_ 161.567045749618
+$node_(53) set Z_ 0.000000000000
+$node_(54) set X_ 464.672656998018
+$node_(54) set Y_ 302.764193847532
+$node_(54) set Z_ 0.000000000000
+$node_(55) set X_ 197.558718638544
+$node_(55) set Y_ 100.132502342472
+$node_(55) set Z_ 0.000000000000
+$node_(56) set X_ 105.197396334507
+$node_(56) set Y_ 494.286513610649
+$node_(56) set Z_ 0.000000000000
+$node_(57) set X_ 185.515277573647
+$node_(57) set Y_ 410.964610749073
+$node_(57) set Z_ 0.000000000000
+$node_(58) set X_ 41.235640197297
+$node_(58) set Y_ 405.489129792373
+$node_(58) set Z_ 0.000000000000
+$node_(59) set X_ 110.158342149326
+$node_(59) set Y_ 381.942393478010
+$node_(59) set Z_ 0.000000000000
+$node_(60) set X_ 36.844050433385
+$node_(60) set Y_ 329.700210731859
+$node_(60) set Z_ 0.000000000000
+$node_(61) set X_ 268.412950525501
+$node_(61) set Y_ 352.700938089237
+$node_(61) set Z_ 0.000000000000
+$node_(62) set X_ 368.163476949093
+$node_(62) set Y_ 120.980280722468
+$node_(62) set Z_ 0.000000000000
+$node_(63) set X_ 18.494975950326
+$node_(63) set Y_ 107.859134193207
+$node_(63) set Z_ 0.000000000000
+$node_(64) set X_ 14.584523284245
+$node_(64) set Y_ 358.673793520813
+$node_(64) set Z_ 0.000000000000
+$node_(65) set X_ 95.163183471640
+$node_(65) set Y_ 49.089620520976
+$node_(65) set Z_ 0.000000000000
+$node_(66) set X_ 129.220843286704
+$node_(66) set Y_ 62.515507569356
+$node_(66) set Z_ 0.000000000000
+$node_(67) set X_ 139.323758771490
+$node_(67) set Y_ 379.459342669589
+$node_(67) set Z_ 0.000000000000
+$node_(68) set X_ 480.616598964728
+$node_(68) set Y_ 315.541697114863
+$node_(68) set Z_ 0.000000000000
+$node_(69) set X_ 68.595008986947
+$node_(69) set Y_ 167.217395915934
+$node_(69) set Z_ 0.000000000000
+$node_(70) set X_ 58.866602309107
+$node_(70) set Y_ 67.252086938460
+$node_(70) set Z_ 0.000000000000
+$node_(71) set X_ 53.586566156243
+$node_(71) set Y_ 339.751002650757
+$node_(71) set Z_ 0.000000000000
+$node_(72) set X_ 212.569858695970
+$node_(72) set Y_ 446.616489183211
+$node_(72) set Z_ 0.000000000000
+$node_(73) set X_ 324.438431296310
+$node_(73) set Y_ 261.193313246642
+$node_(73) set Z_ 0.000000000000
+$node_(74) set X_ 218.790682500336
+$node_(74) set Y_ 344.460921396472
+$node_(74) set Z_ 0.000000000000
+$node_(75) set X_ 341.796307264276
+$node_(75) set Y_ 77.288614254452
+$node_(75) set Z_ 0.000000000000
+$node_(76) set X_ 279.847930001181
+$node_(76) set Y_ 400.817835091173
+$node_(76) set Z_ 0.000000000000
+$node_(77) set X_ 230.444097526458
+$node_(77) set Y_ 131.740233838085
+$node_(77) set Z_ 0.000000000000
+$node_(78) set X_ 84.469843788475
+$node_(78) set Y_ 114.906684239532
+$node_(78) set Z_ 0.000000000000
+$node_(79) set X_ 186.947764802057
+$node_(79) set Y_ 387.969982739947
+$node_(79) set Z_ 0.000000000000
+$node_(80) set X_ 172.485215909994
+$node_(80) set Y_ 182.138911538034
+$node_(80) set Z_ 0.000000000000
+$node_(81) set X_ 92.225926970829
+$node_(81) set Y_ 164.554400655282
+$node_(81) set Z_ 0.000000000000
+$node_(82) set X_ 140.211510044521
+$node_(82) set Y_ 73.091882444711
+$node_(82) set Z_ 0.000000000000
+$node_(83) set X_ 121.413771005828
+$node_(83) set Y_ 296.651445027325
+$node_(83) set Z_ 0.000000000000
+$node_(84) set X_ 139.132502009058
+$node_(84) set Y_ 90.735353849119
+$node_(84) set Z_ 0.000000000000
+$node_(85) set X_ 368.008166212984
+$node_(85) set Y_ 88.083119788507
+$node_(85) set Z_ 0.000000000000
+$node_(86) set X_ 159.658131471111
+$node_(86) set Y_ 453.267713957393
+$node_(86) set Z_ 0.000000000000
+$node_(87) set X_ 161.555108289109
+$node_(87) set Y_ 178.055138568270
+$node_(87) set Z_ 0.000000000000
+$node_(88) set X_ 186.464271457998
+$node_(88) set Y_ 79.437105921777
+$node_(88) set Z_ 0.000000000000
+$node_(89) set X_ 381.448040679375
+$node_(89) set Y_ 249.473766863938
+$node_(89) set Z_ 0.000000000000
+$node_(90) set X_ 496.267485717227
+$node_(90) set Y_ 310.355466220979
+$node_(90) set Z_ 0.000000000000
+$node_(91) set X_ 499.447891229103
+$node_(91) set Y_ 404.999987278133
+$node_(91) set Z_ 0.000000000000
+$node_(92) set X_ 211.079136096980
+$node_(92) set Y_ 155.522060312468
+$node_(92) set Z_ 0.000000000000
+$node_(93) set X_ 411.391509713008
+$node_(93) set Y_ 324.171322497454
+$node_(93) set Z_ 0.000000000000
+$node_(94) set X_ 398.727226870894
+$node_(94) set Y_ 55.127752820629
+$node_(94) set Z_ 0.000000000000
+$node_(95) set X_ 253.744644294234
+$node_(95) set Y_ 204.504779082954
+$node_(95) set Z_ 0.000000000000
+$node_(96) set X_ 132.109589869807
+$node_(96) set Y_ 482.022417304260
+$node_(96) set Z_ 0.000000000000
+$node_(97) set X_ 233.369528558306
+$node_(97) set Y_ 496.657006280650
+$node_(97) set Z_ 0.000000000000
+$node_(98) set X_ 475.028137398384
+$node_(98) set Y_ 361.738908742949
+$node_(98) set Z_ 0.000000000000
+$node_(99) set X_ 100.200105538038
+$node_(99) set Y_ 29.788213827635
+$node_(99) set Z_ 0.000000000000
+$ns_ at 0.000000000000 "$node_(0) setdest 274.148054077010 238.510381223205 0.868613618815"
+$ns_ at 0.000000000000 "$node_(1) setdest 327.249887997279 192.387481223931 0.393388543237"
+$ns_ at 0.000000000000 "$node_(2) setdest 247.607609024826 324.116932208725 0.716676816826"
+$ns_ at 0.000000000000 "$node_(3) setdest 468.733288346912 83.983395008497 0.144075497745"
+$ns_ at 0.000000000000 "$node_(4) setdest 204.815934901525 45.489268368522 0.814573810536"
+$ns_ at 0.000000000000 "$node_(5) setdest 150.134939637051 285.039467804183 0.244073316168"
+$ns_ at 0.000000000000 "$node_(6) setdest 213.096767623007 41.375315540020 0.177883092780"
+$ns_ at 0.000000000000 "$node_(7) setdest 219.082289507873 84.177528742916 0.350581447343"
+$ns_ at 0.000000000000 "$node_(8) setdest 398.004422030626 458.435226430774 0.985189205250"
+$ns_ at 0.000000000000 "$node_(9) setdest 64.681058156691 75.641794417401 0.785153055403"
+$ns_ at 0.000000000000 "$node_(10) setdest 146.554602189771 440.887663561067 0.691792505303"
+$ns_ at 0.000000000000 "$node_(11) setdest 150.780642955185 375.455865542130 0.100734557014"
+$ns_ at 0.000000000000 "$node_(12) setdest 282.853072004728 308.967192719033 0.686657432659"
+$ns_ at 0.000000000000 "$node_(13) setdest 111.265028627386 445.217331313809 0.162406640542"
+$ns_ at 0.000000000000 "$node_(14) setdest 12.385321798769 449.566777797856 0.780243079944"
+$ns_ at 0.000000000000 "$node_(15) setdest 187.567174437915 18.412214082140 0.592711680402"
+$ns_ at 0.000000000000 "$node_(16) setdest 120.206143591292 465.532187682273 0.425070223495"
+$ns_ at 0.000000000000 "$node_(17) setdest 161.010610286660 332.769805150134 0.990506323060"
+$ns_ at 0.000000000000 "$node_(18) setdest 64.388185365298 109.525965592219 0.646352863275"
+$ns_ at 0.000000000000 "$node_(19) setdest 383.809618030768 428.047460977424 0.666672976610"
+$ns_ at 0.000000000000 "$node_(20) setdest 256.268798095153 118.104462527141 0.281346215056"
+$ns_ at 0.000000000000 "$node_(21) setdest 472.801588322672 53.395904858212 0.125616226375"
+$ns_ at 0.000000000000 "$node_(22) setdest 342.112088147391 201.560039288478 0.327663497570"
+$ns_ at 0.000000000000 "$node_(23) setdest 350.931552702972 414.571332100508 0.371998125076"
+$ns_ at 0.000000000000 "$node_(24) setdest 145.583495912460 483.947693757042 0.423205992213"
+$ns_ at 0.000000000000 "$node_(25) setdest 426.486915375404 483.472771840714 0.815237386052"
+$ns_ at 0.000000000000 "$node_(26) setdest 334.311375403024 40.522059641915 0.862945552332"
+$ns_ at 0.000000000000 "$node_(27) setdest 245.629160686132 337.881246064626 0.269360542304"
+$ns_ at 0.000000000000 "$node_(28) setdest 188.020041819701 222.249226115607 0.643860240915"
+$ns_ at 0.000000000000 "$node_(29) setdest 235.215958772441 315.634909237749 0.668042874186"
+$ns_ at 0.000000000000 "$node_(30) setdest 128.962730365863 129.146395917621 0.027341294495"
+$ns_ at 0.000000000000 "$node_(31) setdest 473.501340134134 393.732996167723 0.055515295022"
+$ns_ at 0.000000000000 "$node_(32) setdest 304.136980967711 471.921485187409 0.489296997379"
+$ns_ at 0.000000000000 "$node_(33) setdest 423.315581760751 359.189015745957 0.868672628115"
+$ns_ at 0.000000000000 "$node_(34) setdest 270.261905788089 325.644946711638 0.948278110763"
+$ns_ at 0.000000000000 "$node_(35) setdest 216.759372289746 398.599230197407 0.163927595852"
+$ns_ at 0.000000000000 "$node_(36) setdest 373.154965256395 388.031812899424 0.414978919624"
+$ns_ at 0.000000000000 "$node_(37) setdest 197.912271056732 487.845334567090 0.256116285285"
+$ns_ at 0.000000000000 "$node_(38) setdest 488.082991568666 15.801380455188 0.174954648453"
+$ns_ at 0.000000000000 "$node_(39) setdest 283.692475875848 15.713391538799 0.590701897597"
+$ns_ at 0.000000000000 "$node_(40) setdest 197.816160774269 380.528330837817 0.667317310535"
+$ns_ at 0.000000000000 "$node_(41) setdest 85.363753548744 348.681578535067 0.478599123319"
+$ns_ at 0.000000000000 "$node_(42) setdest 6.236397148383 377.936637287685 0.928616312368"
+$ns_ at 0.000000000000 "$node_(43) setdest 467.249166962650 135.788264042688 0.101283225712"
+$ns_ at 0.000000000000 "$node_(44) setdest 203.080205768506 414.142817524659 0.210885592938"
+$ns_ at 0.000000000000 "$node_(45) setdest 232.606209205019 74.146260955004 0.655071942195"
+$ns_ at 0.000000000000 "$node_(46) setdest 284.545389163643 245.678016590194 0.656516859903"
+$ns_ at 0.000000000000 "$node_(47) setdest 115.800998193819 209.283660988091 0.934540442746"
+$ns_ at 0.000000000000 "$node_(48) setdest 24.182628148698 360.610381701719 0.491849781318"
+$ns_ at 0.000000000000 "$node_(49) setdest 120.098545095068 336.508149861753 0.491294979395"
+$ns_ at 0.000000000000 "$node_(50) setdest 498.640359546336 431.418952237615 0.003061627186"
+$ns_ at 0.000000000000 "$node_(51) setdest 17.445197824529 396.126573415084 0.882243391012"
+$ns_ at 0.000000000000 "$node_(52) setdest 24.217199426419 155.868386365619 0.772331707563"
+$ns_ at 0.000000000000 "$node_(53) setdest 254.226961144993 66.575731464604 0.633717112433"
+$ns_ at 0.000000000000 "$node_(54) setdest 471.651866474093 54.650065807443 0.154841181172"
+$ns_ at 0.000000000000 "$node_(55) setdest 157.124484465898 29.998318813660 0.925394048794"
+$ns_ at 0.000000000000 "$node_(56) setdest 370.088364923927 271.137131237547 0.394810941797"
+$ns_ at 0.000000000000 "$node_(57) setdest 47.460296044997 149.336893707997 0.509786870106"
+$ns_ at 0.000000000000 "$node_(58) setdest 146.176193585770 358.522790850313 0.487444849775"
+$ns_ at 0.000000000000 "$node_(59) setdest 32.469494560187 159.032184416124 0.562953170411"
+$ns_ at 0.000000000000 "$node_(60) setdest 426.382417950673 8.033820700607 0.133891766856"
+$ns_ at 0.000000000000 "$node_(61) setdest 289.782616723046 306.919808345689 0.250998758061"
+$ns_ at 0.000000000000 "$node_(62) setdest 56.017796544289 263.840619446442 0.934096057734"
+$ns_ at 0.000000000000 "$node_(63) setdest 266.628761649780 225.151778043148 0.662323936765"
+$ns_ at 0.000000000000 "$node_(64) setdest 387.701565199980 12.001139343771 0.234088767714"
+$ns_ at 0.000000000000 "$node_(65) setdest 155.837263309898 134.477238280528 0.254850200379"
+$ns_ at 0.000000000000 "$node_(66) setdest 479.340146342933 91.403272471363 0.206087533121"
+$ns_ at 0.000000000000 "$node_(67) setdest 380.362234570865 111.514820879112 0.751051383610"
+$ns_ at 0.000000000000 "$node_(68) setdest 413.954156358369 64.791697770514 0.211193990411"
+$ns_ at 0.000000000000 "$node_(69) setdest 247.784344837801 220.331962995475 0.278035114946"
+$ns_ at 0.000000000000 "$node_(70) setdest 162.494955071935 293.017630453144 0.397988812481"
+$ns_ at 0.000000000000 "$node_(71) setdest 298.997983031809 384.645371699295 0.555143689613"
+$ns_ at 0.000000000000 "$node_(72) setdest 30.227904856998 417.372283016666 0.488536776420"
+$ns_ at 0.000000000000 "$node_(73) setdest 176.767771078203 344.477137935172 0.850475419988"
+$ns_ at 0.000000000000 "$node_(74) setdest 252.391219254903 6.174109011007 0.954745294663"
+$ns_ at 0.000000000000 "$node_(75) setdest 106.232375627461 290.307475226921 0.855124658408"
+$ns_ at 0.000000000000 "$node_(76) setdest 276.822459320322 120.421037088981 0.015039747378"
+$ns_ at 0.000000000000 "$node_(77) setdest 127.508306415223 137.237064783766 0.725536881227"
+$ns_ at 0.000000000000 "$node_(78) setdest 189.048861344849 41.904907258279 0.567418854456"
+$ns_ at 0.000000000000 "$node_(79) setdest 239.166469487042 112.540751092247 0.947729638342"
+$ns_ at 0.000000000000 "$node_(80) setdest 227.928737157299 93.456919058002 0.431288435289"
+$ns_ at 0.000000000000 "$node_(81) setdest 292.903656820757 330.707799011660 0.033698679183"
+$ns_ at 0.000000000000 "$node_(82) setdest 171.103279592814 390.495749940890 0.700031508600"
+$ns_ at 0.000000000000 "$node_(83) setdest 330.064537970681 294.110635452674 0.849758532306"
+$ns_ at 0.000000000000 "$node_(84) setdest 337.934858815384 489.142451491586 0.527424495133"
+$ns_ at 0.000000000000 "$node_(85) setdest 68.702131577312 108.258269731356 0.387633895648"
+$ns_ at 0.000000000000 "$node_(86) setdest 391.058214670073 343.242366191561 0.296606425125"
+$ns_ at 0.000000000000 "$node_(87) setdest 19.244159223229 446.023873000631 0.965189263634"
+$ns_ at 0.000000000000 "$node_(88) setdest 69.206393532206 232.107515278823 0.336635241057"
+$ns_ at 0.000000000000 "$node_(89) setdest 176.878939217613 219.258534280997 0.483905096923"
+$ns_ at 0.000000000000 "$node_(90) setdest 413.801966600774 184.943434192854 0.016143276207"
+$ns_ at 0.000000000000 "$node_(91) setdest 418.732851766151 117.980909892365 0.299001783177"
+$ns_ at 0.000000000000 "$node_(92) setdest 349.521024082874 53.057096906909 0.967834613824"
+$ns_ at 0.000000000000 "$node_(93) setdest 287.110007884652 66.352122184178 0.194284487611"
+$ns_ at 0.000000000000 "$node_(94) setdest 192.873276099014 218.944322210834 0.827000718568"
+$ns_ at 0.000000000000 "$node_(95) setdest 306.626249984433 311.205920002151 0.583242924957"
+$ns_ at 0.000000000000 "$node_(96) setdest 106.815801751261 149.283595977115 0.627870525372"
+$ns_ at 0.000000000000 "$node_(97) setdest 215.367884909855 411.797174404797 0.975339613126"
+$ns_ at 0.000000000000 "$node_(98) setdest 473.649529162585 455.898088362720 0.862195408283"
+$ns_ at 0.000000000000 "$node_(99) setdest 399.367532126710 391.094376763243 0.519549637117"
+God set-dist 0 1 1
+God set-dist 0 2 1
+God set-dist 0 3 2
+God set-dist 0 4 1
+God set-dist 0 5 2
+God set-dist 0 6 1
+God set-dist 0 7 1
+God set-dist 0 8 1
+God set-dist 0 9 1
+God set-dist 0 10 1
+God set-dist 0 11 2
+God set-dist 0 12 1
+God set-dist 0 13 2
+God set-dist 0 14 1
+God set-dist 0 15 2
+God set-dist 0 16 2
+God set-dist 0 17 2
+God set-dist 0 18 1
+God set-dist 0 19 1
+God set-dist 0 20 2
+God set-dist 0 21 1
+God set-dist 0 22 2
+God set-dist 0 23 1
+God set-dist 0 24 2
+God set-dist 0 25 2
+God set-dist 0 26 2
+God set-dist 0 27 1
+God set-dist 0 28 1
+God set-dist 0 29 2
+God set-dist 0 30 1
+God set-dist 0 31 1
+God set-dist 0 32 1
+God set-dist 0 33 1
+God set-dist 0 34 1
+God set-dist 0 35 2
+God set-dist 0 36 1
+God set-dist 0 37 2
+God set-dist 0 38 2
+God set-dist 0 39 2
+God set-dist 0 40 1
+God set-dist 0 41 2
+God set-dist 0 42 2
+God set-dist 0 43 1
+God set-dist 0 44 1
+God set-dist 0 45 1
+God set-dist 0 46 1
+God set-dist 0 47 1
+God set-dist 0 48 1
+God set-dist 0 49 1
+God set-dist 0 50 1
+God set-dist 0 51 2
+God set-dist 0 52 2
+God set-dist 0 53 2
+God set-dist 0 54 1
+God set-dist 0 55 2
+God set-dist 0 56 2
+God set-dist 0 57 1
+God set-dist 0 58 2
+God set-dist 0 59 1
+God set-dist 0 60 2
+God set-dist 0 61 1
+God set-dist 0 62 2
+God set-dist 0 63 2
+God set-dist 0 64 2
+God set-dist 0 65 2
+God set-dist 0 66 2
+God set-dist 0 67 1
+God set-dist 0 68 1
+God set-dist 0 69 2
+God set-dist 0 70 2
+God set-dist 0 71 2
+God set-dist 0 72 1
+God set-dist 0 73 1
+God set-dist 0 74 1
+God set-dist 0 75 2
+God set-dist 0 76 1
+God set-dist 0 77 2
+God set-dist 0 78 2
+God set-dist 0 79 1
+God set-dist 0 80 2
+God set-dist 0 81 2
+God set-dist 0 82 2
+God set-dist 0 83 1
+God set-dist 0 84 2
+God set-dist 0 85 2
+God set-dist 0 86 1
+God set-dist 0 87 2
+God set-dist 0 88 2
+God set-dist 0 89 1
+God set-dist 0 90 1
+God set-dist 0 91 1
+God set-dist 0 92 2
+God set-dist 0 93 1
+God set-dist 0 94 2
+God set-dist 0 95 1
+God set-dist 0 96 1
+God set-dist 0 97 1
+God set-dist 0 98 1
+God set-dist 0 99 2
+God set-dist 1 2 1
+God set-dist 1 3 1
+God set-dist 1 4 1
+God set-dist 1 5 1
+God set-dist 1 6 1
+God set-dist 1 7 1
+God set-dist 1 8 1
+God set-dist 1 9 1
+God set-dist 1 10 1
+God set-dist 1 11 1
+God set-dist 1 12 1
+God set-dist 1 13 2
+God set-dist 1 14 1
+God set-dist 1 15 2
+God set-dist 1 16 1
+God set-dist 1 17 1
+God set-dist 1 18 2
+God set-dist 1 19 1
+God set-dist 1 20 2
+God set-dist 1 21 1
+God set-dist 1 22 1
+God set-dist 1 23 2
+God set-dist 1 24 1
+God set-dist 1 25 2
+God set-dist 1 26 2
+God set-dist 1 27 2
+God set-dist 1 28 1
+God set-dist 1 29 2
+God set-dist 1 30 1
+God set-dist 1 31 1
+God set-dist 1 32 1
+God set-dist 1 33 2
+God set-dist 1 34 1
+God set-dist 1 35 1
+God set-dist 1 36 2
+God set-dist 1 37 1
+God set-dist 1 38 1
+God set-dist 1 39 2
+God set-dist 1 40 1
+God set-dist 1 41 2
+God set-dist 1 42 2
+God set-dist 1 43 1
+God set-dist 1 44 1
+God set-dist 1 45 2
+God set-dist 1 46 2
+God set-dist 1 47 1
+God set-dist 1 48 1
+God set-dist 1 49 1
+God set-dist 1 50 1
+God set-dist 1 51 2
+God set-dist 1 52 2
+God set-dist 1 53 2
+God set-dist 1 54 1
+God set-dist 1 55 1
+God set-dist 1 56 2
+God set-dist 1 57 1
+God set-dist 1 58 2
+God set-dist 1 59 2
+God set-dist 1 60 2
+God set-dist 1 61 1
+God set-dist 1 62 1
+God set-dist 1 63 2
+God set-dist 1 64 2
+God set-dist 1 65 2
+God set-dist 1 66 2
+God set-dist 1 67 1
+God set-dist 1 68 1
+God set-dist 1 69 2
+God set-dist 1 70 2
+God set-dist 1 71 2
+God set-dist 1 72 2
+God set-dist 1 73 1
+God set-dist 1 74 1
+God set-dist 1 75 1
+God set-dist 1 76 1
+God set-dist 1 77 1
+God set-dist 1 78 2
+God set-dist 1 79 1
+God set-dist 1 80 1
+God set-dist 1 81 1
+God set-dist 1 82 1
+God set-dist 1 83 1
+God set-dist 1 84 1
+God set-dist 1 85 1
+God set-dist 1 86 2
+God set-dist 1 87 1
+God set-dist 1 88 1
+God set-dist 1 89 1
+God set-dist 1 90 1
+God set-dist 1 91 1
+God set-dist 1 92 1
+God set-dist 1 93 1
+God set-dist 1 94 1
+God set-dist 1 95 1
+God set-dist 1 96 2
+God set-dist 1 97 2
+God set-dist 1 98 1
+God set-dist 1 99 2
+God set-dist 2 3 1
+God set-dist 2 4 1
+God set-dist 2 5 1
+God set-dist 2 6 1
+God set-dist 2 7 1
+God set-dist 2 8 1
+God set-dist 2 9 1
+God set-dist 2 10 1
+God set-dist 2 11 1
+God set-dist 2 12 1
+God set-dist 2 13 2
+God set-dist 2 14 1
+God set-dist 2 15 2
+God set-dist 2 16 2
+God set-dist 2 17 1
+God set-dist 2 18 1
+God set-dist 2 19 1
+God set-dist 2 20 1
+God set-dist 2 21 1
+God set-dist 2 22 1
+God set-dist 2 23 1
+God set-dist 2 24 2
+God set-dist 2 25 2
+God set-dist 2 26 2
+God set-dist 2 27 1
+God set-dist 2 28 1
+God set-dist 2 29 2
+God set-dist 2 30 1
+God set-dist 2 31 1
+God set-dist 2 32 1
+God set-dist 2 33 1
+God set-dist 2 34 1
+God set-dist 2 35 2
+God set-dist 2 36 1
+God set-dist 2 37 1
+God set-dist 2 38 1
+God set-dist 2 39 2
+God set-dist 2 40 1
+God set-dist 2 41 1
+God set-dist 2 42 2
+God set-dist 2 43 1
+God set-dist 2 44 1
+God set-dist 2 45 1
+God set-dist 2 46 1
+God set-dist 2 47 1
+God set-dist 2 48 1
+God set-dist 2 49 1
+God set-dist 2 50 1
+God set-dist 2 51 2
+God set-dist 2 52 2
+God set-dist 2 53 2
+God set-dist 2 54 1
+God set-dist 2 55 1
+God set-dist 2 56 2
+God set-dist 2 57 1
+God set-dist 2 58 2
+God set-dist 2 59 1
+God set-dist 2 60 2
+God set-dist 2 61 1
+God set-dist 2 62 1
+God set-dist 2 63 2
+God set-dist 2 64 2
+God set-dist 2 65 2
+God set-dist 2 66 2
+God set-dist 2 67 1
+God set-dist 2 68 1
+God set-dist 2 69 2
+God set-dist 2 70 2
+God set-dist 2 71 2
+God set-dist 2 72 1
+God set-dist 2 73 1
+God set-dist 2 74 1
+God set-dist 2 75 1
+God set-dist 2 76 1
+God set-dist 2 77 1
+God set-dist 2 78 2
+God set-dist 2 79 1
+God set-dist 2 80 1
+God set-dist 2 81 1
+God set-dist 2 82 2
+God set-dist 2 83 1
+God set-dist 2 84 2
+God set-dist 2 85 1
+God set-dist 2 86 1
+God set-dist 2 87 1
+God set-dist 2 88 1
+God set-dist 2 89 1
+God set-dist 2 90 1
+God set-dist 2 91 1
+God set-dist 2 92 1
+God set-dist 2 93 1
+God set-dist 2 94 1
+God set-dist 2 95 1
+God set-dist 2 96 2
+God set-dist 2 97 1
+God set-dist 2 98 1
+God set-dist 2 99 2
+God set-dist 3 4 2
+God set-dist 3 5 1
+God set-dist 3 6 1
+God set-dist 3 7 1
+God set-dist 3 8 2
+God set-dist 3 9 2
+God set-dist 3 10 2
+God set-dist 3 11 1
+God set-dist 3 12 2
+God set-dist 3 13 2
+God set-dist 3 14 2
+God set-dist 3 15 2
+God set-dist 3 16 1
+God set-dist 3 17 1
+God set-dist 3 18 2
+God set-dist 3 19 2
+God set-dist 3 20 2
+God set-dist 3 21 2
+God set-dist 3 22 1
+God set-dist 3 23 2
+God set-dist 3 24 1
+God set-dist 3 25 1
+God set-dist 3 26 2
+God set-dist 3 27 2
+God set-dist 3 28 2
+God set-dist 3 29 1
+God set-dist 3 30 2
+God set-dist 3 31 1
+God set-dist 3 32 1
+God set-dist 3 33 2
+God set-dist 3 34 1
+God set-dist 3 35 1
+God set-dist 3 36 2
+God set-dist 3 37 1
+God set-dist 3 38 1
+God set-dist 3 39 1
+God set-dist 3 40 1
+God set-dist 3 41 1
+God set-dist 3 42 2
+God set-dist 3 43 2
+God set-dist 3 44 1
+God set-dist 3 45 2
+God set-dist 3 46 2
+God set-dist 3 47 1
+God set-dist 3 48 2
+God set-dist 3 49 2
+God set-dist 3 50 1
+God set-dist 3 51 1
+God set-dist 3 52 2
+God set-dist 3 53 2
+God set-dist 3 54 2
+God set-dist 3 55 1
+God set-dist 3 56 2
+God set-dist 3 57 2
+God set-dist 3 58 2
+God set-dist 3 59 2
+God set-dist 3 60 2
+God set-dist 3 61 1
+God set-dist 3 62 1
+God set-dist 3 63 2
+God set-dist 3 64 2
+God set-dist 3 65 1
+God set-dist 3 66 1
+God set-dist 3 67 2
+God set-dist 3 68 2
+God set-dist 3 69 1
+God set-dist 3 70 1
+God set-dist 3 71 2
+God set-dist 3 72 2
+God set-dist 3 73 1
+God set-dist 3 74 1
+God set-dist 3 75 1
+God set-dist 3 76 2
+God set-dist 3 77 1
+God set-dist 3 78 1
+God set-dist 3 79 2
+God set-dist 3 80 1
+God set-dist 3 81 1
+God set-dist 3 82 1
+God set-dist 3 83 1
+God set-dist 3 84 1
+God set-dist 3 85 1
+God set-dist 3 86 2
+God set-dist 3 87 1
+God set-dist 3 88 1
+God set-dist 3 89 1
+God set-dist 3 90 2
+God set-dist 3 91 2
+God set-dist 3 92 1
+God set-dist 3 93 2
+God set-dist 3 94 1
+God set-dist 3 95 1
+God set-dist 3 96 2
+God set-dist 3 97 2
+God set-dist 3 98 2
+God set-dist 3 99 1
+God set-dist 4 5 2
+God set-dist 4 6 1
+God set-dist 4 7 2
+God set-dist 4 8 1
+God set-dist 4 9 1
+God set-dist 4 10 1
+God set-dist 4 11 2
+God set-dist 4 12 1
+God set-dist 4 13 2
+God set-dist 4 14 1
+God set-dist 4 15 2
+God set-dist 4 16 2
+God set-dist 4 17 1
+God set-dist 4 18 1
+God set-dist 4 19 1
+God set-dist 4 20 2
+God set-dist 4 21 1
+God set-dist 4 22 2
+God set-dist 4 23 2
+God set-dist 4 24 2
+God set-dist 4 25 2
+God set-dist 4 26 2
+God set-dist 4 27 1
+God set-dist 4 28 1
+God set-dist 4 29 3
+God set-dist 4 30 1
+God set-dist 4 31 2
+God set-dist 4 32 2
+God set-dist 4 33 2
+God set-dist 4 34 1
+God set-dist 4 35 2
+God set-dist 4 36 1
+God set-dist 4 37 2
+God set-dist 4 38 1
+God set-dist 4 39 2
+God set-dist 4 40 2
+God set-dist 4 41 2
+God set-dist 4 42 3
+God set-dist 4 43 1
+God set-dist 4 44 1
+God set-dist 4 45 2
+God set-dist 4 46 2
+God set-dist 4 47 1
+God set-dist 4 48 1
+God set-dist 4 49 1
+God set-dist 4 50 1
+God set-dist 4 51 2
+God set-dist 4 52 3
+God set-dist 4 53 2
+God set-dist 4 54 1
+God set-dist 4 55 2
+God set-dist 4 56 2
+God set-dist 4 57 1
+God set-dist 4 58 2
+God set-dist 4 59 2
+God set-dist 4 60 2
+God set-dist 4 61 1
+God set-dist 4 62 1
+God set-dist 4 63 3
+God set-dist 4 64 2
+God set-dist 4 65 2
+God set-dist 4 66 2
+God set-dist 4 67 2
+God set-dist 4 68 1
+God set-dist 4 69 2
+God set-dist 4 70 2
+God set-dist 4 71 2
+God set-dist 4 72 1
+God set-dist 4 73 1
+God set-dist 4 74 1
+God set-dist 4 75 2
+God set-dist 4 76 1
+God set-dist 4 77 2
+God set-dist 4 78 2
+God set-dist 4 79 1
+God set-dist 4 80 2
+God set-dist 4 81 2
+God set-dist 4 82 2
+God set-dist 4 83 2
+God set-dist 4 84 2
+God set-dist 4 85 2
+God set-dist 4 86 2
+God set-dist 4 87 2
+God set-dist 4 88 2
+God set-dist 4 89 1
+God set-dist 4 90 1
+God set-dist 4 91 1
+God set-dist 4 92 2
+God set-dist 4 93 1
+God set-dist 4 94 2
+God set-dist 4 95 1
+God set-dist 4 96 2
+God set-dist 4 97 1
+God set-dist 4 98 1
+God set-dist 4 99 2
+God set-dist 5 6 2
+God set-dist 5 7 2
+God set-dist 5 8 2
+God set-dist 5 9 2
+God set-dist 5 10 2
+God set-dist 5 11 1
+God set-dist 5 12 2
+God set-dist 5 13 2
+God set-dist 5 14 2
+God set-dist 5 15 2
+God set-dist 5 16 1
+God set-dist 5 17 1
+God set-dist 5 18 2
+God set-dist 5 19 2
+God set-dist 5 20 2
+God set-dist 5 21 2
+God set-dist 5 22 1
+God set-dist 5 23 2
+God set-dist 5 24 1
+God set-dist 5 25 2
+God set-dist 5 26 3
+God set-dist 5 27 2
+God set-dist 5 28 2
+God set-dist 5 29 2
+God set-dist 5 30 2
+God set-dist 5 31 1
+God set-dist 5 32 1
+God set-dist 5 33 2
+God set-dist 5 34 1
+God set-dist 5 35 1
+God set-dist 5 36 2
+God set-dist 5 37 1
+God set-dist 5 38 1
+God set-dist 5 39 1
+God set-dist 5 40 2
+God set-dist 5 41 2
+God set-dist 5 42 2
+God set-dist 5 43 2
+God set-dist 5 44 1
+God set-dist 5 45 2
+God set-dist 5 46 2
+God set-dist 5 47 1
+God set-dist 5 48 2
+God set-dist 5 49 2
+God set-dist 5 50 2
+God set-dist 5 51 1
+God set-dist 5 52 2
+God set-dist 5 53 2
+God set-dist 5 54 2
+God set-dist 5 55 1
+God set-dist 5 56 3
+God set-dist 5 57 2
+God set-dist 5 58 3
+God set-dist 5 59 2
+God set-dist 5 60 2
+God set-dist 5 61 2
+God set-dist 5 62 1
+God set-dist 5 63 2
+God set-dist 5 64 2
+God set-dist 5 65 1
+God set-dist 5 66 1
+God set-dist 5 67 2
+God set-dist 5 68 2
+God set-dist 5 69 2
+God set-dist 5 70 2
+God set-dist 5 71 2
+God set-dist 5 72 2
+God set-dist 5 73 1
+God set-dist 5 74 2
+God set-dist 5 75 1
+God set-dist 5 76 2
+God set-dist 5 77 1
+God set-dist 5 78 2
+God set-dist 5 79 2
+God set-dist 5 80 1
+God set-dist 5 81 2
+God set-dist 5 82 1
+God set-dist 5 83 2
+God set-dist 5 84 1
+God set-dist 5 85 1
+God set-dist 5 86 2
+God set-dist 5 87 1
+God set-dist 5 88 1
+God set-dist 5 89 1
+God set-dist 5 90 2
+God set-dist 5 91 2
+God set-dist 5 92 1
+God set-dist 5 93 2
+God set-dist 5 94 1
+God set-dist 5 95 1
+God set-dist 5 96 3
+God set-dist 5 97 2
+God set-dist 5 98 2
+God set-dist 5 99 1
+God set-dist 6 7 1
+God set-dist 6 8 1
+God set-dist 6 9 1
+God set-dist 6 10 1
+God set-dist 6 11 1
+God set-dist 6 12 1
+God set-dist 6 13 1
+God set-dist 6 14 1
+God set-dist 6 15 2
+God set-dist 6 16 2
+God set-dist 6 17 2
+God set-dist 6 18 1
+God set-dist 6 19 1
+God set-dist 6 20 1
+God set-dist 6 21 1
+God set-dist 6 22 1
+God set-dist 6 23 1
+God set-dist 6 24 2
+God set-dist 6 25 2
+God set-dist 6 26 2
+God set-dist 6 27 1
+God set-dist 6 28 1
+God set-dist 6 29 2
+God set-dist 6 30 1
+God set-dist 6 31 1
+God set-dist 6 32 1
+God set-dist 6 33 1
+God set-dist 6 34 1
+God set-dist 6 35 2
+God set-dist 6 36 1
+God set-dist 6 37 1
+God set-dist 6 38 2
+God set-dist 6 39 2
+God set-dist 6 40 1
+God set-dist 6 41 1
+God set-dist 6 42 2
+God set-dist 6 43 1
+God set-dist 6 44 1
+God set-dist 6 45 1
+God set-dist 6 46 1
+God set-dist 6 47 1
+God set-dist 6 48 1
+God set-dist 6 49 1
+God set-dist 6 50 1
+God set-dist 6 51 2
+God set-dist 6 52 2
+God set-dist 6 53 2
+God set-dist 6 54 1
+God set-dist 6 55 1
+God set-dist 6 56 1
+God set-dist 6 57 1
+God set-dist 6 58 1
+God set-dist 6 59 1
+God set-dist 6 60 1
+God set-dist 6 61 1
+God set-dist 6 62 1
+God set-dist 6 63 2
+God set-dist 6 64 2
+God set-dist 6 65 2
+God set-dist 6 66 2
+God set-dist 6 67 1
+God set-dist 6 68 1
+God set-dist 6 69 2
+God set-dist 6 70 2
+God set-dist 6 71 1
+God set-dist 6 72 1
+God set-dist 6 73 1
+God set-dist 6 74 1
+God set-dist 6 75 2
+God set-dist 6 76 1
+God set-dist 6 77 1
+God set-dist 6 78 2
+God set-dist 6 79 1
+God set-dist 6 80 1
+God set-dist 6 81 1
+God set-dist 6 82 2
+God set-dist 6 83 1
+God set-dist 6 84 2
+God set-dist 6 85 2
+God set-dist 6 86 1
+God set-dist 6 87 1
+God set-dist 6 88 2
+God set-dist 6 89 1
+God set-dist 6 90 1
+God set-dist 6 91 1
+God set-dist 6 92 1
+God set-dist 6 93 1
+God set-dist 6 94 2
+God set-dist 6 95 1
+God set-dist 6 96 1
+God set-dist 6 97 1
+God set-dist 6 98 1
+God set-dist 6 99 2
+God set-dist 7 8 1
+God set-dist 7 9 2
+God set-dist 7 10 1
+God set-dist 7 11 1
+God set-dist 7 12 1
+God set-dist 7 13 1
+God set-dist 7 14 2
+God set-dist 7 15 1
+God set-dist 7 16 1
+God set-dist 7 17 2
+God set-dist 7 18 2
+God set-dist 7 19 2
+God set-dist 7 20 1
+God set-dist 7 21 1
+God set-dist 7 22 1
+God set-dist 7 23 1
+God set-dist 7 24 2
+God set-dist 7 25 1
+God set-dist 7 26 1
+God set-dist 7 27 2
+God set-dist 7 28 2
+God set-dist 7 29 2
+God set-dist 7 30 1
+God set-dist 7 31 1
+God set-dist 7 32 1
+God set-dist 7 33 1
+God set-dist 7 34 1
+God set-dist 7 35 2
+God set-dist 7 36 2
+God set-dist 7 37 1
+God set-dist 7 38 2
+God set-dist 7 39 2
+God set-dist 7 40 1
+God set-dist 7 41 1
+God set-dist 7 42 2
+God set-dist 7 43 1
+God set-dist 7 44 1
+God set-dist 7 45 1
+God set-dist 7 46 1
+God set-dist 7 47 1
+God set-dist 7 48 1
+God set-dist 7 49 1
+God set-dist 7 50 1
+God set-dist 7 51 2
+God set-dist 7 52 2
+God set-dist 7 53 1
+God set-dist 7 54 2
+God set-dist 7 55 1
+God set-dist 7 56 1
+God set-dist 7 57 1
+God set-dist 7 58 1
+God set-dist 7 59 1
+God set-dist 7 60 1
+God set-dist 7 61 1
+God set-dist 7 62 2
+God set-dist 7 63 1
+God set-dist 7 64 1
+God set-dist 7 65 1
+God set-dist 7 66 1
+God set-dist 7 67 1
+God set-dist 7 68 2
+God set-dist 7 69 1
+God set-dist 7 70 1
+God set-dist 7 71 1
+God set-dist 7 72 1
+God set-dist 7 73 1
+God set-dist 7 74 1
+God set-dist 7 75 2
+God set-dist 7 76 1
+God set-dist 7 77 1
+God set-dist 7 78 1
+God set-dist 7 79 1
+God set-dist 7 80 1
+God set-dist 7 81 1
+God set-dist 7 82 1
+God set-dist 7 83 1
+God set-dist 7 84 1
+God set-dist 7 85 2
+God set-dist 7 86 1
+God set-dist 7 87 1
+God set-dist 7 88 1
+God set-dist 7 89 1
+God set-dist 7 90 2
+God set-dist 7 91 2
+God set-dist 7 92 1
+God set-dist 7 93 2
+God set-dist 7 94 2
+God set-dist 7 95 1
+God set-dist 7 96 1
+God set-dist 7 97 1
+God set-dist 7 98 2
+God set-dist 7 99 1
+God set-dist 8 9 1
+God set-dist 8 10 1
+God set-dist 8 11 2
+God set-dist 8 12 1
+God set-dist 8 13 2
+God set-dist 8 14 1
+God set-dist 8 15 2
+God set-dist 8 16 2
+God set-dist 8 17 2
+God set-dist 8 18 1
+God set-dist 8 19 1
+God set-dist 8 20 1
+God set-dist 8 21 1
+God set-dist 8 22 2
+God set-dist 8 23 1
+God set-dist 8 24 2
+God set-dist 8 25 2
+God set-dist 8 26 2
+God set-dist 8 27 1
+God set-dist 8 28 1
+God set-dist 8 29 2
+God set-dist 8 30 1
+God set-dist 8 31 1
+God set-dist 8 32 1
+God set-dist 8 33 1
+God set-dist 8 34 1
+God set-dist 8 35 2
+God set-dist 8 36 1
+God set-dist 8 37 2
+God set-dist 8 38 2
+God set-dist 8 39 2
+God set-dist 8 40 1
+God set-dist 8 41 2
+God set-dist 8 42 2
+God set-dist 8 43 1
+God set-dist 8 44 1
+God set-dist 8 45 1
+God set-dist 8 46 1
+God set-dist 8 47 1
+God set-dist 8 48 1
+God set-dist 8 49 1
+God set-dist 8 50 1
+God set-dist 8 51 2
+God set-dist 8 52 2
+God set-dist 8 53 2
+God set-dist 8 54 1
+God set-dist 8 55 2
+God set-dist 8 56 1
+God set-dist 8 57 1
+God set-dist 8 58 2
+God set-dist 8 59 1
+God set-dist 8 60 2
+God set-dist 8 61 1
+God set-dist 8 62 2
+God set-dist 8 63 2
+God set-dist 8 64 2
+God set-dist 8 65 2
+God set-dist 8 66 2
+God set-dist 8 67 1
+God set-dist 8 68 1
+God set-dist 8 69 2
+God set-dist 8 70 2
+God set-dist 8 71 2
+God set-dist 8 72 1
+God set-dist 8 73 1
+God set-dist 8 74 1
+God set-dist 8 75 2
+God set-dist 8 76 1
+God set-dist 8 77 2
+God set-dist 8 78 2
+God set-dist 8 79 1
+God set-dist 8 80 2
+God set-dist 8 81 2
+God set-dist 8 82 2
+God set-dist 8 83 1
+God set-dist 8 84 2
+God set-dist 8 85 2
+God set-dist 8 86 1
+God set-dist 8 87 2
+God set-dist 8 88 2
+God set-dist 8 89 1
+God set-dist 8 90 1
+God set-dist 8 91 1
+God set-dist 8 92 2
+God set-dist 8 93 1
+God set-dist 8 94 2
+God set-dist 8 95 1
+God set-dist 8 96 1
+God set-dist 8 97 1
+God set-dist 8 98 1
+God set-dist 8 99 2
+God set-dist 9 10 1
+God set-dist 9 11 2
+God set-dist 9 12 1
+God set-dist 9 13 2
+God set-dist 9 14 1
+God set-dist 9 15 3
+God set-dist 9 16 2
+God set-dist 9 17 2
+God set-dist 9 18 1
+God set-dist 9 19 1
+God set-dist 9 20 2
+God set-dist 9 21 2
+God set-dist 9 22 2
+God set-dist 9 23 2
+God set-dist 9 24 2
+God set-dist 9 25 3
+God set-dist 9 26 3
+God set-dist 9 27 1
+God set-dist 9 28 1
+God set-dist 9 29 3
+God set-dist 9 30 1
+God set-dist 9 31 2
+God set-dist 9 32 2
+God set-dist 9 33 2
+God set-dist 9 34 2
+God set-dist 9 35 2
+God set-dist 9 36 1
+God set-dist 9 37 2
+God set-dist 9 38 2
+God set-dist 9 39 3
+God set-dist 9 40 2
+God set-dist 9 41 2
+God set-dist 9 42 3
+God set-dist 9 43 2
+God set-dist 9 44 1
+God set-dist 9 45 2
+God set-dist 9 46 2
+God set-dist 9 47 2
+God set-dist 9 48 1
+God set-dist 9 49 2
+God set-dist 9 50 1
+God set-dist 9 51 3
+God set-dist 9 52 3
+God set-dist 9 53 3
+God set-dist 9 54 1
+God set-dist 9 55 2
+God set-dist 9 56 2
+God set-dist 9 57 2
+God set-dist 9 58 2
+God set-dist 9 59 2
+God set-dist 9 60 2
+God set-dist 9 61 1
+God set-dist 9 62 2
+God set-dist 9 63 3
+God set-dist 9 64 2
+God set-dist 9 65 3
+God set-dist 9 66 3
+God set-dist 9 67 2
+God set-dist 9 68 1
+God set-dist 9 69 3
+God set-dist 9 70 3
+God set-dist 9 71 2
+God set-dist 9 72 2
+God set-dist 9 73 1
+God set-dist 9 74 2
+God set-dist 9 75 2
+God set-dist 9 76 1
+God set-dist 9 77 2
+God set-dist 9 78 3
+God set-dist 9 79 2
+God set-dist 9 80 2
+God set-dist 9 81 2
+God set-dist 9 82 2
+God set-dist 9 83 2
+God set-dist 9 84 2
+God set-dist 9 85 2
+God set-dist 9 86 2
+God set-dist 9 87 2
+God set-dist 9 88 2
+God set-dist 9 89 1
+God set-dist 9 90 1
+God set-dist 9 91 1
+God set-dist 9 92 2
+God set-dist 9 93 1
+God set-dist 9 94 2
+God set-dist 9 95 2
+God set-dist 9 96 2
+God set-dist 9 97 2
+God set-dist 9 98 1
+God set-dist 9 99 3
+God set-dist 10 11 1
+God set-dist 10 12 1
+God set-dist 10 13 2
+God set-dist 10 14 1
+God set-dist 10 15 2
+God set-dist 10 16 2
+God set-dist 10 17 2
+God set-dist 10 18 1
+God set-dist 10 19 1
+God set-dist 10 20 1
+God set-dist 10 21 1
+God set-dist 10 22 1
+God set-dist 10 23 1
+God set-dist 10 24 2
+God set-dist 10 25 2
+God set-dist 10 26 2
+God set-dist 10 27 1
+God set-dist 10 28 1
+God set-dist 10 29 2
+God set-dist 10 30 1
+God set-dist 10 31 1
+God set-dist 10 32 1
+God set-dist 10 33 1
+God set-dist 10 34 1
+God set-dist 10 35 2
+God set-dist 10 36 1
+God set-dist 10 37 2
+God set-dist 10 38 2
+God set-dist 10 39 2
+God set-dist 10 40 1
+God set-dist 10 41 2
+God set-dist 10 42 2
+God set-dist 10 43 1
+God set-dist 10 44 1
+God set-dist 10 45 1
+God set-dist 10 46 1
+God set-dist 10 47 1
+God set-dist 10 48 1
+God set-dist 10 49 1
+God set-dist 10 50 1
+God set-dist 10 51 2
+God set-dist 10 52 2
+God set-dist 10 53 2
+God set-dist 10 54 1
+God set-dist 10 55 2
+God set-dist 10 56 1
+God set-dist 10 57 1
+God set-dist 10 58 2
+God set-dist 10 59 1
+God set-dist 10 60 2
+God set-dist 10 61 1
+God set-dist 10 62 2
+God set-dist 10 63 2
+God set-dist 10 64 2
+God set-dist 10 65 2
+God set-dist 10 66 2
+God set-dist 10 67 1
+God set-dist 10 68 1
+God set-dist 10 69 2
+God set-dist 10 70 2
+God set-dist 10 71 1
+God set-dist 10 72 1
+God set-dist 10 73 1
+God set-dist 10 74 1
+God set-dist 10 75 2
+God set-dist 10 76 1
+God set-dist 10 77 1
+God set-dist 10 78 2
+God set-dist 10 79 1
+God set-dist 10 80 1
+God set-dist 10 81 2
+God set-dist 10 82 2
+God set-dist 10 83 1
+God set-dist 10 84 2
+God set-dist 10 85 2
+God set-dist 10 86 1
+God set-dist 10 87 1
+God set-dist 10 88 2
+God set-dist 10 89 1
+God set-dist 10 90 1
+God set-dist 10 91 1
+God set-dist 10 92 1
+God set-dist 10 93 1
+God set-dist 10 94 2
+God set-dist 10 95 1
+God set-dist 10 96 1
+God set-dist 10 97 1
+God set-dist 10 98 1
+God set-dist 10 99 2
+God set-dist 11 12 2
+God set-dist 11 13 2
+God set-dist 11 14 2
+God set-dist 11 15 2
+God set-dist 11 16 1
+God set-dist 11 17 1
+God set-dist 11 18 2
+God set-dist 11 19 2
+God set-dist 11 20 1
+God set-dist 11 21 2
+God set-dist 11 22 1
+God set-dist 11 23 2
+God set-dist 11 24 1
+God set-dist 11 25 1
+God set-dist 11 26 2
+God set-dist 11 27 2
+God set-dist 11 28 2
+God set-dist 11 29 1
+God set-dist 11 30 1
+God set-dist 11 31 1
+God set-dist 11 32 1
+God set-dist 11 33 2
+God set-dist 11 34 1
+God set-dist 11 35 1
+God set-dist 11 36 2
+God set-dist 11 37 1
+God set-dist 11 38 1
+God set-dist 11 39 1
+God set-dist 11 40 1
+God set-dist 11 41 1
+God set-dist 11 42 2
+God set-dist 11 43 1
+God set-dist 11 44 1
+God set-dist 11 45 2
+God set-dist 11 46 2
+God set-dist 11 47 1
+God set-dist 11 48 1
+God set-dist 11 49 1
+God set-dist 11 50 1
+God set-dist 11 51 1
+God set-dist 11 52 2
+God set-dist 11 53 1
+God set-dist 11 54 2
+God set-dist 11 55 1
+God set-dist 11 56 2
+God set-dist 11 57 2
+God set-dist 11 58 2
+God set-dist 11 59 2
+God set-dist 11 60 2
+God set-dist 11 61 1
+God set-dist 11 62 1
+God set-dist 11 63 1
+God set-dist 11 64 2
+God set-dist 11 65 1
+God set-dist 11 66 1
+God set-dist 11 67 2
+God set-dist 11 68 2
+God set-dist 11 69 1
+God set-dist 11 70 1
+God set-dist 11 71 2
+God set-dist 11 72 2
+God set-dist 11 73 1
+God set-dist 11 74 1
+God set-dist 11 75 1
+God set-dist 11 76 2
+God set-dist 11 77 1
+God set-dist 11 78 1
+God set-dist 11 79 2
+God set-dist 11 80 1
+God set-dist 11 81 1
+God set-dist 11 82 1
+God set-dist 11 83 1
+God set-dist 11 84 1
+God set-dist 11 85 1
+God set-dist 11 86 2
+God set-dist 11 87 1
+God set-dist 11 88 1
+God set-dist 11 89 1
+God set-dist 11 90 2
+God set-dist 11 91 2
+God set-dist 11 92 1
+God set-dist 11 93 1
+God set-dist 11 94 1
+God set-dist 11 95 1
+God set-dist 11 96 2
+God set-dist 11 97 2
+God set-dist 11 98 2
+God set-dist 11 99 1
+God set-dist 12 13 2
+God set-dist 12 14 2
+God set-dist 12 15 2
+God set-dist 12 16 2
+God set-dist 12 17 2
+God set-dist 12 18 1
+God set-dist 12 19 1
+God set-dist 12 20 1
+God set-dist 12 21 1
+God set-dist 12 22 2
+God set-dist 12 23 1
+God set-dist 12 24 2
+God set-dist 12 25 2
+God set-dist 12 26 2
+God set-dist 12 27 1
+God set-dist 12 28 1
+God set-dist 12 29 3
+God set-dist 12 30 1
+God set-dist 12 31 2
+God set-dist 12 32 2
+God set-dist 12 33 1
+God set-dist 12 34 2
+God set-dist 12 35 2
+God set-dist 12 36 1
+God set-dist 12 37 2
+God set-dist 12 38 2
+God set-dist 12 39 2
+God set-dist 12 40 1
+God set-dist 12 41 2
+God set-dist 12 42 3
+God set-dist 12 43 1
+God set-dist 12 44 1
+God set-dist 12 45 1
+God set-dist 12 46 1
+God set-dist 12 47 2
+God set-dist 12 48 1
+God set-dist 12 49 1
+God set-dist 12 50 1
+God set-dist 12 51 2
+God set-dist 12 52 3
+God set-dist 12 53 2
+God set-dist 12 54 1
+God set-dist 12 55 2
+God set-dist 12 56 1
+God set-dist 12 57 1
+God set-dist 12 58 1
+God set-dist 12 59 1
+God set-dist 12 60 2
+God set-dist 12 61 1
+God set-dist 12 62 2
+God set-dist 12 63 2
+God set-dist 12 64 2
+God set-dist 12 65 2
+God set-dist 12 66 2
+God set-dist 12 67 1
+God set-dist 12 68 1
+God set-dist 12 69 2
+God set-dist 12 70 2
+God set-dist 12 71 1
+God set-dist 12 72 1
+God set-dist 12 73 1
+God set-dist 12 74 1
+God set-dist 12 75 2
+God set-dist 12 76 1
+God set-dist 12 77 2
+God set-dist 12 78 2
+God set-dist 12 79 1
+God set-dist 12 80 2
+God set-dist 12 81 2
+God set-dist 12 82 2
+God set-dist 12 83 1
+God set-dist 12 84 2
+God set-dist 12 85 2
+God set-dist 12 86 1
+God set-dist 12 87 2
+God set-dist 12 88 2
+God set-dist 12 89 1
+God set-dist 12 90 2
+God set-dist 12 91 1
+God set-dist 12 92 2
+God set-dist 12 93 1
+God set-dist 12 94 2
+God set-dist 12 95 1
+God set-dist 12 96 1
+God set-dist 12 97 1
+God set-dist 12 98 1
+God set-dist 12 99 2
+God set-dist 13 14 2
+God set-dist 13 15 1
+God set-dist 13 16 1
+God set-dist 13 17 2
+God set-dist 13 18 2
+God set-dist 13 19 2
+God set-dist 13 20 1
+God set-dist 13 21 1
+God set-dist 13 22 2
+God set-dist 13 23 1
+God set-dist 13 24 3
+God set-dist 13 25 1
+God set-dist 13 26 1
+God set-dist 13 27 2
+God set-dist 13 28 2
+God set-dist 13 29 2
+God set-dist 13 30 1
+God set-dist 13 31 1
+God set-dist 13 32 1
+God set-dist 13 33 1
+God set-dist 13 34 2
+God set-dist 13 35 2
+God set-dist 13 36 2
+God set-dist 13 37 2
+God set-dist 13 38 2
+God set-dist 13 39 2
+God set-dist 13 40 1
+God set-dist 13 41 1
+God set-dist 13 42 2
+God set-dist 13 43 1
+God set-dist 13 44 2
+God set-dist 13 45 1
+God set-dist 13 46 1
+God set-dist 13 47 2
+God set-dist 13 48 2
+God set-dist 13 49 1
+God set-dist 13 50 2
+God set-dist 13 51 2
+God set-dist 13 52 2
+God set-dist 13 53 1
+God set-dist 13 54 2
+God set-dist 13 55 1
+God set-dist 13 56 1
+God set-dist 13 57 1
+God set-dist 13 58 1
+God set-dist 13 59 1
+God set-dist 13 60 1
+God set-dist 13 61 1
+God set-dist 13 62 2
+God set-dist 13 63 1
+God set-dist 13 64 1
+God set-dist 13 65 1
+God set-dist 13 66 1
+God set-dist 13 67 1
+God set-dist 13 68 2
+God set-dist 13 69 1
+God set-dist 13 70 1
+God set-dist 13 71 1
+God set-dist 13 72 1
+God set-dist 13 73 2
+God set-dist 13 74 1
+God set-dist 13 75 2
+God set-dist 13 76 2
+God set-dist 13 77 1
+God set-dist 13 78 1
+God set-dist 13 79 1
+God set-dist 13 80 1
+God set-dist 13 81 1
+God set-dist 13 82 1
+God set-dist 13 83 1
+God set-dist 13 84 1
+God set-dist 13 85 2
+God set-dist 13 86 1
+God set-dist 13 87 1
+God set-dist 13 88 2
+God set-dist 13 89 2
+God set-dist 13 90 2
+God set-dist 13 91 2
+God set-dist 13 92 1
+God set-dist 13 93 2
+God set-dist 13 94 2
+God set-dist 13 95 1
+God set-dist 13 96 1
+God set-dist 13 97 2
+God set-dist 13 98 2
+God set-dist 13 99 2
+God set-dist 14 15 2
+God set-dist 14 16 2
+God set-dist 14 17 1
+God set-dist 14 18 1
+God set-dist 14 19 1
+God set-dist 14 20 2
+God set-dist 14 21 2
+God set-dist 14 22 2
+God set-dist 14 23 2
+God set-dist 14 24 1
+God set-dist 14 25 2
+God set-dist 14 26 3
+God set-dist 14 27 2
+God set-dist 14 28 1
+God set-dist 14 29 3
+God set-dist 14 30 1
+God set-dist 14 31 2
+God set-dist 14 32 2
+God set-dist 14 33 2
+God set-dist 14 34 1
+God set-dist 14 35 1
+God set-dist 14 36 1
+God set-dist 14 37 2
+God set-dist 14 38 1
+God set-dist 14 39 2
+God set-dist 14 40 2
+God set-dist 14 41 2
+God set-dist 14 42 3
+God set-dist 14 43 2
+God set-dist 14 44 1
+God set-dist 14 45 2
+God set-dist 14 46 2
+God set-dist 14 47 1
+God set-dist 14 48 1
+God set-dist 14 49 2
+God set-dist 14 50 1
+God set-dist 14 51 2
+God set-dist 14 52 3
+God set-dist 14 53 2
+God set-dist 14 54 1
+God set-dist 14 55 2
+God set-dist 14 56 2
+God set-dist 14 57 2
+God set-dist 14 58 2
+God set-dist 14 59 2
+God set-dist 14 60 2
+God set-dist 14 61 1
+God set-dist 14 62 1
+God set-dist 14 63 3
+God set-dist 14 64 2
+God set-dist 14 65 2
+God set-dist 14 66 2
+God set-dist 14 67 2
+God set-dist 14 68 1
+God set-dist 14 69 2
+God set-dist 14 70 2
+God set-dist 14 71 2
+God set-dist 14 72 2
+God set-dist 14 73 1
+God set-dist 14 74 2
+God set-dist 14 75 1
+God set-dist 14 76 1
+God set-dist 14 77 2
+God set-dist 14 78 2
+God set-dist 14 79 2
+God set-dist 14 80 2
+God set-dist 14 81 2
+God set-dist 14 82 2
+God set-dist 14 83 2
+God set-dist 14 84 2
+God set-dist 14 85 1
+God set-dist 14 86 2
+God set-dist 14 87 2
+God set-dist 14 88 2
+God set-dist 14 89 1
+God set-dist 14 90 1
+God set-dist 14 91 1
+God set-dist 14 92 2
+God set-dist 14 93 1
+God set-dist 14 94 1
+God set-dist 14 95 1
+God set-dist 14 96 2
+God set-dist 14 97 2
+God set-dist 14 98 1
+God set-dist 14 99 2
+God set-dist 15 16 1
+God set-dist 15 17 2
+God set-dist 15 18 3
+God set-dist 15 19 2
+God set-dist 15 20 1
+God set-dist 15 21 2
+God set-dist 15 22 2
+God set-dist 15 23 2
+God set-dist 15 24 3
+God set-dist 15 25 1
+God set-dist 15 26 1
+God set-dist 15 27 2
+God set-dist 15 28 3
+God set-dist 15 29 1
+God set-dist 15 30 2
+God set-dist 15 31 1
+God set-dist 15 32 1
+God set-dist 15 33 1
+God set-dist 15 34 2
+God set-dist 15 35 2
+God set-dist 15 36 3
+God set-dist 15 37 2
+God set-dist 15 38 2
+God set-dist 15 39 1
+God set-dist 15 40 1
+God set-dist 15 41 1
+God set-dist 15 42 1
+God set-dist 15 43 2
+God set-dist 15 44 2
+God set-dist 15 45 1
+God set-dist 15 46 2
+God set-dist 15 47 2
+God set-dist 15 48 2
+God set-dist 15 49 1
+God set-dist 15 50 2
+God set-dist 15 51 1
+God set-dist 15 52 1
+God set-dist 15 53 1
+God set-dist 15 54 2
+God set-dist 15 55 1
+God set-dist 15 56 2
+God set-dist 15 57 2
+God set-dist 15 58 1
+God set-dist 15 59 1
+God set-dist 15 60 1
+God set-dist 15 61 2
+God set-dist 15 62 2
+God set-dist 15 63 1
+God set-dist 15 64 1
+God set-dist 15 65 1
+God set-dist 15 66 1
+God set-dist 15 67 1
+God set-dist 15 68 3
+God set-dist 15 69 1
+God set-dist 15 70 1
+God set-dist 15 71 1
+God set-dist 15 72 2
+God set-dist 15 73 2
+God set-dist 15 74 1
+God set-dist 15 75 2
+God set-dist 15 76 2
+God set-dist 15 77 1
+God set-dist 15 78 1
+God set-dist 15 79 1
+God set-dist 15 80 1
+God set-dist 15 81 1
+God set-dist 15 82 1
+God set-dist 15 83 1
+God set-dist 15 84 1
+God set-dist 15 85 2
+God set-dist 15 86 2
+God set-dist 15 87 1
+God set-dist 15 88 1
+God set-dist 15 89 2
+God set-dist 15 90 3
+God set-dist 15 91 3
+God set-dist 15 92 1
+God set-dist 15 93 2
+God set-dist 15 94 2
+God set-dist 15 95 1
+God set-dist 15 96 2
+God set-dist 15 97 2
+God set-dist 15 98 3
+God set-dist 15 99 1
+God set-dist 16 17 2
+God set-dist 16 18 3
+God set-dist 16 19 2
+God set-dist 16 20 1
+God set-dist 16 21 2
+God set-dist 16 22 1
+God set-dist 16 23 2
+God set-dist 16 24 2
+God set-dist 16 25 1
+God set-dist 16 26 2
+God set-dist 16 27 3
+God set-dist 16 28 2
+God set-dist 16 29 1
+God set-dist 16 30 2
+God set-dist 16 31 1
+God set-dist 16 32 1
+God set-dist 16 33 2
+God set-dist 16 34 2
+God set-dist 16 35 2
+God set-dist 16 36 3
+God set-dist 16 37 1
+God set-dist 16 38 2
+God set-dist 16 39 1
+God set-dist 16 40 1
+God set-dist 16 41 1
+God set-dist 16 42 1
+God set-dist 16 43 2
+God set-dist 16 44 2
+God set-dist 16 45 2
+God set-dist 16 46 2
+God set-dist 16 47 1
+God set-dist 16 48 2
+God set-dist 16 49 2
+God set-dist 16 50 2
+God set-dist 16 51 1
+God set-dist 16 52 1
+God set-dist 16 53 1
+God set-dist 16 54 2
+God set-dist 16 55 1
+God set-dist 16 56 2
+God set-dist 16 57 2
+God set-dist 16 58 2
+God set-dist 16 59 2
+God set-dist 16 60 2
+God set-dist 16 61 2
+God set-dist 16 62 1
+God set-dist 16 63 1
+God set-dist 16 64 2
+God set-dist 16 65 1
+God set-dist 16 66 1
+God set-dist 16 67 2
+God set-dist 16 68 2
+God set-dist 16 69 1
+God set-dist 16 70 1
+God set-dist 16 71 2
+God set-dist 16 72 2
+God set-dist 16 73 2
+God set-dist 16 74 2
+God set-dist 16 75 1
+God set-dist 16 76 2
+God set-dist 16 77 1
+God set-dist 16 78 1
+God set-dist 16 79 2
+God set-dist 16 80 1
+God set-dist 16 81 1
+God set-dist 16 82 1
+God set-dist 16 83 1
+God set-dist 16 84 1
+God set-dist 16 85 1
+God set-dist 16 86 2
+God set-dist 16 87 1
+God set-dist 16 88 1
+God set-dist 16 89 2
+God set-dist 16 90 2
+God set-dist 16 91 2
+God set-dist 16 92 1
+God set-dist 16 93 2
+God set-dist 16 94 2
+God set-dist 16 95 1
+God set-dist 16 96 2
+God set-dist 16 97 2
+God set-dist 16 98 2
+God set-dist 16 99 1
+God set-dist 17 18 2
+God set-dist 17 19 2
+God set-dist 17 20 2
+God set-dist 17 21 2
+God set-dist 17 22 1
+God set-dist 17 23 2
+God set-dist 17 24 1
+God set-dist 17 25 2
+God set-dist 17 26 3
+God set-dist 17 27 2
+God set-dist 17 28 1
+God set-dist 17 29 2
+God set-dist 17 30 2
+God set-dist 17 31 1
+God set-dist 17 32 1
+God set-dist 17 33 2
+God set-dist 17 34 1
+God set-dist 17 35 1
+God set-dist 17 36 2
+God set-dist 17 37 1
+God set-dist 17 38 1
+God set-dist 17 39 2
+God set-dist 17 40 2
+God set-dist 17 41 2
+God set-dist 17 42 2
+God set-dist 17 43 2
+God set-dist 17 44 1
+God set-dist 17 45 2
+God set-dist 17 46 2
+God set-dist 17 47 1
+God set-dist 17 48 2
+God set-dist 17 49 2
+God set-dist 17 50 1
+God set-dist 17 51 2
+God set-dist 17 52 2
+God set-dist 17 53 2
+God set-dist 17 54 1
+God set-dist 17 55 1
+God set-dist 17 56 2
+God set-dist 17 57 2
+God set-dist 17 58 3
+God set-dist 17 59 2
+God set-dist 17 60 2
+God set-dist 17 61 2
+God set-dist 17 62 1
+God set-dist 17 63 2
+God set-dist 17 64 2
+God set-dist 17 65 2
+God set-dist 17 66 2
+God set-dist 17 67 2
+God set-dist 17 68 1
+God set-dist 17 69 2
+God set-dist 17 70 2
+God set-dist 17 71 2
+God set-dist 17 72 2
+God set-dist 17 73 1
+God set-dist 17 74 2
+God set-dist 17 75 1
+God set-dist 17 76 2
+God set-dist 17 77 1
+God set-dist 17 78 2
+God set-dist 17 79 2
+God set-dist 17 80 2
+God set-dist 17 81 2
+God set-dist 17 82 2
+God set-dist 17 83 2
+God set-dist 17 84 2
+God set-dist 17 85 1
+God set-dist 17 86 2
+God set-dist 17 87 2
+God set-dist 17 88 1
+God set-dist 17 89 1
+God set-dist 17 90 1
+God set-dist 17 91 2
+God set-dist 17 92 1
+God set-dist 17 93 1
+God set-dist 17 94 1
+God set-dist 17 95 1
+God set-dist 17 96 2
+God set-dist 17 97 2
+God set-dist 17 98 1
+God set-dist 17 99 2
+God set-dist 18 19 1
+God set-dist 18 20 2
+God set-dist 18 21 2
+God set-dist 18 22 2
+God set-dist 18 23 2
+God set-dist 18 24 2
+God set-dist 18 25 3
+God set-dist 18 26 2
+God set-dist 18 27 1
+God set-dist 18 28 1
+God set-dist 18 29 3
+God set-dist 18 30 1
+God set-dist 18 31 2
+God set-dist 18 32 2
+God set-dist 18 33 2
+God set-dist 18 34 2
+God set-dist 18 35 2
+God set-dist 18 36 1
+God set-dist 18 37 2
+God set-dist 18 38 2
+God set-dist 18 39 3
+God set-dist 18 40 2
+God set-dist 18 41 2
+God set-dist 18 42 3
+God set-dist 18 43 2
+God set-dist 18 44 1
+God set-dist 18 45 2
+God set-dist 18 46 2
+God set-dist 18 47 2
+God set-dist 18 48 1
+God set-dist 18 49 2
+God set-dist 18 50 1
+God set-dist 18 51 3
+God set-dist 18 52 3
+God set-dist 18 53 3
+God set-dist 18 54 1
+God set-dist 18 55 2
+God set-dist 18 56 2
+God set-dist 18 57 2
+God set-dist 18 58 2
+God set-dist 18 59 2
+God set-dist 18 60 2
+God set-dist 18 61 1
+God set-dist 18 62 2
+God set-dist 18 63 3
+God set-dist 18 64 2
+God set-dist 18 65 3
+God set-dist 18 66 3
+God set-dist 18 67 2
+God set-dist 18 68 1
+God set-dist 18 69 3
+God set-dist 18 70 3
+God set-dist 18 71 2
+God set-dist 18 72 1
+God set-dist 18 73 1
+God set-dist 18 74 2
+God set-dist 18 75 2
+God set-dist 18 76 1
+God set-dist 18 77 2
+God set-dist 18 78 3
+God set-dist 18 79 2
+God set-dist 18 80 2
+God set-dist 18 81 2
+God set-dist 18 82 3
+God set-dist 18 83 2
+God set-dist 18 84 3
+God set-dist 18 85 2
+God set-dist 18 86 2
+God set-dist 18 87 2
+God set-dist 18 88 2
+God set-dist 18 89 1
+God set-dist 18 90 1
+God set-dist 18 91 1
+God set-dist 18 92 2
+God set-dist 18 93 1
+God set-dist 18 94 2
+God set-dist 18 95 2
+God set-dist 18 96 2
+God set-dist 18 97 1
+God set-dist 18 98 1
+God set-dist 18 99 3
+God set-dist 19 20 2
+God set-dist 19 21 1
+God set-dist 19 22 2
+God set-dist 19 23 2
+God set-dist 19 24 2
+God set-dist 19 25 3
+God set-dist 19 26 2
+God set-dist 19 27 1
+God set-dist 19 28 1
+God set-dist 19 29 3
+God set-dist 19 30 1
+God set-dist 19 31 2
+God set-dist 19 32 2
+God set-dist 19 33 2
+God set-dist 19 34 2
+God set-dist 19 35 2
+God set-dist 19 36 1
+God set-dist 19 37 2
+God set-dist 19 38 2
+God set-dist 19 39 3
+God set-dist 19 40 2
+God set-dist 19 41 2
+God set-dist 19 42 3
+God set-dist 19 43 1
+God set-dist 19 44 1
+God set-dist 19 45 2
+God set-dist 19 46 2
+God set-dist 19 47 2
+God set-dist 19 48 1
+God set-dist 19 49 1
+God set-dist 19 50 1
+God set-dist 19 51 3
+God set-dist 19 52 3
+God set-dist 19 53 3
+God set-dist 19 54 1
+God set-dist 19 55 2
+God set-dist 19 56 2
+God set-dist 19 57 2
+God set-dist 19 58 2
+God set-dist 19 59 2
+God set-dist 19 60 2
+God set-dist 19 61 1
+God set-dist 19 62 2
+God set-dist 19 63 3
+God set-dist 19 64 2
+God set-dist 19 65 3
+God set-dist 19 66 3
+God set-dist 19 67 2
+God set-dist 19 68 1
+God set-dist 19 69 2
+God set-dist 19 70 3
+God set-dist 19 71 2
+God set-dist 19 72 1
+God set-dist 19 73 1
+God set-dist 19 74 1
+God set-dist 19 75 2
+God set-dist 19 76 1
+God set-dist 19 77 2
+God set-dist 19 78 3
+God set-dist 19 79 2
+God set-dist 19 80 2
+God set-dist 19 81 2
+God set-dist 19 82 2
+God set-dist 19 83 2
+God set-dist 19 84 2
+God set-dist 19 85 2
+God set-dist 19 86 2
+God set-dist 19 87 2
+God set-dist 19 88 2
+God set-dist 19 89 1
+God set-dist 19 90 1
+God set-dist 19 91 1
+God set-dist 19 92 2
+God set-dist 19 93 1
+God set-dist 19 94 2
+God set-dist 19 95 2
+God set-dist 19 96 2
+God set-dist 19 97 1
+God set-dist 19 98 1
+God set-dist 19 99 3
+God set-dist 20 21 1
+God set-dist 20 22 1
+God set-dist 20 23 1
+God set-dist 20 24 2
+God set-dist 20 25 1
+God set-dist 20 26 1
+God set-dist 20 27 2
+God set-dist 20 28 2
+God set-dist 20 29 2
+God set-dist 20 30 1
+God set-dist 20 31 1
+God set-dist 20 32 1
+God set-dist 20 33 1
+God set-dist 20 34 2
+God set-dist 20 35 2
+God set-dist 20 36 2
+God set-dist 20 37 1
+God set-dist 20 38 2
+God set-dist 20 39 2
+God set-dist 20 40 1
+God set-dist 20 41 1
+God set-dist 20 42 2
+God set-dist 20 43 1
+God set-dist 20 44 2
+God set-dist 20 45 1
+God set-dist 20 46 1
+God set-dist 20 47 1
+God set-dist 20 48 1
+God set-dist 20 49 1
+God set-dist 20 50 1
+God set-dist 20 51 2
+God set-dist 20 52 2
+God set-dist 20 53 1
+God set-dist 20 54 2
+God set-dist 20 55 1
+God set-dist 20 56 1
+God set-dist 20 57 1
+God set-dist 20 58 1
+God set-dist 20 59 1
+God set-dist 20 60 1
+God set-dist 20 61 1
+God set-dist 20 62 2
+God set-dist 20 63 1
+God set-dist 20 64 1
+God set-dist 20 65 1
+God set-dist 20 66 1
+God set-dist 20 67 1
+God set-dist 20 68 2
+God set-dist 20 69 1
+God set-dist 20 70 1
+God set-dist 20 71 1
+God set-dist 20 72 1
+God set-dist 20 73 1
+God set-dist 20 74 1
+God set-dist 20 75 2
+God set-dist 20 76 1
+God set-dist 20 77 1
+God set-dist 20 78 1
+God set-dist 20 79 1
+God set-dist 20 80 1
+God set-dist 20 81 1
+God set-dist 20 82 1
+God set-dist 20 83 1
+God set-dist 20 84 1
+God set-dist 20 85 2
+God set-dist 20 86 1
+God set-dist 20 87 1
+God set-dist 20 88 1
+God set-dist 20 89 2
+God set-dist 20 90 2
+God set-dist 20 91 2
+God set-dist 20 92 1
+God set-dist 20 93 2
+God set-dist 20 94 2
+God set-dist 20 95 1
+God set-dist 20 96 1
+God set-dist 20 97 2
+God set-dist 20 98 2
+God set-dist 20 99 1
+God set-dist 21 22 2
+God set-dist 21 23 1
+God set-dist 21 24 2
+God set-dist 21 25 2
+God set-dist 21 26 1
+God set-dist 21 27 1
+God set-dist 21 28 2
+God set-dist 21 29 2
+God set-dist 21 30 1
+God set-dist 21 31 1
+God set-dist 21 32 1
+God set-dist 21 33 1
+God set-dist 21 34 2
+God set-dist 21 35 2
+God set-dist 21 36 2
+God set-dist 21 37 2
+God set-dist 21 38 2
+God set-dist 21 39 2
+God set-dist 21 40 1
+God set-dist 21 41 2
+God set-dist 21 42 2
+God set-dist 21 43 1
+God set-dist 21 44 2
+God set-dist 21 45 1
+God set-dist 21 46 1
+God set-dist 21 47 2
+God set-dist 21 48 1
+God set-dist 21 49 1
+God set-dist 21 50 1
+God set-dist 21 51 2
+God set-dist 21 52 2
+God set-dist 21 53 2
+God set-dist 21 54 2
+God set-dist 21 55 2
+God set-dist 21 56 1
+God set-dist 21 57 1
+God set-dist 21 58 1
+God set-dist 21 59 1
+God set-dist 21 60 1
+God set-dist 21 61 1
+God set-dist 21 62 2
+God set-dist 21 63 2
+God set-dist 21 64 1
+God set-dist 21 65 2
+God set-dist 21 66 2
+God set-dist 21 67 1
+God set-dist 21 68 2
+God set-dist 21 69 2
+God set-dist 21 70 2
+God set-dist 21 71 1
+God set-dist 21 72 1
+God set-dist 21 73 1
+God set-dist 21 74 1
+God set-dist 21 75 2
+God set-dist 21 76 1
+God set-dist 21 77 2
+God set-dist 21 78 2
+God set-dist 21 79 1
+God set-dist 21 80 1
+God set-dist 21 81 2
+God set-dist 21 82 2
+God set-dist 21 83 1
+God set-dist 21 84 2
+God set-dist 21 85 2
+God set-dist 21 86 1
+God set-dist 21 87 1
+God set-dist 21 88 2
+God set-dist 21 89 2
+God set-dist 21 90 2
+God set-dist 21 91 2
+God set-dist 21 92 2
+God set-dist 21 93 1
+God set-dist 21 94 2
+God set-dist 21 95 1
+God set-dist 21 96 1
+God set-dist 21 97 1
+God set-dist 21 98 2
+God set-dist 21 99 2
+God set-dist 22 23 2
+God set-dist 22 24 1
+God set-dist 22 25 1
+God set-dist 22 26 2
+God set-dist 22 27 2
+God set-dist 22 28 2
+God set-dist 22 29 1
+God set-dist 22 30 1
+God set-dist 22 31 1
+God set-dist 22 32 1
+God set-dist 22 33 2
+God set-dist 22 34 1
+God set-dist 22 35 1
+God set-dist 22 36 2
+God set-dist 22 37 1
+God set-dist 22 38 1
+God set-dist 22 39 1
+God set-dist 22 40 1
+God set-dist 22 41 1
+God set-dist 22 42 2
+God set-dist 22 43 1
+God set-dist 22 44 1
+God set-dist 22 45 2
+God set-dist 22 46 2
+God set-dist 22 47 1
+God set-dist 22 48 1
+God set-dist 22 49 2
+God set-dist 22 50 1
+God set-dist 22 51 1
+God set-dist 22 52 2
+God set-dist 22 53 1
+God set-dist 22 54 2
+God set-dist 22 55 1
+God set-dist 22 56 2
+God set-dist 22 57 2
+God set-dist 22 58 2
+God set-dist 22 59 2
+God set-dist 22 60 2
+God set-dist 22 61 1
+God set-dist 22 62 1
+God set-dist 22 63 1
+God set-dist 22 64 2
+God set-dist 22 65 1
+God set-dist 22 66 1
+God set-dist 22 67 2
+God set-dist 22 68 2
+God set-dist 22 69 1
+God set-dist 22 70 1
+God set-dist 22 71 2
+God set-dist 22 72 2
+God set-dist 22 73 1
+God set-dist 22 74 1
+God set-dist 22 75 1
+God set-dist 22 76 2
+God set-dist 22 77 1
+God set-dist 22 78 1
+God set-dist 22 79 2
+God set-dist 22 80 1
+God set-dist 22 81 1
+God set-dist 22 82 1
+God set-dist 22 83 1
+God set-dist 22 84 1
+God set-dist 22 85 1
+God set-dist 22 86 2
+God set-dist 22 87 1
+God set-dist 22 88 1
+God set-dist 22 89 1
+God set-dist 22 90 2
+God set-dist 22 91 2
+God set-dist 22 92 1
+God set-dist 22 93 2
+God set-dist 22 94 1
+God set-dist 22 95 1
+God set-dist 22 96 2
+God set-dist 22 97 2
+God set-dist 22 98 2
+God set-dist 22 99 1
+God set-dist 23 24 3
+God set-dist 23 25 2
+God set-dist 23 26 1
+God set-dist 23 27 1
+God set-dist 23 28 2
+God set-dist 23 29 3
+God set-dist 23 30 1
+God set-dist 23 31 2
+God set-dist 23 32 2
+God set-dist 23 33 1
+God set-dist 23 34 2
+God set-dist 23 35 3
+God set-dist 23 36 2
+God set-dist 23 37 2
+God set-dist 23 38 2
+God set-dist 23 39 3
+God set-dist 23 40 1
+God set-dist 23 41 2
+God set-dist 23 42 3
+God set-dist 23 43 1
+God set-dist 23 44 2
+God set-dist 23 45 1
+God set-dist 23 46 1
+God set-dist 23 47 2
+God set-dist 23 48 1
+God set-dist 23 49 1
+God set-dist 23 50 1
+God set-dist 23 51 3
+God set-dist 23 52 3
+God set-dist 23 53 2
+God set-dist 23 54 2
+God set-dist 23 55 2
+God set-dist 23 56 1
+God set-dist 23 57 1
+God set-dist 23 58 1
+God set-dist 23 59 1
+God set-dist 23 60 1
+God set-dist 23 61 1
+God set-dist 23 62 2
+God set-dist 23 63 2
+God set-dist 23 64 1
+God set-dist 23 65 2
+God set-dist 23 66 2
+God set-dist 23 67 1
+God set-dist 23 68 2
+God set-dist 23 69 2
+God set-dist 23 70 2
+God set-dist 23 71 1
+God set-dist 23 72 1
+God set-dist 23 73 2
+God set-dist 23 74 1
+God set-dist 23 75 2
+God set-dist 23 76 1
+God set-dist 23 77 2
+God set-dist 23 78 2
+God set-dist 23 79 1
+God set-dist 23 80 2
+God set-dist 23 81 2
+God set-dist 23 82 2
+God set-dist 23 83 1
+God set-dist 23 84 2
+God set-dist 23 85 2
+God set-dist 23 86 1
+God set-dist 23 87 2
+God set-dist 23 88 2
+God set-dist 23 89 2
+God set-dist 23 90 2
+God set-dist 23 91 2
+God set-dist 23 92 2
+God set-dist 23 93 2
+God set-dist 23 94 2
+God set-dist 23 95 2
+God set-dist 23 96 1
+God set-dist 23 97 1
+God set-dist 23 98 2
+God set-dist 23 99 2
+God set-dist 24 25 2
+God set-dist 24 26 3
+God set-dist 24 27 2
+God set-dist 24 28 1
+God set-dist 24 29 2
+God set-dist 24 30 2
+God set-dist 24 31 2
+God set-dist 24 32 2
+God set-dist 24 33 2
+God set-dist 24 34 1
+God set-dist 24 35 1
+God set-dist 24 36 2
+God set-dist 24 37 1
+God set-dist 24 38 1
+God set-dist 24 39 2
+God set-dist 24 40 2
+God set-dist 24 41 2
+God set-dist 24 42 2
+God set-dist 24 43 2
+God set-dist 24 44 1
+God set-dist 24 45 2
+God set-dist 24 46 2
+God set-dist 24 47 1
+God set-dist 24 48 2
+God set-dist 24 49 2
+God set-dist 24 50 2
+God set-dist 24 51 2
+God set-dist 24 52 2
+God set-dist 24 53 2
+God set-dist 24 54 1
+God set-dist 24 55 2
+God set-dist 24 56 3
+God set-dist 24 57 2
+God set-dist 24 58 3
+God set-dist 24 59 2
+God set-dist 24 60 3
+God set-dist 24 61 2
+God set-dist 24 62 1
+God set-dist 24 63 2
+God set-dist 24 64 3
+God set-dist 24 65 2
+God set-dist 24 66 2
+God set-dist 24 67 2
+God set-dist 24 68 1
+God set-dist 24 69 2
+God set-dist 24 70 2
+God set-dist 24 71 3
+God set-dist 24 72 2
+God set-dist 24 73 1
+God set-dist 24 74 2
+God set-dist 24 75 1
+God set-dist 24 76 2
+God set-dist 24 77 2
+God set-dist 24 78 2
+God set-dist 24 79 2
+God set-dist 24 80 2
+God set-dist 24 81 2
+God set-dist 24 82 2
+God set-dist 24 83 2
+God set-dist 24 84 2
+God set-dist 24 85 1
+God set-dist 24 86 3
+God set-dist 24 87 2
+God set-dist 24 88 2
+God set-dist 24 89 1
+God set-dist 24 90 1
+God set-dist 24 91 2
+God set-dist 24 92 2
+God set-dist 24 93 1
+God set-dist 24 94 1
+God set-dist 24 95 2
+God set-dist 24 96 3
+God set-dist 24 97 2
+God set-dist 24 98 2
+God set-dist 24 99 2
+God set-dist 25 26 2
+God set-dist 25 27 3
+God set-dist 25 28 3
+God set-dist 25 29 1
+God set-dist 25 30 2
+God set-dist 25 31 1
+God set-dist 25 32 1
+God set-dist 25 33 1
+God set-dist 25 34 2
+God set-dist 25 35 2
+God set-dist 25 36 3
+God set-dist 25 37 1
+God set-dist 25 38 2
+God set-dist 25 39 1
+God set-dist 25 40 1
+God set-dist 25 41 1
+God set-dist 25 42 1
+God set-dist 25 43 2
+God set-dist 25 44 2
+God set-dist 25 45 1
+God set-dist 25 46 2
+God set-dist 25 47 2
+God set-dist 25 48 2
+God set-dist 25 49 2
+God set-dist 25 50 2
+God set-dist 25 51 1
+God set-dist 25 52 1
+God set-dist 25 53 1
+God set-dist 25 54 2
+God set-dist 25 55 1
+God set-dist 25 56 2
+God set-dist 25 57 2
+God set-dist 25 58 2
+God set-dist 25 59 2
+God set-dist 25 60 1
+God set-dist 25 61 2
+God set-dist 25 62 2
+God set-dist 25 63 1
+God set-dist 25 64 1
+God set-dist 25 65 1
+God set-dist 25 66 1
+God set-dist 25 67 2
+God set-dist 25 68 3
+God set-dist 25 69 1
+God set-dist 25 70 1
+God set-dist 25 71 1
+God set-dist 25 72 2
+God set-dist 25 73 2
+God set-dist 25 74 2
+God set-dist 25 75 2
+God set-dist 25 76 2
+God set-dist 25 77 1
+God set-dist 25 78 1
+God set-dist 25 79 2
+God set-dist 25 80 1
+God set-dist 25 81 1
+God set-dist 25 82 1
+God set-dist 25 83 1
+God set-dist 25 84 1
+God set-dist 25 85 2
+God set-dist 25 86 2
+God set-dist 25 87 1
+God set-dist 25 88 1
+God set-dist 25 89 2
+God set-dist 25 90 3
+God set-dist 25 91 3
+God set-dist 25 92 1
+God set-dist 25 93 2
+God set-dist 25 94 2
+God set-dist 25 95 1
+God set-dist 25 96 2
+God set-dist 25 97 2
+God set-dist 25 98 3
+God set-dist 25 99 1
+God set-dist 26 27 2
+God set-dist 26 28 3
+God set-dist 26 29 2
+God set-dist 26 30 2
+God set-dist 26 31 2
+God set-dist 26 32 2
+God set-dist 26 33 1
+God set-dist 26 34 2
+God set-dist 26 35 3
+God set-dist 26 36 2
+God set-dist 26 37 2
+God set-dist 26 38 3
+God set-dist 26 39 2
+God set-dist 26 40 1
+God set-dist 26 41 2
+God set-dist 26 42 2
+God set-dist 26 43 1
+God set-dist 26 44 2
+God set-dist 26 45 1
+God set-dist 26 46 1
+God set-dist 26 47 2
+God set-dist 26 48 2
+God set-dist 26 49 1
+God set-dist 26 50 2
+God set-dist 26 51 2
+God set-dist 26 52 2
+God set-dist 26 53 2
+God set-dist 26 54 2
+God set-dist 26 55 2
+God set-dist 26 56 1
+God set-dist 26 57 1
+God set-dist 26 58 1
+God set-dist 26 59 1
+God set-dist 26 60 1
+God set-dist 26 61 2
+God set-dist 26 62 3
+God set-dist 26 63 2
+God set-dist 26 64 1
+God set-dist 26 65 2
+God set-dist 26 66 2
+God set-dist 26 67 1
+God set-dist 26 68 3
+God set-dist 26 69 2
+God set-dist 26 70 2
+God set-dist 26 71 1
+God set-dist 26 72 1
+God set-dist 26 73 2
+God set-dist 26 74 1
+God set-dist 26 75 3
+God set-dist 26 76 2
+God set-dist 26 77 2
+God set-dist 26 78 2
+God set-dist 26 79 1
+God set-dist 26 80 2
+God set-dist 26 81 2
+God set-dist 26 82 2
+God set-dist 26 83 1
+God set-dist 26 84 2
+God set-dist 26 85 3
+God set-dist 26 86 1
+God set-dist 26 87 2
+God set-dist 26 88 2
+God set-dist 26 89 2
+God set-dist 26 90 3
+God set-dist 26 91 3
+God set-dist 26 92 2
+God set-dist 26 93 2
+God set-dist 26 94 3
+God set-dist 26 95 2
+God set-dist 26 96 1
+God set-dist 26 97 1
+God set-dist 26 98 3
+God set-dist 26 99 2
+God set-dist 27 28 1
+God set-dist 27 29 3
+God set-dist 27 30 1
+God set-dist 27 31 2
+God set-dist 27 32 2
+God set-dist 27 33 2
+God set-dist 27 34 2
+God set-dist 27 35 2
+God set-dist 27 36 1
+God set-dist 27 37 2
+God set-dist 27 38 2
+God set-dist 27 39 3
+God set-dist 27 40 2
+God set-dist 27 41 2
+God set-dist 27 42 3
+God set-dist 27 43 1
+God set-dist 27 44 2
+God set-dist 27 45 2
+God set-dist 27 46 1
+God set-dist 27 47 2
+God set-dist 27 48 1
+God set-dist 27 49 1
+God set-dist 27 50 1
+God set-dist 27 51 3
+God set-dist 27 52 3
+God set-dist 27 53 2
+God set-dist 27 54 1
+God set-dist 27 55 2
+God set-dist 27 56 1
+God set-dist 27 57 1
+God set-dist 27 58 2
+God set-dist 27 59 2
+God set-dist 27 60 2
+God set-dist 27 61 1
+God set-dist 27 62 2
+God set-dist 27 63 3
+God set-dist 27 64 2
+God set-dist 27 65 3
+God set-dist 27 66 3
+God set-dist 27 67 1
+God set-dist 27 68 1
+God set-dist 27 69 2
+God set-dist 27 70 3
+God set-dist 27 71 2
+God set-dist 27 72 1
+God set-dist 27 73 1
+God set-dist 27 74 1
+God set-dist 27 75 2
+God set-dist 27 76 1
+God set-dist 27 77 2
+God set-dist 27 78 3
+God set-dist 27 79 1
+God set-dist 27 80 2
+God set-dist 27 81 2
+God set-dist 27 82 3
+God set-dist 27 83 2
+God set-dist 27 84 3
+God set-dist 27 85 2
+God set-dist 27 86 1
+God set-dist 27 87 2
+God set-dist 27 88 2
+God set-dist 27 89 1
+God set-dist 27 90 1
+God set-dist 27 91 1
+God set-dist 27 92 2
+God set-dist 27 93 1
+God set-dist 27 94 2
+God set-dist 27 95 2
+God set-dist 27 96 1
+God set-dist 27 97 1
+God set-dist 27 98 1
+God set-dist 27 99 3
+God set-dist 28 29 3
+God set-dist 28 30 1
+God set-dist 28 31 2
+God set-dist 28 32 2
+God set-dist 28 33 2
+God set-dist 28 34 1
+God set-dist 28 35 2
+God set-dist 28 36 1
+God set-dist 28 37 2
+God set-dist 28 38 1
+God set-dist 28 39 3
+God set-dist 28 40 2
+God set-dist 28 41 2
+God set-dist 28 42 3
+God set-dist 28 43 2
+God set-dist 28 44 1
+God set-dist 28 45 2
+God set-dist 28 46 2
+God set-dist 28 47 1
+God set-dist 28 48 1
+God set-dist 28 49 2
+God set-dist 28 50 1
+God set-dist 28 51 3
+God set-dist 28 52 3
+God set-dist 28 53 3
+God set-dist 28 54 1
+God set-dist 28 55 2
+God set-dist 28 56 2
+God set-dist 28 57 2
+God set-dist 28 58 2
+God set-dist 28 59 2
+God set-dist 28 60 2
+God set-dist 28 61 1
+God set-dist 28 62 2
+God set-dist 28 63 3
+God set-dist 28 64 2
+God set-dist 28 65 3
+God set-dist 28 66 2
+God set-dist 28 67 2
+God set-dist 28 68 1
+God set-dist 28 69 2
+God set-dist 28 70 3
+God set-dist 28 71 2
+God set-dist 28 72 2
+God set-dist 28 73 1
+God set-dist 28 74 2
+God set-dist 28 75 2
+God set-dist 28 76 1
+God set-dist 28 77 2
+God set-dist 28 78 2
+God set-dist 28 79 2
+God set-dist 28 80 2
+God set-dist 28 81 2
+God set-dist 28 82 2
+God set-dist 28 83 2
+God set-dist 28 84 2
+God set-dist 28 85 2
+God set-dist 28 86 2
+God set-dist 28 87 2
+God set-dist 28 88 2
+God set-dist 28 89 1
+God set-dist 28 90 1
+God set-dist 28 91 1
+God set-dist 28 92 2
+God set-dist 28 93 1
+God set-dist 28 94 2
+God set-dist 28 95 2
+God set-dist 28 96 2
+God set-dist 28 97 2
+God set-dist 28 98 1
+God set-dist 28 99 3
+God set-dist 29 30 2
+God set-dist 29 31 1
+God set-dist 29 32 1
+God set-dist 29 33 2
+God set-dist 29 34 2
+God set-dist 29 35 2
+God set-dist 29 36 3
+God set-dist 29 37 1
+God set-dist 29 38 2
+God set-dist 29 39 1
+God set-dist 29 40 2
+God set-dist 29 41 1
+God set-dist 29 42 1
+God set-dist 29 43 2
+God set-dist 29 44 2
+God set-dist 29 45 2
+God set-dist 29 46 2
+God set-dist 29 47 2
+God set-dist 29 48 2
+God set-dist 29 49 2
+God set-dist 29 50 2
+God set-dist 29 51 1
+God set-dist 29 52 1
+God set-dist 29 53 1
+God set-dist 29 54 3
+God set-dist 29 55 1
+God set-dist 29 56 3
+God set-dist 29 57 2
+God set-dist 29 58 2
+God set-dist 29 59 2
+God set-dist 29 60 2
+God set-dist 29 61 2
+God set-dist 29 62 2
+God set-dist 29 63 1
+God set-dist 29 64 2
+God set-dist 29 65 1
+God set-dist 29 66 1
+God set-dist 29 67 2
+God set-dist 29 68 3
+God set-dist 29 69 1
+God set-dist 29 70 1
+God set-dist 29 71 2
+God set-dist 29 72 3
+God set-dist 29 73 2
+God set-dist 29 74 2
+God set-dist 29 75 2
+God set-dist 29 76 2
+God set-dist 29 77 1
+God set-dist 29 78 1
+God set-dist 29 79 2
+God set-dist 29 80 1
+God set-dist 29 81 1
+God set-dist 29 82 1
+God set-dist 29 83 2
+God set-dist 29 84 1
+God set-dist 29 85 2
+God set-dist 29 86 3
+God set-dist 29 87 1
+God set-dist 29 88 1
+God set-dist 29 89 2
+God set-dist 29 90 3
+God set-dist 29 91 3
+God set-dist 29 92 1
+God set-dist 29 93 2
+God set-dist 29 94 2
+God set-dist 29 95 2
+God set-dist 29 96 3
+God set-dist 29 97 3
+God set-dist 29 98 3
+God set-dist 29 99 1
+God set-dist 30 31 1
+God set-dist 30 32 1
+God set-dist 30 33 1
+God set-dist 30 34 1
+God set-dist 30 35 2
+God set-dist 30 36 1
+God set-dist 30 37 2
+God set-dist 30 38 2
+God set-dist 30 39 2
+God set-dist 30 40 1
+God set-dist 30 41 2
+God set-dist 30 42 2
+God set-dist 30 43 1
+God set-dist 30 44 1
+God set-dist 30 45 1
+God set-dist 30 46 1
+God set-dist 30 47 1
+God set-dist 30 48 1
+God set-dist 30 49 1
+God set-dist 30 50 1
+God set-dist 30 51 2
+God set-dist 30 52 2
+God set-dist 30 53 2
+God set-dist 30 54 1
+God set-dist 30 55 2
+God set-dist 30 56 1
+God set-dist 30 57 1
+God set-dist 30 58 1
+God set-dist 30 59 1
+God set-dist 30 60 1
+God set-dist 30 61 1
+God set-dist 30 62 2
+God set-dist 30 63 2
+God set-dist 30 64 1
+God set-dist 30 65 2
+God set-dist 30 66 2
+God set-dist 30 67 1
+God set-dist 30 68 1
+God set-dist 30 69 2
+God set-dist 30 70 2
+God set-dist 30 71 1
+God set-dist 30 72 1
+God set-dist 30 73 1
+God set-dist 30 74 1
+God set-dist 30 75 2
+God set-dist 30 76 1
+God set-dist 30 77 1
+God set-dist 30 78 2
+God set-dist 30 79 1
+God set-dist 30 80 1
+God set-dist 30 81 2
+God set-dist 30 82 2
+God set-dist 30 83 1
+God set-dist 30 84 2
+God set-dist 30 85 2
+God set-dist 30 86 1
+God set-dist 30 87 1
+God set-dist 30 88 2
+God set-dist 30 89 1
+God set-dist 30 90 1
+God set-dist 30 91 1
+God set-dist 30 92 1
+God set-dist 30 93 1
+God set-dist 30 94 2
+God set-dist 30 95 1
+God set-dist 30 96 1
+God set-dist 30 97 1
+God set-dist 30 98 1
+God set-dist 30 99 2
+God set-dist 31 32 1
+God set-dist 31 33 1
+God set-dist 31 34 1
+God set-dist 31 35 2
+God set-dist 31 36 2
+God set-dist 31 37 1
+God set-dist 31 38 2
+God set-dist 31 39 1
+God set-dist 31 40 1
+God set-dist 31 41 1
+God set-dist 31 42 1
+God set-dist 31 43 1
+God set-dist 31 44 1
+God set-dist 31 45 1
+God set-dist 31 46 1
+God set-dist 31 47 1
+God set-dist 31 48 1
+God set-dist 31 49 1
+God set-dist 31 50 1
+God set-dist 31 51 1
+God set-dist 31 52 1
+God set-dist 31 53 1
+God set-dist 31 54 2
+God set-dist 31 55 1
+God set-dist 31 56 2
+God set-dist 31 57 1
+God set-dist 31 58 2
+God set-dist 31 59 1
+God set-dist 31 60 1
+God set-dist 31 61 1
+God set-dist 31 62 1
+God set-dist 31 63 1
+God set-dist 31 64 1
+God set-dist 31 65 1
+God set-dist 31 66 1
+God set-dist 31 67 1
+God set-dist 31 68 2
+God set-dist 31 69 1
+God set-dist 31 70 1
+God set-dist 31 71 1
+God set-dist 31 72 2
+God set-dist 31 73 1
+God set-dist 31 74 1
+God set-dist 31 75 1
+God set-dist 31 76 1
+God set-dist 31 77 1
+God set-dist 31 78 1
+God set-dist 31 79 1
+God set-dist 31 80 1
+God set-dist 31 81 1
+God set-dist 31 82 1
+God set-dist 31 83 1
+God set-dist 31 84 1
+God set-dist 31 85 1
+God set-dist 31 86 2
+God set-dist 31 87 1
+God set-dist 31 88 1
+God set-dist 31 89 1
+God set-dist 31 90 2
+God set-dist 31 91 2
+God set-dist 31 92 1
+God set-dist 31 93 2
+God set-dist 31 94 1
+God set-dist 31 95 1
+God set-dist 31 96 2
+God set-dist 31 97 2
+God set-dist 31 98 2
+God set-dist 31 99 1
+God set-dist 32 33 1
+God set-dist 32 34 1
+God set-dist 32 35 2
+God set-dist 32 36 2
+God set-dist 32 37 1
+God set-dist 32 38 2
+God set-dist 32 39 1
+God set-dist 32 40 1
+God set-dist 32 41 1
+God set-dist 32 42 1
+God set-dist 32 43 1
+God set-dist 32 44 1
+God set-dist 32 45 1
+God set-dist 32 46 1
+God set-dist 32 47 1
+God set-dist 32 48 1
+God set-dist 32 49 1
+God set-dist 32 50 1
+God set-dist 32 51 1
+God set-dist 32 52 1
+God set-dist 32 53 1
+God set-dist 32 54 2
+God set-dist 32 55 1
+God set-dist 32 56 2
+God set-dist 32 57 1
+God set-dist 32 58 2
+God set-dist 32 59 1
+God set-dist 32 60 1
+God set-dist 32 61 1
+God set-dist 32 62 1
+God set-dist 32 63 1
+God set-dist 32 64 1
+God set-dist 32 65 1
+God set-dist 32 66 1
+God set-dist 32 67 1
+God set-dist 32 68 2
+God set-dist 32 69 1
+God set-dist 32 70 1
+God set-dist 32 71 1
+God set-dist 32 72 2
+God set-dist 32 73 1
+God set-dist 32 74 1
+God set-dist 32 75 1
+God set-dist 32 76 1
+God set-dist 32 77 1
+God set-dist 32 78 1
+God set-dist 32 79 1
+God set-dist 32 80 1
+God set-dist 32 81 1
+God set-dist 32 82 1
+God set-dist 32 83 1
+God set-dist 32 84 1
+God set-dist 32 85 1
+God set-dist 32 86 2
+God set-dist 32 87 1
+God set-dist 32 88 1
+God set-dist 32 89 1
+God set-dist 32 90 2
+God set-dist 32 91 2
+God set-dist 32 92 1
+God set-dist 32 93 2
+God set-dist 32 94 1
+God set-dist 32 95 1
+God set-dist 32 96 2
+God set-dist 32 97 2
+God set-dist 32 98 2
+God set-dist 32 99 1
+God set-dist 33 34 2
+God set-dist 33 35 2
+God set-dist 33 36 2
+God set-dist 33 37 2
+God set-dist 33 38 2
+God set-dist 33 39 2
+God set-dist 33 40 1
+God set-dist 33 41 1
+God set-dist 33 42 2
+God set-dist 33 43 1
+God set-dist 33 44 2
+God set-dist 33 45 1
+God set-dist 33 46 1
+God set-dist 33 47 2
+God set-dist 33 48 1
+God set-dist 33 49 1
+God set-dist 33 50 1
+God set-dist 33 51 2
+God set-dist 33 52 2
+God set-dist 33 53 1
+God set-dist 33 54 2
+God set-dist 33 55 2
+God set-dist 33 56 1
+God set-dist 33 57 1
+God set-dist 33 58 1
+God set-dist 33 59 1
+God set-dist 33 60 1
+God set-dist 33 61 1
+God set-dist 33 62 2
+God set-dist 33 63 2
+God set-dist 33 64 1
+God set-dist 33 65 2
+God set-dist 33 66 2
+God set-dist 33 67 1
+God set-dist 33 68 2
+God set-dist 33 69 1
+God set-dist 33 70 2
+God set-dist 33 71 1
+God set-dist 33 72 1
+God set-dist 33 73 1
+God set-dist 33 74 1
+God set-dist 33 75 2
+God set-dist 33 76 1
+God set-dist 33 77 2
+God set-dist 33 78 1
+God set-dist 33 79 1
+God set-dist 33 80 1
+God set-dist 33 81 1
+God set-dist 33 82 2
+God set-dist 33 83 1
+God set-dist 33 84 2
+God set-dist 33 85 2
+God set-dist 33 86 1
+God set-dist 33 87 1
+God set-dist 33 88 2
+God set-dist 33 89 2
+God set-dist 33 90 2
+God set-dist 33 91 2
+God set-dist 33 92 1
+God set-dist 33 93 2
+God set-dist 33 94 2
+God set-dist 33 95 1
+God set-dist 33 96 1
+God set-dist 33 97 1
+God set-dist 33 98 2
+God set-dist 33 99 2
+God set-dist 34 35 1
+God set-dist 34 36 2
+God set-dist 34 37 1
+God set-dist 34 38 1
+God set-dist 34 39 2
+God set-dist 34 40 2
+God set-dist 34 41 2
+God set-dist 34 42 2
+God set-dist 34 43 1
+God set-dist 34 44 1
+God set-dist 34 45 2
+God set-dist 34 46 2
+God set-dist 34 47 1
+God set-dist 34 48 1
+God set-dist 34 49 1
+God set-dist 34 50 1
+God set-dist 34 51 2
+God set-dist 34 52 2
+God set-dist 34 53 2
+God set-dist 34 54 1
+God set-dist 34 55 1
+God set-dist 34 56 2
+God set-dist 34 57 2
+God set-dist 34 58 2
+God set-dist 34 59 2
+God set-dist 34 60 2
+God set-dist 34 61 1
+God set-dist 34 62 1
+God set-dist 34 63 2
+God set-dist 34 64 2
+God set-dist 34 65 2
+God set-dist 34 66 2
+God set-dist 34 67 2
+God set-dist 34 68 1
+God set-dist 34 69 2
+God set-dist 34 70 2
+God set-dist 34 71 2
+God set-dist 34 72 2
+God set-dist 34 73 1
+God set-dist 34 74 1
+God set-dist 34 75 1
+God set-dist 34 76 1
+God set-dist 34 77 1
+God set-dist 34 78 2
+God set-dist 34 79 2
+God set-dist 34 80 1
+God set-dist 34 81 2
+God set-dist 34 82 2
+God set-dist 34 83 2
+God set-dist 34 84 2
+God set-dist 34 85 1
+God set-dist 34 86 2
+God set-dist 34 87 1
+God set-dist 34 88 1
+God set-dist 34 89 1
+God set-dist 34 90 1
+God set-dist 34 91 1
+God set-dist 34 92 1
+God set-dist 34 93 1
+God set-dist 34 94 1
+God set-dist 34 95 1
+God set-dist 34 96 2
+God set-dist 34 97 2
+God set-dist 34 98 1
+God set-dist 34 99 2
+God set-dist 35 36 2
+God set-dist 35 37 1
+God set-dist 35 38 1
+God set-dist 35 39 2
+God set-dist 35 40 2
+God set-dist 35 41 2
+God set-dist 35 42 2
+God set-dist 35 43 2
+God set-dist 35 44 1
+God set-dist 35 45 2
+God set-dist 35 46 2
+God set-dist 35 47 1
+God set-dist 35 48 2
+God set-dist 35 49 2
+God set-dist 35 50 2
+God set-dist 35 51 2
+God set-dist 35 52 2
+God set-dist 35 53 2
+God set-dist 35 54 1
+God set-dist 35 55 2
+God set-dist 35 56 3
+God set-dist 35 57 2
+God set-dist 35 58 3
+God set-dist 35 59 2
+God set-dist 35 60 3
+God set-dist 35 61 2
+God set-dist 35 62 1
+God set-dist 35 63 2
+God set-dist 35 64 3
+God set-dist 35 65 2
+God set-dist 35 66 2
+God set-dist 35 67 2
+God set-dist 35 68 1
+God set-dist 35 69 2
+God set-dist 35 70 2
+God set-dist 35 71 2
+God set-dist 35 72 2
+God set-dist 35 73 1
+God set-dist 35 74 2
+God set-dist 35 75 1
+God set-dist 35 76 2
+God set-dist 35 77 1
+God set-dist 35 78 2
+God set-dist 35 79 2
+God set-dist 35 80 2
+God set-dist 35 81 2
+God set-dist 35 82 2
+God set-dist 35 83 2
+God set-dist 35 84 2
+God set-dist 35 85 1
+God set-dist 35 86 3
+God set-dist 35 87 2
+God set-dist 35 88 2
+God set-dist 35 89 1
+God set-dist 35 90 1
+God set-dist 35 91 2
+God set-dist 35 92 2
+God set-dist 35 93 1
+God set-dist 35 94 1
+God set-dist 35 95 1
+God set-dist 35 96 3
+God set-dist 35 97 2
+God set-dist 35 98 2
+God set-dist 35 99 2
+God set-dist 36 37 2
+God set-dist 36 38 2
+God set-dist 36 39 3
+God set-dist 36 40 2
+God set-dist 36 41 2
+God set-dist 36 42 3
+God set-dist 36 43 2
+God set-dist 36 44 1
+God set-dist 36 45 2
+God set-dist 36 46 2
+God set-dist 36 47 2
+God set-dist 36 48 1
+God set-dist 36 49 2
+God set-dist 36 50 1
+God set-dist 36 51 3
+God set-dist 36 52 3
+God set-dist 36 53 3
+God set-dist 36 54 1
+God set-dist 36 55 2
+God set-dist 36 56 2
+God set-dist 36 57 2
+God set-dist 36 58 2
+God set-dist 36 59 2
+God set-dist 36 60 2
+God set-dist 36 61 1
+God set-dist 36 62 2
+God set-dist 36 63 3
+God set-dist 36 64 2
+God set-dist 36 65 3
+God set-dist 36 66 3
+God set-dist 36 67 2
+God set-dist 36 68 1
+God set-dist 36 69 3
+God set-dist 36 70 3
+God set-dist 36 71 2
+God set-dist 36 72 2
+God set-dist 36 73 2
+God set-dist 36 74 2
+God set-dist 36 75 2
+God set-dist 36 76 1
+God set-dist 36 77 2
+God set-dist 36 78 3
+God set-dist 36 79 2
+God set-dist 36 80 2
+God set-dist 36 81 2
+God set-dist 36 82 3
+God set-dist 36 83 2
+God set-dist 36 84 3
+God set-dist 36 85 2
+God set-dist 36 86 2
+God set-dist 36 87 2
+God set-dist 36 88 2
+God set-dist 36 89 1
+God set-dist 36 90 1
+God set-dist 36 91 1
+God set-dist 36 92 2
+God set-dist 36 93 1
+God set-dist 36 94 2
+God set-dist 36 95 2
+God set-dist 36 96 2
+God set-dist 36 97 1
+God set-dist 36 98 1
+God set-dist 36 99 3
+God set-dist 37 38 1
+God set-dist 37 39 1
+God set-dist 37 40 1
+God set-dist 37 41 1
+God set-dist 37 42 1
+God set-dist 37 43 2
+God set-dist 37 44 1
+God set-dist 37 45 2
+God set-dist 37 46 2
+God set-dist 37 47 1
+God set-dist 37 48 2
+God set-dist 37 49 2
+God set-dist 37 50 1
+God set-dist 37 51 1
+God set-dist 37 52 1
+God set-dist 37 53 1
+God set-dist 37 54 2
+God set-dist 37 55 1
+God set-dist 37 56 2
+God set-dist 37 57 2
+God set-dist 37 58 2
+God set-dist 37 59 2
+God set-dist 37 60 2
+God set-dist 37 61 1
+God set-dist 37 62 1
+God set-dist 37 63 1
+God set-dist 37 64 2
+God set-dist 37 65 1
+God set-dist 37 66 1
+God set-dist 37 67 2
+God set-dist 37 68 2
+God set-dist 37 69 1
+God set-dist 37 70 1
+God set-dist 37 71 2
+God set-dist 37 72 2
+God set-dist 37 73 1
+God set-dist 37 74 1
+God set-dist 37 75 1
+God set-dist 37 76 2
+God set-dist 37 77 1
+God set-dist 37 78 1
+God set-dist 37 79 2
+God set-dist 37 80 1
+God set-dist 37 81 1
+God set-dist 37 82 1
+God set-dist 37 83 1
+God set-dist 37 84 1
+God set-dist 37 85 1
+God set-dist 37 86 2
+God set-dist 37 87 1
+God set-dist 37 88 1
+God set-dist 37 89 1
+God set-dist 37 90 2
+God set-dist 37 91 2
+God set-dist 37 92 1
+God set-dist 37 93 2
+God set-dist 37 94 1
+God set-dist 37 95 1
+God set-dist 37 96 2
+God set-dist 37 97 2
+God set-dist 37 98 2
+God set-dist 37 99 1
+God set-dist 38 39 2
+God set-dist 38 40 2
+God set-dist 38 41 2
+God set-dist 38 42 2
+God set-dist 38 43 2
+God set-dist 38 44 1
+God set-dist 38 45 2
+God set-dist 38 46 2
+God set-dist 38 47 1
+God set-dist 38 48 2
+God set-dist 38 49 2
+God set-dist 38 50 2
+God set-dist 38 51 2
+God set-dist 38 52 2
+God set-dist 38 53 2
+God set-dist 38 54 1
+God set-dist 38 55 2
+God set-dist 38 56 3
+God set-dist 38 57 2
+God set-dist 38 58 3
+God set-dist 38 59 2
+God set-dist 38 60 3
+God set-dist 38 61 2
+God set-dist 38 62 1
+God set-dist 38 63 2
+God set-dist 38 64 3
+God set-dist 38 65 2
+God set-dist 38 66 2
+God set-dist 38 67 2
+God set-dist 38 68 1
+God set-dist 38 69 2
+God set-dist 38 70 2
+God set-dist 38 71 2
+God set-dist 38 72 2
+God set-dist 38 73 1
+God set-dist 38 74 2
+God set-dist 38 75 1
+God set-dist 38 76 2
+God set-dist 38 77 2
+God set-dist 38 78 2
+God set-dist 38 79 2
+God set-dist 38 80 2
+God set-dist 38 81 2
+God set-dist 38 82 2
+God set-dist 38 83 2
+God set-dist 38 84 2
+God set-dist 38 85 1
+God set-dist 38 86 2
+God set-dist 38 87 2
+God set-dist 38 88 2
+God set-dist 38 89 1
+God set-dist 38 90 1
+God set-dist 38 91 2
+God set-dist 38 92 2
+God set-dist 38 93 1
+God set-dist 38 94 1
+God set-dist 38 95 1
+God set-dist 38 96 3
+God set-dist 38 97 2
+God set-dist 38 98 1
+God set-dist 38 99 2
+God set-dist 39 40 2
+God set-dist 39 41 1
+God set-dist 39 42 1
+God set-dist 39 43 2
+God set-dist 39 44 2
+God set-dist 39 45 2
+God set-dist 39 46 2
+God set-dist 39 47 2
+God set-dist 39 48 2
+God set-dist 39 49 2
+God set-dist 39 50 2
+God set-dist 39 51 1
+God set-dist 39 52 1
+God set-dist 39 53 1
+God set-dist 39 54 2
+God set-dist 39 55 1
+God set-dist 39 56 3
+God set-dist 39 57 2
+God set-dist 39 58 2
+God set-dist 39 59 2
+God set-dist 39 60 2
+God set-dist 39 61 2
+God set-dist 39 62 2
+God set-dist 39 63 1
+God set-dist 39 64 2
+God set-dist 39 65 1
+God set-dist 39 66 1
+God set-dist 39 67 2
+God set-dist 39 68 3
+God set-dist 39 69 1
+God set-dist 39 70 1
+God set-dist 39 71 2
+God set-dist 39 72 2
+God set-dist 39 73 2
+God set-dist 39 74 2
+God set-dist 39 75 2
+God set-dist 39 76 2
+God set-dist 39 77 1
+God set-dist 39 78 1
+God set-dist 39 79 2
+God set-dist 39 80 1
+God set-dist 39 81 1
+God set-dist 39 82 1
+God set-dist 39 83 2
+God set-dist 39 84 1
+God set-dist 39 85 2
+God set-dist 39 86 3
+God set-dist 39 87 1
+God set-dist 39 88 1
+God set-dist 39 89 2
+God set-dist 39 90 3
+God set-dist 39 91 3
+God set-dist 39 92 1
+God set-dist 39 93 2
+God set-dist 39 94 2
+God set-dist 39 95 1
+God set-dist 39 96 3
+God set-dist 39 97 3
+God set-dist 39 98 3
+God set-dist 39 99 1
+God set-dist 40 41 1
+God set-dist 40 42 2
+God set-dist 40 43 1
+God set-dist 40 44 2
+God set-dist 40 45 1
+God set-dist 40 46 1
+God set-dist 40 47 1
+God set-dist 40 48 1
+God set-dist 40 49 1
+God set-dist 40 50 1
+God set-dist 40 51 2
+God set-dist 40 52 2
+God set-dist 40 53 1
+God set-dist 40 54 2
+God set-dist 40 55 1
+God set-dist 40 56 1
+God set-dist 40 57 1
+God set-dist 40 58 1
+God set-dist 40 59 1
+God set-dist 40 60 1
+God set-dist 40 61 1
+God set-dist 40 62 2
+God set-dist 40 63 1
+God set-dist 40 64 1
+God set-dist 40 65 1
+God set-dist 40 66 1
+God set-dist 40 67 1
+God set-dist 40 68 2
+God set-dist 40 69 1
+God set-dist 40 70 1
+God set-dist 40 71 1
+God set-dist 40 72 1
+God set-dist 40 73 1
+God set-dist 40 74 1
+God set-dist 40 75 2
+God set-dist 40 76 1
+God set-dist 40 77 1
+God set-dist 40 78 1
+God set-dist 40 79 1
+God set-dist 40 80 1
+God set-dist 40 81 1
+God set-dist 40 82 1
+God set-dist 40 83 1
+God set-dist 40 84 1
+God set-dist 40 85 2
+God set-dist 40 86 1
+God set-dist 40 87 1
+God set-dist 40 88 1
+God set-dist 40 89 2
+God set-dist 40 90 2
+God set-dist 40 91 2
+God set-dist 40 92 1
+God set-dist 40 93 2
+God set-dist 40 94 2
+God set-dist 40 95 1
+God set-dist 40 96 1
+God set-dist 40 97 1
+God set-dist 40 98 2
+God set-dist 40 99 2
+God set-dist 41 42 1
+God set-dist 41 43 1
+God set-dist 41 44 2
+God set-dist 41 45 1
+God set-dist 41 46 2
+God set-dist 41 47 1
+God set-dist 41 48 2
+God set-dist 41 49 1
+God set-dist 41 50 2
+God set-dist 41 51 1
+God set-dist 41 52 1
+God set-dist 41 53 1
+God set-dist 41 54 2
+God set-dist 41 55 1
+God set-dist 41 56 2
+God set-dist 41 57 2
+God set-dist 41 58 1
+God set-dist 41 59 1
+God set-dist 41 60 1
+God set-dist 41 61 2
+God set-dist 41 62 2
+God set-dist 41 63 1
+God set-dist 41 64 1
+God set-dist 41 65 1
+God set-dist 41 66 1
+God set-dist 41 67 1
+God set-dist 41 68 2
+God set-dist 41 69 1
+God set-dist 41 70 1
+God set-dist 41 71 1
+God set-dist 41 72 2
+God set-dist 41 73 2
+God set-dist 41 74 1
+God set-dist 41 75 2
+God set-dist 41 76 2
+God set-dist 41 77 1
+God set-dist 41 78 1
+God set-dist 41 79 1
+God set-dist 41 80 1
+God set-dist 41 81 1
+God set-dist 41 82 1
+God set-dist 41 83 1
+God set-dist 41 84 1
+God set-dist 41 85 2
+God set-dist 41 86 2
+God set-dist 41 87 1
+God set-dist 41 88 1
+God set-dist 41 89 2
+God set-dist 41 90 2
+God set-dist 41 91 2
+God set-dist 41 92 1
+God set-dist 41 93 2
+God set-dist 41 94 2
+God set-dist 41 95 1
+God set-dist 41 96 2
+God set-dist 41 97 2
+God set-dist 41 98 2
+God set-dist 41 99 1
+God set-dist 42 43 2
+God set-dist 42 44 2
+God set-dist 42 45 2
+God set-dist 42 46 2
+God set-dist 42 47 2
+God set-dist 42 48 2
+God set-dist 42 49 2
+God set-dist 42 50 2
+God set-dist 42 51 1
+God set-dist 42 52 1
+God set-dist 42 53 1
+God set-dist 42 54 3
+God set-dist 42 55 1
+God set-dist 42 56 3
+God set-dist 42 57 2
+God set-dist 42 58 2
+God set-dist 42 59 2
+God set-dist 42 60 2
+God set-dist 42 61 2
+God set-dist 42 62 2
+God set-dist 42 63 1
+God set-dist 42 64 2
+God set-dist 42 65 1
+God set-dist 42 66 1
+God set-dist 42 67 2
+God set-dist 42 68 3
+God set-dist 42 69 1
+God set-dist 42 70 1
+God set-dist 42 71 2
+God set-dist 42 72 3
+God set-dist 42 73 2
+God set-dist 42 74 2
+God set-dist 42 75 2
+God set-dist 42 76 2
+God set-dist 42 77 1
+God set-dist 42 78 1
+God set-dist 42 79 2
+God set-dist 42 80 1
+God set-dist 42 81 1
+God set-dist 42 82 1
+God set-dist 42 83 2
+God set-dist 42 84 1
+God set-dist 42 85 2
+God set-dist 42 86 3
+God set-dist 42 87 1
+God set-dist 42 88 1
+God set-dist 42 89 2
+God set-dist 42 90 3
+God set-dist 42 91 3
+God set-dist 42 92 1
+God set-dist 42 93 3
+God set-dist 42 94 2
+God set-dist 42 95 2
+God set-dist 42 96 3
+God set-dist 42 97 3
+God set-dist 42 98 3
+God set-dist 42 99 1
+God set-dist 43 44 1
+God set-dist 43 45 1
+God set-dist 43 46 1
+God set-dist 43 47 1
+God set-dist 43 48 1
+God set-dist 43 49 1
+God set-dist 43 50 1
+God set-dist 43 51 2
+God set-dist 43 52 2
+God set-dist 43 53 2
+God set-dist 43 54 2
+God set-dist 43 55 2
+God set-dist 43 56 1
+God set-dist 43 57 1
+God set-dist 43 58 1
+God set-dist 43 59 1
+God set-dist 43 60 1
+God set-dist 43 61 1
+God set-dist 43 62 2
+God set-dist 43 63 2
+God set-dist 43 64 1
+God set-dist 43 65 2
+God set-dist 43 66 2
+God set-dist 43 67 1
+God set-dist 43 68 2
+God set-dist 43 69 1
+God set-dist 43 70 2
+God set-dist 43 71 1
+God set-dist 43 72 1
+God set-dist 43 73 1
+God set-dist 43 74 1
+God set-dist 43 75 2
+God set-dist 43 76 1
+God set-dist 43 77 1
+God set-dist 43 78 2
+God set-dist 43 79 1
+God set-dist 43 80 1
+God set-dist 43 81 1
+God set-dist 43 82 2
+God set-dist 43 83 1
+God set-dist 43 84 2
+God set-dist 43 85 2
+God set-dist 43 86 1
+God set-dist 43 87 1
+God set-dist 43 88 2
+God set-dist 43 89 1
+God set-dist 43 90 2
+God set-dist 43 91 2
+God set-dist 43 92 1
+God set-dist 43 93 1
+God set-dist 43 94 2
+God set-dist 43 95 1
+God set-dist 43 96 1
+God set-dist 43 97 1
+God set-dist 43 98 2
+God set-dist 43 99 2
+God set-dist 44 45 2
+God set-dist 44 46 2
+God set-dist 44 47 1
+God set-dist 44 48 1
+God set-dist 44 49 1
+God set-dist 44 50 1
+God set-dist 44 51 2
+God set-dist 44 52 2
+God set-dist 44 53 2
+God set-dist 44 54 1
+God set-dist 44 55 1
+God set-dist 44 56 2
+God set-dist 44 57 2
+God set-dist 44 58 2
+God set-dist 44 59 2
+God set-dist 44 60 2
+God set-dist 44 61 1
+God set-dist 44 62 1
+God set-dist 44 63 2
+God set-dist 44 64 2
+God set-dist 44 65 2
+God set-dist 44 66 2
+God set-dist 44 67 2
+God set-dist 44 68 1
+God set-dist 44 69 2
+God set-dist 44 70 2
+God set-dist 44 71 2
+God set-dist 44 72 2
+God set-dist 44 73 1
+God set-dist 44 74 1
+God set-dist 44 75 1
+God set-dist 44 76 1
+God set-dist 44 77 1
+God set-dist 44 78 2
+God set-dist 44 79 1
+God set-dist 44 80 1
+God set-dist 44 81 2
+God set-dist 44 82 2
+God set-dist 44 83 2
+God set-dist 44 84 2
+God set-dist 44 85 1
+God set-dist 44 86 2
+God set-dist 44 87 1
+God set-dist 44 88 2
+God set-dist 44 89 1
+God set-dist 44 90 1
+God set-dist 44 91 1
+God set-dist 44 92 1
+God set-dist 44 93 1
+God set-dist 44 94 1
+God set-dist 44 95 1
+God set-dist 44 96 2
+God set-dist 44 97 2
+God set-dist 44 98 1
+God set-dist 44 99 2
+God set-dist 45 46 1
+God set-dist 45 47 2
+God set-dist 45 48 1
+God set-dist 45 49 1
+God set-dist 45 50 1
+God set-dist 45 51 2
+God set-dist 45 52 2
+God set-dist 45 53 1
+God set-dist 45 54 2
+God set-dist 45 55 2
+God set-dist 45 56 1
+God set-dist 45 57 1
+God set-dist 45 58 1
+God set-dist 45 59 1
+God set-dist 45 60 1
+God set-dist 45 61 1
+God set-dist 45 62 2
+God set-dist 45 63 2
+God set-dist 45 64 1
+God set-dist 45 65 2
+God set-dist 45 66 2
+God set-dist 45 67 1
+God set-dist 45 68 2
+God set-dist 45 69 1
+God set-dist 45 70 2
+God set-dist 45 71 1
+God set-dist 45 72 1
+God set-dist 45 73 1
+God set-dist 45 74 1
+God set-dist 45 75 2
+God set-dist 45 76 1
+God set-dist 45 77 2
+God set-dist 45 78 1
+God set-dist 45 79 1
+God set-dist 45 80 1
+God set-dist 45 81 1
+God set-dist 45 82 2
+God set-dist 45 83 1
+God set-dist 45 84 2
+God set-dist 45 85 2
+God set-dist 45 86 1
+God set-dist 45 87 1
+God set-dist 45 88 2
+God set-dist 45 89 2
+God set-dist 45 90 2
+God set-dist 45 91 2
+God set-dist 45 92 1
+God set-dist 45 93 2
+God set-dist 45 94 2
+God set-dist 45 95 1
+God set-dist 45 96 1
+God set-dist 45 97 1
+God set-dist 45 98 2
+God set-dist 45 99 2
+God set-dist 46 47 2
+God set-dist 46 48 1
+God set-dist 46 49 1
+God set-dist 46 50 1
+God set-dist 46 51 2
+God set-dist 46 52 2
+God set-dist 46 53 2
+God set-dist 46 54 2
+God set-dist 46 55 2
+God set-dist 46 56 1
+God set-dist 46 57 1
+God set-dist 46 58 1
+God set-dist 46 59 1
+God set-dist 46 60 1
+God set-dist 46 61 1
+God set-dist 46 62 2
+God set-dist 46 63 2
+God set-dist 46 64 1
+God set-dist 46 65 2
+God set-dist 46 66 2
+God set-dist 46 67 1
+God set-dist 46 68 2
+God set-dist 46 69 2
+God set-dist 46 70 2
+God set-dist 46 71 1
+God set-dist 46 72 1
+God set-dist 46 73 1
+God set-dist 46 74 1
+God set-dist 46 75 2
+God set-dist 46 76 1
+God set-dist 46 77 2
+God set-dist 46 78 2
+God set-dist 46 79 1
+God set-dist 46 80 2
+God set-dist 46 81 2
+God set-dist 46 82 2
+God set-dist 46 83 1
+God set-dist 46 84 2
+God set-dist 46 85 2
+God set-dist 46 86 1
+God set-dist 46 87 2
+God set-dist 46 88 2
+God set-dist 46 89 2
+God set-dist 46 90 2
+God set-dist 46 91 2
+God set-dist 46 92 2
+God set-dist 46 93 2
+God set-dist 46 94 2
+God set-dist 46 95 1
+God set-dist 46 96 1
+God set-dist 46 97 1
+God set-dist 46 98 2
+God set-dist 46 99 2
+God set-dist 47 48 1
+God set-dist 47 49 1
+God set-dist 47 50 1
+God set-dist 47 51 2
+God set-dist 47 52 2
+God set-dist 47 53 2
+God set-dist 47 54 1
+God set-dist 47 55 1
+God set-dist 47 56 2
+God set-dist 47 57 2
+God set-dist 47 58 2
+God set-dist 47 59 2
+God set-dist 47 60 2
+God set-dist 47 61 1
+God set-dist 47 62 1
+God set-dist 47 63 2
+God set-dist 47 64 2
+God set-dist 47 65 2
+God set-dist 47 66 1
+God set-dist 47 67 2
+God set-dist 47 68 1
+God set-dist 47 69 1
+God set-dist 47 70 2
+God set-dist 47 71 2
+God set-dist 47 72 2
+God set-dist 47 73 1
+God set-dist 47 74 1
+God set-dist 47 75 1
+God set-dist 47 76 1
+God set-dist 47 77 1
+God set-dist 47 78 1
+God set-dist 47 79 1
+God set-dist 47 80 1
+God set-dist 47 81 1
+God set-dist 47 82 1
+God set-dist 47 83 1
+God set-dist 47 84 1
+God set-dist 47 85 1
+God set-dist 47 86 2
+God set-dist 47 87 1
+God set-dist 47 88 1
+God set-dist 47 89 1
+God set-dist 47 90 1
+God set-dist 47 91 2
+God set-dist 47 92 1
+God set-dist 47 93 1
+God set-dist 47 94 1
+God set-dist 47 95 1
+God set-dist 47 96 2
+God set-dist 47 97 2
+God set-dist 47 98 1
+God set-dist 47 99 2
+God set-dist 48 49 1
+God set-dist 48 50 1
+God set-dist 48 51 2
+God set-dist 48 52 2
+God set-dist 48 53 2
+God set-dist 48 54 1
+God set-dist 48 55 2
+God set-dist 48 56 1
+God set-dist 48 57 1
+God set-dist 48 58 2
+God set-dist 48 59 1
+God set-dist 48 60 2
+God set-dist 48 61 1
+God set-dist 48 62 1
+God set-dist 48 63 2
+God set-dist 48 64 2
+God set-dist 48 65 2
+God set-dist 48 66 2
+God set-dist 48 67 1
+God set-dist 48 68 1
+God set-dist 48 69 2
+God set-dist 48 70 2
+God set-dist 48 71 1
+God set-dist 48 72 1
+God set-dist 48 73 1
+God set-dist 48 74 1
+God set-dist 48 75 2
+God set-dist 48 76 1
+God set-dist 48 77 1
+God set-dist 48 78 2
+God set-dist 48 79 1
+God set-dist 48 80 1
+God set-dist 48 81 2
+God set-dist 48 82 2
+God set-dist 48 83 1
+God set-dist 48 84 2
+God set-dist 48 85 2
+God set-dist 48 86 1
+God set-dist 48 87 1
+God set-dist 48 88 2
+God set-dist 48 89 1
+God set-dist 48 90 1
+God set-dist 48 91 1
+God set-dist 48 92 1
+God set-dist 48 93 1
+God set-dist 48 94 2
+God set-dist 48 95 1
+God set-dist 48 96 1
+God set-dist 48 97 1
+God set-dist 48 98 1
+God set-dist 48 99 2
+God set-dist 49 50 1
+God set-dist 49 51 2
+God set-dist 49 52 2
+God set-dist 49 53 2
+God set-dist 49 54 2
+God set-dist 49 55 2
+God set-dist 49 56 1
+God set-dist 49 57 1
+God set-dist 49 58 1
+God set-dist 49 59 1
+God set-dist 49 60 1
+God set-dist 49 61 1
+God set-dist 49 62 2
+God set-dist 49 63 2
+God set-dist 49 64 1
+God set-dist 49 65 2
+God set-dist 49 66 2
+God set-dist 49 67 1
+God set-dist 49 68 2
+God set-dist 49 69 1
+God set-dist 49 70 2
+God set-dist 49 71 1
+God set-dist 49 72 1
+God set-dist 49 73 1
+God set-dist 49 74 1
+God set-dist 49 75 2
+God set-dist 49 76 1
+God set-dist 49 77 1
+God set-dist 49 78 2
+God set-dist 49 79 1
+God set-dist 49 80 1
+God set-dist 49 81 1
+God set-dist 49 82 2
+God set-dist 49 83 1
+God set-dist 49 84 2
+God set-dist 49 85 2
+God set-dist 49 86 1
+God set-dist 49 87 1
+God set-dist 49 88 2
+God set-dist 49 89 1
+God set-dist 49 90 2
+God set-dist 49 91 2
+God set-dist 49 92 1
+God set-dist 49 93 1
+God set-dist 49 94 2
+God set-dist 49 95 1
+God set-dist 49 96 1
+God set-dist 49 97 1
+God set-dist 49 98 2
+God set-dist 49 99 2
+God set-dist 50 51 2
+God set-dist 50 52 2
+God set-dist 50 53 2
+God set-dist 50 54 1
+God set-dist 50 55 1
+God set-dist 50 56 1
+God set-dist 50 57 1
+God set-dist 50 58 2
+God set-dist 50 59 1
+God set-dist 50 60 1
+God set-dist 50 61 1
+God set-dist 50 62 1
+God set-dist 50 63 2
+God set-dist 50 64 2
+God set-dist 50 65 2
+God set-dist 50 66 2
+God set-dist 50 67 1
+God set-dist 50 68 1
+God set-dist 50 69 2
+God set-dist 50 70 2
+God set-dist 50 71 1
+God set-dist 50 72 1
+God set-dist 50 73 1
+God set-dist 50 74 1
+God set-dist 50 75 2
+God set-dist 50 76 1
+God set-dist 50 77 1
+God set-dist 50 78 2
+God set-dist 50 79 1
+God set-dist 50 80 1
+God set-dist 50 81 2
+God set-dist 50 82 2
+God set-dist 50 83 1
+God set-dist 50 84 2
+God set-dist 50 85 2
+God set-dist 50 86 1
+God set-dist 50 87 1
+God set-dist 50 88 2
+God set-dist 50 89 1
+God set-dist 50 90 1
+God set-dist 50 91 1
+God set-dist 50 92 1
+God set-dist 50 93 1
+God set-dist 50 94 2
+God set-dist 50 95 1
+God set-dist 50 96 1
+God set-dist 50 97 1
+God set-dist 50 98 1
+God set-dist 50 99 2
+God set-dist 51 52 1
+God set-dist 51 53 1
+God set-dist 51 54 2
+God set-dist 51 55 1
+God set-dist 51 56 3
+God set-dist 51 57 2
+God set-dist 51 58 2
+God set-dist 51 59 2
+God set-dist 51 60 2
+God set-dist 51 61 2
+God set-dist 51 62 2
+God set-dist 51 63 1
+God set-dist 51 64 2
+God set-dist 51 65 1
+God set-dist 51 66 1
+God set-dist 51 67 2
+God set-dist 51 68 3
+God set-dist 51 69 1
+God set-dist 51 70 1
+God set-dist 51 71 2
+God set-dist 51 72 2
+God set-dist 51 73 2
+God set-dist 51 74 2
+God set-dist 51 75 1
+God set-dist 51 76 2
+God set-dist 51 77 1
+God set-dist 51 78 1
+God set-dist 51 79 2
+God set-dist 51 80 1
+God set-dist 51 81 1
+God set-dist 51 82 1
+God set-dist 51 83 2
+God set-dist 51 84 1
+God set-dist 51 85 2
+God set-dist 51 86 3
+God set-dist 51 87 1
+God set-dist 51 88 1
+God set-dist 51 89 2
+God set-dist 51 90 3
+God set-dist 51 91 3
+God set-dist 51 92 1
+God set-dist 51 93 2
+God set-dist 51 94 2
+God set-dist 51 95 1
+God set-dist 51 96 3
+God set-dist 51 97 3
+God set-dist 51 98 3
+God set-dist 51 99 1
+God set-dist 52 53 1
+God set-dist 52 54 3
+God set-dist 52 55 1
+God set-dist 52 56 3
+God set-dist 52 57 2
+God set-dist 52 58 2
+God set-dist 52 59 2
+God set-dist 52 60 2
+God set-dist 52 61 2
+God set-dist 52 62 2
+God set-dist 52 63 1
+God set-dist 52 64 2
+God set-dist 52 65 1
+God set-dist 52 66 1
+God set-dist 52 67 2
+God set-dist 52 68 3
+God set-dist 52 69 1
+God set-dist 52 70 1
+God set-dist 52 71 2
+God set-dist 52 72 3
+God set-dist 52 73 2
+God set-dist 52 74 2
+God set-dist 52 75 2
+God set-dist 52 76 2
+God set-dist 52 77 1
+God set-dist 52 78 1
+God set-dist 52 79 2
+God set-dist 52 80 1
+God set-dist 52 81 1
+God set-dist 52 82 1
+God set-dist 52 83 2
+God set-dist 52 84 1
+God set-dist 52 85 2
+God set-dist 52 86 3
+God set-dist 52 87 1
+God set-dist 52 88 1
+God set-dist 52 89 2
+God set-dist 52 90 3
+God set-dist 52 91 3
+God set-dist 52 92 1
+God set-dist 52 93 3
+God set-dist 52 94 2
+God set-dist 52 95 2
+God set-dist 52 96 3
+God set-dist 52 97 3
+God set-dist 52 98 3
+God set-dist 52 99 1
+God set-dist 53 54 2
+God set-dist 53 55 1
+God set-dist 53 56 2
+God set-dist 53 57 2
+God set-dist 53 58 1
+God set-dist 53 59 1
+God set-dist 53 60 1
+God set-dist 53 61 2
+God set-dist 53 62 2
+God set-dist 53 63 1
+God set-dist 53 64 1
+God set-dist 53 65 1
+God set-dist 53 66 1
+God set-dist 53 67 1
+God set-dist 53 68 3
+God set-dist 53 69 1
+God set-dist 53 70 1
+God set-dist 53 71 1
+God set-dist 53 72 2
+God set-dist 53 73 2
+God set-dist 53 74 2
+God set-dist 53 75 2
+God set-dist 53 76 2
+God set-dist 53 77 1
+God set-dist 53 78 1
+God set-dist 53 79 2
+God set-dist 53 80 1
+God set-dist 53 81 1
+God set-dist 53 82 1
+God set-dist 53 83 1
+God set-dist 53 84 1
+God set-dist 53 85 2
+God set-dist 53 86 2
+God set-dist 53 87 1
+God set-dist 53 88 1
+God set-dist 53 89 2
+God set-dist 53 90 3
+God set-dist 53 91 3
+God set-dist 53 92 1
+God set-dist 53 93 2
+God set-dist 53 94 2
+God set-dist 53 95 1
+God set-dist 53 96 2
+God set-dist 53 97 2
+God set-dist 53 98 3
+God set-dist 53 99 1
+God set-dist 54 55 2
+God set-dist 54 56 2
+God set-dist 54 57 2
+God set-dist 54 58 2
+God set-dist 54 59 2
+God set-dist 54 60 2
+God set-dist 54 61 1
+God set-dist 54 62 1
+God set-dist 54 63 3
+God set-dist 54 64 2
+God set-dist 54 65 2
+God set-dist 54 66 2
+God set-dist 54 67 2
+God set-dist 54 68 1
+God set-dist 54 69 2
+God set-dist 54 70 2
+God set-dist 54 71 2
+God set-dist 54 72 2
+God set-dist 54 73 1
+God set-dist 54 74 1
+God set-dist 54 75 2
+God set-dist 54 76 1
+God set-dist 54 77 2
+God set-dist 54 78 2
+God set-dist 54 79 2
+God set-dist 54 80 2
+God set-dist 54 81 2
+God set-dist 54 82 2
+God set-dist 54 83 2
+God set-dist 54 84 2
+God set-dist 54 85 1
+God set-dist 54 86 2
+God set-dist 54 87 2
+God set-dist 54 88 2
+God set-dist 54 89 1
+God set-dist 54 90 1
+God set-dist 54 91 1
+God set-dist 54 92 2
+God set-dist 54 93 1
+God set-dist 54 94 2
+God set-dist 54 95 1
+God set-dist 54 96 2
+God set-dist 54 97 2
+God set-dist 54 98 1
+God set-dist 54 99 2
+God set-dist 55 56 2
+God set-dist 55 57 2
+God set-dist 55 58 2
+God set-dist 55 59 2
+God set-dist 55 60 2
+God set-dist 55 61 2
+God set-dist 55 62 1
+God set-dist 55 63 1
+God set-dist 55 64 2
+God set-dist 55 65 1
+God set-dist 55 66 1
+God set-dist 55 67 2
+God set-dist 55 68 2
+God set-dist 55 69 1
+God set-dist 55 70 1
+God set-dist 55 71 2
+God set-dist 55 72 2
+God set-dist 55 73 1
+God set-dist 55 74 1
+God set-dist 55 75 1
+God set-dist 55 76 2
+God set-dist 55 77 1
+God set-dist 55 78 1
+God set-dist 55 79 2
+God set-dist 55 80 1
+God set-dist 55 81 1
+God set-dist 55 82 1
+God set-dist 55 83 1
+God set-dist 55 84 1
+God set-dist 55 85 1
+God set-dist 55 86 2
+God set-dist 55 87 1
+God set-dist 55 88 1
+God set-dist 55 89 1
+God set-dist 55 90 2
+God set-dist 55 91 2
+God set-dist 55 92 1
+God set-dist 55 93 2
+God set-dist 55 94 1
+God set-dist 55 95 1
+God set-dist 55 96 2
+God set-dist 55 97 2
+God set-dist 55 98 2
+God set-dist 55 99 1
+God set-dist 56 57 1
+God set-dist 56 58 1
+God set-dist 56 59 1
+God set-dist 56 60 1
+God set-dist 56 61 1
+God set-dist 56 62 2
+God set-dist 56 63 2
+God set-dist 56 64 1
+God set-dist 56 65 2
+God set-dist 56 66 2
+God set-dist 56 67 1
+God set-dist 56 68 2
+God set-dist 56 69 2
+God set-dist 56 70 2
+God set-dist 56 71 1
+God set-dist 56 72 1
+God set-dist 56 73 2
+God set-dist 56 74 1
+God set-dist 56 75 3
+God set-dist 56 76 1
+God set-dist 56 77 2
+God set-dist 56 78 2
+God set-dist 56 79 1
+God set-dist 56 80 2
+God set-dist 56 81 2
+God set-dist 56 82 2
+God set-dist 56 83 1
+God set-dist 56 84 2
+God set-dist 56 85 3
+God set-dist 56 86 1
+God set-dist 56 87 2
+God set-dist 56 88 2
+God set-dist 56 89 2
+God set-dist 56 90 2
+God set-dist 56 91 2
+God set-dist 56 92 2
+God set-dist 56 93 2
+God set-dist 56 94 3
+God set-dist 56 95 2
+God set-dist 56 96 1
+God set-dist 56 97 1
+God set-dist 56 98 2
+God set-dist 56 99 2
+God set-dist 57 58 1
+God set-dist 57 59 1
+God set-dist 57 60 1
+God set-dist 57 61 1
+God set-dist 57 62 2
+God set-dist 57 63 2
+God set-dist 57 64 1
+God set-dist 57 65 2
+God set-dist 57 66 2
+God set-dist 57 67 1
+God set-dist 57 68 2
+God set-dist 57 69 2
+God set-dist 57 70 2
+God set-dist 57 71 1
+God set-dist 57 72 1
+God set-dist 57 73 1
+God set-dist 57 74 1
+God set-dist 57 75 2
+God set-dist 57 76 1
+God set-dist 57 77 2
+God set-dist 57 78 2
+God set-dist 57 79 1
+God set-dist 57 80 1
+God set-dist 57 81 2
+God set-dist 57 82 2
+God set-dist 57 83 1
+God set-dist 57 84 2
+God set-dist 57 85 2
+God set-dist 57 86 1
+God set-dist 57 87 1
+God set-dist 57 88 2
+God set-dist 57 89 2
+God set-dist 57 90 2
+God set-dist 57 91 2
+God set-dist 57 92 2
+God set-dist 57 93 1
+God set-dist 57 94 2
+God set-dist 57 95 1
+God set-dist 57 96 1
+God set-dist 57 97 1
+God set-dist 57 98 2
+God set-dist 57 99 2
+God set-dist 58 59 1
+God set-dist 58 60 1
+God set-dist 58 61 1
+God set-dist 58 62 2
+God set-dist 58 63 2
+God set-dist 58 64 1
+God set-dist 58 65 2
+God set-dist 58 66 2
+God set-dist 58 67 1
+God set-dist 58 68 2
+God set-dist 58 69 1
+God set-dist 58 70 2
+God set-dist 58 71 1
+God set-dist 58 72 1
+God set-dist 58 73 2
+God set-dist 58 74 1
+God set-dist 58 75 3
+God set-dist 58 76 1
+God set-dist 58 77 2
+God set-dist 58 78 2
+God set-dist 58 79 1
+God set-dist 58 80 2
+God set-dist 58 81 1
+God set-dist 58 82 2
+God set-dist 58 83 1
+God set-dist 58 84 2
+God set-dist 58 85 3
+God set-dist 58 86 1
+God set-dist 58 87 2
+God set-dist 58 88 2
+God set-dist 58 89 2
+God set-dist 58 90 2
+God set-dist 58 91 2
+God set-dist 58 92 2
+God set-dist 58 93 2
+God set-dist 58 94 3
+God set-dist 58 95 2
+God set-dist 58 96 1
+God set-dist 58 97 1
+God set-dist 58 98 2
+God set-dist 58 99 2
+God set-dist 59 60 1
+God set-dist 59 61 1
+God set-dist 59 62 2
+God set-dist 59 63 2
+God set-dist 59 64 1
+God set-dist 59 65 2
+God set-dist 59 66 2
+God set-dist 59 67 1
+God set-dist 59 68 2
+God set-dist 59 69 1
+God set-dist 59 70 2
+God set-dist 59 71 1
+God set-dist 59 72 1
+God set-dist 59 73 1
+God set-dist 59 74 1
+God set-dist 59 75 2
+God set-dist 59 76 1
+God set-dist 59 77 2
+God set-dist 59 78 2
+God set-dist 59 79 1
+God set-dist 59 80 1
+God set-dist 59 81 1
+God set-dist 59 82 2
+God set-dist 59 83 1
+God set-dist 59 84 2
+God set-dist 59 85 2
+God set-dist 59 86 1
+God set-dist 59 87 1
+God set-dist 59 88 2
+God set-dist 59 89 2
+God set-dist 59 90 2
+God set-dist 59 91 2
+God set-dist 59 92 1
+God set-dist 59 93 2
+God set-dist 59 94 2
+God set-dist 59 95 1
+God set-dist 59 96 1
+God set-dist 59 97 1
+God set-dist 59 98 2
+God set-dist 59 99 2
+God set-dist 60 61 1
+God set-dist 60 62 2
+God set-dist 60 63 1
+God set-dist 60 64 1
+God set-dist 60 65 2
+God set-dist 60 66 2
+God set-dist 60 67 1
+God set-dist 60 68 2
+God set-dist 60 69 1
+God set-dist 60 70 2
+God set-dist 60 71 1
+God set-dist 60 72 1
+God set-dist 60 73 2
+God set-dist 60 74 1
+God set-dist 60 75 2
+God set-dist 60 76 2
+God set-dist 60 77 2
+God set-dist 60 78 1
+God set-dist 60 79 1
+God set-dist 60 80 1
+God set-dist 60 81 1
+God set-dist 60 82 2
+God set-dist 60 83 1
+God set-dist 60 84 2
+God set-dist 60 85 2
+God set-dist 60 86 1
+God set-dist 60 87 1
+God set-dist 60 88 2
+God set-dist 60 89 2
+God set-dist 60 90 2
+God set-dist 60 91 2
+God set-dist 60 92 1
+God set-dist 60 93 2
+God set-dist 60 94 2
+God set-dist 60 95 2
+God set-dist 60 96 1
+God set-dist 60 97 2
+God set-dist 60 98 2
+God set-dist 60 99 2
+God set-dist 61 62 2
+God set-dist 61 63 2
+God set-dist 61 64 2
+God set-dist 61 65 2
+God set-dist 61 66 2
+God set-dist 61 67 1
+God set-dist 61 68 1
+God set-dist 61 69 2
+God set-dist 61 70 2
+God set-dist 61 71 1
+God set-dist 61 72 1
+God set-dist 61 73 1
+God set-dist 61 74 1
+God set-dist 61 75 2
+God set-dist 61 76 1
+God set-dist 61 77 1
+God set-dist 61 78 2
+God set-dist 61 79 1
+God set-dist 61 80 1
+God set-dist 61 81 2
+God set-dist 61 82 2
+God set-dist 61 83 1
+God set-dist 61 84 2
+God set-dist 61 85 2
+God set-dist 61 86 1
+God set-dist 61 87 1
+God set-dist 61 88 2
+God set-dist 61 89 1
+God set-dist 61 90 1
+God set-dist 61 91 1
+God set-dist 61 92 1
+God set-dist 61 93 1
+God set-dist 61 94 2
+God set-dist 61 95 1
+God set-dist 61 96 1
+God set-dist 61 97 1
+God set-dist 61 98 1
+God set-dist 61 99 2
+God set-dist 62 63 2
+God set-dist 62 64 2
+God set-dist 62 65 2
+God set-dist 62 66 1
+God set-dist 62 67 2
+God set-dist 62 68 1
+God set-dist 62 69 2
+God set-dist 62 70 2
+God set-dist 62 71 2
+God set-dist 62 72 2
+God set-dist 62 73 1
+God set-dist 62 74 2
+God set-dist 62 75 1
+God set-dist 62 76 2
+God set-dist 62 77 1
+God set-dist 62 78 2
+God set-dist 62 79 2
+God set-dist 62 80 1
+God set-dist 62 81 2
+God set-dist 62 82 1
+God set-dist 62 83 2
+God set-dist 62 84 1
+God set-dist 62 85 1
+God set-dist 62 86 2
+God set-dist 62 87 1
+God set-dist 62 88 1
+God set-dist 62 89 1
+God set-dist 62 90 1
+God set-dist 62 91 2
+God set-dist 62 92 1
+God set-dist 62 93 1
+God set-dist 62 94 1
+God set-dist 62 95 1
+God set-dist 62 96 2
+God set-dist 62 97 2
+God set-dist 62 98 2
+God set-dist 62 99 2
+God set-dist 63 64 2
+God set-dist 63 65 1
+God set-dist 63 66 1
+God set-dist 63 67 2
+God set-dist 63 68 3
+God set-dist 63 69 1
+God set-dist 63 70 1
+God set-dist 63 71 1
+God set-dist 63 72 2
+God set-dist 63 73 2
+God set-dist 63 74 2
+God set-dist 63 75 2
+God set-dist 63 76 2
+God set-dist 63 77 1
+God set-dist 63 78 1
+God set-dist 63 79 2
+God set-dist 63 80 1
+God set-dist 63 81 1
+God set-dist 63 82 1
+God set-dist 63 83 1
+God set-dist 63 84 1
+God set-dist 63 85 2
+God set-dist 63 86 2
+God set-dist 63 87 1
+God set-dist 63 88 1
+God set-dist 63 89 2
+God set-dist 63 90 3
+God set-dist 63 91 3
+God set-dist 63 92 1
+God set-dist 63 93 2
+God set-dist 63 94 2
+God set-dist 63 95 2
+God set-dist 63 96 2
+God set-dist 63 97 2
+God set-dist 63 98 3
+God set-dist 63 99 1
+God set-dist 64 65 2
+God set-dist 64 66 2
+God set-dist 64 67 1
+God set-dist 64 68 2
+God set-dist 64 69 1
+God set-dist 64 70 2
+God set-dist 64 71 1
+God set-dist 64 72 1
+God set-dist 64 73 2
+God set-dist 64 74 1
+God set-dist 64 75 2
+God set-dist 64 76 2
+God set-dist 64 77 2
+God set-dist 64 78 2
+God set-dist 64 79 1
+God set-dist 64 80 1
+God set-dist 64 81 1
+God set-dist 64 82 2
+God set-dist 64 83 1
+God set-dist 64 84 2
+God set-dist 64 85 2
+God set-dist 64 86 1
+God set-dist 64 87 1
+God set-dist 64 88 2
+God set-dist 64 89 2
+God set-dist 64 90 2
+God set-dist 64 91 2
+God set-dist 64 92 2
+God set-dist 64 93 2
+God set-dist 64 94 2
+God set-dist 64 95 2
+God set-dist 64 96 1
+God set-dist 64 97 2
+God set-dist 64 98 2
+God set-dist 64 99 2
+God set-dist 65 66 1
+God set-dist 65 67 2
+God set-dist 65 68 3
+God set-dist 65 69 1
+God set-dist 65 70 1
+God set-dist 65 71 2
+God set-dist 65 72 2
+God set-dist 65 73 2
+God set-dist 65 74 2
+God set-dist 65 75 1
+God set-dist 65 76 2
+God set-dist 65 77 1
+God set-dist 65 78 1
+God set-dist 65 79 2
+God set-dist 65 80 1
+God set-dist 65 81 1
+God set-dist 65 82 1
+God set-dist 65 83 1
+God set-dist 65 84 1
+God set-dist 65 85 2
+God set-dist 65 86 2
+God set-dist 65 87 1
+God set-dist 65 88 1
+God set-dist 65 89 2
+God set-dist 65 90 3
+God set-dist 65 91 3
+God set-dist 65 92 1
+God set-dist 65 93 2
+God set-dist 65 94 2
+God set-dist 65 95 1
+God set-dist 65 96 2
+God set-dist 65 97 2
+God set-dist 65 98 3
+God set-dist 65 99 1
+God set-dist 66 67 2
+God set-dist 66 68 2
+God set-dist 66 69 1
+God set-dist 66 70 1
+God set-dist 66 71 2
+God set-dist 66 72 2
+God set-dist 66 73 2
+God set-dist 66 74 2
+God set-dist 66 75 1
+God set-dist 66 76 2
+God set-dist 66 77 1
+God set-dist 66 78 1
+God set-dist 66 79 2
+God set-dist 66 80 1
+God set-dist 66 81 1
+God set-dist 66 82 1
+God set-dist 66 83 1
+God set-dist 66 84 1
+God set-dist 66 85 1
+God set-dist 66 86 2
+God set-dist 66 87 1
+God set-dist 66 88 1
+God set-dist 66 89 2
+God set-dist 66 90 2
+God set-dist 66 91 3
+God set-dist 66 92 1
+God set-dist 66 93 2
+God set-dist 66 94 2
+God set-dist 66 95 1
+God set-dist 66 96 2
+God set-dist 66 97 2
+God set-dist 66 98 2
+God set-dist 66 99 1
+God set-dist 67 68 2
+God set-dist 67 69 1
+God set-dist 67 70 2
+God set-dist 67 71 1
+God set-dist 67 72 1
+God set-dist 67 73 1
+God set-dist 67 74 1
+God set-dist 67 75 2
+God set-dist 67 76 1
+God set-dist 67 77 2
+God set-dist 67 78 2
+God set-dist 67 79 1
+God set-dist 67 80 1
+God set-dist 67 81 1
+God set-dist 67 82 2
+God set-dist 67 83 1
+God set-dist 67 84 2
+God set-dist 67 85 2
+God set-dist 67 86 1
+God set-dist 67 87 1
+God set-dist 67 88 2
+God set-dist 67 89 2
+God set-dist 67 90 2
+God set-dist 67 91 2
+God set-dist 67 92 1
+God set-dist 67 93 2
+God set-dist 67 94 2
+God set-dist 67 95 1
+God set-dist 67 96 1
+God set-dist 67 97 1
+God set-dist 67 98 2
+God set-dist 67 99 2
+God set-dist 68 69 2
+God set-dist 68 70 3
+God set-dist 68 71 2
+God set-dist 68 72 2
+God set-dist 68 73 1
+God set-dist 68 74 2
+God set-dist 68 75 2
+God set-dist 68 76 1
+God set-dist 68 77 2
+God set-dist 68 78 2
+God set-dist 68 79 2
+God set-dist 68 80 2
+God set-dist 68 81 2
+God set-dist 68 82 2
+God set-dist 68 83 2
+God set-dist 68 84 2
+God set-dist 68 85 2
+God set-dist 68 86 2
+God set-dist 68 87 2
+God set-dist 68 88 2
+God set-dist 68 89 1
+God set-dist 68 90 1
+God set-dist 68 91 1
+God set-dist 68 92 2
+God set-dist 68 93 1
+God set-dist 68 94 2
+God set-dist 68 95 2
+God set-dist 68 96 2
+God set-dist 68 97 2
+God set-dist 68 98 1
+God set-dist 68 99 3
+God set-dist 69 70 1
+God set-dist 69 71 1
+God set-dist 69 72 2
+God set-dist 69 73 2
+God set-dist 69 74 1
+God set-dist 69 75 2
+God set-dist 69 76 2
+God set-dist 69 77 1
+God set-dist 69 78 1
+God set-dist 69 79 2
+God set-dist 69 80 1
+God set-dist 69 81 1
+God set-dist 69 82 1
+God set-dist 69 83 1
+God set-dist 69 84 1
+God set-dist 69 85 2
+God set-dist 69 86 2
+God set-dist 69 87 1
+God set-dist 69 88 1
+God set-dist 69 89 2
+God set-dist 69 90 2
+God set-dist 69 91 3
+God set-dist 69 92 1
+God set-dist 69 93 2
+God set-dist 69 94 2
+God set-dist 69 95 1
+God set-dist 69 96 2
+God set-dist 69 97 2
+God set-dist 69 98 2
+God set-dist 69 99 1
+God set-dist 70 71 2
+God set-dist 70 72 2
+God set-dist 70 73 2
+God set-dist 70 74 2
+God set-dist 70 75 2
+God set-dist 70 76 2
+God set-dist 70 77 1
+God set-dist 70 78 1
+God set-dist 70 79 2
+God set-dist 70 80 1
+God set-dist 70 81 1
+God set-dist 70 82 1
+God set-dist 70 83 1
+God set-dist 70 84 1
+God set-dist 70 85 2
+God set-dist 70 86 2
+God set-dist 70 87 1
+God set-dist 70 88 1
+God set-dist 70 89 2
+God set-dist 70 90 3
+God set-dist 70 91 3
+God set-dist 70 92 1
+God set-dist 70 93 2
+God set-dist 70 94 2
+God set-dist 70 95 1
+God set-dist 70 96 2
+God set-dist 70 97 2
+God set-dist 70 98 3
+God set-dist 70 99 1
+God set-dist 71 72 1
+God set-dist 71 73 2
+God set-dist 71 74 1
+God set-dist 71 75 2
+God set-dist 71 76 1
+God set-dist 71 77 2
+God set-dist 71 78 1
+God set-dist 71 79 1
+God set-dist 71 80 1
+God set-dist 71 81 1
+God set-dist 71 82 2
+God set-dist 71 83 1
+God set-dist 71 84 2
+God set-dist 71 85 2
+God set-dist 71 86 1
+God set-dist 71 87 1
+God set-dist 71 88 2
+God set-dist 71 89 2
+God set-dist 71 90 2
+God set-dist 71 91 2
+God set-dist 71 92 1
+God set-dist 71 93 2
+God set-dist 71 94 2
+God set-dist 71 95 1
+God set-dist 71 96 1
+God set-dist 71 97 1
+God set-dist 71 98 2
+God set-dist 71 99 2
+God set-dist 72 73 1
+God set-dist 72 74 1
+God set-dist 72 75 2
+God set-dist 72 76 1
+God set-dist 72 77 2
+God set-dist 72 78 2
+God set-dist 72 79 1
+God set-dist 72 80 2
+God set-dist 72 81 2
+God set-dist 72 82 2
+God set-dist 72 83 1
+God set-dist 72 84 2
+God set-dist 72 85 2
+God set-dist 72 86 1
+God set-dist 72 87 2
+God set-dist 72 88 2
+God set-dist 72 89 2
+God set-dist 72 90 2
+God set-dist 72 91 2
+God set-dist 72 92 2
+God set-dist 72 93 1
+God set-dist 72 94 2
+God set-dist 72 95 1
+God set-dist 72 96 1
+God set-dist 72 97 1
+God set-dist 72 98 2
+God set-dist 72 99 2
+God set-dist 73 74 1
+God set-dist 73 75 1
+God set-dist 73 76 1
+God set-dist 73 77 1
+God set-dist 73 78 2
+God set-dist 73 79 1
+God set-dist 73 80 1
+God set-dist 73 81 2
+God set-dist 73 82 2
+God set-dist 73 83 1
+God set-dist 73 84 2
+God set-dist 73 85 1
+God set-dist 73 86 2
+God set-dist 73 87 1
+God set-dist 73 88 1
+God set-dist 73 89 1
+God set-dist 73 90 1
+God set-dist 73 91 1
+God set-dist 73 92 1
+God set-dist 73 93 1
+God set-dist 73 94 1
+God set-dist 73 95 1
+God set-dist 73 96 2
+God set-dist 73 97 2
+God set-dist 73 98 1
+God set-dist 73 99 2
+God set-dist 74 75 2
+God set-dist 74 76 1
+God set-dist 74 77 1
+God set-dist 74 78 2
+God set-dist 74 79 1
+God set-dist 74 80 1
+God set-dist 74 81 1
+God set-dist 74 82 2
+God set-dist 74 83 1
+God set-dist 74 84 2
+God set-dist 74 85 2
+God set-dist 74 86 1
+God set-dist 74 87 1
+God set-dist 74 88 2
+God set-dist 74 89 1
+God set-dist 74 90 2
+God set-dist 74 91 2
+God set-dist 74 92 1
+God set-dist 74 93 1
+God set-dist 74 94 2
+God set-dist 74 95 1
+God set-dist 74 96 1
+God set-dist 74 97 1
+God set-dist 74 98 2
+God set-dist 74 99 2
+God set-dist 75 76 2
+God set-dist 75 77 1
+God set-dist 75 78 2
+God set-dist 75 79 2
+God set-dist 75 80 1
+God set-dist 75 81 2
+God set-dist 75 82 1
+God set-dist 75 83 2
+God set-dist 75 84 1
+God set-dist 75 85 1
+God set-dist 75 86 2
+God set-dist 75 87 1
+God set-dist 75 88 1
+God set-dist 75 89 1
+God set-dist 75 90 2
+God set-dist 75 91 2
+God set-dist 75 92 1
+God set-dist 75 93 2
+God set-dist 75 94 1
+God set-dist 75 95 1
+God set-dist 75 96 3
+God set-dist 75 97 2
+God set-dist 75 98 2
+God set-dist 75 99 1
+God set-dist 76 77 2
+God set-dist 76 78 2
+God set-dist 76 79 1
+God set-dist 76 80 1
+God set-dist 76 81 2
+God set-dist 76 82 2
+God set-dist 76 83 1
+God set-dist 76 84 2
+God set-dist 76 85 2
+God set-dist 76 86 1
+God set-dist 76 87 2
+God set-dist 76 88 2
+God set-dist 76 89 1
+God set-dist 76 90 1
+God set-dist 76 91 1
+God set-dist 76 92 2
+God set-dist 76 93 1
+God set-dist 76 94 2
+God set-dist 76 95 1
+God set-dist 76 96 1
+God set-dist 76 97 1
+God set-dist 76 98 1
+God set-dist 76 99 2
+God set-dist 77 78 1
+God set-dist 77 79 2
+God set-dist 77 80 1
+God set-dist 77 81 1
+God set-dist 77 82 1
+God set-dist 77 83 1
+God set-dist 77 84 1
+God set-dist 77 85 1
+God set-dist 77 86 2
+God set-dist 77 87 1
+God set-dist 77 88 1
+God set-dist 77 89 1
+God set-dist 77 90 2
+God set-dist 77 91 2
+God set-dist 77 92 1
+God set-dist 77 93 2
+God set-dist 77 94 1
+God set-dist 77 95 1
+God set-dist 77 96 2
+God set-dist 77 97 2
+God set-dist 77 98 2
+God set-dist 77 99 1
+God set-dist 78 79 2
+God set-dist 78 80 1
+God set-dist 78 81 1
+God set-dist 78 82 1
+God set-dist 78 83 1
+God set-dist 78 84 1
+God set-dist 78 85 2
+God set-dist 78 86 2
+God set-dist 78 87 1
+God set-dist 78 88 1
+God set-dist 78 89 2
+God set-dist 78 90 2
+God set-dist 78 91 3
+God set-dist 78 92 1
+God set-dist 78 93 2
+God set-dist 78 94 2
+God set-dist 78 95 1
+God set-dist 78 96 2
+God set-dist 78 97 2
+God set-dist 78 98 2
+God set-dist 78 99 1
+God set-dist 79 80 1
+God set-dist 79 81 1
+God set-dist 79 82 2
+God set-dist 79 83 1
+God set-dist 79 84 2
+God set-dist 79 85 2
+God set-dist 79 86 1
+God set-dist 79 87 1
+God set-dist 79 88 2
+God set-dist 79 89 1
+God set-dist 79 90 2
+God set-dist 79 91 2
+God set-dist 79 92 1
+God set-dist 79 93 1
+God set-dist 79 94 2
+God set-dist 79 95 1
+God set-dist 79 96 1
+God set-dist 79 97 1
+God set-dist 79 98 2
+God set-dist 79 99 2
+God set-dist 80 81 1
+God set-dist 80 82 1
+God set-dist 80 83 1
+God set-dist 80 84 1
+God set-dist 80 85 1
+God set-dist 80 86 2
+God set-dist 80 87 1
+God set-dist 80 88 1
+God set-dist 80 89 1
+God set-dist 80 90 2
+God set-dist 80 91 2
+God set-dist 80 92 1
+God set-dist 80 93 2
+God set-dist 80 94 2
+God set-dist 80 95 1
+God set-dist 80 96 2
+God set-dist 80 97 2
+God set-dist 80 98 2
+God set-dist 80 99 1
+God set-dist 81 82 1
+God set-dist 81 83 1
+God set-dist 81 84 1
+God set-dist 81 85 2
+God set-dist 81 86 2
+God set-dist 81 87 1
+God set-dist 81 88 1
+God set-dist 81 89 2
+God set-dist 81 90 2
+God set-dist 81 91 2
+God set-dist 81 92 1
+God set-dist 81 93 2
+God set-dist 81 94 2
+God set-dist 81 95 1
+God set-dist 81 96 2
+God set-dist 81 97 2
+God set-dist 81 98 2
+God set-dist 81 99 1
+God set-dist 82 83 1
+God set-dist 82 84 1
+God set-dist 82 85 1
+God set-dist 82 86 2
+God set-dist 82 87 1
+God set-dist 82 88 1
+God set-dist 82 89 2
+God set-dist 82 90 2
+God set-dist 82 91 2
+God set-dist 82 92 1
+God set-dist 82 93 2
+God set-dist 82 94 2
+God set-dist 82 95 1
+God set-dist 82 96 2
+God set-dist 82 97 2
+God set-dist 82 98 2
+God set-dist 82 99 1
+God set-dist 83 84 1
+God set-dist 83 85 2
+God set-dist 83 86 1
+God set-dist 83 87 1
+God set-dist 83 88 1
+God set-dist 83 89 2
+God set-dist 83 90 2
+God set-dist 83 91 2
+God set-dist 83 92 1
+God set-dist 83 93 2
+God set-dist 83 94 2
+God set-dist 83 95 1
+God set-dist 83 96 1
+God set-dist 83 97 1
+God set-dist 83 98 2
+God set-dist 83 99 2
+God set-dist 84 85 1
+God set-dist 84 86 2
+God set-dist 84 87 1
+God set-dist 84 88 1
+God set-dist 84 89 2
+God set-dist 84 90 2
+God set-dist 84 91 2
+God set-dist 84 92 1
+God set-dist 84 93 2
+God set-dist 84 94 2
+God set-dist 84 95 1
+God set-dist 84 96 2
+God set-dist 84 97 2
+God set-dist 84 98 2
+God set-dist 84 99 1
+God set-dist 85 86 2
+God set-dist 85 87 1
+God set-dist 85 88 1
+God set-dist 85 89 1
+God set-dist 85 90 2
+God set-dist 85 91 2
+God set-dist 85 92 1
+God set-dist 85 93 1
+God set-dist 85 94 1
+God set-dist 85 95 1
+God set-dist 85 96 3
+God set-dist 85 97 2
+God set-dist 85 98 2
+God set-dist 85 99 2
+God set-dist 86 87 2
+God set-dist 86 88 2
+God set-dist 86 89 2
+God set-dist 86 90 2
+God set-dist 86 91 2
+God set-dist 86 92 2
+God set-dist 86 93 2
+God set-dist 86 94 2
+God set-dist 86 95 2
+God set-dist 86 96 1
+God set-dist 86 97 1
+God set-dist 86 98 2
+God set-dist 86 99 2
+God set-dist 87 88 1
+God set-dist 87 89 1
+God set-dist 87 90 2
+God set-dist 87 91 2
+God set-dist 87 92 1
+God set-dist 87 93 2
+God set-dist 87 94 2
+God set-dist 87 95 1
+God set-dist 87 96 2
+God set-dist 87 97 2
+God set-dist 87 98 2
+God set-dist 87 99 1
+God set-dist 88 89 2
+God set-dist 88 90 2
+God set-dist 88 91 2
+God set-dist 88 92 1
+God set-dist 88 93 2
+God set-dist 88 94 1
+God set-dist 88 95 1
+God set-dist 88 96 2
+God set-dist 88 97 2
+God set-dist 88 98 2
+God set-dist 88 99 1
+God set-dist 89 90 1
+God set-dist 89 91 1
+God set-dist 89 92 1
+God set-dist 89 93 1
+God set-dist 89 94 1
+God set-dist 89 95 1
+God set-dist 89 96 2
+God set-dist 89 97 2
+God set-dist 89 98 1
+God set-dist 89 99 2
+God set-dist 90 91 1
+God set-dist 90 92 2
+God set-dist 90 93 1
+God set-dist 90 94 2
+God set-dist 90 95 2
+God set-dist 90 96 2
+God set-dist 90 97 2
+God set-dist 90 98 1
+God set-dist 90 99 3
+God set-dist 91 92 2
+God set-dist 91 93 1
+God set-dist 91 94 2
+God set-dist 91 95 2
+God set-dist 91 96 2
+God set-dist 91 97 2
+God set-dist 91 98 1
+God set-dist 91 99 3
+God set-dist 92 93 2
+God set-dist 92 94 1
+God set-dist 92 95 1
+God set-dist 92 96 2
+God set-dist 92 97 2
+God set-dist 92 98 2
+God set-dist 92 99 1
+God set-dist 93 94 2
+God set-dist 93 95 1
+God set-dist 93 96 2
+God set-dist 93 97 1
+God set-dist 93 98 1
+God set-dist 93 99 2
+God set-dist 94 95 1
+God set-dist 94 96 3
+God set-dist 94 97 2
+God set-dist 94 98 2
+God set-dist 94 99 2
+God set-dist 95 96 2
+God set-dist 95 97 2
+God set-dist 95 98 2
+God set-dist 95 99 1
+God set-dist 96 97 1
+God set-dist 96 98 2
+God set-dist 96 99 2
+God set-dist 97 98 2
+God set-dist 97 99 2
+God set-dist 98 99 3
+$ns_ at 0.018337519835 "God set-dist 50 55 2"
+$ns_ at 0.067825949733 "God set-dist 9 34 1"
+$ns_ at 0.317848217722 "God set-dist 12 90 1"
+$ns_ at 0.512193830418 "God set-dist 69 79 1"
+$ns_ at 0.646197472004 "God set-dist 17 58 2"
+$ns_ at 0.646197472004 "God set-dist 50 58 1"
+$ns_ at 0.752714881547 "God set-dist 12 47 1"
+$ns_ at 1.670088630524 "God set-dist 73 97 1"
+$ns_ at 1.775856216726 "God set-dist 6 17 1"
+$ns_ at 1.875971638424 "God set-dist 5 78 1"
+$ns_ at 1.943124231279 "God set-dist 63 64 1"
+$ns_ at 2.271157709479 "God set-dist 27 44 1"
+$ns_ at 2.324858594079 "God set-dist 46 80 1"
+$ns_ at 2.328098936736 "God set-dist 25 28 2"
+$ns_ at 2.328098936736 "God set-dist 25 47 1"
+$ns_ at 2.328098936736 "God set-dist 25 68 2"
+$ns_ at 2.328098936736 "God set-dist 25 90 2"
+$ns_ at 2.328098936736 "God set-dist 25 98 2"
+$ns_ at 2.365519443124 "God set-dist 18 84 2"
+$ns_ at 2.365519443124 "God set-dist 27 84 2"
+$ns_ at 2.365519443124 "God set-dist 73 84 1"
+$ns_ at 2.368030511316 "God set-dist 37 48 1"
+$ns_ at 2.419624090888 "God set-dist 61 62 1"
+$ns_ at 2.478766148178 "God set-dist 12 34 1"
+$ns_ at 2.628882702186 "God set-dist 35 60 2"
+$ns_ at 2.628882702186 "God set-dist 38 60 2"
+$ns_ at 2.628882702186 "God set-dist 60 95 1"
+$ns_ at 2.745432859695 "God set-dist 73 81 1"
+$ns_ at 2.871668152327 "God set-dist 24 86 2"
+$ns_ at 2.871668152327 "God set-dist 35 86 2"
+$ns_ at 2.871668152327 "God set-dist 73 86 1"
+$ns_ at 3.308840570204 "God set-dist 34 84 1"
+$ns_ at 3.425641714944 "God set-dist 46 87 1"
+$ns_ at 4.051746349802 "God set-dist 76 87 1"
+$ns_ at 4.214634602203 "God set-dist 45 77 1"
+$ns_ at 4.321929403195 "God set-dist 15 68 2"
+$ns_ at 4.321929403195 "God set-dist 39 68 2"
+$ns_ at 4.321929403195 "God set-dist 51 68 2"
+$ns_ at 4.321929403195 "God set-dist 53 68 2"
+$ns_ at 4.321929403195 "God set-dist 65 68 2"
+$ns_ at 4.321929403195 "God set-dist 68 70 2"
+$ns_ at 4.321929403195 "God set-dist 68 95 1"
+$ns_ at 4.321929403195 "God set-dist 68 99 2"
+$ns_ at 4.410409346761 "God set-dist 60 92 2"
+$ns_ at 4.432744267063 "God set-dist 6 55 2"
+$ns_ at 4.543724277178 "God set-dist 12 29 2"
+$ns_ at 4.543724277178 "God set-dist 12 32 1"
+$ns_ at 4.543724277178 "God set-dist 12 42 2"
+$ns_ at 4.543724277178 "God set-dist 12 52 2"
+$ns_ at 4.559289849736 "God set-dist 41 57 1"
+$ns_ at 4.791826517667 "God set-dist 59 92 2"
+$ns_ at 4.856452781943 "God set-dist 0 17 1"
+$ns_ at 5.346657993956 "God set-dist 36 73 1"
+$ns_ at 5.346657993956 "God set-dist 36 84 2"
+$ns_ at 5.413928035533 "God set-dist 5 58 2"
+$ns_ at 5.413928035533 "God set-dist 58 75 2"
+$ns_ at 5.413928035533 "God set-dist 58 85 2"
+$ns_ at 5.413928035533 "God set-dist 58 87 1"
+$ns_ at 5.829529423800 "God set-dist 10 58 1"
+$ns_ at 5.869178845919 "God set-dist 4 46 1"
+$ns_ at 6.102415107842 "God set-dist 9 26 2"
+$ns_ at 6.102415107842 "God set-dist 14 26 2"
+$ns_ at 6.102415107842 "God set-dist 26 28 2"
+$ns_ at 6.102415107842 "God set-dist 26 30 1"
+$ns_ at 6.102415107842 "God set-dist 26 68 2"
+$ns_ at 6.102415107842 "God set-dist 26 90 2"
+$ns_ at 6.102415107842 "God set-dist 26 91 2"
+$ns_ at 6.102415107842 "God set-dist 26 98 2"
+$ns_ at 6.130770929649 "God set-dist 1 20 1"
+$ns_ at 6.210048954658 "God set-dist 8 20 2"
+$ns_ at 6.480838555104 "God set-dist 29 72 2"
+$ns_ at 6.480838555104 "God set-dist 32 72 1"
+$ns_ at 6.480838555104 "God set-dist 42 72 2"
+$ns_ at 6.480838555104 "God set-dist 52 72 2"
+$ns_ at 6.578057271528 "God set-dist 48 58 1"
+$ns_ at 6.604129652250 "God set-dist 0 62 1"
+$ns_ at 7.132818809430 "God set-dist 15 43 1"
+$ns_ at 7.856345956078 "God set-dist 47 67 1"
+$ns_ at 7.926565295574 "God set-dist 80 94 1"
+$ns_ at 7.949983266172 "God set-dist 23 24 2"
+$ns_ at 7.949983266172 "God set-dist 23 35 2"
+$ns_ at 7.949983266172 "God set-dist 23 73 1"
+$ns_ at 7.984605835908 "God set-dist 12 31 1"
+$ns_ at 8.124684814107 "God set-dist 34 79 1"
+$ns_ at 8.286783976930 "God set-dist 28 65 2"
+$ns_ at 8.286783976930 "God set-dist 47 65 1"
+$ns_ at 8.286783976930 "God set-dist 65 90 2"
+$ns_ at 8.286783976930 "God set-dist 65 98 2"
+$ns_ at 8.321961797407 "God set-dist 75 78 1"
+$ns_ at 8.363103351943 "God set-dist 13 50 1"
+$ns_ at 8.921195980714 "God set-dist 39 75 1"
+$ns_ at 8.927680127834 "God set-dist 2 84 1"
+$ns_ at 9.000379501815 "God set-dist 41 73 1"
+$ns_ at 9.016758661204 "God set-dist 77 79 1"
+$ns_ at 9.145367205047 "God set-dist 57 89 1"
+$ns_ at 9.403618821736 "God set-dist 12 14 1"
+$ns_ at 9.544681631948 "God set-dist 17 80 1"
+$ns_ at 9.555644653786 "God set-dist 2 71 1"
+$ns_ at 9.612091043197 "God set-dist 25 98 3"
+$ns_ at 9.612091043197 "God set-dist 47 98 2"
+$ns_ at 9.612091043197 "God set-dist 65 98 3"
+$ns_ at 9.612091043197 "God set-dist 66 98 3"
+$ns_ at 9.612091043197 "God set-dist 69 98 3"
+$ns_ at 9.612091043197 "God set-dist 78 98 3"
+$ns_ at 9.640316298478 "God set-dist 20 29 1"
+$ns_ at 9.640316298478 "God set-dist 23 29 2"
+$ns_ at 9.640316298478 "God set-dist 29 56 2"
+$ns_ at 9.640316298478 "God set-dist 29 86 2"
+$ns_ at 9.640316298478 "God set-dist 29 96 2"
+$ns_ at 9.873521019690 "God set-dist 45 63 1"
+$ns_ at 9.946917127866 "God set-dist 60 97 1"
+$ns_ at 10.050425765052 "God set-dist 25 59 1"
+$ns_ at 10.313138845339 "God set-dist 34 83 1"
+$ns_ at 10.509003185442 "God set-dist 0 11 1"
+$ns_ at 10.631588255070 "God set-dist 19 34 1"
+$ns_ at 11.031998772447 "God set-dist 83 89 1"
+$ns_ at 11.072695094871 "God set-dist 7 29 1"
+$ns_ at 11.072695094871 "God set-dist 29 97 2"
+$ns_ at 11.144571342626 "God set-dist 11 79 1"
+$ns_ at 11.283232520388 "God set-dist 13 24 2"
+$ns_ at 11.283232520388 "God set-dist 15 24 2"
+$ns_ at 11.283232520388 "God set-dist 24 60 2"
+$ns_ at 11.283232520388 "God set-dist 24 71 2"
+$ns_ at 11.283232520388 "God set-dist 24 95 1"
+$ns_ at 11.294947131463 "God set-dist 32 93 1"
+$ns_ at 11.294947131463 "God set-dist 42 93 2"
+$ns_ at 11.294947131463 "God set-dist 52 93 2"
+$ns_ at 11.407097310927 "God set-dist 74 84 1"
+$ns_ at 11.456363415844 "God set-dist 71 92 2"
+$ns_ at 11.483974576648 "God set-dist 26 62 2"
+$ns_ at 11.483974576648 "God set-dist 62 74 1"
+$ns_ at 11.528748369950 "God set-dist 19 25 2"
+$ns_ at 11.528748369950 "God set-dist 25 27 2"
+$ns_ at 11.528748369950 "God set-dist 25 74 1"
+$ns_ at 11.640216949096 "God set-dist 75 93 1"
+$ns_ at 11.786433350655 "God set-dist 64 97 1"
+$ns_ at 11.898501837421 "God set-dist 47 57 1"
+$ns_ at 12.165040590032 "God set-dist 5 29 1"
+$ns_ at 12.264869604732 "God set-dist 28 51 2"
+$ns_ at 12.264869604732 "God set-dist 47 51 1"
+$ns_ at 12.264869604732 "God set-dist 51 90 2"
+$ns_ at 12.313925143385 "God set-dist 28 99 2"
+$ns_ at 12.313925143385 "God set-dist 47 99 1"
+$ns_ at 12.313925143385 "God set-dist 90 99 2"
+$ns_ at 12.362991761093 "God set-dist 3 53 1"
+$ns_ at 12.443797889234 "God set-dist 14 27 1"
+$ns_ at 12.465959675259 "God set-dist 0 92 1"
+$ns_ at 12.563300691987 "God set-dist 7 51 1"
+$ns_ at 12.563300691987 "God set-dist 23 51 2"
+$ns_ at 12.563300691987 "God set-dist 51 56 2"
+$ns_ at 12.563300691987 "God set-dist 51 86 2"
+$ns_ at 12.563300691987 "God set-dist 51 96 2"
+$ns_ at 12.563300691987 "God set-dist 51 97 2"
+$ns_ at 12.670419438748 "God set-dist 19 79 1"
+$ns_ at 12.768638989351 "God set-dist 7 39 1"
+$ns_ at 12.768638989351 "God set-dist 23 39 2"
+$ns_ at 12.768638989351 "God set-dist 39 56 2"
+$ns_ at 12.768638989351 "God set-dist 39 86 2"
+$ns_ at 12.768638989351 "God set-dist 39 96 2"
+$ns_ at 12.768638989351 "God set-dist 39 97 2"
+$ns_ at 12.817039445827 "God set-dist 20 42 1"
+$ns_ at 12.817039445827 "God set-dist 23 42 2"
+$ns_ at 12.817039445827 "God set-dist 42 56 2"
+$ns_ at 12.817039445827 "God set-dist 42 86 2"
+$ns_ at 12.817039445827 "God set-dist 42 96 2"
+$ns_ at 12.867752316978 "God set-dist 34 40 1"
+$ns_ at 12.930685742577 "God set-dist 48 60 1"
+$ns_ at 12.932475419750 "God set-dist 35 92 1"
+$ns_ at 12.938686596113 "God set-dist 3 63 1"
+$ns_ at 13.070794602989 "God set-dist 82 94 1"
+$ns_ at 13.150015382200 "God set-dist 41 61 1"
+$ns_ at 13.258825281710 "God set-dist 13 55 2"
+$ns_ at 13.320237979107 "God set-dist 45 84 1"
+$ns_ at 13.491829822141 "God set-dist 45 47 1"
+$ns_ at 13.558238681157 "God set-dist 32 58 1"
+$ns_ at 13.558238681157 "God set-dist 58 94 2"
+$ns_ at 13.561377327016 "God set-dist 54 94 1"
+$ns_ at 13.663804875562 "God set-dist 84 94 1"
+$ns_ at 13.676042122279 "God set-dist 19 57 1"
+$ns_ at 14.102241438560 "God set-dist 41 50 1"
+$ns_ at 14.161354663046 "God set-dist 4 24 1"
+$ns_ at 14.311818356938 "God set-dist 13 42 1"
+$ns_ at 14.350105441955 "God set-dist 25 67 1"
+$ns_ at 14.560340883489 "God set-dist 67 77 1"
+$ns_ at 14.568490805033 "God set-dist 74 88 1"
+$ns_ at 14.588499319293 "God set-dist 28 62 1"
+$ns_ at 14.684778806720 "God set-dist 33 77 1"
+$ns_ at 14.695238981654 "God set-dist 20 97 1"
+$ns_ at 14.695238981654 "God set-dist 42 97 2"
+$ns_ at 14.729734011877 "God set-dist 2 96 1"
+$ns_ at 14.729734011877 "God set-dist 5 96 2"
+$ns_ at 14.729734011877 "God set-dist 38 96 2"
+$ns_ at 14.729734011877 "God set-dist 75 96 2"
+$ns_ at 14.729734011877 "God set-dist 85 96 2"
+$ns_ at 14.729734011877 "God set-dist 94 96 2"
+$ns_ at 14.810377481094 "God set-dist 40 89 1"
+$ns_ at 14.937072460845 "God set-dist 0 80 1"
+$ns_ at 15.482410727585 "God set-dist 40 65 2"
+$ns_ at 15.504898221026 "God set-dist 44 83 1"
+$ns_ at 15.537171263860 "God set-dist 22 93 1"
+$ns_ at 15.548094682653 "God set-dist 13 88 1"
+$ns_ at 15.808131094557 "God set-dist 17 48 1"
+$ns_ at 15.868976594602 "God set-dist 1 21 2"
+$ns_ at 16.193807591606 "God set-dist 10 60 1"
+$ns_ at 16.856722074224 "God set-dist 34 82 1"
+$ns_ at 17.015799478193 "God set-dist 31 93 1"
+$ns_ at 17.245976811233 "God set-dist 17 61 1"
+$ns_ at 17.488126536851 "God set-dist 18 82 2"
+$ns_ at 17.488126536851 "God set-dist 27 82 2"
+$ns_ at 17.488126536851 "God set-dist 36 82 2"
+$ns_ at 17.488126536851 "God set-dist 73 82 1"
+$ns_ at 17.936508369454 "God set-dist 75 81 1"
+$ns_ at 17.981050558510 "God set-dist 19 46 1"
+$ns_ at 17.985936647797 "God set-dist 6 75 1"
+$ns_ at 17.985936647797 "God set-dist 56 75 2"
+$ns_ at 18.080435873209 "God set-dist 19 23 1"
+$ns_ at 18.202836154598 "God set-dist 12 26 1"
+$ns_ at 18.238182175607 "God set-dist 33 47 1"
+$ns_ at 18.242144178530 "God set-dist 11 15 1"
+$ns_ at 18.477714892838 "God set-dist 11 45 1"
+$ns_ at 18.653672477899 "God set-dist 20 51 1"
+$ns_ at 18.732272700513 "God set-dist 1 66 1"
+$ns_ at 18.732272700513 "God set-dist 9 66 2"
+$ns_ at 18.732272700513 "God set-dist 19 66 2"
+$ns_ at 18.732272700513 "God set-dist 66 91 2"
+$ns_ at 18.732272700513 "God set-dist 66 98 2"
+$ns_ at 18.901353228305 "God set-dist 35 77 2"
+$ns_ at 18.976041863670 "God set-dist 0 87 1"
+$ns_ at 19.138002680364 "God set-dist 11 42 1"
+$ns_ at 19.226290238487 "God set-dist 7 62 1"
+$ns_ at 19.367407750820 "God set-dist 32 86 1"
+$ns_ at 19.367407750820 "God set-dist 52 86 2"
+$ns_ at 19.548685197040 "God set-dist 19 53 2"
+$ns_ at 19.548685197040 "God set-dist 53 74 1"
+$ns_ at 19.794029616845 "God set-dist 44 55 2"
+$ns_ at 19.816342633089 "God set-dist 4 63 2"
+$ns_ at 19.816342633089 "God set-dist 14 63 2"
+$ns_ at 19.816342633089 "God set-dist 54 63 2"
+$ns_ at 19.816342633089 "God set-dist 63 68 2"
+$ns_ at 19.816342633089 "God set-dist 63 95 1"
+$ns_ at 19.944596304168 "God set-dist 33 78 2"
+$ns_ at 20.353301497486 "God set-dist 88 89 1"
+$ns_ at 20.547559166954 "God set-dist 0 22 1"
+$ns_ at 20.781345900867 "God set-dist 74 82 1"
+$ns_ at 20.929225953355 "God set-dist 8 31 2"
+$ns_ at 21.171100232146 "God set-dist 15 28 2"
+$ns_ at 21.171100232146 "God set-dist 28 39 2"
+$ns_ at 21.171100232146 "God set-dist 28 53 2"
+$ns_ at 21.171100232146 "God set-dist 28 63 2"
+$ns_ at 21.171100232146 "God set-dist 28 70 2"
+$ns_ at 21.171100232146 "God set-dist 28 95 1"
+$ns_ at 21.238725540705 "God set-dist 11 52 1"
+$ns_ at 21.833511480790 "God set-dist 60 84 1"
+$ns_ at 21.959654520247 "God set-dist 19 78 2"
+$ns_ at 21.959654520247 "God set-dist 27 78 2"
+$ns_ at 21.959654520247 "God set-dist 74 78 1"
+$ns_ at 21.996571749382 "God set-dist 50 75 1"
+$ns_ at 22.170705861534 "God set-dist 14 29 2"
+$ns_ at 22.170705861534 "God set-dist 29 75 1"
+$ns_ at 22.194623577295 "God set-dist 21 89 1"
+$ns_ at 22.446812647127 "God set-dist 41 46 1"
+$ns_ at 22.658556111397 "God set-dist 67 89 1"
+$ns_ at 22.919287752589 "God set-dist 29 54 2"
+$ns_ at 22.919287752589 "God set-dist 54 75 1"
+$ns_ at 22.919550460593 "God set-dist 66 94 1"
+$ns_ at 22.940749254049 "God set-dist 25 75 1"
+$ns_ at 23.085315589792 "God set-dist 37 43 1"
+$ns_ at 23.292643941717 "God set-dist 10 77 2"
+$ns_ at 23.370963737454 "God set-dist 30 41 1"
+$ns_ at 23.485167647768 "God set-dist 4 29 2"
+$ns_ at 23.485167647768 "God set-dist 4 32 1"
+$ns_ at 23.485167647768 "God set-dist 4 42 2"
+$ns_ at 23.485167647768 "God set-dist 4 52 2"
+$ns_ at 23.689646227106 "God set-dist 26 76 1"
+$ns_ at 23.922188051409 "God set-dist 14 74 1"
+$ns_ at 23.972838636532 "God set-dist 28 39 3"
+$ns_ at 23.972838636532 "God set-dist 39 68 3"
+$ns_ at 23.972838636532 "God set-dist 39 95 2"
+$ns_ at 24.173659068851 "God set-dist 71 73 1"
+$ns_ at 24.187092769653 "God set-dist 22 79 1"
+$ns_ at 24.206022653453 "God set-dist 11 67 1"
+$ns_ at 24.311694756045 "God set-dist 45 82 1"
+$ns_ at 24.817211066489 "God set-dist 46 93 1"
+$ns_ at 25.199652335819 "God set-dist 57 81 1"
+$ns_ at 25.340305026852 "God set-dist 28 39 2"
+$ns_ at 25.340305026852 "God set-dist 39 47 1"
+$ns_ at 25.340305026852 "God set-dist 39 68 2"
+$ns_ at 25.340305026852 "God set-dist 39 90 2"
+$ns_ at 25.437742563693 "God set-dist 38 98 2"
+$ns_ at 25.452281536781 "God set-dist 72 87 1"
+$ns_ at 25.506899097498 "God set-dist 16 27 2"
+$ns_ at 25.506899097498 "God set-dist 16 74 1"
+$ns_ at 25.656426972011 "God set-dist 38 92 1"
+$ns_ at 25.659026951440 "God set-dist 26 41 1"
+$ns_ at 25.852482055623 "God set-dist 44 57 1"
+$ns_ at 25.861762348981 "God set-dist 7 75 1"
+$ns_ at 25.861762348981 "God set-dist 26 75 2"
+$ns_ at 25.893326874241 "God set-dist 7 42 1"
+$ns_ at 25.960458338592 "God set-dist 2 69 1"
+$ns_ at 25.960458338592 "God set-dist 9 69 2"
+$ns_ at 25.960458338592 "God set-dist 18 69 2"
+$ns_ at 25.960458338592 "God set-dist 36 69 2"
+$ns_ at 25.960458338592 "God set-dist 69 91 2"
+$ns_ at 25.960458338592 "God set-dist 69 98 2"
+$ns_ at 26.132014004202 "God set-dist 74 75 1"
+$ns_ at 26.147684373700 "God set-dist 25 79 1"
+$ns_ at 26.230875344772 "God set-dist 86 95 1"
+$ns_ at 26.237800905842 "God set-dist 34 67 1"
+$ns_ at 26.304246927448 "God set-dist 40 44 1"
+$ns_ at 26.328114242048 "God set-dist 86 87 1"
+$ns_ at 26.508690195238 "God set-dist 16 45 1"
+$ns_ at 26.566563027164 "God set-dist 1 41 1"
+$ns_ at 26.586094700897 "God set-dist 62 78 1"
+$ns_ at 27.019090574742 "God set-dist 20 39 1"
+$ns_ at 27.094399185522 "God set-dist 12 87 1"
+$ns_ at 27.176229852166 "God set-dist 30 62 1"
+$ns_ at 27.239003017670 "God set-dist 24 92 1"
+$ns_ at 27.410063651379 "God set-dist 47 53 1"
+$ns_ at 27.410063651379 "God set-dist 53 90 2"
+$ns_ at 27.427429302134 "God set-dist 21 80 2"
+$ns_ at 27.446425590365 "God set-dist 4 67 1"
+$ns_ at 27.480720462340 "God set-dist 17 26 2"
+$ns_ at 27.480720462340 "God set-dist 17 74 1"
+$ns_ at 27.623989981834 "God set-dist 30 37 1"
+$ns_ at 27.905306350008 "God set-dist 10 26 1"
+$ns_ at 27.924774986771 "God set-dist 28 74 1"
+$ns_ at 28.059546771101 "God set-dist 69 73 1"
+$ns_ at 28.080039697976 "God set-dist 55 89 2"
+$ns_ at 28.486720173480 "God set-dist 15 18 2"
+$ns_ at 28.486720173480 "God set-dist 18 43 1"
+$ns_ at 28.627467475180 "God set-dist 47 70 1"
+$ns_ at 28.627467475180 "God set-dist 70 90 2"
+$ns_ at 28.664951354197 "God set-dist 2 82 1"
+$ns_ at 28.730603209925 "God set-dist 16 94 1"
+$ns_ at 28.731635954256 "God set-dist 34 57 1"
+$ns_ at 28.846953556437 "God set-dist 76 80 2"
+$ns_ at 28.990171096892 "God set-dist 15 57 1"
+$ns_ at 29.289114434846 "God set-dist 13 48 1"
+$ns_ at 29.350704007097 "God set-dist 57 69 1"
+$ns_ at 29.490085606535 "God set-dist 71 84 1"
+$ns_ at 29.582038682474 "God set-dist 51 85 1"
+$ns_ at 29.690425307314 "God set-dist 62 99 1"
+$ns_ at 29.720810078733 "God set-dist 4 11 1"
+$ns_ at 29.968268805253 "God set-dist 28 29 2"
+$ns_ at 29.968268805253 "God set-dist 29 47 1"
+$ns_ at 29.968268805253 "God set-dist 29 68 2"
+$ns_ at 29.968268805253 "God set-dist 29 90 2"
+$ns_ at 30.064406437482 "God set-dist 51 62 1"
+$ns_ at 30.144483359021 "God set-dist 95 97 1"
+$ns_ at 30.154979370326 "God set-dist 93 94 1"
+$ns_ at 30.204403711057 "God set-dist 46 47 1"
+$ns_ at 30.419570509593 "God set-dist 60 70 1"
+$ns_ at 30.459665558986 "God set-dist 37 79 1"
+$ns_ at 30.698323571526 "God set-dist 46 89 1"
+$ns_ at 30.711417718421 "God set-dist 44 67 1"
+$ns_ at 30.717020695517 "God set-dist 2 38 2"
+$ns_ at 30.717020695517 "God set-dist 38 96 3"
+$ns_ at 30.779798995182 "God set-dist 0 37 1"
+$ns_ at 30.812532480767 "God set-dist 27 33 1"
+$ns_ at 30.859559921606 "God set-dist 25 49 1"
+$ns_ at 30.879097045054 "God set-dist 18 34 1"
+$ns_ at 30.907903571787 "God set-dist 4 31 1"
+$ns_ at 30.932632478119 "God set-dist 85 99 1"
+$ns_ at 31.023830866936 "God set-dist 31 58 1"
+$ns_ at 31.313391364469 "God set-dist 15 37 1"
+$ns_ at 31.384361485775 "God set-dist 5 25 1"
+$ns_ at 31.590856821583 "God set-dist 19 86 1"
+$ns_ at 31.957526454496 "God set-dist 62 81 1"
+$ns_ at 32.104296938517 "God set-dist 21 47 1"
+$ns_ at 32.285337008460 "God set-dist 3 40 2"
+$ns_ at 32.429372428881 "God set-dist 71 77 1"
+$ns_ at 32.454903195026 "God set-dist 15 90 2"
+$ns_ at 32.454903195026 "God set-dist 63 90 2"
+$ns_ at 32.454903195026 "God set-dist 90 95 1"
+$ns_ at 32.597522756338 "God set-dist 26 61 1"
+$ns_ at 32.693051042219 "God set-dist 1 45 1"
+$ns_ at 32.784736136485 "God set-dist 13 92 2"
+$ns_ at 32.996288525491 "God set-dist 4 22 1"
+$ns_ at 33.185185057333 "God set-dist 5 26 2"
+$ns_ at 33.185185057333 "God set-dist 26 85 2"
+$ns_ at 33.185185057333 "God set-dist 26 87 1"
+$ns_ at 33.342354009012 "God set-dist 62 83 1"
+$ns_ at 33.369989595608 "God set-dist 26 48 1"
+$ns_ at 33.453520132889 "God set-dist 20 52 1"
+$ns_ at 33.453520132889 "God set-dist 23 52 2"
+$ns_ at 33.453520132889 "God set-dist 52 56 2"
+$ns_ at 33.453520132889 "God set-dist 52 96 2"
+$ns_ at 33.453520132889 "God set-dist 52 97 2"
+$ns_ at 33.613760136179 "God set-dist 9 25 2"
+$ns_ at 33.613760136179 "God set-dist 18 25 2"
+$ns_ at 33.613760136179 "God set-dist 25 36 2"
+$ns_ at 33.613760136179 "God set-dist 25 73 1"
+$ns_ at 33.613760136179 "God set-dist 25 91 2"
+$ns_ at 33.613760136179 "God set-dist 25 98 2"
+$ns_ at 33.629548166593 "God set-dist 9 17 1"
+$ns_ at 33.753291594472 "God set-dist 92 93 1"
+$ns_ at 33.833051372433 "God set-dist 0 20 1"
+$ns_ at 33.859703981770 "God set-dist 2 60 1"
+$ns_ at 33.920526029334 "God set-dist 2 13 1"
+$ns_ at 33.967620115321 "God set-dist 16 18 2"
+$ns_ at 33.967620115321 "God set-dist 16 36 2"
+$ns_ at 33.967620115321 "God set-dist 16 73 1"
+$ns_ at 34.096148565491 "God set-dist 47 59 1"
+$ns_ at 34.273283546373 "God set-dist 4 85 1"
+$ns_ at 34.499110760103 "God set-dist 3 20 1"
+$ns_ at 34.532596931217 "God set-dist 24 96 2"
+$ns_ at 34.532596931217 "God set-dist 35 96 2"
+$ns_ at 34.532596931217 "God set-dist 38 96 2"
+$ns_ at 34.532596931217 "God set-dist 73 96 1"
+$ns_ at 34.984436613897 "God set-dist 4 75 1"
+$ns_ at 35.108072014684 "God set-dist 25 62 1"
+$ns_ at 35.200572515929 "God set-dist 4 83 1"
+$ns_ at 35.542741233391 "God set-dist 53 79 1"
+$ns_ at 35.570645415385 "God set-dist 1 25 1"
+$ns_ at 35.703510635227 "God set-dist 62 65 1"
+$ns_ at 35.942653723490 "God set-dist 10 13 1"
+$ns_ at 36.017575959734 "God set-dist 1 33 1"
+$ns_ at 36.103527281645 "God set-dist 2 25 1"
+$ns_ at 36.290857380244 "God set-dist 23 35 3"
+$ns_ at 36.290857380244 "God set-dist 35 73 2"
+$ns_ at 36.290857380244 "God set-dist 35 96 3"
+$ns_ at 36.316133644864 "God set-dist 60 82 1"
+$ns_ at 36.330284721531 "God set-dist 34 46 1"
+$ns_ at 36.364520362830 "God set-dist 25 43 1"
+$ns_ at 36.431321773244 "God set-dist 14 22 1"
+$ns_ at 36.482167527689 "God set-dist 10 22 2"
+$ns_ at 36.661270803402 "God set-dist 79 84 1"
+$ns_ at 36.720303146574 "God set-dist 45 88 1"
+$ns_ at 36.743672790070 "God set-dist 47 63 1"
+$ns_ at 36.787671903742 "God set-dist 87 96 1"
+$ns_ at 36.860657119995 "God set-dist 2 55 2"
+$ns_ at 36.912156281478 "God set-dist 33 84 1"
+$ns_ at 37.044478801498 "God set-dist 61 75 1"
+$ns_ at 37.126024224451 "God set-dist 21 34 1"
+$ns_ at 37.147636940381 "God set-dist 59 77 1"
+$ns_ at 37.166444703974 "God set-dist 2 58 1"
+$ns_ at 37.291438466342 "God set-dist 21 41 1"
+$ns_ at 37.336210311055 "God set-dist 69 75 1"
+$ns_ at 37.644216356730 "God set-dist 0 77 1"
+$ns_ at 37.698272692072 "God set-dist 0 75 1"
+$ns_ at 37.790127203349 "God set-dist 67 84 1"
+$ns_ at 37.936423646168 "God set-dist 11 33 1"
+$ns_ at 38.410570091961 "God set-dist 18 21 1"
+$ns_ at 38.461943540066 "God set-dist 41 48 1"
+$ns_ at 38.653453713071 "God set-dist 32 97 1"
+$ns_ at 38.891075115705 "God set-dist 59 63 1"
+$ns_ at 38.914845549509 "God set-dist 0 3 1"
+$ns_ at 38.973225497789 "God set-dist 22 45 1"
+$ns_ at 39.098560171353 "God set-dist 4 23 1"
+$ns_ at 39.274980995193 "God set-dist 17 30 1"
+$ns_ at 39.326236800464 "God set-dist 1 91 2"
+$ns_ at 39.326236800464 "God set-dist 66 91 3"
+$ns_ at 39.355730777137 "God set-dist 3 93 1"
+$ns_ at 39.398592974806 "God set-dist 16 60 1"
+$ns_ at 39.460298496792 "God set-dist 44 46 1"
+$ns_ at 39.481889375581 "God set-dist 5 81 1"
+$ns_ at 39.539604450810 "God set-dist 1 46 1"
+$ns_ at 39.740529069586 "God set-dist 6 69 1"
+$ns_ at 39.748884648368 "God set-dist 33 92 2"
+$ns_ at 39.752334590428 "God set-dist 78 85 1"
+$ns_ at 39.770071695129 "God set-dist 33 34 1"
+$ns_ at 39.783911436720 "God set-dist 1 78 1"
+$ns_ at 39.783911436720 "God set-dist 9 78 2"
+$ns_ at 39.783911436720 "God set-dist 78 98 2"
+$ns_ at 39.989970997441 "God set-dist 39 85 1"
+$ns_ at 40.034266043353 "God set-dist 39 62 1"
+$ns_ at 40.045096647268 "God set-dist 10 64 1"
+$ns_ at 40.205597903328 "God set-dist 2 56 1"
+$ns_ at 40.205597903328 "God set-dist 5 56 2"
+$ns_ at 40.205597903328 "God set-dist 56 85 2"
+$ns_ at 40.205597903328 "God set-dist 56 94 2"
+$ns_ at 40.346378926546 "God set-dist 28 43 1"
+$ns_ at 40.379340674269 "God set-dist 37 45 1"
+$ns_ at 40.586232007704 "God set-dist 60 76 1"
+$ns_ at 40.599676738253 "God set-dist 29 90 3"
+$ns_ at 40.599676738253 "God set-dist 47 90 2"
+$ns_ at 40.739165691402 "God set-dist 17 98 2"
+$ns_ at 40.917423740168 "God set-dist 21 44 1"
+$ns_ at 40.993831624718 "God set-dist 40 66 2"
+$ns_ at 41.311531721803 "God set-dist 13 97 1"
+$ns_ at 41.460585970243 "God set-dist 22 67 1"
+$ns_ at 41.569212419241 "God set-dist 34 45 1"
+$ns_ at 41.622887197855 "God set-dist 60 77 1"
+$ns_ at 41.687301620536 "God set-dist 4 92 1"
+$ns_ at 41.696558303002 "God set-dist 6 84 1"
+$ns_ at 42.038512756668 "God set-dist 40 55 2"
+$ns_ at 42.045917645958 "God set-dist 70 75 1"
+$ns_ at 42.147498796789 "God set-dist 45 70 1"
+$ns_ at 42.149679370548 "God set-dist 72 93 2"
+$ns_ at 42.442785404274 "God set-dist 13 29 1"
+$ns_ at 42.506444852087 "God set-dist 31 72 1"
+$ns_ at 42.580027471096 "God set-dist 89 97 1"
+$ns_ at 42.639125009995 "God set-dist 75 83 1"
+$ns_ at 42.794657843706 "God set-dist 48 64 1"
+$ns_ at 42.800716787990 "God set-dist 67 93 1"
+$ns_ at 42.835832394629 "God set-dist 71 82 1"
+$ns_ at 42.846124347317 "God set-dist 11 14 1"
+$ns_ at 42.846124347317 "God set-dist 14 42 2"
+$ns_ at 42.846124347317 "God set-dist 14 52 2"
+$ns_ at 42.957694568813 "God set-dist 10 92 2"
+$ns_ at 42.979231189085 "God set-dist 74 85 1"
+$ns_ at 43.076371318901 "God set-dist 28 35 1"
+$ns_ at 43.138652320458 "God set-dist 79 82 1"
+$ns_ at 43.229707689229 "God set-dist 47 71 1"
+$ns_ at 43.323505399518 "God set-dist 4 35 1"
+$ns_ at 43.323505399518 "God set-dist 23 35 2"
+$ns_ at 43.441520786605 "God set-dist 6 85 1"
+$ns_ at 43.453676294280 "God set-dist 8 32 2"
+$ns_ at 43.453676294280 "God set-dist 8 52 3"
+$ns_ at 43.490357357442 "God set-dist 7 8 2"
+$ns_ at 43.490357357442 "God set-dist 8 42 3"
+$ns_ at 43.539802247917 "God set-dist 23 95 1"
+$ns_ at 43.593980007084 "God set-dist 62 79 1"
+$ns_ at 43.640282855303 "God set-dist 20 34 1"
+$ns_ at 43.686096623460 "God set-dist 83 93 1"
+$ns_ at 43.774899171244 "God set-dist 7 52 1"
+$ns_ at 43.793464496858 "God set-dist 17 84 1"
+$ns_ at 43.837877048865 "God set-dist 0 71 1"
+$ns_ at 43.856573592491 "God set-dist 15 47 1"
+$ns_ at 43.866713866642 "God set-dist 6 26 1"
+$ns_ at 43.936903449383 "God set-dist 33 89 1"
+$ns_ at 44.099267252834 "God set-dist 14 43 1"
+$ns_ at 44.102147676547 "God set-dist 10 62 1"
+$ns_ at 44.363708138535 "God set-dist 84 89 1"
+$ns_ at 44.406583532168 "God set-dist 25 58 1"
+$ns_ at 44.451533252130 "God set-dist 32 96 1"
+$ns_ at 44.478237887450 "God set-dist 37 93 1"
+$ns_ at 45.278267558492 "God set-dist 43 62 1"
+$ns_ at 45.446027383982 "God set-dist 12 60 1"
+$ns_ at 45.478827705883 "God set-dist 67 82 1"
+$ns_ at 45.487463892019 "God set-dist 37 67 1"
+$ns_ at 45.589129552866 "God set-dist 4 94 1"
+$ns_ at 45.740173871485 "God set-dist 59 84 1"
+$ns_ at 45.881772382795 "God set-dist 87 97 1"
+$ns_ at 45.966368505510 "God set-dist 4 37 1"
+$ns_ at 46.126750817144 "God set-dist 23 32 1"
+$ns_ at 46.251368495559 "God set-dist 62 69 1"
+$ns_ at 46.265957754242 "God set-dist 65 85 1"
+$ns_ at 46.532600912108 "God set-dist 27 34 1"
+$ns_ at 46.574841189318 "God set-dist 41 75 1"
+$ns_ at 46.675532683001 "God set-dist 4 40 1"
+$ns_ at 46.717150238121 "God set-dist 5 74 1"
+$ns_ at 46.745748976363 "God set-dist 15 22 1"
+$ns_ at 46.834968221132 "God set-dist 34 97 1"
+$ns_ at 47.240481278109 "God set-dist 18 23 1"
+$ns_ at 47.291830130374 "God set-dist 6 25 1"
+$ns_ at 47.451880267885 "God set-dist 3 4 1"
+$ns_ at 47.581136989872 "God set-dist 49 53 1"
+$ns_ at 47.591492865977 "God set-dist 13 73 1"
+$ns_ at 47.617961308526 "God set-dist 3 14 1"
+$ns_ at 47.636790209248 "God set-dist 34 36 1"
+$ns_ at 47.967958616779 "God set-dist 19 63 2"
+$ns_ at 47.967958616779 "God set-dist 27 63 2"
+$ns_ at 47.967958616779 "God set-dist 63 74 1"
+$ns_ at 47.987674455229 "God set-dist 23 87 1"
+$ns_ at 48.148131529060 "God set-dist 27 66 2"
+$ns_ at 48.148131529060 "God set-dist 66 74 1"
+$ns_ at 48.170485907909 "God set-dist 0 56 1"
+$ns_ at 48.175089213638 "God set-dist 13 52 1"
+$ns_ at 48.226551908138 "God set-dist 1 69 1"
+$ns_ at 48.273484071070 "God set-dist 16 34 1"
+$ns_ at 48.296769960095 "God set-dist 19 51 2"
+$ns_ at 48.296769960095 "God set-dist 19 65 2"
+$ns_ at 48.296769960095 "God set-dist 19 70 2"
+$ns_ at 48.296769960095 "God set-dist 19 95 1"
+$ns_ at 48.296769960095 "God set-dist 19 99 2"
+$ns_ at 48.306677956276 "God set-dist 13 51 1"
+$ns_ at 48.750258527815 "God set-dist 25 57 1"
+$ns_ at 48.793187596026 "God set-dist 49 92 2"
+$ns_ at 48.908017753588 "God set-dist 44 97 1"
+$ns_ at 49.056625408720 "God set-dist 17 91 1"
+$ns_ at 49.122336749082 "God set-dist 60 73 1"
+$ns_ at 49.327041370999 "God set-dist 5 14 1"
+$ns_ at 49.448653769136 "God set-dist 8 59 2"
+$ns_ at 49.474914274921 "God set-dist 13 47 1"
+$ns_ at 49.480819329501 "God set-dist 79 88 1"
+$ns_ at 49.555724510448 "God set-dist 33 82 1"
+$ns_ at 49.694419925671 "God set-dist 29 62 1"
+$ns_ at 49.694419925671 "God set-dist 29 90 2"
+$ns_ at 49.910276801059 "God set-dist 26 50 1"
+$ns_ at 50.181429057129 "God set-dist 51 83 1"
+$ns_ at 50.684346189744 "God set-dist 18 46 1"
+$ns_ at 50.761740267618 "God set-dist 24 58 2"
+$ns_ at 50.761740267618 "God set-dist 38 58 2"
+$ns_ at 50.761740267618 "God set-dist 58 73 1"
+$ns_ at 50.921721082299 "God set-dist 55 73 2"
+$ns_ at 50.936173091934 "God set-dist 59 82 1"
+$ns_ at 51.017651516905 "God set-dist 0 85 1"
+$ns_ at 51.204720993225 "God set-dist 1 98 2"
+$ns_ at 51.204720993225 "God set-dist 66 98 3"
+$ns_ at 51.204720993225 "God set-dist 78 98 3"
+$ns_ at 51.474512231538 "God set-dist 26 69 1"
+$ns_ at 51.601230699987 "God set-dist 94 99 1"
+$ns_ at 51.684752709902 "God set-dist 4 86 1"
+$ns_ at 51.702429859724 "God set-dist 68 94 1"
+$ns_ at 51.722758232667 "God set-dist 4 33 1"
+$ns_ at 51.904875608462 "God set-dist 9 97 1"
+$ns_ at 51.942179801398 "God set-dist 45 89 1"
+$ns_ at 51.946399379954 "God set-dist 16 79 1"
+$ns_ at 51.970437004804 "God set-dist 41 62 1"
+$ns_ at 52.220080310886 "God set-dist 9 15 2"
+$ns_ at 52.220080310886 "God set-dist 9 51 2"
+$ns_ at 52.220080310886 "God set-dist 9 53 2"
+$ns_ at 52.220080310886 "God set-dist 9 63 2"
+$ns_ at 52.220080310886 "God set-dist 9 65 2"
+$ns_ at 52.220080310886 "God set-dist 9 70 2"
+$ns_ at 52.220080310886 "God set-dist 9 95 1"
+$ns_ at 52.220080310886 "God set-dist 9 99 2"
+$ns_ at 52.224143643898 "God set-dist 41 96 1"
+$ns_ at 52.297601644933 "God set-dist 27 40 1"
+$ns_ at 52.297601644933 "God set-dist 27 70 2"
+$ns_ at 52.649484399457 "God set-dist 83 99 1"
+$ns_ at 52.738684342944 "God set-dist 17 82 1"
+$ns_ at 52.785770776800 "God set-dist 10 17 1"
+$ns_ at 53.467662947483 "God set-dist 38 58 3"
+$ns_ at 53.467662947483 "God set-dist 38 73 2"
+$ns_ at 53.467662947483 "God set-dist 38 96 3"
+$ns_ at 53.746482644292 "God set-dist 27 51 2"
+$ns_ at 53.746482644292 "God set-dist 27 65 2"
+$ns_ at 53.746482644292 "God set-dist 27 83 1"
+$ns_ at 53.746482644292 "God set-dist 27 99 2"
+$ns_ at 53.818884361319 "God set-dist 8 45 2"
+$ns_ at 53.882780068591 "God set-dist 9 43 1"
+$ns_ at 54.025067418707 "God set-dist 40 62 1"
+$ns_ at 54.136781985928 "God set-dist 8 29 3"
+$ns_ at 54.136781985928 "God set-dist 8 39 3"
+$ns_ at 54.136781985928 "God set-dist 8 47 2"
+$ns_ at 54.302419902331 "God set-dist 6 82 1"
+$ns_ at 54.349301248296 "God set-dist 3 79 1"
+$ns_ at 54.370186200287 "God set-dist 49 84 1"
+$ns_ at 54.430122022549 "God set-dist 26 32 1"
+$ns_ at 54.430122022549 "God set-dist 26 94 2"
+$ns_ at 54.683870031276 "God set-dist 4 7 1"
+$ns_ at 55.074356590349 "God set-dist 16 71 1"
+$ns_ at 55.107739627870 "God set-dist 85 87 2"
+$ns_ at 55.187421397594 "God set-dist 13 66 2"
+$ns_ at 55.225116112491 "God set-dist 82 89 1"
+$ns_ at 55.306987452118 "God set-dist 39 94 1"
+$ns_ at 55.543179915844 "God set-dist 74 94 1"
+$ns_ at 55.675187947379 "God set-dist 8 29 2"
+$ns_ at 55.675187947379 "God set-dist 9 29 2"
+$ns_ at 55.675187947379 "God set-dist 19 29 2"
+$ns_ at 55.675187947379 "God set-dist 29 95 1"
+$ns_ at 55.796015426382 "God set-dist 25 34 1"
+$ns_ at 55.814036050454 "God set-dist 33 44 1"
+$ns_ at 55.906814517717 "God set-dist 12 17 1"
+$ns_ at 55.952114741883 "God set-dist 71 78 2"
+$ns_ at 56.426190342374 "God set-dist 19 67 1"
+$ns_ at 56.468063942194 "God set-dist 17 83 1"
+$ns_ at 56.535999939489 "God set-dist 42 60 1"
+$ns_ at 56.582980128836 "God set-dist 6 64 1"
+$ns_ at 56.630293218659 "God set-dist 31 97 1"
+$ns_ at 56.805092842791 "God set-dist 6 88 1"
+$ns_ at 56.868152878006 "God set-dist 75 79 1"
+$ns_ at 56.905110131367 "God set-dist 43 84 1"
+$ns_ at 56.951470061573 "God set-dist 16 67 1"
+$ns_ at 57.052035403211 "God set-dist 17 79 1"
+$ns_ at 57.087186455574 "God set-dist 53 75 1"
+$ns_ at 57.092849816116 "God set-dist 2 26 1"
+$ns_ at 57.354350630304 "God set-dist 7 17 1"
+$ns_ at 57.520153927127 "God set-dist 14 79 1"
+$ns_ at 57.986784059475 "God set-dist 78 94 1"
+$ns_ at 58.237723851507 "God set-dist 48 75 1"
+$ns_ at 58.286751597003 "God set-dist 2 16 1"
+$ns_ at 58.374518837810 "God set-dist 5 7 1"
+$ns_ at 58.648869332727 "God set-dist 24 56 2"
+$ns_ at 58.648869332727 "God set-dist 56 73 1"
+$ns_ at 58.745033752703 "God set-dist 0 94 1"
+$ns_ at 58.911971904860 "God set-dist 14 92 1"
+$ns_ at 58.916100595798 "God set-dist 14 32 1"
+$ns_ at 58.963598529021 "God set-dist 24 56 3"
+$ns_ at 58.963598529021 "God set-dist 24 58 3"
+$ns_ at 58.963598529021 "God set-dist 24 73 2"
+$ns_ at 58.963598529021 "God set-dist 24 96 3"
+$ns_ at 59.052798767362 "God set-dist 63 67 1"
+$ns_ at 59.269885434445 "God set-dist 10 41 1"
+$ns_ at 59.402791334461 "God set-dist 20 62 1"
+$ns_ at 59.560979738496 "God set-dist 18 55 3"
+$ns_ at 59.560979738496 "God set-dist 34 55 2"
+$ns_ at 59.560979738496 "God set-dist 36 55 3"
+$ns_ at 59.560979738496 "God set-dist 55 98 3"
+$ns_ at 59.682473954387 "God set-dist 15 36 2"
+$ns_ at 59.682473954387 "God set-dist 36 43 1"
+$ns_ at 59.730850010471 "God set-dist 63 75 1"
+$ns_ at 59.820287533950 "God set-dist 25 61 1"
+$ns_ at 59.988530535085 "God set-dist 62 67 1"
+$ns_ at 60.060283846595 "God set-dist 56 87 1"
+$ns_ at 60.200183441790 "God set-dist 47 97 1"
+$ns_ at 60.270960019650 "God set-dist 16 59 1"
+$ns_ at 60.472340656811 "God set-dist 10 90 2"
+$ns_ at 60.569267283704 "God set-dist 12 62 1"
+$ns_ at 60.592434641965 "God set-dist 12 80 1"
+$ns_ at 60.651163711618 "God set-dist 67 88 1"
+$ns_ at 60.666665900224 "God set-dist 57 77 1"
+$ns_ at 60.727216337073 "God set-dist 49 82 1"
+$ns_ at 60.856898206949 "God set-dist 26 81 1"
+$ns_ at 60.993912511245 "God set-dist 34 72 1"
+$ns_ at 61.072196357629 "God set-dist 17 76 1"
+$ns_ at 61.280188749873 "God set-dist 29 85 1"
+$ns_ at 61.407854549526 "God set-dist 17 43 1"
+$ns_ at 61.470084643117 "God set-dist 27 29 2"
+$ns_ at 61.470084643117 "God set-dist 27 95 1"
+$ns_ at 61.510354460983 "God set-dist 63 79 1"
+$ns_ at 61.590146484202 "God set-dist 24 96 2"
+$ns_ at 61.590146484202 "God set-dist 35 96 2"
+$ns_ at 61.590146484202 "God set-dist 38 96 2"
+$ns_ at 61.590146484202 "God set-dist 95 96 1"
+$ns_ at 61.699363053499 "God set-dist 46 69 1"
+$ns_ at 61.778597947154 "God set-dist 61 64 1"
+$ns_ at 61.835726249501 "God set-dist 25 85 1"
+$ns_ at 61.977489124487 "God set-dist 61 84 1"
+$ns_ at 62.080014138936 "God set-dist 70 74 1"
+$ns_ at 62.126474719682 "God set-dist 2 64 1"
+$ns_ at 62.295740352088 "God set-dist 78 79 1"
+$ns_ at 62.793933243574 "God set-dist 25 50 1"
+$ns_ at 63.135751009197 "God set-dist 47 60 1"
+$ns_ at 63.150328836980 "God set-dist 22 49 1"
+$ns_ at 63.166715870115 "God set-dist 14 37 1"
+$ns_ at 63.355034101546 "God set-dist 4 5 1"
+$ns_ at 63.511621060736 "God set-dist 50 84 1"
+$ns_ at 63.898129797939 "God set-dist 6 94 1"
+$ns_ at 64.043531493591 "God set-dist 51 74 1"
+$ns_ at 64.355088790704 "God set-dist 29 83 1"
+$ns_ at 64.448020780792 "God set-dist 74 99 1"
+$ns_ at 64.518854794905 "God set-dist 45 51 1"
+$ns_ at 64.535565044546 "God set-dist 62 70 1"
+$ns_ at 64.618902056135 "God set-dist 61 81 1"
+$ns_ at 64.672893118735 "God set-dist 11 12 1"
+$ns_ at 64.914517273287 "God set-dist 53 62 1"
+$ns_ at 64.943115955189 "God set-dist 28 79 1"
+$ns_ at 64.978944606389 "God set-dist 34 81 1"
+$ns_ at 65.143897146256 "God set-dist 1 99 1"
+$ns_ at 65.242660154471 "God set-dist 28 97 1"
+$ns_ at 65.251161397314 "God set-dist 20 75 1"
+$ns_ at 65.326885763096 "God set-dist 20 89 1"
+$ns_ at 65.535298309386 "God set-dist 25 48 1"
+$ns_ at 65.747457922739 "God set-dist 65 74 1"
+$ns_ at 66.021246654197 "God set-dist 25 46 1"
+$ns_ at 66.362309964286 "God set-dist 43 82 1"
+$ns_ at 66.563669398187 "God set-dist 0 24 1"
+$ns_ at 66.563669398187 "God set-dist 24 56 2"
+$ns_ at 66.596813823051 "God set-dist 42 45 1"
+$ns_ at 66.731265618844 "God set-dist 46 81 1"
+$ns_ at 66.813845501449 "God set-dist 26 73 1"
+$ns_ at 66.823589449471 "God set-dist 45 66 1"
+$ns_ at 66.931379851852 "God set-dist 34 86 1"
+$ns_ at 67.081625081783 "God set-dist 47 68 2"
+$ns_ at 67.110568437129 "God set-dist 23 36 1"
+$ns_ at 67.161786179561 "God set-dist 33 37 1"
+$ns_ at 67.215493306013 "God set-dist 55 83 2"
+$ns_ at 67.231877969836 "God set-dist 19 33 1"
+$ns_ at 67.263574055730 "God set-dist 4 80 1"
+$ns_ at 67.326318859180 "God set-dist 9 74 1"
+$ns_ at 67.381754289793 "God set-dist 45 65 1"
+$ns_ at 67.393277488810 "God set-dist 18 86 1"
+$ns_ at 67.460203227437 "God set-dist 18 29 2"
+$ns_ at 67.460203227437 "God set-dist 18 51 2"
+$ns_ at 67.460203227437 "God set-dist 18 53 2"
+$ns_ at 67.460203227437 "God set-dist 18 55 2"
+$ns_ at 67.460203227437 "God set-dist 18 63 2"
+$ns_ at 67.460203227437 "God set-dist 18 65 2"
+$ns_ at 67.460203227437 "God set-dist 18 66 2"
+$ns_ at 67.460203227437 "God set-dist 18 70 2"
+$ns_ at 67.460203227437 "God set-dist 18 78 2"
+$ns_ at 67.460203227437 "God set-dist 18 95 1"
+$ns_ at 67.460203227437 "God set-dist 18 99 2"
+$ns_ at 67.566334829103 "God set-dist 34 41 1"
+$ns_ at 67.661182390966 "God set-dist 41 72 1"
+$ns_ at 67.717803563825 "God set-dist 22 33 1"
+$ns_ at 67.770271267140 "God set-dist 45 62 1"
+$ns_ at 67.792024952394 "God set-dist 37 49 1"
+$ns_ at 68.094468066519 "God set-dist 64 80 2"
+$ns_ at 68.223728546890 "God set-dist 9 24 1"
+$ns_ at 68.248095507823 "God set-dist 0 5 1"
+$ns_ at 68.297382225892 "God set-dist 25 26 1"
+$ns_ at 68.537955851079 "God set-dist 22 54 1"
+$ns_ at 68.543807645571 "God set-dist 5 70 1"
+$ns_ at 68.558697414954 "God set-dist 7 85 1"
+$ns_ at 68.676436952561 "God set-dist 18 70 3"
+$ns_ at 68.676436952561 "God set-dist 70 95 2"
+$ns_ at 69.284068661831 "God set-dist 65 94 1"
+$ns_ at 69.403010557471 "God set-dist 62 63 1"
+$ns_ at 69.786164748762 "God set-dist 24 58 2"
+$ns_ at 69.786164748762 "God set-dist 35 58 2"
+$ns_ at 69.786164748762 "God set-dist 38 58 2"
+$ns_ at 69.786164748762 "God set-dist 58 95 1"
+$ns_ at 69.828359759587 "God set-dist 61 69 1"
+$ns_ at 69.835755034874 "God set-dist 30 92 2"
+$ns_ at 70.065205233984 "God set-dist 29 45 1"
+$ns_ at 70.076028618952 "God set-dist 29 74 1"
+$ns_ at 70.132048844195 "God set-dist 34 59 1"
+$ns_ at 70.224053903963 "God set-dist 12 22 1"
+$ns_ at 70.458997496090 "God set-dist 23 34 1"
+$ns_ at 70.530576845043 "God set-dist 5 87 2"
+$ns_ at 70.609027565515 "God set-dist 33 93 1"
+$ns_ at 71.203647691599 "God set-dist 30 75 1"
+$ns_ at 71.411530749663 "God set-dist 25 30 1"
+$ns_ at 71.680506031012 "God set-dist 19 83 1"
+$ns_ at 71.751713328067 "God set-dist 40 70 2"
+$ns_ at 71.893996951984 "God set-dist 14 83 1"
+$ns_ at 72.068450223792 "God set-dist 21 36 1"
+$ns_ at 72.128444481063 "God set-dist 61 82 1"
+$ns_ at 72.217959533688 "God set-dist 51 94 1"
+$ns_ at 72.231957578781 "God set-dist 25 89 1"
+$ns_ at 72.250490192513 "God set-dist 33 63 1"
+$ns_ at 72.405773144822 "God set-dist 41 86 1"
+$ns_ at 72.436744623729 "God set-dist 43 92 2"
+$ns_ at 72.484636181327 "God set-dist 64 73 1"
+$ns_ at 72.662264461944 "God set-dist 28 42 2"
+$ns_ at 72.662264461944 "God set-dist 42 47 1"
+$ns_ at 72.662264461944 "God set-dist 42 54 2"
+$ns_ at 72.918324830665 "God set-dist 42 92 2"
+$ns_ at 72.973164313223 "God set-dist 67 75 1"
+$ns_ at 73.133026389801 "God set-dist 45 99 1"
+$ns_ at 73.179909210519 "God set-dist 44 84 1"
+$ns_ at 73.286269051571 "God set-dist 48 69 1"
+$ns_ at 73.538243797649 "God set-dist 5 6 1"
+$ns_ at 73.629513149641 "God set-dist 11 57 1"
+$ns_ at 73.859333743229 "God set-dist 59 70 1"
+$ns_ at 74.170926495932 "God set-dist 13 99 1"
+$ns_ at 74.185612252717 "God set-dist 36 53 2"
+$ns_ at 74.185612252717 "God set-dist 53 73 1"
+$ns_ at 74.185612252717 "God set-dist 53 91 2"
+$ns_ at 74.185612252717 "God set-dist 53 98 2"
+$ns_ at 74.215085127681 "God set-dist 5 69 1"
+$ns_ at 74.319680719824 "God set-dist 14 97 1"
+$ns_ at 74.527117490433 "God set-dist 16 17 1"
+$ns_ at 74.558663637770 "God set-dist 34 71 1"
+$ns_ at 74.562101908362 "God set-dist 34 69 1"
+$ns_ at 74.577429672203 "God set-dist 17 67 1"
+$ns_ at 74.658179657847 "God set-dist 25 94 1"
+$ns_ at 74.818650468771 "God set-dist 31 86 1"
+$ns_ at 74.848190744055 "God set-dist 17 87 1"
+$ns_ at 75.142860842923 "God set-dist 0 84 1"
+$ns_ at 75.243435025190 "God set-dist 26 31 1"
+$ns_ at 75.310874821291 "God set-dist 41 97 1"
+$ns_ at 75.466222716016 "God set-dist 40 93 1"
+$ns_ at 75.494635404627 "God set-dist 43 75 1"
+$ns_ at 75.613335496528 "God set-dist 5 93 1"
+$ns_ at 75.728972180724 "God set-dist 33 62 1"
+$ns_ at 75.856159838891 "God set-dist 31 96 1"
+$ns_ at 75.983934978345 "God set-dist 64 82 1"
+$ns_ at 76.089027401185 "God set-dist 29 94 1"
+$ns_ at 76.176263342492 "God set-dist 50 82 1"
+$ns_ at 76.332251895124 "God set-dist 57 84 1"
+$ns_ at 76.400751822835 "God set-dist 0 58 1"
+$ns_ at 76.483831737486 "God set-dist 17 55 2"
+$ns_ at 76.483831737486 "God set-dist 55 91 3"
+$ns_ at 76.587119573110 "God set-dist 62 76 1"
+$ns_ at 76.732478698637 "God set-dist 48 81 1"
+$ns_ at 76.950935923583 "God set-dist 45 75 1"
+$ns_ at 76.990424732578 "God set-dist 14 46 1"
+$ns_ at 77.065825015608 "God set-dist 7 94 1"
+$ns_ at 77.087189233513 "God set-dist 50 94 1"
+$ns_ at 77.148417412038 "$node_(1) setdest 154.290572063168 173.784918768160 0.730378758376"
+$ns_ at 77.305271195480 "God set-dist 18 79 1"
+$ns_ at 77.388457098612 "God set-dist 57 82 1"
+$ns_ at 77.405349421133 "God set-dist 44 45 1"
+$ns_ at 77.418147302928 "God set-dist 17 19 1"
+$ns_ at 77.436836404685 "God set-dist 48 84 1"
+$ns_ at 77.633039205439 "God set-dist 1 8 2"
+$ns_ at 77.635365679684 "God set-dist 28 52 2"
+$ns_ at 77.635365679684 "God set-dist 47 52 1"
+$ns_ at 77.635365679684 "God set-dist 52 54 2"
+$ns_ at 77.852004156211 "God set-dist 40 75 1"
+$ns_ at 78.130401020283 "God set-dist 61 94 1"
+$ns_ at 78.151483783022 "God set-dist 39 90 3"
+$ns_ at 78.151483783022 "God set-dist 62 90 2"
+$ns_ at 78.151483783022 "God set-dist 70 90 3"
+$ns_ at 78.168930448363 "God set-dist 0 25 1"
+$ns_ at 78.181703246944 "God set-dist 28 46 1"
+$ns_ at 78.183842450045 "God set-dist 49 62 1"
+$ns_ at 78.325622905399 "God set-dist 49 63 1"
+$ns_ at 78.479420909227 "God set-dist 40 92 2"
+$ns_ at 78.508180686415 "God set-dist 42 64 1"
+$ns_ at 78.552477574058 "God set-dist 38 47 2"
+$ns_ at 78.714837215935 "God set-dist 9 38 1"
+$ns_ at 79.046091152142 "God set-dist 14 31 1"
+$ns_ at 79.176028060570 "God set-dist 19 40 1"
+$ns_ at 79.514102416052 "God set-dist 36 46 1"
+$ns_ at 79.523509017247 "God set-dist 28 94 1"
+$ns_ at 79.631781208781 "God set-dist 17 66 1"
+$ns_ at 79.631781208781 "God set-dist 66 91 2"
+$ns_ at 79.654933497577 "God set-dist 9 46 1"
+$ns_ at 80.059710668146 "God set-dist 59 88 1"
+$ns_ at 80.126262679761 "God set-dist 14 67 1"
+$ns_ at 80.701134043908 "God set-dist 12 37 1"
+$ns_ at 80.845614665447 "God set-dist 0 82 1"
+$ns_ at 80.855298143588 "God set-dist 53 98 3"
+$ns_ at 80.855298143588 "God set-dist 73 98 2"
+$ns_ at 81.109930064665 "God set-dist 11 46 1"
+$ns_ at 81.174139903944 "God set-dist 16 33 1"
+$ns_ at 81.181251397812 "God set-dist 17 25 1"
+$ns_ at 81.189023927261 "God set-dist 11 59 1"
+$ns_ at 81.241967600240 "God set-dist 51 60 1"
+$ns_ at 81.404559882185 "God set-dist 0 41 1"
+$ns_ at 81.464815521960 "God set-dist 28 83 1"
+$ns_ at 81.685823558844 "God set-dist 48 92 2"
+$ns_ at 81.690222144664 "God set-dist 1 51 1"
+$ns_ at 81.915135281464 "God set-dist 16 49 1"
+$ns_ at 82.019431692968 "God set-dist 10 68 2"
+$ns_ at 82.050745607828 "God set-dist 16 89 1"
+$ns_ at 82.311205560149 "God set-dist 52 92 2"
+$ns_ at 82.396106751351 "God set-dist 1 97 1"
+$ns_ at 82.406440167649 "God set-dist 18 70 2"
+$ns_ at 82.406440167649 "God set-dist 70 79 1"
+$ns_ at 82.447256694058 "God set-dist 1 65 1"
+$ns_ at 82.473493895544 "God set-dist 53 57 1"
+$ns_ at 82.510839578110 "God set-dist 42 59 1"
+$ns_ at 82.769031501630 "God set-dist 4 45 1"
+$ns_ at 83.160326878846 "God set-dist 83 94 1"
+$ns_ at 83.224414249584 "God set-dist 22 28 1"
+$ns_ at 83.335256961521 "God set-dist 48 82 1"
+$ns_ at 83.539874885204 "God set-dist 24 91 1"
+$ns_ at 83.630896783395 "God set-dist 28 32 1"
+$ns_ at 83.761608350530 "God set-dist 17 18 1"
+$ns_ at 83.892864892633 "God set-dist 40 78 2"
+$ns_ at 83.941727968815 "God set-dist 10 91 2"
+$ns_ at 83.945727057667 "God set-dist 51 79 1"
+$ns_ at 84.061124429885 "God set-dist 15 73 1"
+$ns_ at 84.061124429885 "God set-dist 15 91 2"
+$ns_ at 84.077514397111 "God set-dist 47 58 1"
+$ns_ at 84.142218928020 "God set-dist 1 29 1"
+$ns_ at 84.200915888567 "God set-dist 10 11 2"
+$ns_ at 84.290149120546 "God set-dist 83 85 1"
+$ns_ at 84.304124585184 "God set-dist 12 75 1"
+$ns_ at 84.509990573901 "God set-dist 61 85 1"
+$ns_ at 84.815240979497 "God set-dist 50 69 1"
+$ns_ at 84.865820510378 "God set-dist 28 75 1"
+$ns_ at 84.916489019002 "God set-dist 9 79 1"
+$ns_ at 84.960706577526 "God set-dist 46 62 1"
+$ns_ at 85.166147033081 "God set-dist 1 39 1"
+$ns_ at 85.166147033081 "God set-dist 9 39 2"
+$ns_ at 85.166147033081 "God set-dist 19 39 2"
+$ns_ at 85.166147033081 "God set-dist 39 90 2"
+$ns_ at 85.354622306735 "God set-dist 5 83 1"
+$ns_ at 85.440431830363 "God set-dist 5 53 1"
+$ns_ at 85.676306010153 "$node_(19) setdest 340.868411096891 27.737140252563 0.607330890914"
+$ns_ at 86.104064569365 "God set-dist 66 79 1"
+$ns_ at 86.235224299411 "God set-dist 64 84 1"
+$ns_ at 86.553142983821 "God set-dist 1 53 1"
+$ns_ at 86.566508897046 "God set-dist 17 40 1"
+$ns_ at 86.798820331183 "God set-dist 48 90 2"
+$ns_ at 86.921464257065 "God set-dist 64 70 1"
+$ns_ at 86.995542240563 "God set-dist 79 94 1"
+$ns_ at 87.041812491310 "God set-dist 42 54 3"
+$ns_ at 87.041812491310 "God set-dist 47 54 2"
+$ns_ at 87.041812491310 "God set-dist 52 54 3"
+$ns_ at 87.139480013955 "God set-dist 45 52 1"
+$ns_ at 87.154595697526 "God set-dist 6 16 1"
+$ns_ at 87.183220632687 "God set-dist 18 55 3"
+$ns_ at 87.183220632687 "God set-dist 55 95 2"
+$ns_ at 87.481778441442 "$node_(55) setdest 407.790370360109 41.852423619783 0.062798612300"
+$ns_ at 87.667548090810 "God set-dist 12 41 1"
+$ns_ at 87.817474255735 "God set-dist 32 56 1"
+$ns_ at 88.101129168266 "God set-dist 15 92 2"
+$ns_ at 88.248845477630 "God set-dist 15 75 1"
+$ns_ at 88.300652026594 "God set-dist 51 59 1"
+$ns_ at 88.337724440344 "God set-dist 36 63 2"
+$ns_ at 88.337724440344 "God set-dist 63 73 1"
+$ns_ at 88.337724440344 "God set-dist 63 91 2"
+$ns_ at 88.504664471645 "God set-dist 64 77 1"
+$ns_ at 88.680312972454 "God set-dist 0 88 1"
+$ns_ at 88.762791236192 "God set-dist 12 13 1"
+$ns_ at 88.766535406518 "God set-dist 52 60 1"
+$ns_ at 88.860087389645 "God set-dist 17 33 1"
+$ns_ at 88.926837434509 "God set-dist 9 21 1"
+$ns_ at 88.941532820629 "$node_(97) setdest 402.057377302073 367.345792569203 0.911216058427"
+$ns_ at 88.966027186438 "God set-dist 46 77 1"
+$ns_ at 88.981638597238 "God set-dist 34 96 1"
+$ns_ at 89.018329728918 "God set-dist 3 67 1"
+$ns_ at 89.090285012259 "God set-dist 28 67 1"
+$ns_ at 89.220801429086 "God set-dist 17 46 1"
+$ns_ at 89.255573055270 "God set-dist 10 25 1"
+$ns_ at 89.421196320792 "God set-dist 79 99 1"
+$ns_ at 89.539963945863 "God set-dist 57 62 1"
+$ns_ at 89.563877842059 "God set-dist 18 33 1"
+$ns_ at 89.926716623887 "God set-dist 5 63 1"
+$ns_ at 89.966810660505 "God set-dist 14 33 1"
+$ns_ at 89.984644761664 "God set-dist 24 64 2"
+$ns_ at 89.984644761664 "God set-dist 35 64 2"
+$ns_ at 89.984644761664 "God set-dist 47 64 1"
+$ns_ at 90.062710097418 "God set-dist 29 79 1"
+$ns_ at 90.120733123693 "God set-dist 29 91 2"
+$ns_ at 90.120733123693 "God set-dist 51 91 2"
+$ns_ at 90.120733123693 "God set-dist 65 91 2"
+$ns_ at 90.120733123693 "God set-dist 78 91 2"
+$ns_ at 90.120733123693 "God set-dist 91 95 1"
+$ns_ at 90.120733123693 "God set-dist 91 99 2"
+$ns_ at 90.321472689292 "God set-dist 79 85 1"
+$ns_ at 90.375418910398 "God set-dist 49 93 2"
+$ns_ at 90.507932767674 "God set-dist 25 96 1"
+$ns_ at 90.535841413627 "God set-dist 60 88 1"
+$ns_ at 90.560341217064 "God set-dist 2 98 2"
+$ns_ at 90.569176310910 "God set-dist 15 62 1"
+$ns_ at 90.934264560202 "God set-dist 10 54 2"
+$ns_ at 91.076769361418 "God set-dist 16 64 1"
+$ns_ at 91.180605703400 "God set-dist 81 85 1"
+$ns_ at 91.192792080137 "God set-dist 60 78 2"
+$ns_ at 91.253665799647 "God set-dist 10 80 2"
+$ns_ at 91.354941623100 "God set-dist 18 67 1"
+$ns_ at 91.406590707671 "God set-dist 29 36 2"
+$ns_ at 91.406590707671 "God set-dist 36 51 2"
+$ns_ at 91.406590707671 "God set-dist 36 65 2"
+$ns_ at 91.406590707671 "God set-dist 36 66 2"
+$ns_ at 91.406590707671 "God set-dist 36 78 2"
+$ns_ at 91.406590707671 "God set-dist 36 95 1"
+$ns_ at 91.406590707671 "God set-dist 36 99 2"
+$ns_ at 91.419284463448 "God set-dist 8 96 2"
+$ns_ at 91.664843632227 "God set-dist 14 21 1"
+$ns_ at 91.675481152589 "God set-dist 1 63 1"
+$ns_ at 91.761289322668 "God set-dist 67 78 1"
+$ns_ at 91.824498038644 "God set-dist 5 79 1"
+$ns_ at 91.895283859466 "God set-dist 15 43 2"
+$ns_ at 91.957869497473 "God set-dist 47 86 1"
+$ns_ at 92.005913183703 "God set-dist 18 65 3"
+$ns_ at 92.005913183703 "God set-dist 36 65 3"
+$ns_ at 92.005913183703 "God set-dist 65 91 3"
+$ns_ at 92.005913183703 "God set-dist 65 95 2"
+$ns_ at 92.103338674764 "God set-dist 46 82 1"
+$ns_ at 92.205271119540 "God set-dist 47 96 1"
+$ns_ at 92.294355965172 "God set-dist 46 84 1"
+$ns_ at 92.375076884086 "God set-dist 9 83 1"
+$ns_ at 92.396136749470 "God set-dist 30 84 1"
+$ns_ at 92.442758481913 "God set-dist 8 39 2"
+$ns_ at 92.442758481913 "God set-dist 27 39 2"
+$ns_ at 92.442758481913 "God set-dist 39 74 1"
+$ns_ at 92.577723650658 "God set-dist 4 72 2"
+$ns_ at 92.763775878930 "God set-dist 33 75 1"
+$ns_ at 92.817683883455 "God set-dist 12 25 1"
+$ns_ at 92.838859718062 "God set-dist 70 71 1"
+$ns_ at 92.877269811379 "God set-dist 17 45 1"
+$ns_ at 92.879885840126 "God set-dist 21 25 1"
+$ns_ at 92.986281146095 "God set-dist 24 26 2"
+$ns_ at 92.986281146095 "God set-dist 26 35 2"
+$ns_ at 92.986281146095 "God set-dist 26 38 2"
+$ns_ at 92.986281146095 "God set-dist 26 95 1"
+$ns_ at 93.079982875429 "God set-dist 18 65 2"
+$ns_ at 93.079982875429 "God set-dist 18 83 1"
+$ns_ at 93.500611265098 "God set-dist 86 89 1"
+$ns_ at 93.679367175661 "God set-dist 23 93 1"
+$ns_ at 93.812635302355 "God set-dist 17 78 1"
+$ns_ at 93.889270650878 "God set-dist 26 47 1"
+$ns_ at 94.243628971383 "God set-dist 22 46 1"
+$ns_ at 94.244595275814 "God set-dist 57 63 1"
+$ns_ at 94.332507914281 "God set-dist 65 79 1"
+$ns_ at 94.722925713739 "God set-dist 0 69 1"
+$ns_ at 95.099093673386 "God set-dist 59 78 1"
+$ns_ at 95.108249925621 "God set-dist 35 47 2"
+$ns_ at 95.108249925621 "God set-dist 35 64 3"
+$ns_ at 95.133750310271 "God set-dist 69 96 1"
+$ns_ at 95.264287552992 "God set-dist 3 45 1"
+$ns_ at 95.343249498081 "God set-dist 37 46 1"
+$ns_ at 95.446897252711 "God set-dist 44 82 1"
+$ns_ at 95.464833744186 "God set-dist 21 28 1"
+$ns_ at 95.522492191379 "God set-dist 73 91 2"
+$ns_ at 95.601551875619 "God set-dist 50 85 1"
+$ns_ at 95.638658149763 "God set-dist 81 94 1"
+$ns_ at 95.860645860602 "God set-dist 37 57 1"
+$ns_ at 96.332252627906 "God set-dist 28 33 1"
+$ns_ at 96.353477847540 "God set-dist 26 53 1"
+$ns_ at 96.376353646710 "God set-dist 2 53 1"
+$ns_ at 96.626658057910 "God set-dist 41 56 1"
+$ns_ at 96.688611558018 "God set-dist 47 72 1"
+$ns_ at 96.874926958382 "God set-dist 51 67 1"
+$ns_ at 96.887103368750 "God set-dist 69 89 1"
+$ns_ at 96.919466946996 "God set-dist 36 86 1"
+$ns_ at 96.992046123368 "God set-dist 67 70 1"
+$ns_ at 96.996484941471 "God set-dist 30 82 1"
+$ns_ at 97.222442466520 "God set-dist 9 23 1"
+$ns_ at 97.269819042501 "God set-dist 8 39 3"
+$ns_ at 97.269819042501 "God set-dist 8 55 3"
+$ns_ at 97.269819042501 "God set-dist 8 74 2"
+$ns_ at 97.653545640886 "God set-dist 0 26 1"
+$ns_ at 97.692057200744 "God set-dist 11 71 1"
+$ns_ at 97.856975464209 "God set-dist 45 92 2"
+$ns_ at 97.890171949089 "God set-dist 49 88 1"
+$ns_ at 98.058444253603 "God set-dist 69 85 1"
+$ns_ at 98.392728463257 "God set-dist 69 94 1"
+$ns_ at 98.494567003820 "God set-dist 2 5 2"
+$ns_ at 98.632740899577 "God set-dist 25 97 1"
+$ns_ at 98.704477543186 "God set-dist 29 60 1"
+$ns_ at 98.726516285028 "God set-dist 9 67 1"
+$ns_ at 98.800514610906 "God set-dist 30 69 1"
+$ns_ at 99.000360740418 "God set-dist 9 42 2"
+$ns_ at 99.000360740418 "God set-dist 19 42 2"
+$ns_ at 99.000360740418 "God set-dist 27 42 2"
+$ns_ at 99.000360740418 "God set-dist 42 54 2"
+$ns_ at 99.000360740418 "God set-dist 42 74 1"
+$ns_ at 99.015418023083 "God set-dist 58 63 1"
+$ns_ at 99.040457952568 "God set-dist 16 57 1"
+$ns_ at 99.144230508918 "God set-dist 44 87 2"
+$ns_ at 99.151155968392 "God set-dist 22 68 1"
+$ns_ at 99.239172804116 "God set-dist 17 97 1"
+$ns_ at 99.276580751664 "God set-dist 14 40 1"
+$ns_ at 99.323419678994 "God set-dist 0 81 1"
+$ns_ at 99.331144614565 "God set-dist 26 63 1"
+$ns_ at 99.339565105533 "God set-dist 17 99 1"
+$ns_ at 99.573702333333 "God set-dist 71 89 1"
+$ns_ at 99.722713447270 "God set-dist 29 59 1"
+$ns_ at 99.994549276941 "God set-dist 9 33 1"
+#
+# Destination Unreachables: 0
+#
+# Route Changes: 1097
+#
+# Link Changes: 826
+#
+# Node | Route Changes | Link Changes
+#    0 |            27 |           27
+#    1 |            21 |           21
+#    2 |            18 |           18
+#    3 |            11 |           11
+#    4 |            28 |           24
+#    5 |            23 |           19
+#    6 |            14 |           14
+#    7 |            13 |           13
+#    8 |            18 |           10
+#    9 |            30 |           15
+#   10 |            18 |           18
+#   11 |            16 |           16
+#   12 |            22 |           19
+#   13 |            18 |           17
+#   14 |            25 |           20
+#   15 |            19 |           11
+#   16 |            21 |           18
+#   17 |            36 |           34
+#   18 |            34 |           12
+#   19 |            24 |           12
+#   20 |            14 |           14
+#   21 |            13 |           13
+#   22 |            16 |           16
+#   23 |            20 |           11
+#   24 |            24 |            7
+#   25 |            45 |           33
+#   26 |            38 |           22
+#   27 |            21 |            7
+#   28 |            31 |           16
+#   29 |            40 |           17
+#   30 |            11 |           11
+#   31 |            11 |           11
+#   32 |            14 |           14
+#   33 |            26 |           26
+#   34 |            31 |           31
+#   35 |            18 |            6
+#   36 |            24 |            8
+#   37 |            16 |           16
+#   38 |            16 |            6
+#   39 |            30 |           10
+#   40 |            18 |           18
+#   41 |            21 |           21
+#   42 |            29 |           11
+#   43 |            15 |           15
+#   44 |            14 |           14
+#   45 |            29 |           29
+#   46 |            27 |           27
+#   47 |            37 |           37
+#   48 |            16 |           16
+#   49 |            12 |           12
+#   50 |            12 |           12
+#   51 |            29 |           15
+#   52 |            22 |            8
+#   53 |            23 |           13
+#   54 |            12 |            5
+#   55 |            19 |           12
+#   56 |            18 |            6
+#   57 |            19 |           19
+#   58 |            25 |           13
+#   59 |            17 |           17
+#   60 |            24 |           21
+#   61 |            13 |           13
+#   62 |            36 |           35
+#   63 |            31 |           19
+#   64 |            19 |           16
+#   65 |            25 |           10
+#   66 |            19 |            8
+#   67 |            28 |           28
+#   68 |            18 |            5
+#   69 |            27 |           21
+#   70 |            24 |           14
+#   71 |            15 |           14
+#   72 |            11 |            8
+#   73 |            28 |           28
+#   74 |            26 |           26
+#   75 |            36 |           32
+#   76 |             6 |            6
+#   77 |            13 |           13
+#   78 |            24 |           15
+#   79 |            32 |           32
+#   80 |            10 |           10
+#   81 |            13 |           13
+#   82 |            29 |           26
+#   83 |            21 |           21
+#   84 |            29 |           26
+#   85 |            23 |           19
+#   86 |            20 |           13
+#   87 |            16 |           16
+#   88 |            11 |           11
+#   89 |            19 |           19
+#   90 |            22 |            6
+#   91 |            22 |            6
+#   92 |            22 |           22
+#   93 |            19 |           17
+#   94 |            31 |           27
+#   95 |            23 |           23
+#   96 |            32 |           12
+#   97 |            25 |           20
+#   98 |            23 |            6
+#   99 |            20 |           11
+#

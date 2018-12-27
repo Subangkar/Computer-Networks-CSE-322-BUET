@@ -1,0 +1,21 @@
+cd /
+cd home
+cd ubuntu
+cd ns2\ programs/
+
+ns 802_15_4_grid_tcp_timeout_random.tcl
+awk -f rule_th_del_enr_tcp.awk 802_15_4_grid_tcp_with_collaborator.tr > 802_15_4_60_60_2_2_4_q1.out
+
+ns 802_15_4_grid_tcp_timeout_random.tcl
+awk -f rule_th_del_enr_tcp.awk 802_15_4_grid_tcp_with_collaborator.tr > 802_15_4_60_60_2_2_4_q2.out
+
+ns 802_15_4_grid_tcp_timeout_random.tcl
+awk -f rule_th_del_enr_tcp.awk 802_15_4_grid_tcp_with_collaborator.tr > 802_15_4_60_60_2_2_4_q3.out
+
+ns 802_15_4_grid_tcp_timeout_random.tcl
+awk -f rule_th_del_enr_tcp.awk 802_15_4_grid_tcp_with_collaborator.tr > 802_15_4_60_60_2_2_4_q4.out
+
+ns 802_15_4_grid_tcp_timeout_random.tcl
+awk -f rule_th_del_enr_tcp.awk 802_15_4_grid_tcp_with_collaborator.tr > 802_15_4_60_60_2_2_4_q5.out
+
+

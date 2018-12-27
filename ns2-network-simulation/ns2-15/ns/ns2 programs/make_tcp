@@ -1,0 +1,6 @@
+cd /
+cd home
+cd ubuntu
+cd ns-allinone-2.34
+cd ns-2.34
+make

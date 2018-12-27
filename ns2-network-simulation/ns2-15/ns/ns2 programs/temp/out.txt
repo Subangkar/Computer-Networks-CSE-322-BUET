@@ -1,0 +1,2 @@
+number of packets sent:0 lost:0
+number of tcp packets sent:6474 ack received:6444

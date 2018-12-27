@@ -1,0 +1,20 @@
+set cbr_size 28
+set cbr_rate 11.0Mb
+set cbr_interval 1;# ?????? 1 for 1 packets per second and 0.1 for 10 packets per second
+set num_row 5 ;#number of nodes in a row
+set num_col 5 ;#number of nodes in a column
+set x_dim 400
+set y_dim 400
+set time_duration 10
+set start_time 5
+set parallel_start_gap 0.1
+set cross_start_gap 0.2
+
+#############################################################ENERGY PARAMETERS
+set val(energymodel_11)    EnergyModel     ;
+set val(initialenergy_11)  1000            ;# Initial energy in Joules
+set val(idlepower_11) 1.0 
+set val(rxpower_11) 1.0
+set val(txpower_11) 1.0
+set val(sleeppower_11) 0.001
+set val(transitionpower_11) 0.2

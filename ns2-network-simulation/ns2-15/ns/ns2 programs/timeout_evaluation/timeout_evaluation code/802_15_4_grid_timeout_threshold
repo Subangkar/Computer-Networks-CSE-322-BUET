@@ -1,0 +1,6 @@
+cd /
+cd home
+cd ubuntu
+cd ns2\ programs/
+ns 802_15_4_grid_tcp_timeout.tcl
+awk -f rule_th_del_enr_tcp.awk 802_15_4_grid_tcp_with_collaborator.tr > 802_15_4_100.out

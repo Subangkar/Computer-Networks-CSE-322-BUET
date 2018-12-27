@@ -16,3 +16,9 @@
 *.sh~
 
 *.out~
+
+ns2-network-simulation/ns2-15/ns/ns2 programs/\.DS_Store
+
+ns2-network-simulation/ns2-15/ns/ns2 programs/802_15_4_grid_timeout_threshold_random~
+
+ns2-network-simulation/ns2-15/ns/ns2 programs/802_15_4_grid_timeout_threshold~

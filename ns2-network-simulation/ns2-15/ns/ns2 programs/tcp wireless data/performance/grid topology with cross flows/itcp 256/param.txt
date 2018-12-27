@@ -1,0 +1,27 @@
+	itcp=1;
+	wci=wcd=wcs=wcc=wcch=1.0;
+	wti=-3.0; wtd=-4.0; wts=-2.0;
+	wai=-1.5; wad=-2.0; was=-1.0;
+	
+	wid=wdd=wsd=1.0;
+	wic=wdc=1.0;
+	wsc=0.0;
+
+	wdch=1.0;
+
+	wchc=1.0;
+
+	base_of_log=2.0;
+
+	f_i_max=4.0; f_d_max=4.0; f_s_max=4.0;
+
+	base_of_expo=2.0;
+
+	prob_rand_decision=0.3;
+
+	f_i_th = 64; f_d_th = -64;
+
+	inc_precesion = 2.0;
+
+	max_itcp_cwnd = 256.0;
+
