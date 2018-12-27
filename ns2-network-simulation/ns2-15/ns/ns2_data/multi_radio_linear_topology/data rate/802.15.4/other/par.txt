@@ -1,0 +1,79 @@
+################################################################802.15.4 in Grid topology with cross folw
+set cbr_size 64; #4,8,16,32,64
+set cbr_rate 11.0Mb
+set cbr_pckt_per_sec 1250
+set cbr_interval [expr 1.0/$cbr_pckt_per_sec] ;# ?????? 1 for 1 packets per second and 0.1 for 10 packets per second
+set num_row 1 ;#[lindex $argv 0] ;#number of row
+set num_col [lindex $argv 0] ;#number of column
+set x_dim 180
+set y_dim 180
+set time_duration 25 ;#50
+set start_time 50 ;#100
+set parallel_start_gap 0.0
+set cross_start_gap 0.0
+
+#############################################################ENERGY PARAMETERS
+set val(energymodel_15_4)    EnergyModel     ;
+set val(initialenergy_15_4)  1000            ;# Initial energy in Joules
+
+set val(idlepower_15_4) 2.095e-3		;#LEAP	(active power in spec)
+set val(rxpower_15_4) 65.01e-3			;#LEAP
+set val(txpower_15_4) 57.42e-3			;#LEAP
+set val(sleeppower_15_4) 1.925e-3		;#LEAP
+set val(transitionpower_15_4) 4.31e-3		;#LEAP: 
+set val(transitiontime_15_4) 1e-3		;#LEAP
+
+#set val(idlepower_15_4) 3e-3			;#telos	(active power in spec)
+#set val(rxpower_15_4) 38e-3			;#telos
+#set val(txpower_15_4) 35e-3			;#telos
+#set val(sleeppower_15_4) 15e-6			;#telos
+#set val(transitionpower_15_4) 1.8e-6		;#telos: volt = 1.8V; sleep current of MSP430 = 1 microA; so, 1.8 micro W
+#set val(transitiontime_15_4) 6e-6		;#telos
+
+#Mac/802_15_4 set dataRate_ 0.250Mb
+
+#CHNG
+set num_parallel_flow 0 ;#[lindex $argv 0]	# along column
+set num_cross_flow 1 ;#[lindex $argv 0]		#along row
+set num_random_flow 0
+
+set grid 1
+set extra_time 10 ;#10
+
+#set tcp_src Agent/TCP/Vegas ;# Agent/TCP or Agent/TCP/Reno or Agent/TCP/Newreno or Agent/TCP/FullTcp/Sack or Agent/TCP/Vegas
+#set tcp_sink Agent/TCPSink ;# Agent/TCPSink or Agent/TCPSink/Sack1
+
+set tcp_src Agent/UDP
+set tcp_sink Agent/Null
+
+
+# TAHOE:	Agent/TCP		Agent/TCPSink
+# RENO:		Agent/TCP/Reno		Agent/TCPSink
+# NEWRENO:	Agent/TCP/Newreno	Agent/TCPSink
+# SACK: 	Agent/TCP/FullTcp/Sack	Agent/TCPSink/Sack1
+# VEGAS:	Agent/TCP/Vegas		Agent/TCPSink
+# FACK:		Agent/TCP/Fack		Agent/TCPSink
+# LINUX:	Agent/TCP/Linux		Agent/TCPSink
+
+#	http://research.cens.ucla.edu/people/estrin/resources/conferences/2007may-Stathopoulos-Lukac-Dual_Radio.pdf
+
+#set frequency_ 2.461e+9
+#Phy/WirelessPhy set Rb_ 11*1e6            ;# Bandwidth
+#Phy/WirelessPhy set freq_ $frequency_
+
+
+
+set val(chan) Channel/WirelessChannel ;# channel type
+set val(prop) Propagation/TwoRayGround ;# radio-propagation model
+#set val(prop) Propagation/FreeSpace ;# radio-propagation model
+#set val(netif) Phy/WirelessPhy ;# network interface type
+set val(netif) Phy/WirelessPhy/802_15_4 ;# network interface type
+#set val(mac) Mac/802_11 ;# MAC type
+set val(mac) Mac/802_15_4 ;# MAC type
+set val(ifq) Queue/DropTail/PriQueue ;# interface queue type
+set val(ll) LL ;# link layer type
+set val(ant) Antenna/OmniAntenna ;# antenna model
+set val(ifqlen) 50 ;# max packet in ifq
+set val(rp) DSDV ;# routing protocol
+
+

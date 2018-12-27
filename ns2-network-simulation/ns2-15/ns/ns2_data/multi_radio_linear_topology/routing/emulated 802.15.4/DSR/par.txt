@@ -1,0 +1,130 @@
+################################################################802.11 in Grid topology with cross folw
+set cbr_size 64 ; #[lindex $argv 2]; #4,8,16,32,64
+set cbr_rate 11.0Mb
+set cbr_pckt_per_sec 1400
+set cbr_interval [expr 1.0/$cbr_pckt_per_sec] ;# ?????? 1 for 1 packets per second and 0.1 for 10 packets per second
+#set cbr_interval 0.00005 ; #[expr 1/[lindex $argv 2]] ;# ?????? 1 for 1 packets per second and 0.1 for 10 packets per second
+set num_row 1 ;#[lindex $argv 0] ;#number of row
+set num_col [lindex $argv 0] ;#number of column
+set x_dim 90 ; #[lindex $argv 1]
+set y_dim 90 ; #[lindex $argv 1]
+set time_duration 25 ; #[lindex $argv 5] ;#50
+set start_time 50 ;#100
+set parallel_start_gap 0.0
+set cross_start_gap 0.0
+
+#############################################################ENERGY PARAMETERS
+set val(energymodel_11)    EnergyModel     ;
+set val(initialenergy_11)  1000            ;# Initial energy in Joules
+
+set val(idlepower_11) 56.4e-3		;#LEAP	(active power in spec)
+set val(rxpower_11) 59.1e-3			;#LEAP
+set val(txpower_11) 52.2e-3			;#LEAP
+set val(sleeppower_11) 0.6e-3		;#LEAP
+set val(transitionpower_11) 35.708e-3		;#LEAP: 
+set val(transitiontime_11) 2.4e-3		;#LEAP
+
+
+#set val(idlepower_11) 869.4e-3			;#LEAP (802.11g) 
+#set val(rxpower_11) 1560.6e-3			;#LEAP (802.11g)
+#set val(txpower_11) 1679.4e-3			;#LEAP (802.11g)
+#set val(sleeppower_11) 37.8e-3			;#LEAP (802.11g)
+#set val(transitionpower_11) 176.695e-3		;#LEAP (802.11g)	??????????????????????????????/
+#set val(transitiontime_11) 2.36			;#LEAP (802.11g)
+
+#set val(idlepower_11) 900e-3			;#Stargate (802.11b) 
+#set val(rxpower_11) 925e-3			;#Stargate (802.11b)
+#set val(txpower_11) 1425e-3			;#Stargate (802.11b)
+#set val(sleeppower_11) 300e-3			;#Stargate (802.11b)
+#set val(transitionpower_11) 200e-3		;#Stargate (802.11b)	??????????????????????????????/
+#set val(transitiontime_11) 3			;#Stargate (802.11b)
+
+#puts "$MAC/802_11.dataRate_"
+Mac/802_11 set dataRate_ .250Mb
+
+#CHNG
+set num_parallel_flow 0 ;#[lindex $argv 0]	# along column
+set num_cross_flow 1 ;#[lindex $argv 0]		#along row
+set num_random_flow 0
+
+set grid 1
+set extra_time 10 ;#10
+
+#set tcp_src Agent/TCP/Vegas ;# Agent/TCP or Agent/TCP/Reno or Agent/TCP/Newreno or Agent/TCP/FullTcp/Sack or Agent/TCP/Vegas
+#set tcp_sink Agent/TCPSink ;# Agent/TCPSink or Agent/TCPSink/Sack1
+
+set tcp_src Agent/UDP
+set tcp_sink Agent/Null
+
+
+# TAHOE:	Agent/TCP		Agent/TCPSink
+# RENO:		Agent/TCP/Reno		Agent/TCPSink
+# NEWRENO:	Agent/TCP/Newreno	Agent/TCPSink
+# SACK: 	Agent/TCP/FullTcp/Sack	Agent/TCPSink/Sack1
+# VEGAS:	Agent/TCP/Vegas		Agent/TCPSink
+# FACK:		Agent/TCP/Fack		Agent/TCPSink
+# LINUX:	Agent/TCP/Linux		Agent/TCPSink
+
+#	http://research.cens.ucla.edu/people/estrin/resources/conferences/2007may-Stathopoulos-Lukac-Dual_Radio.pdf
+
+#set frequency_ 2.461e+9
+#Phy/WirelessPhy set Rb_ 11*1e6            ;# Bandwidth
+#Phy/WirelessPhy set freq_ $frequency_
+
+
+
+set val(chan) Channel/WirelessChannel ;# channel type
+set val(prop) Propagation/TwoRayGround ;# radio-propagation model
+#set val(prop) Propagation/FreeSpace ;# radio-propagation model
+set val(netif) Phy/WirelessPhy ;# network interface type
+set val(mac) Mac/802_11 ;# MAC type
+#set val(mac) SMac/802_15_4 ;# MAC type
+set val(ifq) Queue/DropTail/PriQueue ;# interface queue type
+set val(ll) LL ;# link layer type
+set val(ant) Antenna/OmniAntenna ;# antenna model
+set val(ifqlen) 50 ;# max packet in ifq
+set val(rp) DSDV ; #[lindex $argv 4] ;# routing protocol
+
+Mac/802_11 set syncFlag_ 1
+
+Mac/802_11 set dutyCycle_ cbr_interval
+
+set nm multi_radio_emulated_802_15_4_linear.nam
+set tr /home/ubuntu/ns2\ programs/raw_data/multi_radio_emulated_802_15_4_linear.tr
+set topo_file topo_multi_radio_emulated_802_15_4_linear.txt
+
+#set topo_file 5.txt
+# 
+# Initialize ns
+#
+set ns_ [new Simulator]
+
+set tracefd [open $tr w]
+$ns_ trace-all $tracefd
+
+#$ns_ use-newtrace ;# use the new wireless trace file format
+
+set namtrace [open $nm w]
+#$ns_ namtrace-all-wireless $namtrace $x_dim $y_dim
+
+#set topofilename "topo_ex3.txt"
+set topofile [open $topo_file "w"]
+
+
+set dist(5m)  7.69113e-06
+set dist(9m)  2.37381e-06
+set dist(10m) 1.92278e-06
+set dist(11m) 1.58908e-06
+set dist(12m) 1.33527e-06
+set dist(13m) 1.13774e-06
+set dist(14m) 9.81011e-07
+set dist(15m) 8.54570e-07
+set dist(16m) 7.51087e-07
+set dist(20m) 4.80696e-07
+set dist(25m) 3.07645e-07
+set dist(30m) 2.13643e-07
+set dist(35m) 1.56962e-07
+set dist(40m) 1.20174e-07
+Phy/WirelessPhy set CSThresh_ $dist(40m)
+Phy/WirelessPhy set RXThresh_ $dist(40m)
+
