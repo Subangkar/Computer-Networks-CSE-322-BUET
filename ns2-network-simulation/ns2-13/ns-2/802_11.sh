@@ -1,6 +1,6 @@
-cd /
-cd home
-cd ubuntu
+cd ..
+cd ..
+cd ns2-15/ns
 cd ns2\ programs/
 
 #		CHANGE PATH IN 4 PLACES *******************************************************
