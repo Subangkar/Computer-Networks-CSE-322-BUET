@@ -1,0 +1,668 @@
+
+EVENT time: 93.569748,  type: 1, fromlayer5  entity: 0
+[A] @93.569748 Receive an message from layer5.Window[0,0) Message[data=aaaaaaaaaaaaaaaaaaa..]
+[A] @93.569748 Processed an message from layer5.Window[0,0) Message[data=aaaaaaaaaaaaaaaaaaa..]
+[A] @93.569748 Send packet to layer3.Window[0,1) Packet[seq=0,ack=15,check=1858,data=aaaaaaaaaaaaaaaaaaa..]
+
+EVENT time: 99.062195,  type: 2, fromlayer3  entity: 1
+[B] @99.062195 Receive a packet from layer3.Expected[0] Packet[seq=0,ack=15,check=1858,data=aaaaaaaaaaaaaaaaaaa..]
+[B] @99.062195 Send packet to layer5.Expected[1] Packet[seq=0,ack=15,check=1858,data=aaaaaaaaaaaaaaaaaaa..]
+[B] @99.062195 Cumulative Timer Started!!!.Expected[1]
+
+EVENT time: 123.062195,  type: 0, timerinterrupt   entity: 1
+[B] @123.062195 Timer interrupt occurred @B !!!.Expected[1]
+[B] @123.062195 Send cumulative ACK packet to layer3.Expected[1] Packet[seq=255,ack=0,check=1285,data=ack_packet..]
+
+EVENT time: 125.561325,  type: 2, fromlayer3  entity: 0
+[A] @125.561325 Receive ACK packet from layer3.Window[0,1) Packet[seq=255,ack=0,check=1285,data=ack_packet..]
+[A] @125.561325 ACK packet processed successfully !!.Window[1,1) Packet[seq=255,ack=0,check=1285,data=ack_packet..]
+
+EVENT time: 1607.715088,  type: 1, fromlayer5  entity: 0
+[A] @1607.715088 Receive an message from layer5.Window[1,1) Message[data=bbbbbbbbbbbbbbbbbbb..]
+[A] @1607.715088 Processed an message from layer5.Window[1,1) Message[data=bbbbbbbbbbbbbbbbbbb..]
+[A] @1607.715088 Send packet to layer3.Window[1,2) Packet[seq=1,ack=15,check=1878,data=bbbbbbbbbbbbbbbbbbb..]
+
+EVENT time: 1609.116333,  type: 2, fromlayer3  entity: 1
+[B] @1609.116333 Receive a packet from layer3.Expected[1] Packet[seq=1,ack=15,check=1878,data=bbbbbbbbbbbbbbbbbbb..]
+[B] @1609.116333 Send packet to layer5.Expected[2] Packet[seq=1,ack=15,check=1878,data=bbbbbbbbbbbbbbbbbbb..]
+[B] @1609.116333 Cumulative Timer Started!!!.Expected[2]
+
+EVENT time: 1633.116333,  type: 0, timerinterrupt   entity: 1
+[B] @1633.116333 Timer interrupt occurred @B !!!.Expected[2]
+[B] @1633.116333 Send cumulative ACK packet to layer3.Expected[2] Packet[seq=255,ack=1,check=1286,data=ack_packet..]
+
+EVENT time: 1638.552979,  type: 2, fromlayer3  entity: 0
+[A] @1638.552979 Receive ACK packet from layer3.Window[1,2) Packet[seq=255,ack=1,check=1286,data=ack_packet..]
+[A] @1638.552979 ACK packet processed successfully !!.Window[2,2) Packet[seq=255,ack=1,check=1286,data=ack_packet..]
+
+EVENT time: 2322.031250,  type: 1, fromlayer5  entity: 0
+[A] @2322.031250 Receive an message from layer5.Window[2,2) Message[data=ccccccccccccccccccc..]
+[A] @2322.031250 Processed an message from layer5.Window[2,2) Message[data=ccccccccccccccccccc..]
+[A] @2322.031250 Send packet to layer3.Window[2,3) Packet[seq=2,ack=15,check=1898,data=ccccccccccccccccccc..]
+
+EVENT time: 2325.527344,  type: 2, fromlayer3  entity: 1
+[B] @2325.527344 Receive a packet from layer3.Expected[2] Packet[seq=2,ack=15,check=1898,data=ccccccccccccccccccc..]
+[B] @2325.527344 Send packet to layer5.Expected[3] Packet[seq=2,ack=15,check=1898,data=ccccccccccccccccccc..]
+[B] @2325.527344 Cumulative Timer Started!!!.Expected[3]
+
+EVENT time: 2349.527344,  type: 0, timerinterrupt   entity: 1
+[B] @2349.527344 Timer interrupt occurred @B !!!.Expected[3]
+[B] @2349.527344 Send cumulative ACK packet to layer3.Expected[3] Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+
+EVENT time: 2352.412354,  type: 2, fromlayer3  entity: 0
+[A] @2352.412354 Receive ACK packet from layer3.Window[2,3) Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+[A] @2352.412354 ACK packet processed successfully !!.Window[3,3) Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+
+EVENT time: 3332.804199,  type: 1, fromlayer5  entity: 0
+[A] @3332.804199 Receive an message from layer5.Window[3,3) Message[data=ddddddddddddddddddd..]
+[A] @3332.804199 Processed an message from layer5.Window[3,3) Message[data=ddddddddddddddddddd..]
+[A] @3332.804199 Send packet to layer3.Window[3,4) Packet[seq=3,ack=15,check=1918,data=ddddddddddddddddddd..]
+
+EVENT time: 3337.380615,  type: 2, fromlayer3  entity: 1
+[B] @3337.380615 Receive a packet from layer3.Expected[3] Packet[seq=3,ack=15,check=1918,data=ddddddddddddddddddd..]
+[B] @3337.380615 Send packet to layer5.Expected[4] Packet[seq=3,ack=15,check=1918,data=ddddddddddddddddddd..]
+[B] @3337.380615 Cumulative Timer Started!!!.Expected[4]
+
+EVENT time: 3361.380615,  type: 0, timerinterrupt   entity: 1
+[B] @3361.380615 Timer interrupt occurred @B !!!.Expected[4]
+[B] @3361.380615 Send cumulative ACK packet to layer3.Expected[4] Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+
+EVENT time: 3369.409912,  type: 2, fromlayer3  entity: 0
+[A] @3369.409912 Receive ACK packet from layer3.Window[3,4) Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+[A] @3369.409912 ACK packet processed successfully !!.Window[4,4) Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+
+EVENT time: 5057.893555,  type: 1, fromlayer5  entity: 0
+[A] @5057.893555 Receive an message from layer5.Window[4,4) Message[data=eeeeeeeeeeeeeeeeeee..]
+[A] @5057.893555 Processed an message from layer5.Window[4,4) Message[data=eeeeeeeeeeeeeeeeeee..]
+[A] @5057.893555 Send packet to layer3.Window[4,5) Packet[seq=4,ack=15,check=1938,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 5063.455078,  type: 2, fromlayer3  entity: 1
+[B] @5063.455078 Receive a packet from layer3.Expected[4] Packet[seq=4,ack=15,check=1938,data=eeeeeeeeeeeeeeeeeee..]
+[B] @5063.455078 Send packet to layer5.Expected[5] Packet[seq=4,ack=15,check=1938,data=eeeeeeeeeeeeeeeeeee..]
+[B] @5063.455078 Cumulative Timer Started!!!.Expected[5]
+
+EVENT time: 5087.455078,  type: 0, timerinterrupt   entity: 1
+[B] @5087.455078 Timer interrupt occurred @B !!!.Expected[5]
+          TOLAYER3: packet being lost
+[B] @5087.455078 Send cumulative ACK packet to layer3.Expected[5] Packet[seq=255,ack=4,check=1289,data=ack_packet..]
+
+EVENT time: 5097.893555,  type: 0, timerinterrupt   entity: 0
+[A] @5097.893555 Timer interrupt occurred.Window[4,5)
+[A] @5097.893555 >Resend the packet again.Window[4,5) Packet[seq=4,ack=15,check=1938,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 5103.841309,  type: 2, fromlayer3  entity: 1
+[B] @5103.841309 Receive a packet from layer3.Expected[5] Packet[seq=4,ack=15,check=1938,data=eeeeeeeeeeeeeeeeeee..]
+[B] @5103.841309 Disordered packet received.Expected[5] Packet[seq=4,ack=15,check=1938,data=eeeeeeeeeeeeeeeeeee..]
+[B] @5103.841309 Send NACK packet to layer3.Expected[5] Packet[seq=4,ack=4,check=1927,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 5106.039062,  type: 2, fromlayer3  entity: 0
+[A] @5106.039062 Receive ACK packet from layer3.Window[4,5) Packet[seq=4,ack=4,check=1927,data=eeeeeeeeeeeeeeeeeee..]
+[A] @5106.039062 ACK packet processed successfully !!.Window[5,5) Packet[seq=4,ack=4,check=1927,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 5746.330078,  type: 1, fromlayer5  entity: 0
+[A] @5746.330078 Receive an message from layer5.Window[5,5) Message[data=fffffffffffffffffff..]
+[A] @5746.330078 Processed an message from layer5.Window[5,5) Message[data=fffffffffffffffffff..]
+[A] @5746.330078 Send packet to layer3.Window[5,6) Packet[seq=5,ack=15,check=1958,data=fffffffffffffffffff..]
+
+EVENT time: 5747.367676,  type: 1, fromlayer5  entity: 0
+[A] @5747.367676 Receive an message from layer5.Window[5,6) Message[data=ggggggggggggggggggg..]
+[A] @5747.367676 Processed an message from layer5.Window[5,6) Message[data=ggggggggggggggggggg..]
+          TOLAYER3: packet being corrupted
+[A] @5747.367676 Send packet to layer3.Window[5,7) Packet[seq=6,ack=15,check=1978,data=ggggggggggggggggggg..]
+
+EVENT time: 5750.909180,  type: 2, fromlayer3  entity: 1
+[B] @5750.909180 Receive a packet from layer3.Expected[5] Packet[seq=5,ack=15,check=1958,data=fffffffffffffffffff..]
+[B] @5750.909180 Send packet to layer5.Expected[6] Packet[seq=5,ack=15,check=1958,data=fffffffffffffffffff..]
+[B] @5750.909180 Cumulative Timer Started!!!.Expected[6]
+
+EVENT time: 5759.888184,  type: 2, fromlayer3  entity: 1
+[B] @5759.888184 Receive a packet from layer3.Expected[6] Packet[seq=6,ack=15,check=1978,data=Zgggggggggggggggggg..]
+[B] @5759.888184 Packet is corrupted.Expected[6] Packet[seq=6,ack=15,check=1978,data=Zgggggggggggggggggg..]
+[B] @5759.888184 Send NACK packet to layer3.Expected[6] Packet[seq=6,ack=5,check=1955,data=Zgggggggggggggggggg..]
+
+EVENT time: 5761.808105,  type: 2, fromlayer3  entity: 0
+[A] @5761.808105 Receive ACK packet from layer3.Window[5,7) Packet[seq=6,ack=5,check=1955,data=Zgggggggggggggggggg..]
+[A] @5761.808105 ACK packet processed successfully !!.Window[6,7) Packet[seq=6,ack=5,check=1955,data=Zgggggggggggggggggg..]
+
+EVENT time: 5787.367676,  type: 0, timerinterrupt   entity: 0
+[A] @5787.367676 Timer interrupt occurred.Window[6,7)
+          TOLAYER3: packet being corrupted
+[A] @5787.367676 >Resend the packet again.Window[6,7) Packet[seq=6,ack=15,check=1978,data=ggggggggggggggggggg..]
+
+EVENT time: 5797.002441,  type: 2, fromlayer3  entity: 1
+[B] @5797.002441 Receive a packet from layer3.Expected[6] Packet[seq=999999,ack=15,check=1978,data=ggggggggggggggggggg..]
+[B] @5797.002441 Packet is corrupted.Expected[6] Packet[seq=999999,ack=15,check=1978,data=ggggggggggggggggggg..]
+[B] @5797.002441 Send NACK packet to layer3.Expected[6] Packet[seq=999999,ack=5,check=1001961,data=ggggggggggggggggggg..]
+
+EVENT time: 5803.083984,  type: 2, fromlayer3  entity: 0
+[A] @5803.083984 Receive ACK packet from layer3.Window[6,7) Packet[seq=999999,ack=5,check=1001961,data=ggggggggggggggggggg..]
+[A] @5803.083984 Received duplicate ACK.Window[6,7) Packet[seq=999999,ack=5,check=1001961,data=ggggggggggggggggggg..]
+[A] @5803.083984 >Resend the packet again.Window[6,7) Packet[seq=6,ack=15,check=1978,data=ggggggggggggggggggg..]
+
+EVENT time: 5807.635742,  type: 2, fromlayer3  entity: 1
+[B] @5807.635742 Receive a packet from layer3.Expected[6] Packet[seq=6,ack=15,check=1978,data=ggggggggggggggggggg..]
+[B] @5807.635742 Send packet to layer5.Expected[7] Packet[seq=6,ack=15,check=1978,data=ggggggggggggggggggg..]
+[B] @5807.635742 Cumulative Timer Started!!!.Expected[7]
+
+EVENT time: 5831.635742,  type: 0, timerinterrupt   entity: 1
+[B] @5831.635742 Timer interrupt occurred @B !!!.Expected[7]
+          TOLAYER3: packet being lost
+[B] @5831.635742 Send cumulative ACK packet to layer3.Expected[7] Packet[seq=255,ack=6,check=1291,data=ack_packet..]
+
+EVENT time: 5843.083984,  type: 0, timerinterrupt   entity: 0
+[A] @5843.083984 Timer interrupt occurred.Window[6,7)
+          TOLAYER3: packet being corrupted
+[A] @5843.083984 >Resend the packet again.Window[6,7) Packet[seq=6,ack=15,check=1978,data=ggggggggggggggggggg..]
+
+EVENT time: 5850.795898,  type: 2, fromlayer3  entity: 1
+[B] @5850.795898 Receive a packet from layer3.Expected[7] Packet[seq=6,ack=15,check=1978,data=Zgggggggggggggggggg..]
+[B] @5850.795898 Packet is corrupted.Expected[7] Packet[seq=6,ack=15,check=1978,data=Zgggggggggggggggggg..]
+[B] @5850.795898 Send NACK packet to layer3.Expected[7] Packet[seq=6,ack=6,check=1956,data=Zgggggggggggggggggg..]
+
+EVENT time: 5856.491699,  type: 2, fromlayer3  entity: 0
+[A] @5856.491699 Receive ACK packet from layer3.Window[6,7) Packet[seq=6,ack=6,check=1956,data=Zgggggggggggggggggg..]
+[A] @5856.491699 ACK packet processed successfully !!.Window[7,7) Packet[seq=6,ack=6,check=1956,data=Zgggggggggggggggggg..]
+
+EVENT time: 6231.452148,  type: 1, fromlayer5  entity: 0
+[A] @6231.452148 Receive an message from layer5.Window[7,7) Message[data=hhhhhhhhhhhhhhhhhhh..]
+[A] @6231.452148 Processed an message from layer5.Window[7,7) Message[data=hhhhhhhhhhhhhhhhhhh..]
+[A] @6231.452148 Send packet to layer3.Window[7,0) Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 6234.318359,  type: 2, fromlayer3  entity: 1
+[B] @6234.318359 Receive a packet from layer3.Expected[7] Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+[B] @6234.318359 Send packet to layer5.Expected[0] Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+[B] @6234.318359 Cumulative Timer Started!!!.Expected[0]
+
+EVENT time: 6258.318359,  type: 0, timerinterrupt   entity: 1
+[B] @6258.318359 Timer interrupt occurred @B !!!.Expected[0]
+          TOLAYER3: packet being lost
+[B] @6258.318359 Send cumulative ACK packet to layer3.Expected[0] Packet[seq=255,ack=7,check=1292,data=ack_packet..]
+
+EVENT time: 6271.452148,  type: 0, timerinterrupt   entity: 0
+[A] @6271.452148 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being corrupted
+[A] @6271.452148 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 6280.976074,  type: 2, fromlayer3  entity: 1
+[B] @6280.976074 Receive a packet from layer3.Expected[0] Packet[seq=7,ack=15,check=1998,data=Zhhhhhhhhhhhhhhhhhh..]
+[B] @6280.976074 Packet is corrupted.Expected[0] Packet[seq=7,ack=15,check=1998,data=Zhhhhhhhhhhhhhhhhhh..]
+          TOLAYER3: packet being lost
+[B] @6280.976074 Send NACK packet to layer3.Expected[0] Packet[seq=7,ack=7,check=1976,data=Zhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 6311.452148,  type: 0, timerinterrupt   entity: 0
+[A] @6311.452148 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being lost
+[A] @6311.452148 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 6351.452148,  type: 0, timerinterrupt   entity: 0
+[A] @6351.452148 Timer interrupt occurred.Window[7,0)
+[A] @6351.452148 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 6352.612793,  type: 2, fromlayer3  entity: 1
+[B] @6352.612793 Receive a packet from layer3.Expected[0] Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+[B] @6352.612793 Disordered packet received.Expected[0] Packet[seq=7,ack=15,check=1998,data=hhhhhhhhhhhhhhhhhhh..]
+[B] @6352.612793 Send NACK packet to layer3.Expected[0] Packet[seq=7,ack=7,check=1990,data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 6356.809082,  type: 2, fromlayer3  entity: 0
+[A] @6356.809082 Receive ACK packet from layer3.Window[7,0) Packet[seq=7,ack=7,check=1990,data=hhhhhhhhhhhhhhhhhhh..]
+[A] @6356.809082 ACK packet processed successfully !!.Window[0,0) Packet[seq=7,ack=7,check=1990,data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 7930.112305,  type: 1, fromlayer5  entity: 0
+[A] @7930.112305 Receive an message from layer5.Window[0,0) Message[data=iiiiiiiiiiiiiiiiiii..]
+[A] @7930.112305 Processed an message from layer5.Window[0,0) Message[data=iiiiiiiiiiiiiiiiiii..]
+          TOLAYER3: packet being lost
+[A] @7930.112305 Send packet to layer3.Window[0,1) Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 7970.112305,  type: 0, timerinterrupt   entity: 0
+[A] @7970.112305 Timer interrupt occurred.Window[0,1)
+[A] @7970.112305 >Resend the packet again.Window[0,1) Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 7971.655762,  type: 2, fromlayer3  entity: 1
+[B] @7971.655762 Receive a packet from layer3.Expected[0] Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+[B] @7971.655762 Send packet to layer5.Expected[1] Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+[B] @7971.655762 Cumulative Timer Started!!!.Expected[1]
+
+EVENT time: 7995.655762,  type: 0, timerinterrupt   entity: 1
+[B] @7995.655762 Timer interrupt occurred @B !!!.Expected[1]
+          TOLAYER3: packet being lost
+[B] @7995.655762 Send cumulative ACK packet to layer3.Expected[1] Packet[seq=255,ack=0,check=1285,data=ack_packet..]
+
+EVENT time: 8010.112305,  type: 0, timerinterrupt   entity: 0
+[A] @8010.112305 Timer interrupt occurred.Window[0,1)
+[A] @8010.112305 >Resend the packet again.Window[0,1) Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 8016.030273,  type: 2, fromlayer3  entity: 1
+[B] @8016.030273 Receive a packet from layer3.Expected[1] Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+[B] @8016.030273 Disordered packet received.Expected[1] Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+          TOLAYER3: packet being corrupted
+[B] @8016.030273 Send NACK packet to layer3.Expected[1] Packet[seq=0,ack=0,check=1995,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 8023.425293,  type: 2, fromlayer3  entity: 0
+[A] @8023.425293 Receive ACK packet from layer3.Window[0,1) Packet[seq=0,ack=0,check=1995,data=Ziiiiiiiiiiiiiiiiii..]
+[A] @8023.425293 ACK packet is corrupted.Window[0,1) Packet[seq=0,ack=0,check=1995,data=Ziiiiiiiiiiiiiiiiii..]
+
+EVENT time: 8050.112305,  type: 0, timerinterrupt   entity: 0
+[A] @8050.112305 Timer interrupt occurred.Window[0,1)
+          TOLAYER3: packet being lost
+[A] @8050.112305 >Resend the packet again.Window[0,1) Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 8089.113770,  type: 1, fromlayer5  entity: 0
+[A] @8089.113770 Receive an message from layer5.Window[0,1) Message[data=jjjjjjjjjjjjjjjjjjj..]
+[A] @8089.113770 Processed an message from layer5.Window[0,1) Message[data=jjjjjjjjjjjjjjjjjjj..]
+[A] @8089.113770 Send packet to layer3.Window[0,2) Packet[seq=1,ack=15,check=2030,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 8090.112305,  type: 0, timerinterrupt   entity: 0
+[A] @8090.112305 Timer interrupt occurred.Window[0,2)
+[A] @8090.112305 >Resend the packet again.Window[0,2) Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+[A] @8090.112305 >Resend the packet again.Window[0,2) Packet[seq=1,ack=15,check=2030,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 8097.320801,  type: 2, fromlayer3  entity: 1
+[B] @8097.320801 Receive a packet from layer3.Expected[1] Packet[seq=1,ack=15,check=2030,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @8097.320801 Send packet to layer5.Expected[2] Packet[seq=1,ack=15,check=2030,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @8097.320801 Cumulative Timer Started!!!.Expected[2]
+
+EVENT time: 8107.086914,  type: 2, fromlayer3  entity: 1
+[B] @8107.086914 Receive a packet from layer3.Expected[2] Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+[B] @8107.086914 Disordered packet received.Expected[2] Packet[seq=0,ack=15,check=2010,data=iiiiiiiiiiiiiiiiiii..]
+[B] @8107.086914 Send NACK packet to layer3.Expected[2] Packet[seq=0,ack=1,check=1996,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 8108.749023,  type: 2, fromlayer3  entity: 0
+[A] @8108.749023 Receive ACK packet from layer3.Window[0,2) Packet[seq=0,ack=1,check=1996,data=iiiiiiiiiiiiiiiiiii..]
+[A] @8108.749023 ACK packet processed successfully !!.Window[2,2) Packet[seq=0,ack=1,check=1996,data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 8115.068848,  type: 2, fromlayer3  entity: 1
+[B] @8115.068848 Receive a packet from layer3.Expected[2] Packet[seq=1,ack=15,check=2030,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @8115.068848 Disordered packet received.Expected[2] Packet[seq=1,ack=15,check=2030,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @8115.068848 Send NACK packet to layer3.Expected[2] Packet[seq=1,ack=1,check=2016,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 8122.088379,  type: 2, fromlayer3  entity: 0
+[A] @8122.088379 Receive ACK packet from layer3.Window[2,2) Packet[seq=1,ack=1,check=2016,data=jjjjjjjjjjjjjjjjjjj..]
+[A] @8122.088379 Received duplicate ACK.Window[2,2) Packet[seq=1,ack=1,check=2016,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 10068.483398,  type: 1, fromlayer5  entity: 0
+[A] @10068.483398 Receive an message from layer5.Window[2,2) Message[data=kkkkkkkkkkkkkkkkkkk..]
+[A] @10068.483398 Processed an message from layer5.Window[2,2) Message[data=kkkkkkkkkkkkkkkkkkk..]
+          TOLAYER3: packet being lost
+[A] @10068.483398 Send packet to layer3.Window[2,3) Packet[seq=2,ack=15,check=2050,data=kkkkkkkkkkkkkkkkkkk..]
+
+EVENT time: 10108.483398,  type: 0, timerinterrupt   entity: 0
+[A] @10108.483398 Timer interrupt occurred.Window[2,3)
+          TOLAYER3: packet being lost
+[A] @10108.483398 >Resend the packet again.Window[2,3) Packet[seq=2,ack=15,check=2050,data=kkkkkkkkkkkkkkkkkkk..]
+
+EVENT time: 10148.483398,  type: 0, timerinterrupt   entity: 0
+[A] @10148.483398 Timer interrupt occurred.Window[2,3)
+[A] @10148.483398 >Resend the packet again.Window[2,3) Packet[seq=2,ack=15,check=2050,data=kkkkkkkkkkkkkkkkkkk..]
+
+EVENT time: 10153.919922,  type: 2, fromlayer3  entity: 1
+[B] @10153.919922 Receive a packet from layer3.Expected[2] Packet[seq=2,ack=15,check=2050,data=kkkkkkkkkkkkkkkkkkk..]
+[B] @10153.919922 Send packet to layer5.Expected[3] Packet[seq=2,ack=15,check=2050,data=kkkkkkkkkkkkkkkkkkk..]
+[B] @10153.919922 Cumulative Timer Started!!!.Expected[3]
+
+EVENT time: 10177.919922,  type: 0, timerinterrupt   entity: 1
+[B] @10177.919922 Timer interrupt occurred @B !!!.Expected[3]
+[B] @10177.919922 Send cumulative ACK packet to layer3.Expected[3] Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+
+EVENT time: 10178.946289,  type: 2, fromlayer3  entity: 0
+[A] @10178.946289 Receive ACK packet from layer3.Window[2,3) Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+[A] @10178.946289 ACK packet processed successfully !!.Window[3,3) Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+
+EVENT time: 11261.574219,  type: 1, fromlayer5  entity: 0
+[A] @11261.574219 Receive an message from layer5.Window[3,3) Message[data=lllllllllllllllllll..]
+[A] @11261.574219 Processed an message from layer5.Window[3,3) Message[data=lllllllllllllllllll..]
+          TOLAYER3: packet being corrupted
+[A] @11261.574219 Send packet to layer3.Window[3,4) Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+
+EVENT time: 11270.081055,  type: 2, fromlayer3  entity: 1
+[B] @11270.081055 Receive a packet from layer3.Expected[3] Packet[seq=3,ack=15,check=2070,data=Zllllllllllllllllll..]
+[B] @11270.081055 Packet is corrupted.Expected[3] Packet[seq=3,ack=15,check=2070,data=Zllllllllllllllllll..]
+[B] @11270.081055 Send NACK packet to layer3.Expected[3] Packet[seq=3,ack=2,check=2039,data=Zllllllllllllllllll..]
+
+EVENT time: 11271.423828,  type: 2, fromlayer3  entity: 0
+[A] @11271.423828 Receive ACK packet from layer3.Window[3,4) Packet[seq=3,ack=2,check=2039,data=Zllllllllllllllllll..]
+[A] @11271.423828 Received duplicate ACK.Window[3,4) Packet[seq=3,ack=2,check=2039,data=Zllllllllllllllllll..]
+[A] @11271.423828 >Resend the packet again.Window[3,4) Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+
+EVENT time: 11272.473633,  type: 2, fromlayer3  entity: 1
+[B] @11272.473633 Receive a packet from layer3.Expected[3] Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+[B] @11272.473633 Send packet to layer5.Expected[4] Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+[B] @11272.473633 Cumulative Timer Started!!!.Expected[4]
+
+EVENT time: 11296.473633,  type: 0, timerinterrupt   entity: 1
+[B] @11296.473633 Timer interrupt occurred @B !!!.Expected[4]
+          TOLAYER3: packet being lost
+[B] @11296.473633 Send cumulative ACK packet to layer3.Expected[4] Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+
+EVENT time: 11311.423828,  type: 0, timerinterrupt   entity: 0
+[A] @11311.423828 Timer interrupt occurred.Window[3,4)
+[A] @11311.423828 >Resend the packet again.Window[3,4) Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+
+EVENT time: 11315.508789,  type: 2, fromlayer3  entity: 1
+[B] @11315.508789 Receive a packet from layer3.Expected[4] Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+[B] @11315.508789 Disordered packet received.Expected[4] Packet[seq=3,ack=15,check=2070,data=lllllllllllllllllll..]
+[B] @11315.508789 Send NACK packet to layer3.Expected[4] Packet[seq=3,ack=3,check=2058,data=lllllllllllllllllll..]
+
+EVENT time: 11316.520508,  type: 2, fromlayer3  entity: 0
+[A] @11316.520508 Receive ACK packet from layer3.Window[3,4) Packet[seq=3,ack=3,check=2058,data=lllllllllllllllllll..]
+[A] @11316.520508 ACK packet processed successfully !!.Window[4,4) Packet[seq=3,ack=3,check=2058,data=lllllllllllllllllll..]
+
+EVENT time: 11918.210938,  type: 1, fromlayer5  entity: 0
+[A] @11918.210938 Receive an message from layer5.Window[4,4) Message[data=mmmmmmmmmmmmmmmmmmm..]
+[A] @11918.210938 Processed an message from layer5.Window[4,4) Message[data=mmmmmmmmmmmmmmmmmmm..]
+[A] @11918.210938 Send packet to layer3.Window[4,5) Packet[seq=4,ack=15,check=2090,data=mmmmmmmmmmmmmmmmmmm..]
+
+EVENT time: 11922.582031,  type: 2, fromlayer3  entity: 1
+[B] @11922.582031 Receive a packet from layer3.Expected[4] Packet[seq=4,ack=15,check=2090,data=mmmmmmmmmmmmmmmmmmm..]
+[B] @11922.582031 Send packet to layer5.Expected[5] Packet[seq=4,ack=15,check=2090,data=mmmmmmmmmmmmmmmmmmm..]
+[B] @11922.582031 Cumulative Timer Started!!!.Expected[5]
+
+EVENT time: 11946.582031,  type: 0, timerinterrupt   entity: 1
+[B] @11946.582031 Timer interrupt occurred @B !!!.Expected[5]
+[B] @11946.582031 Send cumulative ACK packet to layer3.Expected[5] Packet[seq=255,ack=4,check=1289,data=ack_packet..]
+
+EVENT time: 11950.125000,  type: 2, fromlayer3  entity: 0
+[A] @11950.125000 Receive ACK packet from layer3.Window[4,5) Packet[seq=255,ack=4,check=1289,data=ack_packet..]
+[A] @11950.125000 ACK packet processed successfully !!.Window[5,5) Packet[seq=255,ack=4,check=1289,data=ack_packet..]
+
+EVENT time: 12735.313477,  type: 1, fromlayer5  entity: 0
+[A] @12735.313477 Receive an message from layer5.Window[5,5) Message[data=nnnnnnnnnnnnnnnnnnn..]
+[A] @12735.313477 Processed an message from layer5.Window[5,5) Message[data=nnnnnnnnnnnnnnnnnnn..]
+          TOLAYER3: packet being corrupted
+[A] @12735.313477 Send packet to layer3.Window[5,6) Packet[seq=5,ack=15,check=2110,data=nnnnnnnnnnnnnnnnnnn..]
+
+EVENT time: 12741.892578,  type: 2, fromlayer3  entity: 1
+[B] @12741.892578 Receive a packet from layer3.Expected[5] Packet[seq=5,ack=15,check=2110,data=Znnnnnnnnnnnnnnnnnn..]
+[B] @12741.892578 Packet is corrupted.Expected[5] Packet[seq=5,ack=15,check=2110,data=Znnnnnnnnnnnnnnnnnn..]
+          TOLAYER3: packet being corrupted
+[B] @12741.892578 Send NACK packet to layer3.Expected[5] Packet[seq=5,ack=4,check=2079,data=Znnnnnnnnnnnnnnnnnn..]
+
+EVENT time: 12746.508789,  type: 2, fromlayer3  entity: 0
+[A] @12746.508789 Receive ACK packet from layer3.Window[5,6) Packet[seq=5,ack=4,check=2079,data=Znnnnnnnnnnnnnnnnnn..]
+[A] @12746.508789 Received duplicate ACK.Window[5,6) Packet[seq=5,ack=4,check=2079,data=Znnnnnnnnnnnnnnnnnn..]
+[A] @12746.508789 >Resend the packet again.Window[5,6) Packet[seq=5,ack=15,check=2110,data=nnnnnnnnnnnnnnnnnnn..]
+
+EVENT time: 12747.873047,  type: 2, fromlayer3  entity: 1
+[B] @12747.873047 Receive a packet from layer3.Expected[5] Packet[seq=5,ack=15,check=2110,data=nnnnnnnnnnnnnnnnnnn..]
+[B] @12747.873047 Send packet to layer5.Expected[6] Packet[seq=5,ack=15,check=2110,data=nnnnnnnnnnnnnnnnnnn..]
+[B] @12747.873047 Cumulative Timer Started!!!.Expected[6]
+
+EVENT time: 12771.873047,  type: 0, timerinterrupt   entity: 1
+[B] @12771.873047 Timer interrupt occurred @B !!!.Expected[6]
+[B] @12771.873047 Send cumulative ACK packet to layer3.Expected[6] Packet[seq=255,ack=5,check=1290,data=ack_packet..]
+
+EVENT time: 12776.409180,  type: 2, fromlayer3  entity: 0
+[A] @12776.409180 Receive ACK packet from layer3.Window[5,6) Packet[seq=255,ack=5,check=1290,data=ack_packet..]
+[A] @12776.409180 ACK packet processed successfully !!.Window[6,6) Packet[seq=255,ack=5,check=1290,data=ack_packet..]
+
+EVENT time: 14353.648438,  type: 1, fromlayer5  entity: 0
+[A] @14353.648438 Receive an message from layer5.Window[6,6) Message[data=ooooooooooooooooooo..]
+[A] @14353.648438 Processed an message from layer5.Window[6,6) Message[data=ooooooooooooooooooo..]
+          TOLAYER3: packet being corrupted
+[A] @14353.648438 Send packet to layer3.Window[6,7) Packet[seq=6,ack=15,check=2130,data=ooooooooooooooooooo..]
+
+EVENT time: 14358.692383,  type: 2, fromlayer3  entity: 1
+[B] @14358.692383 Receive a packet from layer3.Expected[6] Packet[seq=6,ack=15,check=2130,data=Zoooooooooooooooooo..]
+[B] @14358.692383 Packet is corrupted.Expected[6] Packet[seq=6,ack=15,check=2130,data=Zoooooooooooooooooo..]
+[B] @14358.692383 Send NACK packet to layer3.Expected[6] Packet[seq=6,ack=5,check=2099,data=Zoooooooooooooooooo..]
+
+EVENT time: 14368.281250,  type: 2, fromlayer3  entity: 0
+[A] @14368.281250 Receive ACK packet from layer3.Window[6,7) Packet[seq=6,ack=5,check=2099,data=Zoooooooooooooooooo..]
+[A] @14368.281250 Received duplicate ACK.Window[6,7) Packet[seq=6,ack=5,check=2099,data=Zoooooooooooooooooo..]
+          TOLAYER3: packet being corrupted
+[A] @14368.281250 >Resend the packet again.Window[6,7) Packet[seq=6,ack=15,check=2130,data=ooooooooooooooooooo..]
+
+EVENT time: 14372.767578,  type: 2, fromlayer3  entity: 1
+[B] @14372.767578 Receive a packet from layer3.Expected[6] Packet[seq=6,ack=15,check=2130,data=Zoooooooooooooooooo..]
+[B] @14372.767578 Packet is corrupted.Expected[6] Packet[seq=6,ack=15,check=2130,data=Zoooooooooooooooooo..]
+[B] @14372.767578 Send NACK packet to layer3.Expected[6] Packet[seq=6,ack=5,check=2099,data=Zoooooooooooooooooo..]
+
+EVENT time: 14376.061523,  type: 2, fromlayer3  entity: 0
+[A] @14376.061523 Receive ACK packet from layer3.Window[6,7) Packet[seq=6,ack=5,check=2099,data=Zoooooooooooooooooo..]
+[A] @14376.061523 Received duplicate ACK.Window[6,7) Packet[seq=6,ack=5,check=2099,data=Zoooooooooooooooooo..]
+          TOLAYER3: packet being lost
+[A] @14376.061523 >Resend the packet again.Window[6,7) Packet[seq=6,ack=15,check=2130,data=ooooooooooooooooooo..]
+
+EVENT time: 14416.061523,  type: 0, timerinterrupt   entity: 0
+[A] @14416.061523 Timer interrupt occurred.Window[6,7)
+[A] @14416.061523 >Resend the packet again.Window[6,7) Packet[seq=6,ack=15,check=2130,data=ooooooooooooooooooo..]
+
+EVENT time: 14419.883789,  type: 2, fromlayer3  entity: 1
+[B] @14419.883789 Receive a packet from layer3.Expected[6] Packet[seq=6,ack=15,check=2130,data=ooooooooooooooooooo..]
+[B] @14419.883789 Send packet to layer5.Expected[7] Packet[seq=6,ack=15,check=2130,data=ooooooooooooooooooo..]
+[B] @14419.883789 Cumulative Timer Started!!!.Expected[7]
+
+EVENT time: 14443.883789,  type: 0, timerinterrupt   entity: 1
+[B] @14443.883789 Timer interrupt occurred @B !!!.Expected[7]
+[B] @14443.883789 Send cumulative ACK packet to layer3.Expected[7] Packet[seq=255,ack=6,check=1291,data=ack_packet..]
+
+EVENT time: 14450.706055,  type: 2, fromlayer3  entity: 0
+[A] @14450.706055 Receive ACK packet from layer3.Window[6,7) Packet[seq=255,ack=6,check=1291,data=ack_packet..]
+[A] @14450.706055 ACK packet processed successfully !!.Window[7,7) Packet[seq=255,ack=6,check=1291,data=ack_packet..]
+
+EVENT time: 16288.094727,  type: 1, fromlayer5  entity: 0
+[A] @16288.094727 Receive an message from layer5.Window[7,7) Message[data=ppppppppppppppppppp..]
+[A] @16288.094727 Processed an message from layer5.Window[7,7) Message[data=ppppppppppppppppppp..]
+          TOLAYER3: packet being lost
+[A] @16288.094727 Send packet to layer3.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16328.094727,  type: 0, timerinterrupt   entity: 0
+[A] @16328.094727 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being lost
+[A] @16328.094727 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16368.094727,  type: 0, timerinterrupt   entity: 0
+[A] @16368.094727 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being lost
+[A] @16368.094727 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16408.093750,  type: 0, timerinterrupt   entity: 0
+[A] @16408.093750 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being corrupted
+[A] @16408.093750 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16416.421875,  type: 2, fromlayer3  entity: 1
+[B] @16416.421875 Receive a packet from layer3.Expected[7] Packet[seq=7,ack=15,check=2150,data=Zpppppppppppppppppp..]
+[B] @16416.421875 Packet is corrupted.Expected[7] Packet[seq=7,ack=15,check=2150,data=Zpppppppppppppppppp..]
+[B] @16416.421875 Send NACK packet to layer3.Expected[7] Packet[seq=7,ack=6,check=2119,data=Zpppppppppppppppppp..]
+
+EVENT time: 16422.771484,  type: 2, fromlayer3  entity: 0
+[A] @16422.771484 Receive ACK packet from layer3.Window[7,0) Packet[seq=7,ack=6,check=2119,data=Zpppppppppppppppppp..]
+[A] @16422.771484 Received duplicate ACK.Window[7,0) Packet[seq=7,ack=6,check=2119,data=Zpppppppppppppppppp..]
+[A] @16422.771484 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16432.160156,  type: 2, fromlayer3  entity: 1
+[B] @16432.160156 Receive a packet from layer3.Expected[7] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+[B] @16432.160156 Send packet to layer5.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+[B] @16432.160156 Cumulative Timer Started!!!.Expected[0]
+
+EVENT time: 16456.160156,  type: 0, timerinterrupt   entity: 1
+[B] @16456.160156 Timer interrupt occurred @B !!!.Expected[0]
+          TOLAYER3: packet being corrupted
+[B] @16456.160156 Send cumulative ACK packet to layer3.Expected[0] Packet[seq=255,ack=7,check=1292,data=ack_packet..]
+
+EVENT time: 16462.771484,  type: 0, timerinterrupt   entity: 0
+[A] @16462.771484 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being lost
+[A] @16462.771484 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16465.080078,  type: 2, fromlayer3  entity: 0
+[A] @16465.080078 Receive ACK packet from layer3.Window[7,0) Packet[seq=999999,ack=7,check=1292,data=ack_packet..]
+[A] @16465.080078 ACK packet is corrupted.Window[7,0) Packet[seq=999999,ack=7,check=1292,data=ack_packet..]
+
+EVENT time: 16502.771484,  type: 0, timerinterrupt   entity: 0
+[A] @16502.771484 Timer interrupt occurred.Window[7,0)
+[A] @16502.771484 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16509.593750,  type: 2, fromlayer3  entity: 1
+[B] @16509.593750 Receive a packet from layer3.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+[B] @16509.593750 Disordered packet received.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+          TOLAYER3: packet being lost
+[B] @16509.593750 Send NACK packet to layer3.Expected[0] Packet[seq=7,ack=7,check=2142,data=ppppppppppppppppppp..]
+
+EVENT time: 16542.771484,  type: 0, timerinterrupt   entity: 0
+[A] @16542.771484 Timer interrupt occurred.Window[7,0)
+          TOLAYER3: packet being lost
+[A] @16542.771484 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16582.771484,  type: 0, timerinterrupt   entity: 0
+[A] @16582.771484 Timer interrupt occurred.Window[7,0)
+[A] @16582.771484 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16588.630859,  type: 2, fromlayer3  entity: 1
+[B] @16588.630859 Receive a packet from layer3.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+[B] @16588.630859 Disordered packet received.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+          TOLAYER3: packet being lost
+[B] @16588.630859 Send NACK packet to layer3.Expected[0] Packet[seq=7,ack=7,check=2142,data=ppppppppppppppppppp..]
+
+EVENT time: 16622.771484,  type: 0, timerinterrupt   entity: 0
+[A] @16622.771484 Timer interrupt occurred.Window[7,0)
+[A] @16622.771484 >Resend the packet again.Window[7,0) Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+
+EVENT time: 16627.375000,  type: 2, fromlayer3  entity: 1
+[B] @16627.375000 Receive a packet from layer3.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+[B] @16627.375000 Disordered packet received.Expected[0] Packet[seq=7,ack=15,check=2150,data=ppppppppppppppppppp..]
+[B] @16627.375000 Send NACK packet to layer3.Expected[0] Packet[seq=7,ack=7,check=2142,data=ppppppppppppppppppp..]
+
+EVENT time: 16629.748047,  type: 2, fromlayer3  entity: 0
+[A] @16629.748047 Receive ACK packet from layer3.Window[7,0) Packet[seq=7,ack=7,check=2142,data=ppppppppppppppppppp..]
+[A] @16629.748047 ACK packet processed successfully !!.Window[0,0) Packet[seq=7,ack=7,check=2142,data=ppppppppppppppppppp..]
+
+EVENT time: 17293.191406,  type: 1, fromlayer5  entity: 0
+[A] @17293.191406 Receive an message from layer5.Window[0,0) Message[data=qqqqqqqqqqqqqqqqqqq..]
+[A] @17293.191406 Processed an message from layer5.Window[0,0) Message[data=qqqqqqqqqqqqqqqqqqq..]
+          TOLAYER3: packet being lost
+[A] @17293.191406 Send packet to layer3.Window[0,1) Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 17333.191406,  type: 0, timerinterrupt   entity: 0
+[A] @17333.191406 Timer interrupt occurred.Window[0,1)
+[A] @17333.191406 >Resend the packet again.Window[0,1) Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 17336.494141,  type: 2, fromlayer3  entity: 1
+[B] @17336.494141 Receive a packet from layer3.Expected[0] Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+[B] @17336.494141 Send packet to layer5.Expected[1] Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+[B] @17336.494141 Cumulative Timer Started!!!.Expected[1]
+
+EVENT time: 17360.494141,  type: 0, timerinterrupt   entity: 1
+[B] @17360.494141 Timer interrupt occurred @B !!!.Expected[1]
+          TOLAYER3: packet being corrupted
+[B] @17360.494141 Send cumulative ACK packet to layer3.Expected[1] Packet[seq=255,ack=0,check=1285,data=ack_packet..]
+
+EVENT time: 17368.720703,  type: 2, fromlayer3  entity: 0
+[A] @17368.720703 Receive ACK packet from layer3.Window[0,1) Packet[seq=255,ack=0,check=1285,data=Zck_packet..]
+[A] @17368.720703 ACK packet is corrupted.Window[0,1) Packet[seq=255,ack=0,check=1285,data=Zck_packet..]
+
+EVENT time: 17373.191406,  type: 0, timerinterrupt   entity: 0
+[A] @17373.191406 Timer interrupt occurred.Window[0,1)
+          TOLAYER3: packet being corrupted
+[A] @17373.191406 >Resend the packet again.Window[0,1) Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 17376.625000,  type: 2, fromlayer3  entity: 1
+[B] @17376.625000 Receive a packet from layer3.Expected[1] Packet[seq=0,ack=15,check=2162,data=Zqqqqqqqqqqqqqqqqqq..]
+[B] @17376.625000 Packet is corrupted.Expected[1] Packet[seq=0,ack=15,check=2162,data=Zqqqqqqqqqqqqqqqqqq..]
+          TOLAYER3: packet being corrupted
+[B] @17376.625000 Send NACK packet to layer3.Expected[1] Packet[seq=0,ack=0,check=2124,data=Zqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 17383.794922,  type: 2, fromlayer3  entity: 0
+[A] @17383.794922 Receive ACK packet from layer3.Window[0,1) Packet[seq=0,ack=0,check=2124,data=Zqqqqqqqqqqqqqqqqqq..]
+[A] @17383.794922 ACK packet processed successfully !!.Window[1,1) Packet[seq=0,ack=0,check=2124,data=Zqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 17409.101562,  type: 1, fromlayer5  entity: 0
+[A] @17409.101562 Receive an message from layer5.Window[1,1) Message[data=rrrrrrrrrrrrrrrrrrr..]
+[A] @17409.101562 Processed an message from layer5.Window[1,1) Message[data=rrrrrrrrrrrrrrrrrrr..]
+          TOLAYER3: packet being lost
+[A] @17409.101562 Send packet to layer3.Window[1,2) Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 17449.101562,  type: 0, timerinterrupt   entity: 0
+[A] @17449.101562 Timer interrupt occurred.Window[1,2)
+          TOLAYER3: packet being corrupted
+[A] @17449.101562 >Resend the packet again.Window[1,2) Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 17454.708984,  type: 2, fromlayer3  entity: 1
+[B] @17454.708984 Receive a packet from layer3.Expected[1] Packet[seq=1,ack=15,check=2182,data=Zrrrrrrrrrrrrrrrrrr..]
+[B] @17454.708984 Packet is corrupted.Expected[1] Packet[seq=1,ack=15,check=2182,data=Zrrrrrrrrrrrrrrrrrr..]
+[B] @17454.708984 Send NACK packet to layer3.Expected[1] Packet[seq=1,ack=0,check=2143,data=Zrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 17456.873047,  type: 2, fromlayer3  entity: 0
+[A] @17456.873047 Receive ACK packet from layer3.Window[1,2) Packet[seq=1,ack=0,check=2143,data=Zrrrrrrrrrrrrrrrrrr..]
+[A] @17456.873047 Received duplicate ACK.Window[1,2) Packet[seq=1,ack=0,check=2143,data=Zrrrrrrrrrrrrrrrrrr..]
+[A] @17456.873047 >Resend the packet again.Window[1,2) Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 17464.427734,  type: 2, fromlayer3  entity: 1
+[B] @17464.427734 Receive a packet from layer3.Expected[1] Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+[B] @17464.427734 Send packet to layer5.Expected[2] Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+[B] @17464.427734 Cumulative Timer Started!!!.Expected[2]
+
+EVENT time: 17488.427734,  type: 0, timerinterrupt   entity: 1
+[B] @17488.427734 Timer interrupt occurred @B !!!.Expected[2]
+[B] @17488.427734 Send cumulative ACK packet to layer3.Expected[2] Packet[seq=255,ack=1,check=1286,data=ack_packet..]
+
+EVENT time: 17496.781250,  type: 2, fromlayer3  entity: 0
+[A] @17496.781250 Receive ACK packet from layer3.Window[1,2) Packet[seq=255,ack=1,check=1286,data=ack_packet..]
+[A] @17496.781250 ACK packet processed successfully !!.Window[2,2) Packet[seq=255,ack=1,check=1286,data=ack_packet..]
+
+EVENT time: 18606.160156,  type: 1, fromlayer5  entity: 0
+[A] @18606.160156 Receive an message from layer5.Window[2,2) Message[data=sssssssssssssssssss..]
+[A] @18606.160156 Processed an message from layer5.Window[2,2) Message[data=sssssssssssssssssss..]
+[A] @18606.160156 Send packet to layer3.Window[2,3) Packet[seq=2,ack=15,check=2202,data=sssssssssssssssssss..]
+
+EVENT time: 18616.152344,  type: 2, fromlayer3  entity: 1
+[B] @18616.152344 Receive a packet from layer3.Expected[2] Packet[seq=2,ack=15,check=2202,data=sssssssssssssssssss..]
+[B] @18616.152344 Send packet to layer5.Expected[3] Packet[seq=2,ack=15,check=2202,data=sssssssssssssssssss..]
+[B] @18616.152344 Cumulative Timer Started!!!.Expected[3]
+
+EVENT time: 18640.152344,  type: 0, timerinterrupt   entity: 1
+[B] @18640.152344 Timer interrupt occurred @B !!!.Expected[3]
+[B] @18640.152344 Send cumulative ACK packet to layer3.Expected[3] Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+
+EVENT time: 18646.160156,  type: 0, timerinterrupt   entity: 0
+[A] @18646.160156 Timer interrupt occurred.Window[2,3)
+[A] @18646.160156 >Resend the packet again.Window[2,3) Packet[seq=2,ack=15,check=2202,data=sssssssssssssssssss..]
+
+EVENT time: 18649.880859,  type: 2, fromlayer3  entity: 0
+[A] @18649.880859 Receive ACK packet from layer3.Window[2,3) Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+[A] @18649.880859 ACK packet processed successfully !!.Window[3,3) Packet[seq=255,ack=2,check=1287,data=ack_packet..]
+
+EVENT time: 18652.478516,  type: 2, fromlayer3  entity: 1
+[B] @18652.478516 Receive a packet from layer3.Expected[3] Packet[seq=2,ack=15,check=2202,data=sssssssssssssssssss..]
+[B] @18652.478516 Disordered packet received.Expected[3] Packet[seq=2,ack=15,check=2202,data=sssssssssssssssssss..]
+[B] @18652.478516 Send NACK packet to layer3.Expected[3] Packet[seq=2,ack=2,check=2189,data=sssssssssssssssssss..]
+
+EVENT time: 18655.066406,  type: 2, fromlayer3  entity: 0
+[A] @18655.066406 Receive ACK packet from layer3.Window[3,3) Packet[seq=2,ack=2,check=2189,data=sssssssssssssssssss..]
+[A] @18655.066406 Received duplicate ACK.Window[3,3) Packet[seq=2,ack=2,check=2189,data=sssssssssssssssssss..]
+
+EVENT time: 20580.646484,  type: 1, fromlayer5  entity: 0
+[A] @20580.646484 Receive an message from layer5.Window[3,3) Message[data=ttttttttttttttttttt..]
+[A] @20580.646484 Processed an message from layer5.Window[3,3) Message[data=ttttttttttttttttttt..]
+          TOLAYER3: packet being corrupted
+[A] @20580.646484 Send packet to layer3.Window[3,4) Packet[seq=3,ack=15,check=2222,data=ttttttttttttttttttt..]
+
+EVENT time: 20583.529297,  type: 2, fromlayer3  entity: 1
+[B] @20583.529297 Receive a packet from layer3.Expected[3] Packet[seq=3,ack=15,check=2222,data=Ztttttttttttttttttt..]
+[B] @20583.529297 Packet is corrupted.Expected[3] Packet[seq=3,ack=15,check=2222,data=Ztttttttttttttttttt..]
+[B] @20583.529297 Send NACK packet to layer3.Expected[3] Packet[seq=3,ack=2,check=2183,data=Ztttttttttttttttttt..]
+
+EVENT time: 20587.078125,  type: 2, fromlayer3  entity: 0
+[A] @20587.078125 Receive ACK packet from layer3.Window[3,4) Packet[seq=3,ack=2,check=2183,data=Ztttttttttttttttttt..]
+[A] @20587.078125 Received duplicate ACK.Window[3,4) Packet[seq=3,ack=2,check=2183,data=Ztttttttttttttttttt..]
+[A] @20587.078125 >Resend the packet again.Window[3,4) Packet[seq=3,ack=15,check=2222,data=ttttttttttttttttttt..]
+
+EVENT time: 20593.828125,  type: 2, fromlayer3  entity: 1
+[B] @20593.828125 Receive a packet from layer3.Expected[3] Packet[seq=3,ack=15,check=2222,data=ttttttttttttttttttt..]
+[B] @20593.828125 Send packet to layer5.Expected[4] Packet[seq=3,ack=15,check=2222,data=ttttttttttttttttttt..]
+[B] @20593.828125 Cumulative Timer Started!!!.Expected[4]
+
+EVENT time: 20617.828125,  type: 0, timerinterrupt   entity: 1
+[B] @20617.828125 Timer interrupt occurred @B !!!.Expected[4]
+[B] @20617.828125 Send cumulative ACK packet to layer3.Expected[4] Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+
+EVENT time: 20627.052734,  type: 2, fromlayer3  entity: 0
+[A] @20627.052734 Receive ACK packet from layer3.Window[3,4) Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+[A] @20627.052734 ACK packet processed successfully !!.Window[4,4) Packet[seq=255,ack=3,check=1288,data=ack_packet..]
+ Simulator terminated at time 20627.052734
+ after sending 20 msgs from layer5
+#Sent Messages from Layer5-to   A: 20
+#Sent Messages to   Layer3-from A: 20
+#Sent Packets  to   Layer3-from A: 55
+#Sent Packets  from Layer3-to   B: 42
+#Sent Messages to   Layer5-from B: 20
