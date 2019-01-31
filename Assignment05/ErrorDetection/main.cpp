@@ -22,9 +22,11 @@ void printDataBlock(const string &s, int m);
 
 void printHammingCodedColoredString(const string &s);
 
-void printHammingCodedDataString(const string &s, int m);
+void printHammingCodedDataBlock(const string &s, int m);
 
 string convertToBinaryString(const string &s);
+
+string convertToHammingPaddedDataBlock(const string &s, int m);
 
 int nhamming_redundant_bits(int m);
 
@@ -57,12 +59,15 @@ int main() {
 	cout << "Data string after padding: \"" << s << "\" (" << s.length() << ")" << endl;
 	cout << endl;
 
+	string binaryDataBlock = convertToBinaryString(s);
+	string hammingDataBlock = convertToHammingPaddedDataBlock(binaryDataBlock, m);
+
 	cout << "Data block:" << endl;
-	printDataBlock(convertToBinaryString(s), m);
+	printDataBlock(binaryDataBlock, m);
 	cout << endl;
 
 	cout << "Data block after adding check bits:" << endl;
-	printHammingCodedDataString(convertToBinaryString(s), m);
+	printHammingCodedDataBlock(hammingDataBlock, m);
 	cout << endl;
 
 	return 0;
@@ -76,6 +81,15 @@ string convertToBinaryString(const string &s) {
 	return binStr;
 }
 
+string convertToHammingPaddedDataBlock(const string &s, int m) {
+	string hammingBlock;
+	int n = s.length() / m;//string is a multiple of m
+	for (int i = 0; i < n; ++i) {
+		hammingBlock += (hammingPaddedString(string(s, i * m, m), m));
+	}
+	return hammingBlock;
+}
+
 void printDataBlock(const string &s, int m) {
 	for (int i = 0; i < s.length();) {
 		cout << s[i];
@@ -83,24 +97,29 @@ void printDataBlock(const string &s, int m) {
 	}
 }
 
+void printHammingCodedDataBlock(const string &s, int m) {
+	int r = nhamming_redundant_bits(m);
+	for (int i = 0; i * (m + r) < s.length(); ++i) {
+		printHammingCodedColoredString(string(s, i * (m + r), m + r));
+	}
+}
+
+void printHammingCodedColoredString(const string &s) {
+	for (int pos = 1; pos <= s.length(); ++pos) {
+		if (isPowerOf_2(pos)) {
+			setConsoleColor(GREEN);
+		}
+		cout << s[pos - 1];
+		setConsoleColor(WHITE);
+	}
+	setConsoleColor(WHITE);
+	cout << endl;
+}
+
 int nhamming_redundant_bits(int m) {
 	int r = 0;
 	while ((1 << r) < m + r + 1) ++r; // 1<<r == 1*2^r
 	return r;
-}
-
-double randomFactor() {
-	static bool isSeeded = false;
-	if (!isSeeded) isSeeded = true, srand(time(nullptr));
-	double fact = rand();
-	return fact / RAND_MAX;
-}
-
-void printHammingCodedDataString(const string &s, int m) {
-	int n = s.length() / m;
-	for (int i = 0; i < n; ++i) {
-		printHammingCodedColoredString(hammingPaddedString(string(s, i * m, m), m));
-	}
 }
 
 string hammingPaddedString(const string &s, int m) {
@@ -134,15 +153,10 @@ char hammingOddParity(const string &s, int rpos) {
 	return hammingEvenParity(s, rpos) == '1' ? '0' : '1';
 }
 
-void printHammingCodedColoredString(const string &s) {
-	for (int pos = 1; pos <= s.length(); ++pos) {
-		if (isPowerOf_2(pos)) {
-			setConsoleColor(GREEN);
-		}
-		cout << s[pos - 1];
-		setConsoleColor(WHITE);
-	}
-	setConsoleColor(WHITE);
-	cout << endl;
+double randomFactor() {
+	static bool isSeeded = false;
+	if (!isSeeded) isSeeded = true, srand(time(nullptr));
+	double fact = rand();
+	return fact / RAND_MAX;
 }
 
