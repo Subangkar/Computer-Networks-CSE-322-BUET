@@ -66,16 +66,29 @@ int main() {
 	printHammingCodedDataBlock(hammingDataBlock, m);
 	cout << endl;
 
-//	cout << "Data bits after column-wise serialization:" << " (" << serializeColmWiseDataBits.length() << ")" << endl;
-//	cout << serializeColmWiseDataBits << endl;
+	cout << "Data bits after column-wise serialization:" << " (" << serializeColmWiseDataBits.length() << ")" << endl;
+	cout << serializeColmWiseDataBits << endl;
+
+	cout << "Data bits after corruption:" << endl;
+	string corruptedSerialBlock = corruptDataBlockAndPrint(serializeColmWiseDataBits, P);
+	string corruptHammingDataBlock = deserializeColmWise(corruptedSerialBlock, m + r);
+	string correctedDataBlock = convertFromHammingPaddedDataBlock(corruptHammingDataBlock, m);
+	string correctedDataString = convertFromBinaryString(correctedDataBlock);
+
+	cout << "Data bits after deserialization:" << " (" << corruptHammingDataBlock.length() << ")" << endl;
+	printHammingCodedDataBlock(corruptHammingDataBlock, m);
+
+	cout << "Data block after removing check bits:" << " (" << correctedDataBlock.length() << ")" << endl;
+	printDataBlock(correctedDataBlock, m);
+	cout << endl;
+
 
 //	printDataBlock(convertFromHammingPaddedDataBlock(hammingDataBlock, m), m);
-	if (hammingDataBlock != deserializeColmWise(serializeColmWiseDataBits, m + r))cerr << "NOT SAME" << endl;
-	if (binaryDataBlock != convertFromHammingPaddedDataBlock(hammingDataBlock, m))cerr << "error" << endl;
+//	if (hammingDataBlock != deserializeColmWise(serializeColmWiseDataBits, m + r))cerr << "NOT SAME" << endl;
+//	if (binaryDataBlock != convertFromHammingPaddedDataBlock(hammingDataBlock, m))cerr << "error" << endl;
 
-	string corruptedSerialBlock = corruptDataBlockAndPrint(serializeColmWiseDataBits, P);
-
-	cout << "Recoverd data string: " << convertFromBinaryString(binaryDataBlock) << endl;
+//	cout << corr
+	cout << "Recoverd data string: " << correctedDataString << endl;
 	return 0;
 }
 

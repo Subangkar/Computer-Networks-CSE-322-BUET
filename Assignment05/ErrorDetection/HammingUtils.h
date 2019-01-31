@@ -31,7 +31,7 @@ string computeHammingString(const string &s, int r);
 string hammingPaddedString(const string &s, int m);
 
 // also corrects
-string hammingUnPaddedString(const string &s);
+string hammingUnPaddedString(const string &s, int m);
 
 char hammingEvenParity(const string &s, int rpos);
 
@@ -52,7 +52,7 @@ string convertFromHammingPaddedDataBlock(const string &s, int m) {
 	int r = nhamming_redundant_bits(m);
 	int n = s.length() / m;//string is a multiple of m
 	for (int i = 0; i < n; ++i) {
-		normalBlock += (hammingUnPaddedString(string(s, i * (m + r), m + r)));
+		normalBlock += (hammingUnPaddedString(string(s, i * (m + r), m + r), m));
 	}
 	return normalBlock;
 }
@@ -91,16 +91,20 @@ string hammingPaddedString(const string &s, int m) {
 	return computeHammingString(str, r);
 }
 
-string hammingUnPaddedString(const string &s) {
+string hammingUnPaddedString(const string &s, int m) {
+	string newHammingCodes = computeHammingString(s, m);
+
 	/// finding the erroneous bit position
 	int errorPos = 0;
 	for (int i = 0, pow = 0; i < s.length(); ++i) {
 		if (isPowerOf_2(i + 1)) {
-			errorPos = ((s[i] - '0') << pow) | errorPos;
+			errorPos = ((newHammingCodes[i] - '0') << pow) | errorPos;
+			++pow;
 		}
 	}
+//	if (errorPos > 0)cout << "Error @ Pos: " << errorPos << endl;
 	string correctedString = s;
-	correctedString[errorPos - 1] = TOGGLE_BIT(correctedString[errorPos - 1]);
+	if (errorPos > 0)correctedString[errorPos - 1] = TOGGLE_BIT(correctedString[errorPos - 1]);
 	string str;
 	/// deleting check bits @pos = 2^x
 	for (int i = 0; i < correctedString.length(); ++i) {
