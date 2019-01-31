@@ -9,6 +9,7 @@ using namespace std;
 bool debug = true;
 #define M 2
 #define S "Computer Networks"//"Hamming Code"
+#define P 0.1
 
 enum console_color_t {
 	WHITE = 15, GREEN = 10, RED = 4, CYAN = 11
@@ -26,15 +27,29 @@ void printHammingCodedDataBlock(const string &s, int m);
 
 string convertToBinaryString(const string &s);
 
+string convertFromBinaryString(const string &s);
+
 string convertToHammingPaddedDataBlock(const string &s, int m);
+
+string convertFromHammingPaddedDataBlock(const string &s, int m);
 
 int nhamming_redundant_bits(int m);
 
+string computeHammingString(const string &s, int r);
+
 string hammingPaddedString(const string &s, int m);
+
+string hammingUnPaddedString(const string &s);
 
 char hammingEvenParity(const string &s, int rpos);
 
 char hammingOddParity(const string &s, int rpos);
+
+string appendChecksumCRC(const string &s);
+
+string serializeColmWise(const string &s, int nChars_per_row);
+
+string corruptDataBlockAndPrint(const string &s, double corruptionFactor = 0.0);
 
 /// returns a random value between [0,1]
 double randomFactor();
@@ -55,21 +70,32 @@ int main() {
 	if (!debug)getline(cin, s);
 	else cout << s << endl;
 	while (s.length() % m != 0) s.append("~");
-	m = 8 * m;
+	m *= 8;
 	cout << "Data string after padding: \"" << s << "\" (" << s.length() << ")" << endl;
 	cout << endl;
 
+	int r = nhamming_redundant_bits(m);
 	string binaryDataBlock = convertToBinaryString(s);
 	string hammingDataBlock = convertToHammingPaddedDataBlock(binaryDataBlock, m);
+	string serializeColmWiseDataBits = serializeColmWise(hammingDataBlock, m + r);
 
-	cout << "Data block:" << endl;
+	cout << "Data block:" << " (" << binaryDataBlock.length() << ")" << endl;
 	printDataBlock(binaryDataBlock, m);
 	cout << endl;
 
-	cout << "Data block after adding check bits:" << endl;
+	cout << "Data block after adding check bits:" << " (" << hammingDataBlock.length() << ")" << endl;
 	printHammingCodedDataBlock(hammingDataBlock, m);
 	cout << endl;
 
+//	cout << "Data bits after column-wise serialization:" << " (" << serializeColmWiseDataBits.length() << ")" << endl;
+//	cout << serializeColmWiseDataBits << endl;
+
+	printDataBlock(convertFromHammingPaddedDataBlock(hammingDataBlock, m), m);
+//	if (binaryDataBlock != convertFromHammingPaddedDataBlock(hammingDataBlock, m))cerr << "error" << endl;
+
+//	string corruptedSerialBlock = corruptDataBlockAndPrint(serializeColmWiseDataBits, P);
+
+//	cout << "Recoverd data string: " << convertFromBinaryString(binaryDataBlock) << endl;
 	return 0;
 }
 
@@ -81,6 +107,14 @@ string convertToBinaryString(const string &s) {
 	return binStr;
 }
 
+string convertFromBinaryString(const string &s) {
+	string asciiStr;
+	for (int i = 0; i * 8 < s.length(); ++i) {
+		asciiStr += (char) bitset<8>(string(s, i * 8, 8)).to_ullong();
+	}
+	return asciiStr;
+}
+
 string convertToHammingPaddedDataBlock(const string &s, int m) {
 	string hammingBlock;
 	int n = s.length() / m;//string is a multiple of m
@@ -88,6 +122,16 @@ string convertToHammingPaddedDataBlock(const string &s, int m) {
 		hammingBlock += (hammingPaddedString(string(s, i * m, m), m));
 	}
 	return hammingBlock;
+}
+
+string convertFromHammingPaddedDataBlock(const string &s, int m) {
+	string normalBlock;
+	int r = nhamming_redundant_bits(m);
+	int n = s.length() / m;//string is a multiple of m
+	for (int i = 0; i < n; ++i) {
+		normalBlock += (hammingUnPaddedString(string(s, i * (m + r), m + r)));
+	}
+	return normalBlock;
 }
 
 void printDataBlock(const string &s, int m) {
@@ -133,11 +177,23 @@ string hammingPaddedString(const string &s, int m) {
 		else str[i] = s[j++];
 	}
 
-	/// setting parity @check_bits
-	for (int rpos = 0; rpos < r; ++rpos) {
-		str[(1 << rpos) - 1] = hammingOddParity(str, rpos);
+	cout << "-----------" << endl;
+	cout << computeHammingString(str, r) << endl << computeHammingString(computeHammingString(str, r), r) << endl;
+	cout << "-----------" << endl;
+//	/// setting parity @check_bits
+//	for (int rpos = 0; rpos < r; ++rpos) {
+//		str[(1 << rpos) - 1] = hammingOddParity(str, rpos);
+//	}
+	return computeHammingString(str, r);
+}
+
+string hammingUnPaddedString(const string &s) {
+	string str;
+	/// deleting check bits @pos = 2^x
+	for (int i = 0; i < s.length(); ++i) {
+		if (!isPowerOf_2(i + 1)) str += s[i];
 	}
-	return std::string(str);
+	return str;
 }
 
 char hammingEvenParity(const string &s, int rpos) {
@@ -159,4 +215,39 @@ double randomFactor() {
 	double fact = rand();
 	return fact / RAND_MAX;
 }
+
+string serializeColmWise(const string &s, int nChars_per_row) {
+	string serialStr;
+	int n = s.length() / nChars_per_row;
+	for (int c = 0; c < nChars_per_row; ++c) {
+		for (int r = 0; r < n; ++r) {
+			serialStr += s[r * nChars_per_row + c];
+		}
+	}
+	return serialStr;
+}
+
+string corruptDataBlockAndPrint(const string &s, double corruptionFactor) {
+	string corrupted = s;
+	for (auto &c:corrupted) {
+		if (randomFactor() < corruptionFactor) {
+			c = !(c - '0') + '0';
+			setConsoleColor(RED);
+		}
+		cout << c;
+		setConsoleColor(WHITE);
+	}
+	cout << endl;
+	return corrupted;
+}
+
+string computeHammingString(const string &s, int r) {
+	string str = s;
+	/// setting parity @check_bits
+	for (int rpos = 0; rpos < r; ++rpos) {
+		str[(1 << rpos) - 1] = hammingOddParity(str, rpos);
+	}
+	return str;
+}
+
 
