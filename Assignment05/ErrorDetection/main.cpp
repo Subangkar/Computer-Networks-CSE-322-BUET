@@ -99,7 +99,7 @@ double randomFactor() {
 void printHammingCodedDataString(const string &s, int m) {
 	int n = s.length() / m;
 	for (int i = 0; i < n; ++i) {
-		printHammingCodedColoredString(hammingPaddedString(string(s, i * m, 16), m));
+		printHammingCodedColoredString(hammingPaddedString(string(s, i * m, m), m));
 	}
 }
 
