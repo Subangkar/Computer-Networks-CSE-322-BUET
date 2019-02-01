@@ -10,7 +10,7 @@
 
 using namespace std;
 
-bool debug = true;
+bool debug = false;
 #define M 1
 #define S "a"//"Hamming Code"
 #define P 0.1
@@ -36,17 +36,11 @@ string convertFromBinaryString(const string &s);
 
 string serializeColmWise(const string &s, int nChars_per_row);
 
-string deserializeColmWise(const string &s, int nChars_per_row, vector<int> &corruptIdx);
+string deserializeColmWise(const string &s, int nChars_per_row);
 
-string corruptDataFrame(const string &s, double corruptionFactor, vector<int> &corruptIdx);
+string corruptDataFrame(const string &s, double corruptionFactor);
 
 void printCorrupted(const string &s, const string &actual, int newLineSep = 0, bool seperate_ascii = false);
-
-void printCorruptedFrame(const string &s, const vector<int> &corruptIdx);
-
-void printCorruptedFrame(const string &s, const string &actual);
-
-void printCorruptedDataBlock(const string &s, int m, const vector<int> &corruptIdx);
 
 /// returns a random value between [0,1]
 double randomFactor();
@@ -56,33 +50,33 @@ int main() {
 	string s = S;
 	string polynomial = POLYNOMIAL;
 	double p = P;
-	cout << "Enter #data_bytes in a row (m): ";
-	if (!debug)cin >> m;
-	else cout << m << endl;
-	fflush(stdin);
 	cout << "Enter data string: ";
 	if (!debug)getline(cin, s);
 	else cout << s << endl;
-	cout << "Enter generator: ";
-	if (!debug)getline(cin, polynomial);
-	else cout << polynomial << endl;
+	cout << "Enter #data_bytes in a row (m): ";
+	if (!debug)cin >> m;
+	else cout << m << endl;
 	cout << "Enter corruption probability: ";
 	if (!debug)cin >> p;
 	else cout << p << endl;
+	fflush(stdin);
+	cout << "Enter generator: ";
+	if (!debug)getline(cin, polynomial);
+	else cout << polynomial << endl;
+
 	while (s.length() % m != 0) s.append("~");
 	m *= 8;
 
-	vector<int> corruptIdx;
 	int r = nhamming_redundant_bits(m);// from HammingUtils.h
 	string binaryDataBlock = convertToBinaryString(s);
 	string hammingDataBlock = convertToHammingPaddedDataBlock(binaryDataBlock, m);
 	string serializedFrame = serializeColmWise(hammingDataBlock, m + r);
 	string checksumAddedFrame = appendChecksumCRC(serializedFrame, polynomial);
 
-	string corruptedFrame = corruptDataFrame(checksumAddedFrame, p, corruptIdx);
+	string corruptedFrame = corruptDataFrame(checksumAddedFrame, p);
 
 	string checkSumRemovedFrame = removeChecksumCRC(corruptedFrame, polynomial);
-	string corruptHammingDataBlock = deserializeColmWise(checkSumRemovedFrame, m + r, corruptIdx);
+	string corruptHammingDataBlock = deserializeColmWise(checkSumRemovedFrame, m + r);
 	string correctedDataBlock = convertFromHammingPaddedDataBlock(corruptHammingDataBlock, m);
 	string correctedDataString = convertFromBinaryString(correctedDataBlock);
 
@@ -115,19 +109,15 @@ int main() {
 	cout << endl;
 
 	cout << "Data bits after removing CRC check-sum:" << " (" << checkSumRemovedFrame.length() << ")" << endl;
-//	printCorruptedFrame(checkSumRemovedFrame, corruptIdx);
 	printCorrupted(checkSumRemovedFrame, serializedFrame);
 	cout << endl;
-//	cout << checkSumRemovedFrame << endl;
 
 
 	cout << "Data bits after deserialization:" << " (" << corruptHammingDataBlock.length() << ")" << endl;
-//	printCorruptedDataBlock(corruptHammingDataBlock, m + r, corruptIdx);
 	printCorrupted(corruptHammingDataBlock, hammingDataBlock, m + r);
 	cout << endl;
 
 	cout << "Data block after removing check bits:" << " (" << correctedDataBlock.length() << ")" << endl;
-//	printDataBlock(correctedDataBlock, m);
 	printCorrupted(correctedDataBlock, binaryDataBlock, m, true);
 	cout << endl;
 
@@ -172,17 +162,6 @@ void printDataBlock(const string &s, int m) {
 	}
 }
 
-void printCorruptedDataBlock(const string &s, int m, const vector<int> &corruptIdx) {
-	for (int i = 0; i < s.length();) {
-		if (find(corruptIdx.begin(), corruptIdx.end(), i) != corruptIdx.end()) {
-			setConsoleColor(RED);
-		}
-		cout << s[i];
-		if (++i % (m) == 0) cout << endl;
-		setConsoleColor(WHITE);
-	}
-}
-
 double randomFactor() {
 	static bool isSeeded = false;
 	if (!isSeeded) isSeeded = true, srand(time(nullptr));
@@ -201,48 +180,29 @@ string serializeColmWise(const string &s, int nChars_per_row) {
 	return serialStr;
 }
 
-string deserializeColmWise(const string &s, int nChars_per_row, vector<int> &corruptIdx) {
-	vector<int> newCorruptIdx;
+string deserializeColmWise(const string &s, int nChars_per_row) {
 	string origStr;
 	auto nChars_per_colm = s.length() / nChars_per_row;
 	for (int r = 0; r < nChars_per_colm; ++r) {
 		for (int c = 0; c < nChars_per_row; ++c) {
 			auto i = c * nChars_per_colm + r;
 			origStr += s[i];
-			if (find(corruptIdx.begin(), corruptIdx.end(), i) != corruptIdx.end()) {
-				newCorruptIdx.push_back(r * nChars_per_row + c);
-			}
 		}
 	}
-	corruptIdx = newCorruptIdx;
 	return origStr;
 }
 
-string corruptDataFrame(const string &s, double corruptionFactor, vector<int> &corruptIdx) {
+string corruptDataFrame(const string &s, double corruptionFactor) {
 	string corrupted = s;
 	int i = 0;
 	for (auto &c:corrupted) {
 		if (randomFactor() < corruptionFactor) {
 //		if (i == 12 || i == 0) {
 			c = !(c - '0') + '0';
-			corruptIdx.push_back(i);
 		}
 		++i;
 	}
 	return corrupted;
-}
-
-void printCorruptedFrame(const string &s, const vector<int> &corruptIdx) {
-	int i = 0;
-	for (const auto &c:s) {
-		if (find(corruptIdx.begin(), corruptIdx.end(), i) != corruptIdx.end()) {
-			setConsoleColor(RED);
-		}
-		cout << c;
-		setConsoleColor(WHITE);
-		++i;
-	}
-	cout << endl;
 }
 
 void printChecksumAddedDataBits(const string &s, const string &polynomial) {
