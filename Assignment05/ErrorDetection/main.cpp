@@ -25,6 +25,8 @@ void printDataBlock(const string &s, int m);
 
 void printHammingCodedColoredString(const string &s);
 
+void printChecksumAddedDataBits(const string &s, string polynomial);
+
 string convertToBinaryString(const string &s);
 
 string convertFromBinaryString(const string &s);
@@ -41,6 +43,8 @@ double randomFactor();
 int main() {
 	int m = M;
 	string s = S;
+	string polynomial = POLYNOMIAL;
+	double p = P;
 	cout << "Enter #data_bytes in a row (m): ";
 	if (!debug)cin >> m;
 	else cout << m << endl;
@@ -48,6 +52,12 @@ int main() {
 	cout << "Enter data string: ";
 	if (!debug)getline(cin, s);
 	else cout << s << endl;
+	cout << "Enter generator: ";
+	if (!debug)getline(cin, polynomial);
+	else cout << polynomial << endl;
+	cout << "Enter corruption probability: ";
+	if (!debug)cin >> p;
+	else cout << p << endl;
 	while (s.length() % m != 0) s.append("~");
 	m *= 8;
 	cout << "Data string after padding: \"" << s << "\" (" << s.length() << ")" << endl;
@@ -57,6 +67,7 @@ int main() {
 	string binaryDataBlock = convertToBinaryString(s);
 	string hammingDataBlock = convertToHammingPaddedDataBlock(binaryDataBlock, m);
 	string serializeColmWiseDataBits = serializeColmWise(hammingDataBlock, m + r);
+	string checksumAddedFrame = appendChecksumCRC(serializeColmWiseDataBits, polynomial);
 
 	cout << "Data block:" << " (" << binaryDataBlock.length() << ")" << endl;
 	printDataBlock(binaryDataBlock, m);
@@ -69,9 +80,20 @@ int main() {
 	cout << "Data bits after column-wise serialization:" << " (" << serializeColmWiseDataBits.length() << ")" << endl;
 	cout << serializeColmWiseDataBits << endl;
 
+	cout << "Data bits after adding check-sum:" << " (" << checksumAddedFrame.length() << ")" << endl;
+	printChecksumAddedDataBits(checksumAddedFrame, polynomial);
+
 	cout << "Data bits after corruption:" << endl;
-	string corruptedSerialBlock = corruptDataBlockAndPrint(serializeColmWiseDataBits, P);
-	string corruptHammingDataBlock = deserializeColmWise(corruptedSerialBlock, m + r);
+	string corruptedSerialBlock = corruptDataBlockAndPrint(checksumAddedFrame, p);
+	string removedCheckSumFrame = removeChecksumCRC(corruptedSerialBlock, polynomial);
+
+	if (!checkChecksumOkay(corruptedSerialBlock, polynomial)) cout << "Checksum: error detected" << endl;
+	else cout << "Checksum: no error detected" << endl;
+
+	cout << "Data bits after removing check-sum:" << " (" << removedCheckSumFrame.length() << ")" << endl;
+	cout << removedCheckSumFrame << endl;
+
+	string corruptHammingDataBlock = deserializeColmWise(removedCheckSumFrame, m + r);
 	string correctedDataBlock = convertFromHammingPaddedDataBlock(corruptHammingDataBlock, m);
 	string correctedDataString = convertFromBinaryString(correctedDataBlock);
 
@@ -145,6 +167,7 @@ string serializeColmWise(const string &s, int nChars_per_row) {
 	return serialStr;
 }
 
+// problem
 string deserializeColmWise(const string &s, int nChars_per_row) {
 	string origStr;
 	int nChars_per_colm = s.length() / nChars_per_row;
@@ -168,6 +191,19 @@ string corruptDataBlockAndPrint(const string &s, double corruptionFactor) {
 	}
 	cout << endl;
 	return corrupted;
+}
+
+void printChecksumAddedDataBits(const string &s, string polynomial) {
+	auto crc_len = polynomial.length() - 1;
+	int i;
+	setConsoleColor(WHITE);
+	for (i = 0; i < s.length() - crc_len; ++i) {
+		cout << s[i];
+	}
+	setConsoleColor(CYAN);
+	while (i < s.length()) cout << s[i++];
+	cout << endl;
+	setConsoleColor();
 }
 
 

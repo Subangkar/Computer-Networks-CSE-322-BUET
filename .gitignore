@@ -4,3 +4,5 @@ Assignment05/ErrorDetection/\.idea/
 *.exe
 
 Assignment05/ErrorDetection/cmake-build-debug/
+
+Assignment05/ErrorDetection/venv/

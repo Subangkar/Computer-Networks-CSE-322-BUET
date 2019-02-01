@@ -81,9 +81,9 @@ string hammingPaddedString(const string &s, int m) {
 		else str[i] = s[j++];
 	}
 
-	cout << "-----------" << endl;
-	cout << computeHammingString(str, r) << endl << computeHammingString(computeHammingString(str, r), r) << endl;
-	cout << "-----------" << endl;
+//	cout << "-----------" << endl;
+//	cout << computeHammingString(str, r) << endl << computeHammingString(computeHammingString(str, r), r) << endl;
+//	cout << "-----------" << endl;
 //	/// setting parity @check_bits
 //	for (int rpos = 0; rpos < r; ++rpos) {
 //		str[(1 << rpos) - 1] = hammingOddParity(str, rpos);
@@ -92,7 +92,7 @@ string hammingPaddedString(const string &s, int m) {
 }
 
 string hammingUnPaddedString(const string &s, int m) {
-	string newHammingCodes = computeHammingString(s, m);
+	string newHammingCodes = computeHammingString(s, nhamming_redundant_bits(m));
 
 	/// finding the erroneous bit position
 	int errorPos = 0;
