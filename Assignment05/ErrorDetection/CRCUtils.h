@@ -13,7 +13,7 @@ using namespace std;
 string xorBits(string x, string y, bool leftAlign = false);
 
 /// returns remainder
-string mod2div(string divident, string divisor);
+string mod2div(const string &divident, string divisor);
 
 string computeCRC(const string &s, const string &polynomial);
 
@@ -48,7 +48,7 @@ string xorBits(string x, string y, bool leftAlign) {
 	return result;
 }
 
-string mod2div(string divident, string divisor) {
+string mod2div(const string &divident, string divisor) {
 	auto rem = divident;
 	auto crc_len = divisor.length() - 1;
 	int i = 0;

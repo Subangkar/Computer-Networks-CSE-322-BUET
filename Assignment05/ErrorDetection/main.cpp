@@ -12,6 +12,7 @@ bool debug = true;
 #define M 1
 #define S "a"//"Hamming Code"
 #define P 0.1
+#define POLYNOMIAL "10101"
 
 enum console_color_t {
 	WHITE = 15, GREEN = 10, RED = 4, CYAN = 11
@@ -25,7 +26,7 @@ void printDataBlock(const string &s, int m);
 
 void printHammingCodedColoredString(const string &s);
 
-void printChecksumAddedDataBits(const string &s, string polynomial);
+void printChecksumAddedDataBits(const string &s, const string &polynomial);
 
 string convertToBinaryString(const string &s);
 
@@ -167,12 +168,12 @@ string serializeColmWise(const string &s, int nChars_per_row) {
 	return serialStr;
 }
 
-// problem
+
 string deserializeColmWise(const string &s, int nChars_per_row) {
 	string origStr;
 	int nChars_per_colm = s.length() / nChars_per_row;
-	for (int r = 0; r < nChars_per_row; ++r) {
-		for (int c = 0; c < nChars_per_colm; ++c) {
+	for (int r = 0; r < nChars_per_colm; ++r) {
+		for (int c = 0; c < nChars_per_row; ++c) {
 			origStr += s[c * nChars_per_colm + r];
 		}
 	}
@@ -193,7 +194,7 @@ string corruptDataBlockAndPrint(const string &s, double corruptionFactor) {
 	return corrupted;
 }
 
-void printChecksumAddedDataBits(const string &s, string polynomial) {
+void printChecksumAddedDataBits(const string &s, const string &polynomial) {
 	auto crc_len = polynomial.length() - 1;
 	int i;
 	setConsoleColor(WHITE);

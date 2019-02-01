@@ -6,6 +6,7 @@
 #define ERRORDETECTION_HAMMINGUTILS_H
 
 #include <bitset>
+#include <cstring>
 
 using namespace std;
 
@@ -40,7 +41,7 @@ char hammingOddParity(const string &s, int rpos);
 
 string convertToHammingPaddedDataBlock(const string &s, int m) {
 	string hammingBlock;
-	int n = s.length() / m;//string is a multiple of m
+	auto n = s.length() / m;//string is a multiple of m
 	for (int i = 0; i < n; ++i) {
 		hammingBlock += (hammingPaddedString(string(s, i * m, m), m));
 	}
@@ -49,8 +50,8 @@ string convertToHammingPaddedDataBlock(const string &s, int m) {
 
 string convertFromHammingPaddedDataBlock(const string &s, int m) {
 	string normalBlock;
-	int r = nhamming_redundant_bits(m);
-	int n = s.length() / m;//string is a multiple of m
+	auto r = nhamming_redundant_bits(m);
+	auto n = s.length() / m;//string is a multiple of m
 	for (int i = 0; i < n; ++i) {
 		normalBlock += (hammingUnPaddedString(string(s, i * (m + r), m + r), m));
 	}
@@ -58,14 +59,14 @@ string convertFromHammingPaddedDataBlock(const string &s, int m) {
 }
 
 void printHammingCodedDataBlock(const string &s, int m) {
-	int r = nhamming_redundant_bits(m);
+	auto r = nhamming_redundant_bits(m);
 	for (int i = 0; i * (m + r) < s.length(); ++i) {
 		printHammingCodedColoredString(string(s, i * (m + r), m + r));
 	}
 }
 
 int nhamming_redundant_bits(int m) {
-	int r = 0;
+	auto r = 0;
 	while ((1 << r) < m + r + 1) ++r; // 1<<r == 1*2^r
 	return r;
 }
