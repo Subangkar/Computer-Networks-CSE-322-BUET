@@ -1,0 +1,26 @@
+cd /
+cd home
+cd ubuntu
+cd ns2\ programs/
+
+ns 802_11_rto_bound.tcl
+echo "SIMULATION COMPLETE. BUILDING STAT......"
+awk -f rule_th_del_enr_tcp.awk 802_11_grid_tcp_with_energy_random_traffic.tr > rto_bound11.out
+
+ns 802_11_rto_bound.tcl
+echo "SIMULATION COMPLETE. BUILDING STAT......"
+awk -f rule_th_del_enr_tcp.awk 802_11_grid_tcp_with_energy_random_traffic.tr > rto_bound21.out
+
+ns 802_11_rto_bound.tcl
+echo "SIMULATION COMPLETE. BUILDING STAT......"
+awk -f rule_th_del_enr_tcp.awk 802_11_grid_tcp_with_energy_random_traffic.tr > rto_bound31.out
+
+ns 802_11_rto_bound.tcl
+echo "SIMULATION COMPLETE. BUILDING STAT......"
+awk -f rule_th_del_enr_tcp.awk 802_11_grid_tcp_with_energy_random_traffic.tr > rto_bound41.out
+
+ns 802_11_rto_bound.tcl
+echo "SIMULATION COMPLETE. BUILDING STAT......"
+awk -f rule_th_del_enr_tcp.awk 802_11_grid_tcp_with_energy_random_traffic.tr > rto_bound51.out
+
+

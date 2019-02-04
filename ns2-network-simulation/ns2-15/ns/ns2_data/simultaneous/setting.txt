@@ -1,0 +1,17 @@
+grid: n+n flows (n parallel + n cross)
+
+
+random: n flows
+
+
+sink: n flows
+
+
+
+impact on variation of bandwidth, payload size, packets per second: in grid (udp): n+n flows (n parallel + n cross)
+
+
+impact on variation of number of flows: in random, and sink (udp): m flows (m -> 5, 25, 50) ??
+
+
+

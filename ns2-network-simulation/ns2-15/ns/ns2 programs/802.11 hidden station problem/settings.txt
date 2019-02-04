@@ -1,0 +1,11 @@
+set cbr_size 28
+set cbr_rate 11.0Mb
+set cbr_interval 0.1
+set num_row 19 ;#number of nodes in a row		15~20
+set num_col 19 ;#number of nodes in a column		15~20
+set x_dim 750
+set y_dim 750
+set time_duration 25
+set start_time 5
+set parallel_start_gap 0.1
+set cross_start_gap 0.2

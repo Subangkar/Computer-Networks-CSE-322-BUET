@@ -1,0 +1,30 @@
+xgraph delay.out -geometry 800x800
+ [this command will show graph] 
+xgraph -device ps -o file.ps myfile.out
+[this command will save graph as a pdf(ps) file]
+
+
+loc=Area
+
+nodeVarPs=outputs/$loc/$loc.ps
+
+xgr_thr_file_name_ps=outputs/$loc/throughput.ps
+xgr_delay_file_name_ps=outputs/$loc/delay.ps
+xgr_rDel_file_name_ps=outputs/$loc/deliveryRatio.ps
+xgr_rDrop_file_name_ps=outputs/$loc/dropRatio.ps
+xgr_enrgy_file_name_ps=outputs/$loc/energyConsumption.ps
+
+xgr_thr_file_name=outputs/$loc/throughput.out
+xgr_delay_file_name=outputs/$loc/delay.out
+xgr_rDel_file_name=outputs/$loc/deliveryRatio.out
+xgr_rDrop_file_name=outputs/$loc/dropRatio.out
+xgr_enrgy_file_name=outputs/$loc/energyConsumption.out
+
+xgraph -device ps -o $xgr_thr_file_name_ps $xgr_thr_file_name 
+xgraph -device ps -o $xgr_delay_file_name_ps $xgr_delay_file_name 
+xgraph -device ps -o $xgr_rDel_file_name_ps $xgr_rDel_file_name 
+xgraph -device ps -o $xgr_rDrop_file_name_ps $xgr_rDrop_file_name 
+xgraph -device ps -o $xgr_enrgy_file_name_ps $xgr_enrgy_file_name 
+
+gs -dBATCH -dNOPAUSE -q -sDEVICE=ps2write -sOutputFile=$nodeVarPs $xgr_thr_file_name_ps $xgr_delay_file_name_ps $xgr_rDel_file_name_ps $xgr_rDrop_file_name_ps $xgr_enrgy_file_name_ps
+xdg-open $nodeVarPs

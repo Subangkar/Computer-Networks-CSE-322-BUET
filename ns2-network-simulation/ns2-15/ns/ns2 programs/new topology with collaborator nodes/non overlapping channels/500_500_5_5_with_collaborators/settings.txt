@@ -1,0 +1,27 @@
+set cbr_size 28
+set cbr_rate 11.0Mb
+set cbr_interval 1
+set num_row 5 ;#number of nodes in a row
+set num_col 5 ;#number of nodes in a column
+set x_dim 500
+set y_dim 500
+set time_duration 10
+set start_time 5
+set parallel_start_gap 0.1
+set cross_start_gap 0.2
+
+set cbr_type CBR
+set cbr_size_15 28
+set cbr_rate_15 0.250Mb
+
+
+
+
+#set frequency_ 2.405e+9
+#Phy/WirelessPhy set Rb_ 5*1e6            ;# Bandwidth
+#Phy/WirelessPhy set freq_ $frequency_
+
+#set frequency_ 2.405e+9
+#Phy/WirelessPhy set Rb_ 5*1e6            ;# Bandwidth
+#Phy/WirelessPhy set freq_ $frequency_
+

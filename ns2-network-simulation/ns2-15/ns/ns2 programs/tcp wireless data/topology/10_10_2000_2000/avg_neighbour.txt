@@ -1,0 +1,4 @@
+TOPOLOGY: 100 randomly deployed nodes in 2000 x 2000 m2
+Average # within Xmit range: 4.372000
+Average # within Sensing range: 15.336000
+Average # within Sensing range but outside Xmit range: 10.964000

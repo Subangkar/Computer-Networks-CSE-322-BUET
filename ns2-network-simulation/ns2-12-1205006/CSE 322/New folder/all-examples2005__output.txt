@@ -1,0 +1,174 @@
+$ ns234-blackholeaodv2013 atk3.tcl
+
+num_nodes is set 3
+warning: Please use -channel as shown in tcl/ex/wireless-mitf.tcl
+INITIALIZE THE LIST xListHead
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+
+-------------------------------------------
+
+$ ns234-blackholeaodv2013 blackhole20-1.tcl
+
+num_nodes is set 21
+INITIALIZE THE LIST xListHead
+loading random connection pattern...
+cbr_(0) has been created over udp_(0)
+_o478 and _o481 agents has been connected each other
+cbr_(1) has been created over udp_(1)
+_o485 and _o488 agents has been connected each other
+cbr_(2) has been created over udp_(2)
+_o492 and _o495 agents has been connected each other
+cbr_(3) has been created over udp_(3)
+_o499 and _o502 agents has been connected each other
+cbr_(4) has been created over udp_(4)
+_o506 and _o509 agents has been connected each other
+cbr_(5) has been created over udp_(5)
+_o513 and _o516 agents has been connected each other
+cbr_(6) has been created over udp_(6)
+_o520 and _o523 agents has been connected each other
+cbr_(7) has been created over udp_(7)
+_o527 and _o530 agents has been connected each other
+cbr_(8) has been created over udp_(8)
+_o534 and _o537 agents has been connected each other
+Starting simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+
+-------------------------------------------------
+
+$ ns234-blackholeaodv2013 blackhole20-1-vbr.tcl
+
+num_nodes is set 21
+INITIALIZE THE LIST xListHead
+loading random connection pattern...
+cbr_(0) has been created over udp_(0)
+_o548 and _o551 agents has been connected each other
+cbr_(1) has been created over udp_(1)
+_o555 and _o558 agents has been connected each other
+cbr_(2) has been created over udp_(2)
+_o562 and _o565 agents has been connected each other
+cbr_(3) has been created over udp_(3)
+_o569 and _o572 agents has been connected each other
+cbr_(4) has been created over udp_(4)
+_o576 and _o579 agents has been connected each other
+cbr_(5) has been created over udp_(5)
+_o583 and _o586 agents has been connected each other
+cbr_(6) has been created over udp_(6)
+_o590 and _o593 agents has been connected each other
+cbr_(7) has been created over udp_(7)
+_o597 and _o600 agents has been connected each other
+cbr_(8) has been created over udp_(8)
+_o604 and _o607 agents has been connected each other
+Starting simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+
+---------------------------------------------------
+
+$ ns234-blackholeaodv2013 blackholeaodv-btechnos.tcl
+
+num_nodes is set 20
+Creating nodes...
+INITIALIZE THE LIST xListHead
+Loading random connection pattern...
+cbr_(0) has been created over udp_(0)
+udp_(0) and null_(0) agents has been connected each other
+cbr_(1) has been created over udp_(1)
+udp_(1) and null_(1) agents has been connected each other
+cbr_(2) has been created over udp_(2)
+udp_(2) and null_(2) agents has been connected each other
+cbr_(3) has been created over udp_(3)
+udp_(3) and null_(3) agents has been connected each other
+cbr_(4) has been created over udp_(4)
+udp_(4) and null_(4) agents has been connected each other
+cbr_(5) has been created over udp_(5)
+udp_(5) and null_(5) agents has been connected each other
+cbr_(6) has been created over udp_(6)
+udp_(6) and null_(6) agents has been connected each other
+cbr_(7) has been created over udp_(7)
+udp_(7) and null_(7) agents has been connected each other
+cbr_(8) has been created over udp_(8)
+udp_(8) and null_(8) agents has been connected each other
+Starting Simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+
+-------------------------------------------------------
+
+$ ns234-blackholeaodv2013 blackholeAODV-DevangPatel.tcl
+
+num_nodes is set 20                                                                                                            
+Creating nodes...                                                                                                              
+INITIALIZE THE LIST xListHead                                                                                                  
+Loading random connection pattern...
+cbr_(0) has been created over udp_(0)
+udp_(0) and null_(0) agents has been connected each other
+cbr_(1) has been created over udp_(1)
+udp_(1) and null_(1) agents has been connected each other
+cbr_(2) has been created over udp_(2)
+udp_(2) and null_(2) agents has been connected each other
+cbr_(3) has been created over udp_(3)
+udp_(3) and null_(3) agents has been connected each other
+cbr_(4) has been created over udp_(4)
+udp_(4) and null_(4) agents has been connected each other
+cbr_(5) has been created over udp_(5)
+udp_(5) and null_(5) agents has been connected each other
+cbr_(6) has been created over udp_(6)
+udp_(6) and null_(6) agents has been connected each other
+cbr_(7) has been created over udp_(7)
+udp_(7) and null_(7) agents has been connected each other
+cbr_(8) has been created over udp_(8)
+udp_(8) and null_(8) agents has been connected each other
+Starting Simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+
+------------------------------------------------
+
+$ ns234-blackholeaodv2013 sim1forBlackHole_5.tcl 
+
+num_nodes is set 20
+Creating nodes...
+INITIALIZE THE LIST xListHead
+Loading random connection pattern...
+Starting Simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+NS EXITING...
+
+------------------------------------------
+
+$ ns234-blackholeaodv2013 test1-nadiui.tcl                       
+
+num_nodes is set 6
+INITIALIZE THE LIST xListHead
+Starting Simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE!
+$ ns234-blackholeaodv2013 testblack-1.tcl 
+num_nodes is set 9
+warning: Please use -channel as shown in tcl/ex/wireless-mitf.tcl
+INITIALIZE THE LIST xListHead
+Starting Simulation...
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+SORTING LISTS ...DONE! 
+
+#############################################
+
+Output files :
+bhatk.tr      BlackHole20.tr  outblack.tr  sim1forBlackHole.tr
+BlackH-21.tr  BlackHole.tr    out.tr
+
+BlackH-21.nam    BlackHole.nam  out.nam   wrlsaodv.nam
+BlackHole20.nam  outblack.nam   sim1forBlackHole.nam
+
+#############################################

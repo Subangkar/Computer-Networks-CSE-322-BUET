@@ -1,0 +1,4 @@
+xgraph delay.out -geometry 800x800
+ [this command will show graph] 
+xgraph -device ps -o file.ps myfile.out
+[this command will save graph as a pdf(ps) file]
