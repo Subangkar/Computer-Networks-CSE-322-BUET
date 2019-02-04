@@ -1,0 +1,650 @@
+
+EVENT time: 9.356975,  type: 1, fromlayer5  entity: 0
+[A] @9.356975 Sent packet to layer3. Packet[seq=0,ack=15,check=1858,data=aaaaaaaaaaaaaaaaaaa..]
+
+EVENT time: 14.849421,  type: 2, fromlayer3  entity: 1
+[B] @14.849421 Receive a packet from layer3. Packet[seq=0,ack=15,check=1858,data=aaaaaaaaaaaaaaaaaaa..]
+[B] @14.849421 Sent packet to layer5. Packet[seq=0,ack=15,check=1858,data=aaaaaaaaaaaaaaaaaaa..]
+[B] @14.849421 Send ACK packet to layer3. Packet[seq=0,ack=0,check=1843,data=aaaaaaaaaaaaaaaaaaa..]
+
+EVENT time: 17.348551,  type: 2, fromlayer3  entity: 0
+[A] @17.348551 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=1843,data=aaaaaaaaaaaaaaaaaaa..]
+[A] @17.348551 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=1843,data=aaaaaaaaaaaaaaaaaaa..]
+
+EVENT time: 160.771515,  type: 1, fromlayer5  entity: 0
+[A] @160.771515 Sent packet to layer3. Packet[seq=1,ack=15,check=1878,data=bbbbbbbbbbbbbbbbbbb..]
+
+EVENT time: 162.172806,  type: 2, fromlayer3  entity: 1
+[B] @162.172806 Receive a packet from layer3. Packet[seq=1,ack=15,check=1878,data=bbbbbbbbbbbbbbbbbbb..]
+[B] @162.172806 Sent packet to layer5. Packet[seq=1,ack=15,check=1878,data=bbbbbbbbbbbbbbbbbbb..]
+[B] @162.172806 Send ACK packet to layer3. Packet[seq=1,ack=1,check=1864,data=bbbbbbbbbbbbbbbbbbb..]
+
+EVENT time: 167.609497,  type: 2, fromlayer3  entity: 0
+[A] @167.609497 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=1864,data=bbbbbbbbbbbbbbbbbbb..]
+[A] @167.609497 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=1864,data=bbbbbbbbbbbbbbbbbbb..]
+
+EVENT time: 232.203140,  type: 1, fromlayer5  entity: 0
+[A] @232.203140 Sent packet to layer3. Packet[seq=0,ack=15,check=1896,data=ccccccccccccccccccc..]
+
+EVENT time: 235.699310,  type: 2, fromlayer3  entity: 1
+[B] @235.699310 Receive a packet from layer3. Packet[seq=0,ack=15,check=1896,data=ccccccccccccccccccc..]
+[B] @235.699310 Sent packet to layer5. Packet[seq=0,ack=15,check=1896,data=ccccccccccccccccccc..]
+[B] @235.699310 Send ACK packet to layer3. Packet[seq=0,ack=0,check=1881,data=ccccccccccccccccccc..]
+
+EVENT time: 238.584351,  type: 2, fromlayer3  entity: 0
+[A] @238.584351 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=1881,data=ccccccccccccccccccc..]
+[A] @238.584351 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=1881,data=ccccccccccccccccccc..]
+
+EVENT time: 333.280457,  type: 1, fromlayer5  entity: 0
+[A] @333.280457 Sent packet to layer3. Packet[seq=1,ack=15,check=1916,data=ddddddddddddddddddd..]
+
+EVENT time: 337.856903,  type: 2, fromlayer3  entity: 1
+[B] @337.856903 Receive a packet from layer3. Packet[seq=1,ack=15,check=1916,data=ddddddddddddddddddd..]
+[B] @337.856903 Sent packet to layer5. Packet[seq=1,ack=15,check=1916,data=ddddddddddddddddddd..]
+[B] @337.856903 Send ACK packet to layer3. Packet[seq=1,ack=1,check=1902,data=ddddddddddddddddddd..]
+
+EVENT time: 345.886169,  type: 2, fromlayer3  entity: 0
+[A] @345.886169 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=1902,data=ddddddddddddddddddd..]
+[A] @345.886169 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=1902,data=ddddddddddddddddddd..]
+
+EVENT time: 505.789368,  type: 1, fromlayer5  entity: 0
+[A] @505.789368 Sent packet to layer3. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 511.350769,  type: 2, fromlayer3  entity: 1
+[B] @511.350769 Receive a packet from layer3. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @511.350769 Sent packet to layer5. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+          TOLAYER3: packet being lost
+[B] @511.350769 Send ACK packet to layer3. Packet[seq=0,ack=0,check=1919,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 525.789368,  type: 0, timerinterrupt   entity: 0
+[A] @525.789368 Timeout occurred. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[A] @525.789368 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 531.736938,  type: 2, fromlayer3  entity: 1
+[B] @531.736938 Receive a packet from layer3. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @531.736938 Duplicated packet detected. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @531.736938 Send ACK packet to layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 533.934753,  type: 2, fromlayer3  entity: 0
+[A] @533.934753 Receive ACK packet from layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @533.934753 ACK is not expected : NACK. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @533.934753 Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+          TOLAYER3: packet being lost
+
+EVENT time: 553.934753,  type: 0, timerinterrupt   entity: 0
+[A] @553.934753 Timeout occurred. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[A] @553.934753 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 558.513672,  type: 2, fromlayer3  entity: 1
+[B] @558.513672 Receive a packet from layer3. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @558.513672 Duplicated packet detected. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @558.513672 Send ACK packet to layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 566.256165,  type: 2, fromlayer3  entity: 0
+[A] @566.256165 Receive ACK packet from layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @566.256165 ACK is not expected : NACK. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @566.256165 Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+          TOLAYER3: packet being lost
+
+EVENT time: 574.632996,  type: 1, fromlayer5  entity: 0
+[A] @574.632996 Drop this message, last message have not finished. Message[data=fffffffffffffffffff..]
+
+EVENT time: 586.256165,  type: 0, timerinterrupt   entity: 0
+[A] @586.256165 Timeout occurred. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[A] @586.256165 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 588.176025,  type: 2, fromlayer3  entity: 1
+[B] @588.176025 Receive a packet from layer3. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @588.176025 Duplicated packet detected. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+          TOLAYER3: packet being corrupted
+[B] @588.176025 Send ACK packet to layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 597.810974,  type: 2, fromlayer3  entity: 0
+[A] @597.810974 Receive ACK packet from layer3. Packet[seq=999999,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @597.810974 ACK packet is corrupted. Packet[seq=999999,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 606.256165,  type: 0, timerinterrupt   entity: 0
+[A] @606.256165 Timeout occurred. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[A] @606.256165 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 612.337524,  type: 2, fromlayer3  entity: 1
+[B] @612.337524 Receive a packet from layer3. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @612.337524 Duplicated packet detected. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[B] @612.337524 Send ACK packet to layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 616.889221,  type: 2, fromlayer3  entity: 0
+[A] @616.889221 Receive ACK packet from layer3. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @616.889221 ACK is not expected : NACK. Packet[seq=0,ack=1,check=1920,data=eeeeeeeeeeeeeeeeeee..]
+[A] @616.889221 Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+          TOLAYER3: packet being lost
+
+EVENT time: 636.889221,  type: 0, timerinterrupt   entity: 0
+[A] @636.889221 Timeout occurred. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+[A] @636.889221 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=1934,data=eeeeeeeeeeeeeeeeeee..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 644.600952,  type: 2, fromlayer3  entity: 1
+[B] @644.600952 Receive a packet from layer3. Packet[seq=0,ack=15,check=1934,data=Zeeeeeeeeeeeeeeeeee..]
+[B] @644.600952 Data Packet is corrupted. Packet[seq=0,ack=15,check=1934,data=Zeeeeeeeeeeeeeeeeee..]
+[B] @644.600952 Send NACK packet to layer3. Packet[seq=0,ack=0,check=1908,data=Zeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 650.296631,  type: 2, fromlayer3  entity: 0
+[A] @650.296631 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=1908,data=Zeeeeeeeeeeeeeeeeee..]
+[A] @650.296631 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=1908,data=Zeeeeeeeeeeeeeeeeee..]
+
+EVENT time: 696.566650,  type: 1, fromlayer5  entity: 0
+[A] @696.566650 Sent packet to layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 699.432739,  type: 2, fromlayer3  entity: 1
+[B] @699.432739 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @699.432739 Sent packet to layer5. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+[B] @699.432739 Send ACK packet to layer3. Packet[seq=1,ack=1,check=1959,data=ggggggggggggggggggg..]
+
+EVENT time: 716.566650,  type: 0, timerinterrupt   entity: 0
+[A] @716.566650 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @716.566650 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 726.090393,  type: 2, fromlayer3  entity: 1
+[B] @726.090393 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=Zgggggggggggggggggg..]
+[B] @726.090393 Data Packet is corrupted. Packet[seq=1,ack=15,check=1973,data=Zgggggggggggggggggg..]
+          TOLAYER3: packet being lost
+[B] @726.090393 Send NACK packet to layer3. Packet[seq=1,ack=1,check=1946,data=Zgggggggggggggggggg..]
+
+EVENT time: 736.566650,  type: 0, timerinterrupt   entity: 0
+[A] @736.566650 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @736.566650 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+
+EVENT time: 756.566650,  type: 0, timerinterrupt   entity: 0
+[A] @756.566650 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @756.566650 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 757.727356,  type: 2, fromlayer3  entity: 1
+[B] @757.727356 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @757.727356 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @757.727356 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 761.923645,  type: 2, fromlayer3  entity: 0
+[A] @761.923645 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @761.923645 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @761.923645 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+
+EVENT time: 781.923645,  type: 0, timerinterrupt   entity: 0
+[A] @781.923645 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @781.923645 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+
+EVENT time: 801.923645,  type: 0, timerinterrupt   entity: 0
+[A] @801.923645 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @801.923645 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 803.467224,  type: 2, fromlayer3  entity: 1
+[B] @803.467224 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @803.467224 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+[B] @803.467224 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 821.923645,  type: 0, timerinterrupt   entity: 0
+[A] @821.923645 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @821.923645 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 827.841553,  type: 2, fromlayer3  entity: 1
+[B] @827.841553 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @827.841553 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being corrupted
+[B] @827.841553 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 835.236328,  type: 2, fromlayer3  entity: 0
+[A] @835.236328 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=Zgggggggggggggggggg..]
+[A] @835.236328 ACK packet is corrupted. Packet[seq=1,ack=0,check=1958,data=Zgggggggggggggggggg..]
+
+EVENT time: 841.923645,  type: 0, timerinterrupt   entity: 0
+[A] @841.923645 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @841.923645 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+
+EVENT time: 861.923645,  type: 0, timerinterrupt   entity: 0
+[A] @861.923645 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @861.923645 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 866.432678,  type: 1, fromlayer5  entity: 0
+[A] @866.432678 Drop this message, last message have not finished. Message[data=hhhhhhhhhhhhhhhhhhh..]
+
+EVENT time: 866.606384,  type: 2, fromlayer3  entity: 1
+[B] @866.606384 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @866.606384 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @866.606384 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 876.372375,  type: 2, fromlayer3  entity: 0
+[A] @876.372375 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @876.372375 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @876.372375 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 884.354370,  type: 2, fromlayer3  entity: 1
+[B] @884.354370 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @884.354370 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @884.354370 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 886.016602,  type: 2, fromlayer3  entity: 0
+[A] @886.016602 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @886.016602 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @886.016602 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 893.035950,  type: 2, fromlayer3  entity: 1
+[B] @893.035950 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @893.035950 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being corrupted
+[B] @893.035950 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 894.822327,  type: 2, fromlayer3  entity: 0
+[A] @894.822327 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=Zgggggggggggggggggg..]
+[A] @894.822327 ACK packet is corrupted. Packet[seq=1,ack=0,check=1958,data=Zgggggggggggggggggg..]
+
+EVENT time: 906.016602,  type: 0, timerinterrupt   entity: 0
+[A] @906.016602 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @906.016602 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 912.252319,  type: 2, fromlayer3  entity: 1
+[B] @912.252319 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @912.252319 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+[B] @912.252319 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 926.016602,  type: 0, timerinterrupt   entity: 0
+[A] @926.016602 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @926.016602 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 929.971436,  type: 2, fromlayer3  entity: 1
+[B] @929.971436 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @929.971436 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @929.971436 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 931.150208,  type: 1, fromlayer5  entity: 0
+[A] @931.150208 Drop this message, last message have not finished. Message[data=iiiiiiiiiiiiiiiiiii..]
+
+EVENT time: 931.918762,  type: 2, fromlayer3  entity: 0
+[A] @931.918762 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @931.918762 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @931.918762 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+
+EVENT time: 951.918762,  type: 0, timerinterrupt   entity: 0
+[A] @951.918762 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @951.918762 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 960.235901,  type: 2, fromlayer3  entity: 1
+[B] @960.235901 Receive a packet from layer3. Packet[seq=999999,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @960.235901 Data Packet is corrupted. Packet[seq=999999,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being lost
+[B] @960.235901 Send NACK packet to layer3. Packet[seq=999999,ack=1,check=1001957,data=ggggggggggggggggggg..]
+
+EVENT time: 971.918762,  type: 0, timerinterrupt   entity: 0
+[A] @971.918762 Timeout occurred. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[A] @971.918762 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 976.003845,  type: 2, fromlayer3  entity: 1
+[B] @976.003845 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @976.003845 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @976.003845 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 977.015137,  type: 2, fromlayer3  entity: 0
+[A] @977.015137 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @977.015137 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @977.015137 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 980.046326,  type: 2, fromlayer3  entity: 1
+[B] @980.046326 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @980.046326 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @980.046326 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 984.234375,  type: 2, fromlayer3  entity: 0
+[A] @984.234375 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @984.234375 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @984.234375 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+
+EVENT time: 992.516907,  type: 2, fromlayer3  entity: 1
+[B] @992.516907 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @992.516907 Duplicated packet detected. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+[B] @992.516907 Send ACK packet to layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+
+EVENT time: 994.124451,  type: 2, fromlayer3  entity: 0
+[A] @994.124451 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @994.124451 ACK is not expected : NACK. Packet[seq=1,ack=0,check=1958,data=ggggggggggggggggggg..]
+[A] @994.124451 Resend the packet again. Packet[seq=1,ack=15,check=1973,data=ggggggggggggggggggg..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 998.740417,  type: 2, fromlayer3  entity: 1
+[B] @998.740417 Receive a packet from layer3. Packet[seq=1,ack=15,check=1973,data=Zgggggggggggggggggg..]
+[B] @998.740417 Data Packet is corrupted. Packet[seq=1,ack=15,check=1973,data=Zgggggggggggggggggg..]
+[B] @998.740417 Send NACK packet to layer3. Packet[seq=1,ack=1,check=1946,data=Zgggggggggggggggggg..]
+
+EVENT time: 1000.104614,  type: 2, fromlayer3  entity: 0
+[A] @1000.104614 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=1946,data=Zgggggggggggggggggg..]
+[A] @1000.104614 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=1946,data=Zgggggggggggggggggg..]
+
+EVENT time: 1101.333618,  type: 1, fromlayer5  entity: 0
+[A] @1101.333618 Sent packet to layer3. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1104.193359,  type: 2, fromlayer3  entity: 1
+[B] @1104.193359 Receive a packet from layer3. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @1104.193359 Sent packet to layer5. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+          TOLAYER3: packet being corrupted
+[B] @1104.193359 Send ACK packet to layer3. Packet[seq=0,ack=0,check=2014,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1109.237549,  type: 2, fromlayer3  entity: 0
+[A] @1109.237549 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=2014,data=Zjjjjjjjjjjjjjjjjjj..]
+[A] @1109.237549 ACK packet is corrupted. Packet[seq=0,ack=0,check=2014,data=Zjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1121.333618,  type: 0, timerinterrupt   entity: 0
+[A] @1121.333618 Timeout occurred. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[A] @1121.333618 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1130.922119,  type: 2, fromlayer3  entity: 1
+[B] @1130.922119 Receive a packet from layer3. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @1130.922119 Duplicated packet detected. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+          TOLAYER3: packet being corrupted
+[B] @1130.922119 Send ACK packet to layer3. Packet[seq=0,ack=1,check=2015,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1135.408447,  type: 2, fromlayer3  entity: 0
+[A] @1135.408447 Receive ACK packet from layer3. Packet[seq=0,ack=1,check=2015,data=Zjjjjjjjjjjjjjjjjjj..]
+[A] @1135.408447 ACK packet is corrupted. Packet[seq=0,ack=1,check=2015,data=Zjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1141.333618,  type: 0, timerinterrupt   entity: 0
+[A] @1141.333618 Timeout occurred. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[A] @1141.333618 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1144.627686,  type: 2, fromlayer3  entity: 1
+[B] @1144.627686 Receive a packet from layer3. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @1144.627686 Duplicated packet detected. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+          TOLAYER3: packet being lost
+[B] @1144.627686 Send ACK packet to layer3. Packet[seq=0,ack=1,check=2015,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1161.333618,  type: 0, timerinterrupt   entity: 0
+[A] @1161.333618 Timeout occurred. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[A] @1161.333618 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1165.155762,  type: 2, fromlayer3  entity: 1
+[B] @1165.155762 Receive a packet from layer3. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @1165.155762 Duplicated packet detected. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+[B] @1165.155762 Send ACK packet to layer3. Packet[seq=0,ack=1,check=2015,data=jjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1171.977539,  type: 2, fromlayer3  entity: 0
+[A] @1171.977539 Receive ACK packet from layer3. Packet[seq=0,ack=1,check=2015,data=jjjjjjjjjjjjjjjjjjj..]
+[A] @1171.977539 ACK is not expected : NACK. Packet[seq=0,ack=1,check=2015,data=jjjjjjjjjjjjjjjjjjj..]
+[A] @1171.977539 Resend the packet again. Packet[seq=0,ack=15,check=2029,data=jjjjjjjjjjjjjjjjjjj..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 1173.821533,  type: 2, fromlayer3  entity: 1
+[B] @1173.821533 Receive a packet from layer3. Packet[seq=0,ack=15,check=2029,data=Zjjjjjjjjjjjjjjjjjj..]
+[B] @1173.821533 Data Packet is corrupted. Packet[seq=0,ack=15,check=2029,data=Zjjjjjjjjjjjjjjjjjj..]
+          TOLAYER3: packet being corrupted
+[B] @1173.821533 Send NACK packet to layer3. Packet[seq=0,ack=0,check=1998,data=Zjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1181.804810,  type: 1, fromlayer5  entity: 0
+[A] @1181.804810 Drop this message, last message have not finished. Message[data=kkkkkkkkkkkkkkkkkkk..]
+
+EVENT time: 1182.149902,  type: 2, fromlayer3  entity: 0
+[A] @1182.149902 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=1998,data=Zjjjjjjjjjjjjjjjjjj..]
+[A] @1182.149902 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=1998,data=Zjjjjjjjjjjjjjjjjjj..]
+
+EVENT time: 1354.203857,  type: 1, fromlayer5  entity: 0
+[A] @1354.203857 Sent packet to layer3. Packet[seq=1,ack=15,check=2068,data=lllllllllllllllllll..]
+
+EVENT time: 1358.038696,  type: 2, fromlayer3  entity: 1
+[B] @1358.038696 Receive a packet from layer3. Packet[seq=1,ack=15,check=2068,data=lllllllllllllllllll..]
+[B] @1358.038696 Sent packet to layer5. Packet[seq=1,ack=15,check=2068,data=lllllllllllllllllll..]
+[B] @1358.038696 Send ACK packet to layer3. Packet[seq=1,ack=1,check=2054,data=lllllllllllllllllll..]
+
+EVENT time: 1366.334106,  type: 2, fromlayer3  entity: 0
+[A] @1366.334106 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=2054,data=lllllllllllllllllll..]
+[A] @1366.334106 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=2054,data=lllllllllllllllllll..]
+
+EVENT time: 1473.097900,  type: 1, fromlayer5  entity: 0
+[A] @1473.097900 Sent packet to layer3. Packet[seq=0,ack=15,check=2086,data=mmmmmmmmmmmmmmmmmmm..]
+
+EVENT time: 1474.296509,  type: 2, fromlayer3  entity: 1
+[B] @1474.296509 Receive a packet from layer3. Packet[seq=0,ack=15,check=2086,data=mmmmmmmmmmmmmmmmmmm..]
+[B] @1474.296509 Sent packet to layer5. Packet[seq=0,ack=15,check=2086,data=mmmmmmmmmmmmmmmmmmm..]
+          TOLAYER3: packet being corrupted
+[B] @1474.296509 Send ACK packet to layer3. Packet[seq=0,ack=0,check=2071,data=mmmmmmmmmmmmmmmmmmm..]
+
+EVENT time: 1479.059448,  type: 2, fromlayer3  entity: 0
+[A] @1479.059448 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=2071,data=Zmmmmmmmmmmmmmmmmmm..]
+[A] @1479.059448 ACK packet is corrupted. Packet[seq=0,ack=0,check=2071,data=Zmmmmmmmmmmmmmmmmmm..]
+
+EVENT time: 1480.062256,  type: 1, fromlayer5  entity: 0
+[A] @1480.062256 Drop this message, last message have not finished. Message[data=nnnnnnnnnnnnnnnnnnn..]
+
+EVENT time: 1493.097900,  type: 0, timerinterrupt   entity: 0
+[A] @1493.097900 Timeout occurred. Packet[seq=0,ack=15,check=2086,data=mmmmmmmmmmmmmmmmmmm..]
+[A] @1493.097900 Timeout! Resend the packet again. Packet[seq=0,ack=15,check=2086,data=mmmmmmmmmmmmmmmmmmm..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 1496.614380,  type: 2, fromlayer3  entity: 1
+[B] @1496.614380 Receive a packet from layer3. Packet[seq=0,ack=15,check=2086,data=Zmmmmmmmmmmmmmmmmmm..]
+[B] @1496.614380 Data Packet is corrupted. Packet[seq=0,ack=15,check=2086,data=Zmmmmmmmmmmmmmmmmmm..]
+[B] @1496.614380 Send NACK packet to layer3. Packet[seq=0,ack=0,check=2052,data=Zmmmmmmmmmmmmmmmmmm..]
+
+EVENT time: 1505.311401,  type: 2, fromlayer3  entity: 0
+[A] @1505.311401 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=2052,data=Zmmmmmmmmmmmmmmmmmm..]
+[A] @1505.311401 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=2052,data=Zmmmmmmmmmmmmmmmmmm..]
+
+EVENT time: 1543.906982,  type: 1, fromlayer5  entity: 0
+          TOLAYER3: packet being corrupted
+[A] @1543.906982 Sent packet to layer3. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+
+EVENT time: 1545.428589,  type: 2, fromlayer3  entity: 1
+[B] @1545.428589 Receive a packet from layer3. Packet[seq=1,ack=15,check=2125,data=Zoooooooooooooooooo..]
+[B] @1545.428589 Data Packet is corrupted. Packet[seq=1,ack=15,check=2125,data=Zoooooooooooooooooo..]
+[B] @1545.428589 Send NACK packet to layer3. Packet[seq=1,ack=0,check=2089,data=Zoooooooooooooooooo..]
+
+EVENT time: 1549.135986,  type: 2, fromlayer3  entity: 0
+[A] @1549.135986 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=2089,data=Zoooooooooooooooooo..]
+[A] @1549.135986 ACK is not expected : NACK. Packet[seq=1,ack=0,check=2089,data=Zoooooooooooooooooo..]
+[A] @1549.135986 Resend the packet again. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+
+EVENT time: 1550.682861,  type: 2, fromlayer3  entity: 1
+[B] @1550.682861 Receive a packet from layer3. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+[B] @1550.682861 Sent packet to layer5. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+          TOLAYER3: packet being corrupted
+[B] @1550.682861 Send ACK packet to layer3. Packet[seq=1,ack=1,check=2111,data=ooooooooooooooooooo..]
+
+EVENT time: 1554.116699,  type: 2, fromlayer3  entity: 0
+[A] @1554.116699 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=2111,data=Zoooooooooooooooooo..]
+[A] @1554.116699 ACK packet is corrupted. Packet[seq=1,ack=1,check=2111,data=Zoooooooooooooooooo..]
+
+EVENT time: 1569.135986,  type: 0, timerinterrupt   entity: 0
+[A] @1569.135986 Timeout occurred. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+[A] @1569.135986 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 1574.413330,  type: 1, fromlayer5  entity: 0
+[A] @1574.413330 Drop this message, last message have not finished. Message[data=ppppppppppppppppppp..]
+
+EVENT time: 1576.305786,  type: 2, fromlayer3  entity: 1
+[B] @1576.305786 Receive a packet from layer3. Packet[seq=1,ack=15,check=2125,data=Zoooooooooooooooooo..]
+[B] @1576.305786 Data Packet is corrupted. Packet[seq=1,ack=15,check=2125,data=Zoooooooooooooooooo..]
+          TOLAYER3: packet being lost
+[B] @1576.305786 Send NACK packet to layer3. Packet[seq=1,ack=1,check=2090,data=Zoooooooooooooooooo..]
+
+EVENT time: 1589.135986,  type: 0, timerinterrupt   entity: 0
+[A] @1589.135986 Timeout occurred. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+[A] @1589.135986 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2125,data=ooooooooooooooooooo..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 1594.744385,  type: 2, fromlayer3  entity: 1
+[B] @1594.744385 Receive a packet from layer3. Packet[seq=1,ack=15,check=2125,data=Zoooooooooooooooooo..]
+[B] @1594.744385 Data Packet is corrupted. Packet[seq=1,ack=15,check=2125,data=Zoooooooooooooooooo..]
+[B] @1594.744385 Send NACK packet to layer3. Packet[seq=1,ack=1,check=2090,data=Zoooooooooooooooooo..]
+
+EVENT time: 1596.907593,  type: 2, fromlayer3  entity: 0
+[A] @1596.907593 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=2090,data=Zoooooooooooooooooo..]
+[A] @1596.907593 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=2090,data=Zoooooooooooooooooo..]
+
+EVENT time: 1694.119141,  type: 1, fromlayer5  entity: 0
+[A] @1694.119141 Sent packet to layer3. Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 1700.826660,  type: 2, fromlayer3  entity: 1
+[B] @1700.826660 Receive a packet from layer3. Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+[B] @1700.826660 Sent packet to layer5. Packet[seq=0,ack=15,check=2162,data=qqqqqqqqqqqqqqqqqqq..]
+[B] @1700.826660 Send ACK packet to layer3. Packet[seq=0,ack=0,check=2147,data=qqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 1703.994385,  type: 2, fromlayer3  entity: 0
+[A] @1703.994385 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=2147,data=qqqqqqqqqqqqqqqqqqq..]
+[A] @1703.994385 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=2147,data=qqqqqqqqqqqqqqqqqqq..]
+
+EVENT time: 1788.885254,  type: 1, fromlayer5  entity: 0
+[A] @1788.885254 Sent packet to layer3. Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 1796.421265,  type: 2, fromlayer3  entity: 1
+[B] @1796.421265 Receive a packet from layer3. Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+[B] @1796.421265 Sent packet to layer5. Packet[seq=1,ack=15,check=2182,data=rrrrrrrrrrrrrrrrrrr..]
+[B] @1796.421265 Send ACK packet to layer3. Packet[seq=1,ack=1,check=2168,data=rrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 1799.488159,  type: 2, fromlayer3  entity: 0
+[A] @1799.488159 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=2168,data=rrrrrrrrrrrrrrrrrrr..]
+[A] @1799.488159 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=2168,data=rrrrrrrrrrrrrrrrrrr..]
+
+EVENT time: 1858.705444,  type: 1, fromlayer5  entity: 0
+          TOLAYER3: packet being corrupted
+[A] @1858.705444 Sent packet to layer3. Packet[seq=0,ack=15,check=2200,data=sssssssssssssssssss..]
+
+EVENT time: 1865.031006,  type: 2, fromlayer3  entity: 1
+[B] @1865.031006 Receive a packet from layer3. Packet[seq=0,ack=15,check=2200,data=Zssssssssssssssssss..]
+[B] @1865.031006 Data Packet is corrupted. Packet[seq=0,ack=15,check=2200,data=Zssssssssssssssssss..]
+          TOLAYER3: packet being corrupted
+[B] @1865.031006 Send NACK packet to layer3. Packet[seq=0,ack=1,check=2161,data=Zssssssssssssssssss..]
+
+EVENT time: 1867.914429,  type: 2, fromlayer3  entity: 0
+[A] @1867.914429 Receive ACK packet from layer3. Packet[seq=0,ack=1,check=2161,data=Zssssssssssssssssss..]
+[A] @1867.914429 ACK is not expected : NACK. Packet[seq=0,ack=1,check=2161,data=Zssssssssssssssssss..]
+[A] @1867.914429 Resend the packet again. Packet[seq=0,ack=15,check=2200,data=sssssssssssssssssss..]
+
+EVENT time: 1871.462524,  type: 2, fromlayer3  entity: 1
+[B] @1871.462524 Receive a packet from layer3. Packet[seq=0,ack=15,check=2200,data=sssssssssssssssssss..]
+[B] @1871.462524 Sent packet to layer5. Packet[seq=0,ack=15,check=2200,data=sssssssssssssssssss..]
+[B] @1871.462524 Send ACK packet to layer3. Packet[seq=0,ack=0,check=2185,data=sssssssssssssssssss..]
+
+EVENT time: 1878.211792,  type: 2, fromlayer3  entity: 0
+[A] @1878.211792 Receive ACK packet from layer3. Packet[seq=0,ack=0,check=2185,data=sssssssssssssssssss..]
+[A] @1878.211792 ACK packet process successfully accomplished!!. Packet[seq=0,ack=0,check=2185,data=sssssssssssssssssss..]
+
+EVENT time: 1976.891479,  type: 1, fromlayer5  entity: 0
+[A] @1976.891479 Sent packet to layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+
+EVENT time: 1986.115601,  type: 2, fromlayer3  entity: 1
+[B] @1986.115601 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @1986.115601 Sent packet to layer5. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being lost
+[B] @1986.115601 Send ACK packet to layer3. Packet[seq=1,ack=1,check=2206,data=ttttttttttttttttttt..]
+
+EVENT time: 1996.891479,  type: 0, timerinterrupt   entity: 0
+[A] @1996.891479 Timeout occurred. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[A] @1996.891479 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being lost
+
+EVENT time: 2016.891479,  type: 0, timerinterrupt   entity: 0
+[A] @2016.891479 Timeout occurred. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[A] @2016.891479 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 2020.665283,  type: 2, fromlayer3  entity: 1
+[B] @2020.665283 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=Ztttttttttttttttttt..]
+[B] @2020.665283 Data Packet is corrupted. Packet[seq=1,ack=15,check=2220,data=Ztttttttttttttttttt..]
+          TOLAYER3: packet being lost
+[B] @2020.665283 Send NACK packet to layer3. Packet[seq=1,ack=1,check=2180,data=Ztttttttttttttttttt..]
+
+EVENT time: 2036.891479,  type: 0, timerinterrupt   entity: 0
+[A] @2036.891479 Timeout occurred. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[A] @2036.891479 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 2039.146118,  type: 2, fromlayer3  entity: 1
+[B] @2039.146118 Receive a packet from layer3. Packet[seq=999999,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2039.146118 Data Packet is corrupted. Packet[seq=999999,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being corrupted
+[B] @2039.146118 Send NACK packet to layer3. Packet[seq=999999,ack=1,check=1002204,data=ttttttttttttttttttt..]
+
+EVENT time: 2047.457520,  type: 2, fromlayer3  entity: 0
+[A] @2047.457520 Receive ACK packet from layer3. Packet[seq=999999,ack=999999,check=1002204,data=ttttttttttttttttttt..]
+[A] @2047.457520 ACK packet is corrupted. Packet[seq=999999,ack=999999,check=1002204,data=ttttttttttttttttttt..]
+
+EVENT time: 2056.891602,  type: 0, timerinterrupt   entity: 0
+[A] @2056.891602 Timeout occurred. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[A] @2056.891602 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+
+EVENT time: 2059.505859,  type: 2, fromlayer3  entity: 1
+[B] @2059.505859 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2059.505859 Duplicated packet detected. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being lost
+[B] @2059.505859 Send ACK packet to layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+
+EVENT time: 2076.891602,  type: 0, timerinterrupt   entity: 0
+[A] @2076.891602 Timeout occurred. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[A] @2076.891602 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+
+EVENT time: 2082.979492,  type: 2, fromlayer3  entity: 1
+[B] @2082.979492 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2082.979492 Duplicated packet detected. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2082.979492 Send ACK packet to layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+
+EVENT time: 2092.226563,  type: 2, fromlayer3  entity: 0
+[A] @2092.226563 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2092.226563 ACK is not expected : NACK. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2092.226563 Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being lost
+
+EVENT time: 2112.226563,  type: 0, timerinterrupt   entity: 0
+[A] @2112.226563 Timeout occurred. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[A] @2112.226563 Timeout! Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+
+EVENT time: 2116.803223,  type: 2, fromlayer3  entity: 1
+[B] @2116.803223 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2116.803223 Duplicated packet detected. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2116.803223 Send ACK packet to layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+
+EVENT time: 2123.363037,  type: 2, fromlayer3  entity: 0
+[A] @2123.363037 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2123.363037 ACK is not expected : NACK. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2123.363037 Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+
+EVENT time: 2128.232178,  type: 2, fromlayer3  entity: 1
+[B] @2128.232178 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2128.232178 Duplicated packet detected. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2128.232178 Send ACK packet to layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+
+EVENT time: 2132.567383,  type: 2, fromlayer3  entity: 0
+[A] @2132.567383 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2132.567383 ACK is not expected : NACK. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2132.567383 Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+
+EVENT time: 2139.819336,  type: 2, fromlayer3  entity: 1
+[B] @2139.819336 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2139.819336 Duplicated packet detected. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+[B] @2139.819336 Send ACK packet to layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+
+EVENT time: 2145.421631,  type: 2, fromlayer3  entity: 0
+[A] @2145.421631 Receive ACK packet from layer3. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2145.421631 ACK is not expected : NACK. Packet[seq=1,ack=0,check=2205,data=ttttttttttttttttttt..]
+[A] @2145.421631 Resend the packet again. Packet[seq=1,ack=15,check=2220,data=ttttttttttttttttttt..]
+          TOLAYER3: packet being corrupted
+
+EVENT time: 2147.945313,  type: 2, fromlayer3  entity: 1
+[B] @2147.945313 Receive a packet from layer3. Packet[seq=1,ack=15,check=2220,data=Ztttttttttttttttttt..]
+[B] @2147.945313 Data Packet is corrupted. Packet[seq=1,ack=15,check=2220,data=Ztttttttttttttttttt..]
+[B] @2147.945313 Send NACK packet to layer3. Packet[seq=1,ack=1,check=2180,data=Ztttttttttttttttttt..]
+
+EVENT time: 2152.229980,  type: 2, fromlayer3  entity: 0
+[A] @2152.229980 Receive ACK packet from layer3. Packet[seq=1,ack=1,check=2180,data=Ztttttttttttttttttt..]
+[A] @2152.229980 ACK packet process successfully accomplished!!. Packet[seq=1,ack=1,check=2180,data=Ztttttttttttttttttt..]
+ Simulator terminated at time 2152.229980
+ after sending 20 msgs from layer5
+#Sent Messages from Layer5-to   A: 20
+#Sent Messages to   Layer3-from A: 14
+#Sent Packets  to   Layer3-from A: 60
+#Sent Packets  from Layer3-to   B: 50
+#Sent Messages to   Layer5-from B: 14

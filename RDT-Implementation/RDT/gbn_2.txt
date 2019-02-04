@@ -1,0 +1,18 @@
+
+#define DEBUG_NMSG 40
+#define DEBUG_PROB_LOSS 0.10//0.05
+#define DEBUG_PROB_CORP 0.00//0.45
+#define DEBUG_TIME 10
+#define DEBUG_TRACE 0
+
+#Sent Messages from Layer5-to   A: 40
+#Sent Messages to   Layer3-from A: 40
+#Sent Packets  to   Layer3-from A: 4034
+#Sent Packets  from Layer3-to   B: 3613
+#Sent Messages to   Layer5-from B: 40
+
+#Sent Messages from Layer5-to   A: 40
+#Sent Messages to   Layer3-from A: 40
+#Sent Packets  to   Layer3-from A: 3701
+#Sent Packets  from Layer3-to   B: 3309
+#Sent Messages to   Layer5-from B: 40
