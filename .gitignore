@@ -58,3 +58,12 @@ ns2-network-simulation/\.vscode/
 *.topo
 
 ns2-network-simulation/ns2-12-1205006/Submission 1/802_11_static/802_11/topo_multi_radio_802_11_random\.txt
+
+
+Assignment05/ErrorDetection/\.idea/
+
+*.exe
+
+Assignment05/ErrorDetection/cmake-build-debug/
+
+Assignment05/ErrorDetection/venv/
